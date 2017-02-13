@@ -1,0 +1,17 @@
+#index {
+    background: url(../img/index/bg05.png) center 0 no-repeat #fff;
+    background-size: cover;
+}
+.main-section {
+    height: 800px;
+}
+.main-banner {
+    text-align: center;
+    line-height: 500px;
+    color: #fff;
+}
+footer,
+footer a {
+    color: #fff;
+}
+

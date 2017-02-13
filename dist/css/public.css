@@ -1,0 +1,109 @@
+/*overlay CSS*/
+
+#overlay {
+    background: #000;
+    filter: alpha(opacity=50);
+    /* IE的透明度 */
+    opacity: 0.5;
+    /* 透明度 */
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    /* 此处的图层要大于页面 */
+}
+
+/*Layout*/
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.nopadding {
+    padding: 0;
+}
+.nomargin {
+    margin: 0;
+}
+
+/*水平翻转*/
+
+.flipx {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    /*IE*/
+    filter: FlipH;
+}
+
+/*垂直翻转*/
+
+.flipy {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+/*固定宽度，超出部分用…代替*/
+
+.fixed-width {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*支付方式汇总*/
+
+.cards {
+    background: transparent url("../img/icon/icon-cards.png") no-repeat scroll 0 0;
+}
+
+/*建设银行*/
+
+.ccb {
+    background-position: 0px -47px;
+}
+
+/*农业银行*/
+
+.abc {
+    background-position: 0px -382px;
+}
+
+/*工商银行*/
+
+.icbc {
+    background-position: 0px -94px;
+}
+
+/*中国银行*/
+
+.boc {
+    background-position: 0px -142px;
+}
+
+/*招商银行*/
+
+.cmb {
+    background-position: 0px 2px;
+}
+
+/*支付宝*/
+
+.alipay {
+    background-position: 0px -1347px;
+}
+
+/*在线支付*/
+
+.unionpay {
+    background-position: 0px -1299px;
+}
+
