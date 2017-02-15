@@ -93,3 +93,28 @@ function isIE() { //ie?
 };
 /*========================判断是否是IE浏览器结束========================*/
 
+$(function() {
+    var $backToTop = $(".back-to-top");
+    // 滚动监听
+    $(window).scroll(function() {
+        var scrollTopVal = $(window).scrollTop();
+        if (scrollTopVal > 260) {
+            // 左侧导航固定
+            $(".lf-nav").css("position", "fixed");
+            $(".lf-nav").css("top", "20px");
+            //显示返回顶部箭头
+            $backToTop.show();
+        } else {
+            $(".lf-nav").css("position", "absolute");
+            $(".lf-nav").css("top", "200px");
+            //隐藏返回顶部箭头
+            $backToTop.hide();
+        }
+    });
+    $backToTop.click(function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+})

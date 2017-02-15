@@ -16,20 +16,25 @@
     /* 此处的图层要大于页面 */
 }
 
+
 /*Layout*/
 
 .fl {
     float: left;
 }
+
 .fr {
     float: right;
 }
+
 .nopadding {
     padding: 0;
 }
+
 .nomargin {
     margin: 0;
 }
+
 
 /*水平翻转*/
 
@@ -42,6 +47,7 @@
     filter: FlipH;
 }
 
+
 /*垂直翻转*/
 
 .flipy {
@@ -51,6 +57,7 @@
     transform: scaleY(-1);
 }
 
+
 /*固定宽度，超出部分用…代替*/
 
 .fixed-width {
@@ -58,6 +65,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 
 /*icon图标集开始*/
 
@@ -68,11 +76,13 @@
     vertical-align: middle;
 }
 
+
 /*支付方式汇总*/
 
 .icon-cards {
     background: transparent url("../img/icon/icon-cards.png") no-repeat scroll 0 0;
 }
+
 
 /*建设银行*/
 
@@ -80,11 +90,13 @@
     background-position: 0px -47px;
 }
 
+
 /*农业银行*/
 
 .abc {
     background-position: 0px -382px;
 }
+
 
 /*工商银行*/
 
@@ -92,11 +104,13 @@
     background-position: 0px -94px;
 }
 
+
 /*中国银行*/
 
 .boc {
     background-position: 0px -142px;
 }
+
 
 /*招商银行*/
 
@@ -104,15 +118,16 @@
     background-position: 0px 2px;
 }
 
+
 /*支付宝*/
 
 .alipay {
     background-position: 0px -1347px;
 }
 
+
 /*在线支付*/
 
 .unionpay {
     background-position: 0px -1299px;
 }
-

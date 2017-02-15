@@ -1,0 +1,29 @@
+#codeguide .main {
+    position: relative;
+}
+
+.lf-nav {
+    position: absolute;
+    top: 200px;
+    float: left;
+    width: 200px;
+    border: 1px solid #ddd;
+}
+
+.lf-nav .nav-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.lf-nav .nav-content {
+    height: 650px;
+    overflow-y: scroll;
+}
+
+.rg-content {
+    float: right;
+    width: 860px;
+    min-height: 500px;
+    margin-bottom: 360px;
+}
