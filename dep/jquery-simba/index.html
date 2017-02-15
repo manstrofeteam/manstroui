@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title> 网站常用效果插件 </title>
+		<meta name="Generator" content="Notepad++">
+		<meta name="Keywords" content="网站常用效果插件">
+		<meta name="Author" content="Eric">
+		<meta http-equiv="Content-Language" content="zh-CN">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+		<!--页面在规定时间内跳转到指定页面-->
+		<!--<meta http-equiv="Refresh" content="n;url=http://www.baidu.com">-->
+		<!--强制页面在当前窗口中以独立页面显示，可以防止自己的网页被别人当作一个frame页调用-->
+		<meta http-equiv="windows-Target" content="_top">
+		<link rel="stylesheet" href="./css/base.css" />
+		<link rel="stylesheet" href="./css/common.css" />
+	</head>
+	<body>
+		<div class="body">
+		
+			<!--轮播-->
+			<div class="limit"> 
+				<h1 class="title">轮播</h1>
+				<div class="content">
+					<!--html处理-->
+					<div class="slider" id="slider" e-fun="slider">
+						<a href="javascript:"><img src="./images/1.jpg" alt="" /></a>
+						<a href="javascript:"><img src="./images/2.jpg" alt="" /></a>
+						<a href="javascript:"><img src="./images/3.jpg" alt="" /></a>
+						<a href="javascript:"><img src="./images/4.jpg" alt="" /></a>
+						<a href="javascript:"><img src="./images/5.jpg" alt="" /></a>
+					</div>
+					<!--操作-->
+					<div class="demoDo">
+						<h3 class="title">基础设置</h3>
+						<ul class="demo-list clear">
+							<li class="clear">
+								<span>timeout(时间间隔)：</span>
+								<input type="text" value="3000"/>
+							</li>
+							<li class="clear">
+								<span>moveTime(动画时间)：</span>
+								<input type="text"  value="300"/>
+							</li>
+							<li class="clear">
+								<span>autoSlider(是否自动轮播)：</span>
+								<div e-fun="dropBox" e-val=0 class="demoDrop clear">
+									<input readonly type="text" value="true"/>
+									<i class="fa fa-chevron-down"></i>
+									<ul class="">
+										<li>true</li>
+										<li>false</li>
+									</ul>
+								</div>
+							</li>
+							<li class="clear">
+								<span>moveStyle(动画效果)：</span>
+								<div e-fun="dropBox" e-val=0 class="demoDrop clear">
+									<input readonly type="text" value="slide"/>
+									<i class="fa fa-chevron-down"></i>
+									<ul class="">
+										<li>slide</li>
+										<li>fade</li>
+									</ul>
+								</div>
+							</li>
+							<li class="clear">
+								<span>addTag(是否创建圆点标记)：</span>
+								<div e-fun="dropBox" e-val=0 class="demoDrop clear">
+									<input readonly type="text" value="true"/>
+									<i class="fa fa-chevron-down"></i>
+									<ul class="">
+										<li>true</li>
+										<li>false</li>
+									</ul>
+								</div>
+							</li>
+							<li class="clear">
+								<span>tagSize(圆点的尺寸)：</span>
+								<input type="text"  value="12"/>
+							</li>
+							<li class="clear">
+								<span>tagDefaultBg(圆点标记的默认背景)：</span>
+								<input type="text"  value="#fff"/>
+							</li>
+							<li class="clear">
+								<span>tagActiveBg(圆点标记选中背景)：</span>
+								<input type="text"  value="#5638d8"/>
+							</li>
+							<li class="clear">
+								<span>btnShow(是否显示左右按钮)：</span>
+								<div e-fun="dropBox" e-val=0 class="demoDrop clear">
+									<input readonly type="text" value="true"/>
+									<i class="fa fa-chevron-down"></i>
+									<ul class="">
+										<li>true</li>
+										<li>false</li>
+									</ul>
+								</div>
+							</li>
+							<li class="clear">
+								<span>btnW(按钮的宽度)：</span>
+								<input type="text"  value="30"/>
+							</li>
+							<li class="clear">
+								<span>btnH(按钮的高度)：</span>
+								<input type="text"  value="60"/>
+							</li>
+							<li class="clear">
+								<span>btnBg(按钮的背景)：</span>
+								<input type="text"  value="rgba(255,255,255,.6)"/>
+							</li>
+						</ul>
+						<a class="demo-a" id="slider_a" href="javascript:">GO</a>
+					</div>
+				</div>
+			</div>
+			<!--截取字符串-->
+			<div class="limit"> 
+				<h1 class="title">截取字符串</h1>
+				<div class="content">
+					<!--html处理-->
+					<p e-fun="limit" e-num="10">这里只能显示10个字符，嗯呢呢呢</p>
+				</div>
+			</div>
+			
+			<!--Tab菜单切换-->
+			<div class="">
+				<h1 class="title">Tab菜单切换</h1>
+				<div class="content">
+					<!--js-->
+					<div e-fun="tab" e-event="click" e-index="0" class="tab">
+						<div class="clear">
+							<a e-tab-for="nav0">a</a>
+							<a e-tab-for="nav1">b</a>
+							<a e-tab-for="nav2">c</a>
+						</div>
+						<div>
+							<p e-tab-nav="nav0">a</p>
+							<p e-tab-nav="nav1">b</p>
+							<p e-tab-nav="nav2">c</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--div模拟下拉-->
+			<div class="">
+				<h1 class="title">div模拟下拉</h1>
+				<div class="content">
+					<!--js-->
+					<div e-fun="dropBox" e-val=0  class="dropBox clear">
+						<input readonly type="text" />
+						<i class="fa fa-chevron-down"></i>
+						<ul class="">
+							<li>选项1</li>
+							<li>选项2</li>
+							<li>选项3</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!--弹出框-->
+			<div class="">
+				<h1 class="title">指定弹出框</h1>
+				<div class="content">
+					<!--js-->
+					<a class="pop-a" href="javascript:" e-pop-for="pop1">点我弹出popBox</a>
+				</div>
+				<div class="popBox none" e-pop-box="pop1">
+					<div class="popCon">
+						<p class="popTit">这是popBox</p>
+						<p><a class="pop-a" href="javascript:" e-pop-close="pop1">关闭</a></p>
+					</div>
+				</div>
+			</div>
+			
+			<!--多选框-->
+			<div class="" id="a">
+				<h1 class="title">图片式多选框</h1>
+				<div class="content">
+					<!--js-->
+					<div class="" e-fun="check">
+						<ul class="checkList">
+							<li class="fristCheck"><i e-check-all e-check=0><img src="./images/e-check.png" alt="" />全选</i></li>
+							<li class="secCheck clear">
+								<i e-check-one e-check=0><img src="./images/e-check.png" alt="" />多选1</i>
+								<i e-check-one e-check=0><img src="./images/e-check.png" alt="" />多选2</i>
+								<i e-check-one e-check=0><img src="./images/e-check.png" alt="" />多选3</i>
+								<i e-check-one e-check=0><img src="./images/e-check.png" alt="" />多选4</i>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!--单选框-->
+			<div class="">
+				<h1 class="title">图片式单选框</h1>
+				<div class="content">
+					<!--js-->
+					<div class="" e-fun="radio">
+						<ul class="checkList">
+							<li class="secCheck clear">
+								<i e-radio e-check=1><img src="./images/e-radioed.png" alt="" />单选1</i>
+								<i e-radio e-check=0><img src="./images/e-radio.png" alt="" />单选2</i>
+								<i e-radio e-check=0><img src="./images/e-radio.png" alt="" />单选3</i>
+								<i e-radio e-check=0><img src="./images/e-radio.png" alt="" />单选4</i>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+			<!--回到顶部-->
+			<div class="">
+				<h1 class="title">类锚点  回到顶部</h1>
+				<div class="content">
+					<!--js-->
+					<div class="">
+						<a class="pop-a" href="javascript:" e-for="" e-fun="anchor">点我就能回到顶部了</a>
+					</div>
+				</div>
+			</div>
+			
+			<!--弹出框（确认框，提示框）-->
+			<div class="">
+				<h1 class="title">弹出框（确认框，提示框）</h1>
+				<div class="content">
+					<!--js-->
+					<div class="">
+						<a class="btn" id="pop1" e-fun="popUpWindow" e-style="1" href="javascript:">点我试试看咯</a>
+						<a class="btn" id="pop2" e-fun="popUpWindow" e-style="2" href="javascript:">还有我呢</a>
+						<a class="btn" id="pop3" e-fun="popUpWindow" e-style="3" href="javascript:">再来一次</a>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		
+		
+		<!--js-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/simba.webSite.js"></script>
+		
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

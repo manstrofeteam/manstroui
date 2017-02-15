@@ -1,17 +1,31 @@
-#index {
+body {
+    background: url("../img/index/bg1.jpg") center 0 no-repeat #fff;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* #index {
     background: url(../img/index/bg05.png) center 0 no-repeat #fff;
     background-size: cover;
-}
+} */
+
 .main-section {
-    height: 800px;
+    min-height: 400px;
 }
+
 .main-banner {
+    padding-top: 160px;
+    line-height: 4;
     text-align: center;
-    line-height: 500px;
-    color: #fff;
-}
-footer,
-footer a {
     color: #fff;
 }
 
+.main-banner a {
+    color: #0099d9;
+}
+
+#index footer {
+    position: fixed;
+    background-color: transparent;
+}

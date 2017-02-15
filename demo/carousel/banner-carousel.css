@@ -1,0 +1,118 @@
+.jssora02l,
+.jssora02r {
+    display: block;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url('img2/a02.png') no-repeat;
+    overflow: hidden
+}
+.jssora02l {
+    background-position: -3px -33px
+}
+.jssora02r {
+    background-position: -63px -33px
+}
+.jssora02l:hover {
+    background-position: -123px -33px
+}
+.jssora02r:hover {
+    background-position: -183px -33px
+}
+.jssora02l.jssora02ldn {
+    background-position: -3px -33px
+}
+.jssora02r.jssora02rdn {
+    background-position: -63px -33px
+}
+.jssort11-100-70 .p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 70px;
+    background: #181818
+}
+.jssort11-100-70 .tp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none
+}
+* html .jssort11-100-70 .i {
+    width: 29px;
+    height: 32px;
+}
+.jssort11-100-70 .pav .i {
+    border: 1px solid #2B7FB4 !important;
+    cursor: pointer;
+}
+.jssort11-100-70 .i,
+.jssort11-100-70 .pav:hover .i {
+    position: absolute;
+    width: 98px;
+    height: 98px;
+    cursor: pointer;
+}
+.jssort11-100-70 .t,
+.jssort11-100-70 .pav:hover .t {
+    position: absolute;
+    top: 3px;
+    left: 35px;
+    width: 62px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #fc9835;
+    font-size: 13px;
+    font-weight: 700
+}
+.jssort11-100-70 .pav .t,
+.jssort11-100-70 .p:hover .t {
+    color: #fff
+}
+.jssort11-100-70 .c,
+.jssort11-100-70 .pav:hover .c {
+    position: absolute;
+    top: 38px;
+    left: 3px;
+    width: 94px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 400;
+    overflow: hidden
+}
+.jssort11-100-70 .pav .c,
+.jssort11-100-70 .p:hover .c {
+    color: #fc9835
+}
+.jssort11-100-70 .t,
+.jssort11-100-70 .c {
+    transition: color 2s;
+    -moz-transition: color 2s;
+    -webkit-transition: color 2s;
+    -o-transition: color 2s
+}
+.jssort11-100-70 .p:hover .t,
+.jssort11-100-70 .pav:hover .t,
+.jssort11-100-70 .p:hover .c,
+.jssort11-100-70 .pav:hover .c {
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none
+}
+.jssort11-100-70 .p:hover,
+.jssort11-100-70 .pav:hover {
+    background: #333
+}
+.jssort11-100-70 .pav,
+.jssort11-100-70 .p.pdn {
+    background: #462300
+}
+

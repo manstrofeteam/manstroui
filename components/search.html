@@ -1,0 +1,67 @@
+<div id="search-html">
+    <!-- 带下拉框的搜索框开始 -->
+    <div class="header-search">
+        <!-- 搜索框主体开始 -->
+        <div class="search-body blue-border">
+            <!-- 搜索类型选择开始 -->
+            <div class="search-type fl">
+                <div class="search-key">
+                    <span class="chosen-key" key="camp">营地</span>
+                    <i class="manstro-icon icon-caret"></i>
+                </div>
+                <div class="key-body">
+                    <i class="top-arrow"></i>
+                    <ul class="keys">
+                        <li key="camp">营地</li>
+                        <li key="route">尚美之旅</li>
+                        <li key="travel">营地印象</li>
+                        <li key="goods">在线商品</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 搜索类型选择结束 -->
+            <div class="search-input fl">
+                <input type="text" placeholder="搜营地/尚美之旅/营地印象/在线商品">
+            </div>
+            <div class="search-btn fr bg-blue">
+                <i class="manstro-icon icon-16 icon-search"></i>
+                <span>搜索</span>
+            </div>
+        </div>
+        <!-- 搜索框主体结束 -->
+    </div>
+    <!-- 带下拉框的搜索框结束 -->
+    <!-- 普通搜索框开始 -->
+    <div class="search-body orange-border">
+        <div class="search-input fl">
+            <input type="text" placeholder="请输入搜索内容">
+        </div>
+        <div class="search-btn fr bg-orange">
+            <i class="manstro-icon icon-16 icon-search"></i>
+            <span>搜索</span>
+        </div>
+    </div>
+    <!-- 普通搜索框结束 -->
+</div>
+<!-- 这里显示下拉列表的html代码 -->
+<div id="search-code" class="show-code"></div>
+<script type="text/javascript">
+// 搜索关键字下拉列表
+var title = $(".search-key");
+var oUl = $(".key-body");
+var oLi = $(".keys li");
+title.click(function() {
+    oUl.stop().slideToggle(77);
+});
+oLi.click(function() {
+    var liContent = $(this).text();
+    var key = $(this).attr("key");
+    title.children(".chosen-key").text(liContent);
+    title.children(".chosen-key").attr("key", key);
+    oUl.stop().slideToggle(77);
+});
+/*下拉列表结束*/
+$("#search-html").htmlcode($("#search-code"), {
+    indent: true
+});
+</script>

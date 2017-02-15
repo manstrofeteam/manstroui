@@ -1,0 +1,57 @@
+/*页面样式开始*/
+
+.main {
+    margin: 20px auto;
+    padding: 20px;
+    width: 1100px;
+    min-height: 400px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 2px #ccc;
+}
+.main .nav-tabs-desc {
+    margin-bottom: 40px;
+}
+.main .tab-content {
+    padding: 20px;
+    height: 300px;
+    border: 2px solid #209EF6;
+    border-top: none;
+}
+.show-code {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px dashed #ddd;
+    background-color: #f0f3f9;
+}
+
+/*页面样式结束*/
+
+
+/* tab标签开始 */
+
+.nav-tabs {
+    margin: 0 auto;
+    /*width: 1140px;*/
+    height: 42px;
+    border-bottom: 2px solid #209EF6;
+}
+.nav-tabs li {
+    float: left;
+    margin-right: 10px;
+    width: 130px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    border: 2px solid #DDD;
+    border-bottom: none;
+    cursor: pointer;
+}
+.nav-tabs .active {
+    color: #209EF6;
+    border: 2px solid #209EF6;
+    border-bottom-color: #FFF;
+}
+
+/* tab标签结束 */
+

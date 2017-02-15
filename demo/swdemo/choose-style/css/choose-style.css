@@ -1,0 +1,28 @@
+.sigining-list ul li {
+    width: 120px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    border: 1px solid #eee;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    list-style: none;
+}
+.order-img {
+    bottom: 0;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    width: 20px;
+    display: none;
+}
+.order-address {
+    position: relative;
+}
+.sigining-list ul li.out-border {
+    border: 1px solid #209EF7;
+}
+

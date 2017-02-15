@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="share.css" />
+</head>
+
+<body>
+    <div class="mark"></div>
+    <div class="share-dialog">
+        <div class="share-close"></div>
+        <div class="share-dialog-title">分享</div>
+        <div class="share-dialog-cont">
+            <div class="share-copy">
+                <div class="share-copy-l">分享链接：</div>
+                <div class="share-copy-c">
+                    <input id="copytext" type="text" />
+                </div>
+                <div id="btnCopy" class="share-copy-r" data-clipboard-target="copytext">复制链接</div>
+                <div class="clear"></div>
+            </div>
+            <div class="share-platform">
+                <div class="share-platform-l">社交平台：</div>
+                <div class="share-platform-r">
+                    <div class="bdsharebuttonbox">
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                    </div>
+                    <div class="share-platform-text">
+                        您可以直接复制短链，分享给朋友，也可直接点击社交平台图标，指定分享。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "分享到新浪微博",
+            "bdMini": "1",
+            "bdMiniList": ["bdxc", "tqf", "douban", "bdhome", "sqq", "thx", "ibaidu", "meilishuo", "mogujie", "diandian", "huaban", "duitang", "hx", "fx", "youdao", "sdo", "qingbiji", "people", "xinhua", "mail", "isohu", "yaolan", "wealink", "ty", "iguba", "fbook", "twi", "linkedin", "h163", "evernotecn", "copy", "print"],
+            "bdPic": "",
+            "bdStyle": "1",
+            "bdSize": "32"
+        },
+        "share": {}
+    };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="ZeroClipboard.js"></script>
+    <script>
+    //获取本页链接
+    var g_url = window.location.href;
+    $('.share-copy-c input').val(g_url);
+    var clip = new ZeroClipboard(document.getElementById("btnCopy"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1407 @@
+/*backToTop CSS*/
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    width: 34px;
+    height: 34px;
+    background-image: url(../../img/public/back-to-top.png);
+    cursor: pointer;
+    z-index: 99;
+}
+#back-to-top:hover {
+    background-position: 0 -34px;
+}
+
+/*overlay CSS*/
+
+#overlay {
+    background: #000;
+    filter: alpha(opacity=30);
+    /* IE的透明度 */
+    opacity: 0.3;
+    /* 透明度 */
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    /* 此处的图层要大于页面 */
+}
+
+/*水平翻转*/
+
+.flipx {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    /*IE*/
+    filter: FlipH;
+}
+
+/*垂直翻转*/
+
+.flipy {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+/*固定宽度，超出部分用…代替*/
+
+.fixed-width {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*Layout*/
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.nopadding {
+    padding: 0;
+}
+.nomargin {
+    margin: 0;
+}
+.right2 {
+    margin-right: 2px;
+}
+.right4 {
+    margin-right: 4px;
+}
+.right10 {
+    margin-right: 10px;
+}
+.right20 {
+    margin-right: 20px;
+}
+.right30 {
+    margin-right: 30px;
+}
+.right40 {
+    margin-right: 40px;
+}
+.right50 {
+    margin-right: 50px;
+}
+.right100 {
+    margin-right: 100px;
+}
+.top20 {
+    margin-top: 20px;
+    display: inline-block;
+}
+.font10 {
+    font-size: 10px;
+}
+.font14 {
+    font-size: 14px;
+}
+.font16 {
+    font-size: 16px;
+}
+.font18 {
+    font-size: 18px;
+}
+.font20 {
+    font-size: 20px;
+}
+.font22 {
+    font-size: 22px;
+}
+.font32 {
+    font-size: 32px;
+}
+.font28 {
+    font-size: 28px;
+}
+.cursor {
+    cursor: pointer;
+}
+
+/*支付方式汇总*/
+
+.cards {
+    background: transparent url(../../img/public/cards.png) no-repeat scroll 0 0;
+}
+
+/*建设银行*/
+
+.ccb {
+    background-position: 0px -47px;
+}
+
+/*农业银行*/
+
+.abc {
+    background-position: 0px -382px;
+}
+
+/*工商银行*/
+
+.icbc {
+    background-position: 0px -94px;
+}
+
+/*中国银行*/
+
+.boc {
+    background-position: 0px -142px;
+}
+
+/*招商银行*/
+
+.cmb {
+    background-position: 0px 2px;
+}
+
+/*支付宝*/
+
+.alipay {
+    background-position: 0px -1347px;
+}
+
+/*在线支付*/
+
+.unionpay {
+    background-position: 0px -1299px;
+}
+li {
+    list-style: none;
+}
+
+/*本站常用颜色值*/
+
+.white {
+    color: #FFF;
+}
+.red {
+    color: #FE5621;
+}
+.orange {
+    color: #FF9560;
+}
+.brown {
+    color: #BF7554;
+}
+.black {
+    color: #343434;
+}
+.yellow {
+    color: #FEB210;
+}
+.light-blue {
+    color: #1D8ECA;
+}
+.blue {
+    color: #209EF6 !important;
+}
+.blue2 {
+    color: #2CA2F6;
+}
+.background-blue2 {
+    background-color: #63B7F9;
+}
+.background-blue {
+    background-color: #EEF4F7;
+}
+.light-black {
+    color: #666;
+}
+.grey {
+    color: #909090;
+}
+.grey1 {
+    color: #ABADAE;
+}
+.grey2 {
+    color: #B0B0B0;
+}
+.grey3 {
+    color: #ABABAB;
+}
+.light-grey {
+    background-color: #F0F0F0;
+}
+
+/*上箭头*/
+
+.top-arrow {
+    border-bottom: 8px solid #fff;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+/*icon图标集开始*/
+
+.manstro-icon {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}
+
+/*占位图片开始*/
+
+.icon-default {
+    width: 16px;
+    height: 16px;
+    background-image: url(../../img/placeholder/16.png);
+}
+
+/*占位图片结束*/
+
+.icon-caret {
+    width: 10px;
+    height: 7px;
+    background-image: url(../../img/public/icon-caret-grey.png);
+}
+
+/*.icon-caret-left {
+    width: 7px;
+    height: 10px;
+    background-image: url(../../img/public/icon-caret-grey-lf.png);
+}
+
+*/
+
+.icon-caret-white {
+    width: 13px;
+    height: 10px;
+    background-image: url(../../img/public/icon-caret-white.png);
+}
+.icon-14 {
+    width: 14px;
+    height: 14px;
+}
+.icon-up-arrow {
+    width: 13px;
+    height: 9px;
+    background-image: url(../../img/public/up-arrow.png);
+}
+
+/*人物头像标志*/
+
+.icon-user {
+    background-image: url(../../img/public/icon-user-grey.png);
+}
+.icon-user-big {
+    width: 25px;
+    height: 23px;
+    background-image: url(../../img/public/icon-user-big.png);
+}
+.icon-right {
+    background-image: url(../../img/public/icon-right-grey.png);
+}
+.icon-16 {
+    width: 16px;
+    height: 16px;
+}
+
+/*搜索标志*/
+
+.icon-search {
+    background-image: url(../../img/public/icon-search.png);
+}
+
+/*电话标志*/
+
+.icon-phone-big {
+    width: 38px;
+    height: 38px;
+    background-image: url(../../img/public/icon-phone-big.png);
+}
+
+/*定位*/
+
+.icon-location {
+    width: 20px;
+    height: 24px;
+    background-image: url(../../img/public/icon-location.png);
+}
+
+/*星级图标*/
+
+.icon-grade {
+    height: 14px;
+    background-position: 0 0;
+    background-image: url(../../img/public/icon-grade.png);
+}
+.icon-grade1 {
+    width: 16px;
+}
+.icon-grade2 {
+    width: 32px;
+}
+.icon-grade3 {
+    width: 47px;
+}
+.icon-grade4 {
+    width: 63px;
+}
+.icon-grade5 {
+    width: 60px;
+}
+
+/*订单标志*/
+
+.icon-order {
+    width: 25px;
+    height: 23px;
+    background-image: url(../../img/public/icon-order.png);
+}
+
+/*新增标志*/
+
+.icon-new {
+    width: 32px;
+    height: 23px;
+    background-image: url(../../img/public/icon-new.png);
+}
+
+/*钱袋标志*/
+
+.icon-money {
+    width: 25px;
+    height: 23px;
+    background-image: url(../../img/public/icon-money.png);
+}
+
+/*服务中心标志*/
+
+.icon-help {
+    width: 25px;
+    height: 23px;
+    background-image: url(../../img/public/icon-help.png);
+}
+
+/*连接标志*/
+
+.icon-link {
+    width: 26px;
+    height: 25px;
+    background-image: url(../../img/public/icon-link.png);
+}
+
+/*问号标志*/
+
+.icon-question {
+    width: 25px;
+    height: 25px;
+    background-image: url(../../img/public/icon-question.png);
+}
+
+/*关闭标志*/
+
+.icon-close {
+    width: 27px;
+    height: 27px;
+    background-image: url(../../img/public/icon-close.png);
+}
+
+/*会员等级标志*/
+
+.icon-lv {
+    width: 38px;
+    height: 13px;
+}
+.icon-lv1 {
+    background-image: url(../../img/public/icon-lv1.png);
+}
+.icon-lv2 {
+    background-image: url(../../img/public/icon-lv2.png);
+}
+.icon-lv3 {
+    background-image: url(../../img/public/icon-lv3.png);
+}
+.icon-lv4 {
+    background-image: url(../../img/public/icon-lv4.png);
+}
+.icon-lv5 {
+    settlement background-image: url(../../img/public/icon-lv5.png);
+}
+.icon-lv6 {
+    background-image: url(../../img/public/icon-lv6.png);
+}
+
+/*账户设置图标集*/
+
+.icon-account-setting {
+    width: 22px;
+    height: 22px;
+    margin-right: 4px;
+    vertical-align: middle;
+    background-image: url(../../img/public/account-setting.png);
+}
+.icon-account-user-white {
+    background-position: -22px 0;
+}
+.icon-account-user-grey {
+    background-position: 0 0;
+}
+.icon-account-avatar-white {
+    background-position: -22px -22px;
+}
+.icon-account-avatar-grey {
+    background-position: 0 -22px;
+}
+.icon-account-safe-white {
+    background-position: -22px -66px;
+}
+.icon-account-safe-grey {
+    background-position: 0 -66px;
+}
+.icon-account-home-white {
+    background-position: -22px -154px;
+}
+.icon-account-home-grey {
+    background-position: 0 -154px;
+}
+
+/*手机和微信图标开始  后期再优化*/
+
+.icon-spirites1 {
+    height: 20px;
+    background-image: url(../../img/public/spirites1.png);
+}
+.icon-phone {
+    width: 12px;
+    background-position: 0 0;
+}
+.icon-phone:hover,
+.icon-phone-blue {
+    width: 12px;
+    background-position: 0 -22px;
+}
+.icon-wechat {
+    width: 20px;
+    background-position: -20px 0;
+}
+.icon-wechat:hover,
+.icon-wechat-green {
+    width: 20px;
+    background-position: -20px -22px;
+}
+
+/*手机和微信图标结束*/
+
+
+/*对号*/
+
+.icon-right-big-grey {
+    width: 33px;
+    height: 33px;
+    background-image: url(../../img/public/icon-right-big-grey.png);
+}
+.icon-right-big-green {
+    width: 33px;
+    height: 33px;
+    background-image: url(../../img/public/icon-right-big-green.png);
+}
+
+/*文章编辑相关图标开始*/
+
+.icon-size28 {
+    width: 28px;
+    height: 28px;
+    background-size: 96%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*添加*/
+
+.icon-blue-add {
+    background-image: url(../../img/personal-center/my-travels/icon-blue-add.png);
+}
+
+/*文字*/
+
+.icon-blue-txt {
+    background-image: url(../../img/personal-center/my-travels/icon-blue-txt.png);
+}
+
+/*上传图片*/
+
+.icon-blue-lt-upload {
+    background-image: url(../../img/personal-center/my-travels/icon-blue-lt-upload.png);
+}
+
+/*蓝色节点*/
+
+.icon-blue-node {
+    width: 50px;
+    height: 31px;
+    background-image: url(../../img/personal-center/my-travels/icon-blue-node.png);
+    background-size: 100%;
+}
+
+/*添加按钮 小*/
+
+.icon-blue-add {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../img/personal-center/my-travels/icon-blue-add.png);
+    background-size: 98%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*添加按钮 大*/
+
+.icon-blue-big-add {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../img/personal-center/my-travels/icon-blue-big-add.png);
+    background-size: 98%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*节点圆圈*/
+
+.icon-blue-circle-node {
+    width: 43px;
+    height: 43px;
+    background-image: url(../../img/personal-center/my-travels/icon-blue-circle-node.png);
+}
+
+/*编辑 铅笔*/
+
+.icon-grey-pen {
+    width: 16px;
+    height: 18px;
+    background-image: url(../../img/personal-center/my-travels/icon-grey-pen.png);
+    background-size: 98%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*定位*/
+
+.icon-blue-location {
+    width: 26px;
+    height: 26px;
+    background-image: url(../../img/personal-center/my-travels/icon-blue-location.png);
+    background-size: 98%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*文章编辑相关图标结束*/
+
+
+/*icon图标集结束*/
+
+
+/* -----顶部公共样式开始----*/
+
+.header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+.align-center {
+    margin: 0 auto;
+    width: 1140px;
+    /*height: 30px;*/
+}
+
+/*顶部入口开始*/
+
+.header .header-top {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #F5F5F5;
+    background-color: #FAFAFA;
+}
+.header .header-top .lf-link {
+    position: relative;
+    top: 4px;
+    left: 2px;
+    cursor: pointer;
+}
+.header .header-top .qrcode {
+    position: absolute;
+    top: 0px;
+    left: 126px;
+}
+.header .header-top .box-bg {
+    display: none;
+    position: absolute;
+    top: 26px;
+    left: -61px;
+    width: 120px;
+    height: 150px;
+    background-color: #e4e7eb;
+    border-radius: 2px;
+    z-index: 104;
+}
+.header .header-top .qrcode-img p {
+    line-height: 30px;
+}
+.header .header-top .qrcode-img .icon-up-arrow {
+    position: absolute;
+    top: -6px;
+}
+.header .header-top .qrcode .qrcode-img {
+    margin: 2px auto;
+    width: 102px;
+    height: 136px;
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #b8b8b8;
+    background-color: #fff;
+    z-index: 104;
+}
+.header .header-top .app-qrcode img {
+    margin-top: 6px;
+    width: 82px;
+    height: 82px;
+}
+.header .header-top .wechat-qrcode img {
+    width: 96px;
+    height: 96px;
+}
+.header .header-top .wechat-qrcode {
+    left: 150px;
+}
+.header .header-top .wechat-qrcode .box-bg {
+    left: -58px;
+}
+.header .header-top .entry {
+    position: relative;
+}
+.header .header-top .entry span {
+    line-height: 30px;
+}
+.header .header-top .entry .hover {
+    color: #FE5621;
+}
+.header .header-top .entry .hover .icon-caret {
+    background-image: url(../../img/public/icon-caret-red.png);
+}
+.header .header-top .entry-title {
+    cursor: pointer;
+}
+.header .header-top .entry-body {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    background-color: #fff;
+    z-index: 101;
+}
+.header .header-top .entry-body a:hover .icon-user {
+    background-image: url(../../img/public/icon-user-red.png);
+}
+.header .header-top .entry-body a:hover .icon-right {
+    background-image: url(../../img/public/icon-right-red.png);
+}
+.header .header-top .entry-body a:hover span {
+    color: #FE5621;
+}
+.header .header-top .header .header-top .entry-title {
+    padding-right: 12px;
+    text-align: right;
+    line-height: 30px;
+    cursor: pointer;
+}
+.header .header-top .entry-body .top-arrow {
+    position: absolute;
+    top: -8px;
+    right: 10px;
+}
+.header .header-top .entry-body ul {
+    width: 120px;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0 0 6px #ccc;
+}
+.header .header-top .entry-body li,
+.header .header-top .entry-body ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+}
+
+/*顶部入口结束*/
+
+
+/*搜索框开始*/
+
+.header .header-search {
+    margin: 0 auto;
+    width: 1140px;
+    height: 80px;
+}
+.header .logo {
+    margin-top: 14px;
+    width: 208px;
+    height: 56px;
+    /* margin-top: 8px;
+    width: 182px;
+    height: 62px; */
+}
+.header .search-body {
+    float: right;
+    margin-top: 20px;
+    margin-right: 30px;
+    width: 500px;
+    height: 40px;
+    border: 2px solid #008CD6;
+}
+.search-body .search-type {
+    position: relative;
+    width: 100px;
+    height: 100%;
+    border-right: 1px solid #ddd;
+    background-color: #F2FBFF;
+}
+.search-body .search-type .chosen-key {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.search-body .search-key .icon-caret {
+    position: absolute;
+    top: 18px;
+    right: 6px;
+}
+.search-body .key-body {
+    display: none;
+    position: absolute;
+    top: 37px;
+    right: 6px;
+}
+.search-body .key-body .top-arrow {
+    position: absolute;
+    top: -8px;
+    right: 0;
+    z-index: 104;
+}
+.search-body .key-body .keys {
+    position: relative;
+    width: 110px;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0 0 6px #ccc;
+    background-color: #FFF;
+    z-index: 103;
+    left: 6px;
+}
+.search-body .keys li {
+    font-size: 14px;
+    color: #909090;
+    cursor: pointer;
+}
+.search-body .keys li:hover {
+    color: #343434;
+}
+.search-body .keys li:last-child {
+    border: none;
+}
+.search-body .search-input input {
+    display: block;
+    padding-left: 4px;
+    width: 320px;
+    height: 40px;
+    border: none;
+    border-radius: 0;
+}
+.search-body .search-btn {
+    width: 75px;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #008CD6;
+    cursor: pointer;
+}
+.header .shop-cart {
+    position: relative;
+    top: 20px;
+    width: 140px;
+    height: 38px;
+    border: 1px solid #ddd;
+    display: inline-block;
+}
+.header .shop-cart:hover {
+    box-shadow: 0 0 3px #ddd;
+}
+.header .shop-cart span {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 4px;
+    font-size: 14px;
+    display: inline-block;
+}
+.header .shop-cart .cart-img {
+    margin-top: 9px;
+    width: 24px;
+    margin-left: 5px;
+}
+.header .shop-cart .arrow-img {
+    margin-right: 7px;
+    float: right;
+    margin-top: 17px;
+    margin-right: 5px;
+}
+.header .help-phone {
+    position: relative;
+    top: 20px;
+    width: 174px;
+    height: 44px;
+}
+.header .help-phone span {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 12px;
+}
+.header .help-phone .manstro-icon {
+    top: 4px;
+    left: 0;
+}
+.header .help-phone .help-title {
+    top: 0;
+    left: 45px;
+    color: #666;
+}
+.header .help-phone .phone-pre {
+    top: 24px;
+    left: 45px;
+}
+.header .help-phone .phone-body {
+    top: 14px;
+    left: 74px;
+    font-size: 22px;
+}
+
+/*搜索框结束*/
+
+
+/*主导航开始*/
+
+.header .main-nav {
+    position: absolute;
+    top: 111px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(103, 114, 122, 0.4);
+    z-index: 100;
+}
+.header-dark .main-nav {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #838D95;
+}
+.main-nav ul {
+    margin: 0 auto;
+    width: 1140px;
+    height: 40px;
+}
+.main-nav ul li {
+    float: left;
+    margin-right: 2px;
+    width: 96px;
+    height: 100%;
+}
+.main-nav ul li:hover,
+.main-nav ul li.active {
+    background-color: #1283C0;
+}
+.main-nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/*主导航结束*/
+
+
+/* -----顶部公共样式结束----*/
+
+
+/* -----底部公共样式结束----*/
+
+.footer {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #4C5A65;
+}
+.footer .footer-nav {
+    margin: 0 auto;
+    width: 1140px;
+    height: 200px;
+}
+.footer-nav .nav-item {
+    float: left;
+    margin-top: 20px;
+    margin-right: 30px;
+    width: 194px;
+}
+.nav-item .nav-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #fff;
+}
+.nav-item a {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #CBCBCB;
+}
+.app-download {
+    position: relative;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 244px;
+}
+.app-download .download-title {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+}
+.app-download .android {
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+.app-download .ios {
+    position: absolute;
+    left: 140px;
+    top: 50px;
+}
+.footer .copyright,
+.login-register-footer .copyright {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #4C5A65;
+    background-color: #fff;
+}
+
+/* -----底部公共样式结束----*/
+
+.login-register-footer ul {
+    width: 706px;
+    margin: 20px auto 0;
+    overflow: hidden;
+}
+.login-register-footer ul li {
+    float: left;
+    width: 100px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    border-right: 1px solid #454545;
+}
+.login-register-footer ul li:last-child {
+    border: none;
+}
+.login-register-footer ul li .light {
+    padding-left: 20px;
+}
+.login-register-footer .copyright {
+    line-height: 60px;
+}
+.login-register-footer .copyright span {
+    text-align: center;
+    font-family: "微软雅黑";
+}
+
+/*简单分页样式开始*/
+
+.pagination span {
+    display: inline-block;
+    margin-right: 1px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.pagination .active,
+.pagination span:hover {
+    color: #E43E4D;
+    background-color: #F5F5F5;
+}
+.pagination span:last-child {
+    margin-right: 0;
+}
+.pagination .prev {
+    width: 70px;
+    /*background-image: url(../img/icon-caret-grey-lf.png);*/
+    background-repeat: no-repeat;
+    background-position: 15% 56%;
+}
+.pagination .next {
+    width: 70px;
+    /*background-image: url(../img/icon-caret-grey-rt.png);*/
+    background-repeat: no-repeat;
+    background-position: 89% 53%;
+}
+.pagination .prev:hover {
+    background-image: url(../img/icon-caret-red-lf.png);
+}
+.pagination .next:hover {
+    background-image: url(../img/icon-caret-red-rt.png);
+}
+.pagination .page-num {
+    width: 34px;
+}
+
+/*简单分页样式结束*/
+
+
+/*------右侧快捷方式导航开始-------*/
+
+
+/*营地快速预订入口开始*/
+
+.no-quick-booking .to-order-camp,
+.no-quick-booking .quick-booking {
+    display: none !important;
+}
+.main-shortcut .to-order-camp {
+    position: fixed;
+    right: 0;
+    top: 152px;
+    z-index: 102;
+    width: 900px;
+    height: 62px;
+    background-color: rgba(229, 233, 231, 0.9);
+}
+.to-order-camp li {
+    float: left;
+}
+.to-order-camp .to-order-title {
+    width: 90px;
+    padding-left: 30px;
+    line-height: 1.25;
+    margin-top: 12px;
+}
+.to-order-camp .to-order-title .zh-txt {
+    letter-spacing: 5px;
+}
+.to-order-camp .to-order-title .en-txt {
+    font-size: 11px;
+}
+.to-order-camp .order-input {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+}
+.to-order-camp .order-input label {
+    display: block;
+    margin: 6px 0 4px 2px;
+}
+.to-order-camp .order-input input {
+    width: 160px;
+    height: 24px;
+}
+.to-order-camp .find-camp input {
+    width: 200px;
+    height: 24px;
+}
+.to-order-camp .to-order-btn {
+    float: right;
+    width: 116px;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(232, 223, 191, 0.6);
+    cursor: pointer;
+}
+.to-order-camp .to-order-btn span {
+    position: relative;
+    top: 19px;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+/*营地快速预订入口结束*/
+
+
+/*右侧小图标开始*/
+
+.main-shortcut .icon-shortcut {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -100px;
+    z-index: 102;
+}
+.main-shortcut .icon-shortcut li {
+    position: relative;
+    display: block;
+    margin-bottom: 2px;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+.main-shortcut .icon-shortcut li:hover {
+    background-color: rgba(172, 94, 93, 0.8);
+}
+.main-shortcut .icon-tip {
+    float: left;
+    position: absolute;
+    top: 0;
+    right: 36px;
+    display: none;
+    width: 80px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    color: #FFF;
+    background-color: rgba(172, 94, 93, 0.8);
+}
+.main-shortcut .right-icon {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    left: 8px;
+    width: 20px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-shortcut .feed-back .right-icon {
+    background-image: url(../../img/public/icon-feed-back.png);
+}
+.main-shortcut ul .back-to-top {
+    display: none;
+}
+.main-shortcut .back-to-top .right-icon {
+    background-image: url(../../img/public/icon-back-to-top.png);
+}
+.main-shortcut .quick-booking .right-icon {
+    background-image: url(../../img/public/icon-location.png);
+}
+.main-shortcut .qa-robot .right-icon {
+    background-image: url(../../img/public/icon-qa-robot.png);
+}
+
+/*右侧小图标结束*/
+
+
+/*流程节点开始*/
+
+.flow-node {
+    width: 1140px;
+    height: 40px;
+    text-align: center;
+    margin: 23px auto;
+}
+.flow-node li {
+    float: left;
+    margin-right: 10px;
+    width: 370px;
+}
+.flow-node .node-underline {
+    position: relative;
+    top: 4px;
+    width: 370px;
+    height: 10px;
+    text-align: center;
+    line-height: 10px;
+}
+.flow-node .node-underline .disc {
+    position: absolute;
+    display: inline-block;
+    top: 2px;
+    left: 176px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+#vas-cart .flow-node .node-underline .disc {
+    top: -4px;
+    left: 179px;
+}
+#pay-order .flow-node .node-underline .disc {
+    top: 1px;
+    left: 179px;
+}
+.flow-node .node-underline .underline {
+    display: inline-block;
+    width: 370px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ccc;
+}
+.first-node li:first-child .node-name,
+.second-node li:nth-child(2) .node-name,
+.third-node li:nth-child(3) .node-name,
+.fourth-node li:nth-child(4) .node-name,
+.fifth-node li:nth-child(5) .node-name {
+    color: #209EF6;
+}
+.first-node li:first-child .disc,
+.first-node li:first-child .underline,
+.second-node li:nth-child(2) .disc,
+.second-node li:nth-child(2) .underline,
+.third-node li:nth-child(3) .disc,
+.third-node li:nth-child(3) .underline,
+.fourth-node li:nth-child(4) .disc,
+.fourth-node li:nth-child(4) .underline,
+.fifth-node li:nth-child(5) .disc,
+.fifth-node li:nth-child(5) .underline {
+    background-color: #209EF6;
+}
+.business-node {
+    margin-top: 14px;
+    margin-bottom: 20px;
+    height: 40px;
+    text-align: center;
+}
+.business-node li {
+    float: left;
+    margin-right: 10px;
+    width: 218px;
+}
+.business-node:nth-child(5) {
+    margin-right: 0px;
+}
+.node-underline {
+    position: relative;
+    top: 4px;
+    width: 228px;
+    height: 10px;
+    text-align: center;
+    line-height: 10px;
+}
+.underline {
+    display: inline-block;
+    width: 200px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ccc;
+}
+.disc {
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    left: 102px;
+    position: absolute;
+    top: 2px;
+    width: 12px;
+    background-color: #ccc;
+}
+
+/*流程节点结束*/
+
+
+/*------右侧快捷方式导航结束-------*/
+
+
+/*下拉列表开始*/
+
+.dropdown {
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.dropdown .dropdown-title {
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+}
+.dropdown .dropdown-menu {
+    display: none;
+}
+.dropdown .dropdown-menu li:first-child {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+.dropdown .dropdown-menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+/*下拉列表结束*/
+
+
+/* 加减对话框结束 */
+
+.buy-num {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.item-amount {
+    position: relative;
+    height: 25px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    width: 84px;
+    left: 70px;
+}
+.minus {
+    width: 25px;
+    border-right: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 22px;
+    position: absolute;
+    font-size: 16px;
+    height: 30px;
+}
+.plus {
+    width: 25px;
+    border-left: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 26px;
+    position: absolute;
+    font-size: 16px;
+    height: 30px;
+}
+.text-amount {
+    height: 30px;
+    width: 40px;
+    text-align: center;
+    margin-left: 24px;
+    line-height: 30px;
+    display: inline-block;
+}
+.item-amount .plus {
+    right: 0;
+    margin-top: -30px;
+    cursor: pointer;
+}
+.item-amount .minus {
+    cursor: pointer;
+}
+
+/* 加减对话框结束 */
+

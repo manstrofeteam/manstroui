@@ -1,0 +1,43 @@
+<!-- 页数加减框开始 -->
+<div id="page-html">
+    <div class="page">
+        <span class="pageIcon prev">&lt;</span>
+        <span class="num">1</span>
+        <span>/</span>
+        <span class="num2">5</span>
+        <span class=" pageIcon next">&gt;</span>
+    </div>
+</div>
+<!-- 页数加减框开始 -->
+<!-- 这里显示下拉列表的html代码 -->
+<div id="page-code" class="show-code"></div>
+<script type="text/javascript">
+/*---------页数加减框开始----------*/
+
+$(".prev").click(function() {
+    // plus();
+    //页数
+    var $page = $(this).siblings(".num");
+    var val = Number($.trim($page.text()));
+    if (val > 1) {
+        val = val - 1;
+        $page.text(val);
+    }
+});
+$(".next").click(function() {
+    // plus();
+    //页数
+    var $page = $(this).siblings(".num");
+    var $page2 = $(this).siblings(".num2");
+    var val = Number($.trim($page.text()));
+    var val2 = Number($.trim($page2.text()));
+    if (val < val2) {
+        val = val + 1;
+        $page.text(val);
+    }
+});
+/*---------页数加减框结束----------*/
+$("#page-html").htmlcode($("#page-code"), {
+    indent: true
+});
+</script>

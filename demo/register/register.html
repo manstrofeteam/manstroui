@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <form id="email-form" action="" method="post">
+        <div class="form-field">
+            <label>邮箱地址</label>
+            <input type="text" name="email" data-rule="required;email" data-ok="不错" class="input" data-tip="请输邮箱">
+        </div>
+        <div class="form-field password">
+            <label class="creat-pw">创建密码</label>
+            <input type="password" name="password" data-rule="required;password" data-ok="不错" maxlength="16" minlength="6" class="input" data-tip="请输入密码" />
+            <div id="check-pwd-strong">
+                <div id="tips"><span>弱</span><span>中</span><span>强</span><span>非常好</span></div>
+            </div>
+        </div>
+        <div class="form-field">
+            <label>确认密码</label>
+            <input type="password" class="input" data-rule="required;password2;match(password)" data-ok="一致" name="password2" class="input">
+        </div>
+        <div class="form-field">
+            <label>验证码</label>
+            <input type="text" name="captcha" class="input" data-tip="请输入验证码" data-rule="required;captcha" data-ok="不错" data-tip="请输入确认密码">
+        </div>
+        <div class="form-field">
+            <label>激活码</label>
+            <input type="text" name="smsCaptcha" data-tip="请输入激活码" data-rule="required;smsCaptcha" class="input" data-ok="不错">
+        </div>
+        <button class="email-register-btn" type="submit">立即注册</button>
+    </form>
+    <script src="../../dep/jquery-1.11.1.min.js"></script>
+    <script src="../../dep/nice-validator/jquery.validator.js?local=zh-CN"></script>
+    <script>
+    // 注册表单的验证
+    $('#email-form').validator({
+            focusCleanup: true,
+            stopOnError: false,
+            //debug: true,
+            timely: 2,
+            fields: {
+                "captcha": {
+                    rule: "required;captcha",
+                    ok: "验证码正确。",
+                    msg: {
+                        required: "验证码必填!"
+                    }
+                },
+                "smsCaptcha": {
+                    rule: "required;smsCaptcha",
+                    ok: "激活码正确。",
+                    msg: {
+                        required: "激活码必填!"
+                    }
+                },
+            },
+        })
+        /*---------密码强度验证开始----------*/
+    var oTips = $("#check-pwd-strong #tips");
+    var oInput = $(".form-field:nth-child(2) input");
+    var aSpan = oTips.children("span");
+    oInput.bind('focus keyup blur', function() {
+        var index = checkStrong(this.value);
+        // 改变输入框边框颜色
+        this.className = index ? "correct" : "error";
+        //改变右侧强度标识的颜色
+        oTips.attr("class", "s" + index);
+        for (var i = 0; i < aSpan.length; i++) {
+            aSpan[i].className = "";
+            index && (aSpan[index - 1].className = "active");
+        }
+    });
+
+    function checkStrong(sValue) {
+        var modes = 0;
+        if (sValue.length < 6) return modes;
+        if (/\d/.test(sValue)) modes++; //数字
+        if (/[a-z]/.test(sValue)) modes++; //小写
+        if (/[A-Z]/.test(sValue)) modes++; //大写  
+        if (/\W/.test(sValue)) modes++; //特殊字符
+        switch (modes) {
+            case 1:
+                return 1;
+                break;
+            case 2:
+                return 2;
+            case 3:
+            case 4:
+                return sValue.length < 12 ? 3 : 4
+                break;
+        }
+    }
+
+    /*---------密码强度验证结束----------*/
+    </script>
+</body>
+
+</html>

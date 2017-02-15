@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>多终点选择的公交换乘查询</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="demo2.css">
+    <link href="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=zcYpvTeHnqD1m9P6TzyUMevu4MTI9T8V"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.js"></script>
+    <script src="demo.js"></script>
+    <script src="demo2.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 地图显示开始 -->
+        <div id="l-map"></div>
+        <!-- 地图显示结束 -->
+        <div id="r-result1">
+            <input class="add" type="button" onclick="add_control1();" value="添加" />
+            <input class="delete" type="button" onclick="delete_control1();" value="删除" />
+        </div>
+        <div class="close_wrap">关闭</div>
+        <div class="right">
+            <div id="J_foldBtn" class="btn_side_close"></div>
+            <div id="J_mapSide" class="map_side" style="height: 580px;">
+                <div id="J_aroundSearch" class="around_search" style="display: block;">
+                    <div class="map_side_title">
+                        <span id="J_aroundBack" class="back">
+                            <a href="javascript:;">< 返回</a>
+                        </span> 周边查询
+                    </div>
+                    <div id="J_aroundBox" class="around_box">
+                        <a class="hotel" data-type="hotel" data-subtype="酒店|宾馆|" href="javascript:;">
+                            <i></i> 酒店
+                        </a>
+                        <a class="restaurant" data-type="restaurant" data-subtype="中餐|西餐|日本料理|韩国料理|快餐小吃|咖啡馆|蛋糕房" href="javascript:;">
+                            <i></i> 餐厅
+                        </a>
+                        <a class="train" data-type="train" href="javascript:;">
+                            <i></i> 地铁
+                        </a>
+                        <a class="entertainment" data-type="entertainment" data-subtype="KTV|电影院" href="javascript:;">
+                            <i></i> 娱乐
+                        </a>
+                        <a class="sight" data-type="sight" href="javascript:;">
+                            <i></i> 景点
+                        </a>
+                        <a class="market" data-type="market" href="javascript:;">
+                            <i></i> 商场
+                        </a>
+                    </div>
+                </div>
+                <div id="J_trafficHub" class="traffic_hub">
+                    <div class="map_side_title">
+                        交通枢纽
+                        <span class="traffic_info">快速查询到酒店的路线</span>
+                    </div>
+                    <div class="traffic_item">
+                        <i class="airport"></i>
+                        <sapn id="J_airportItem" style="display:block;">
+                            <a href="javascript:;" data-xy="116.403351|39.792099">南苑机场</a>
+                            <span>|</span>
+                            <a href="javascript:;" data-xy="116.587922|40.081577">首都国际机场</a>
+                        </sapn>
+                    </div>
+                    <div class="traffic_item">
+                        <i class="train"></i>
+                        <sapn id="J_stationItem" style="display:block;">
+                            <a href="javascript:;" data-xy="116.427282|39.903716">北京火车站</a>
+                            <span>|</span>
+                            <a href="javascript:;" data-xy="116.32116|39.896071">北京西站</a>
+                            <span>|</span>
+                            <a href="javascript:;" data-xy="116.379028320313|39.8650436401367">北京南站</a>
+                            <span>|</span>
+                            <a href="javascript:;" data-xy="116.353809|39.942785">北京北站</a>
+                            <span>|</span>
+                            <a href="javascript:;" data-xy="116.484606|39.902755">北京东火车站</a>
+                        </sapn>
+                    </div>
+                </div>
+            </div>
+            <div id="routePanel" class="route_search">
+                <div class="map_side_title">
+                    <sapn id="J_routeBack" class="back" style="display: none;">
+                        <a href="javascript:;">
+                            < 返回</a>
+                    </sapn>
+                    路线查询
+                </div>
+                <div id="J_routeWay" class="route_way">
+                    <a id="transfer" class="selected" data-way="transfer" href="javascript:;">公交</a>
+                    <a id="driving" class="" data-way="driving" href="javascript:;">驾车</a>
+                    <a id="walking" class="" data-way="walking" href="javascript:;">步行</a>
+                </div>
+                <p style="margin-right:10px;">
+                    起点：
+                    <input type="text" id="start" value="" />
+                    <br>
+                    <br>终点：
+                    <input type="text" id="end" value="" />
+                    <br>
+                    <br>
+                    <input type="button" id="result" value="查询路线" />
+                    <input type="button" id="result1" value="费用" />
+                </p>
+            </div>
+            <div id="r-result" style="display:none;"></div>
+        </div>
+    </div>
+</body>
+
+</html>

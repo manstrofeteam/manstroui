@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts图表</title>
+    <style type="text/css" media="screen">
+    #main {
+        margin: 0 auto;
+        width: 1000px;
+        height: 400px
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+    <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts图表
+    var myChart = echarts.init(document.getElementById('main'));
+    //时间坐标折线图配置
+    option = {
+        title: {
+            text: '时间坐标折线图',
+            subtext: 'dataZoom支持'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: function(params) {
+                var date = new Date(params.value[0]);
+                data = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes();
+                return data + '<br/>' + params.value[1] + ', ' + params.value[2];
+            }
+        },
+
+        dataZoom: {
+            show: true,
+            start: 70
+        },
+
+        grid: {
+            y2: 80
+        },
+        xAxis: [{
+            type: 'time',
+            splitNumber: 10
+        }],
+        yAxis: [{
+            type: 'value'
+        }],
+        series: [{
+            name: 'series1',
+            type: 'line',
+            showAllSymbol: true,
+
+            data: (function() {
+                var d = [];
+                var len = 0;
+                var now = new Date();
+                var value;
+                while (len++ < 200) {
+                    d.push([
+                        new Date(2014, 9, 1, 0, len * 10000),
+                        (Math.random() * 30).toFixed(2) - 0,
+                        (Math.random() * 100).toFixed(2) - 0
+                    ]);
+                }
+                return d;
+            })()
+        }]
+    };
+
+    // 为echarts对象加载数据 
+    myChart.setOption(option);
+    </script>
+</body>

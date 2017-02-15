@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>在线商城购物车</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/shopping-cart.css">
+</head>
+
+<body>
+    <div id="expend-main">
+        <!-- 主体开始 -->
+        <div class="goods-cart">
+            <div class="bread">
+                <span class="myposition font16">我的位置:</span><span class="orange0 font16">购物车</span>
+            </div>
+            <div class="flow-content">
+                <div class="top-choose">
+                    <div class="right-choose all-cost">
+                        <p class="already-goods">已选商品<span class="orange total-num">0</span>件</p>
+                        <p class="all-price">合计
+                            <span>￥</span><span class="orange price total">0</span>
+                        </p>
+                        <a class="saveSec" href="javascript:void(0);">
+                            <p class="all-settlement">结算</p>
+                        </a>
+                    </div>
+                </div>
+                <table class="" e-fun="check">
+                    <thead>
+                        <tr class="goods-title">
+                            <td>
+                                <i e-check-all e-check=0 class="all-choose">
+                            <img src="img/e-check.png" alt="">
+                            全选
+                            </i>
+                            </td>
+                            <td class="goods-new">商品信息</td>
+                            <td>价格</td>
+                            <td>数量</td>
+                            <td>小计</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 商品循环开始 -->
+                        <tr class="goods-list">
+                            <td class="e-check">
+                                <i e-check-one e-check=0 class="choose-item">
+                            <img src="img/e-check.png" alt="">
+                            </i>
+                            </td>
+                            <td class="img-info">
+                                <img src="img/demo.jpg" alt="">
+                                <div class="info">
+                                    时尚独轮车 平和独轮车 高性能独轮车 7543-KSYZ
+                                </div>
+                            </td>
+                            <td class="unit-price">
+                                <span>￥</span>
+                                <span class="price">1900.02</span>
+                            </td>
+                            <td class="number-box">
+                                <!-- 加减对话框 -->
+                                <div class="item-amount">
+                                    <!-- 该物品最大库存量 -->
+                                    <input type="hidden" value="10" class="maxNum" />
+                                    <div class="minus">-</div>
+                                    <span class="text text-amount">1</span>
+                                    <div class="plus">+</div>
+                                </div>
+                                <!-- 加减对话框 -->
+                            </td>
+                            <td class="subtotal">
+                                <span>￥</span>
+                                <span class="subtotal-price">1900.02</span>
+                            </td>
+                            <td>
+                                <span class="delete">删除</span>
+                            </td>
+                        </tr>
+                        <tr class="goods-list">
+                            <td class="e-check">
+                                <i e-check-one e-check=0 class="choose-item">
+                            <img src="img/e-check.png" alt="">
+                            </i>
+                            </td>
+                            <td class="img-info">
+                                <img src="img/demo.jpg" alt="">
+                                <div class="info">
+                                    时尚独轮车 平和独轮车 高性能独轮车 7543-KSYZ
+                                </div>
+                            </td>
+                            <td class="unit-price">
+                                <span>￥</span>
+                                <span class="price">1900.02</span>
+                            </td>
+                            <td class="number-box">
+                                <!-- 加减对话框 -->
+                                <div class="item-amount">
+                                    <!-- 该物品最大库存量 -->
+                                    <input type="hidden" value="10" class="maxNum" />
+                                    <div class="minus">-</div>
+                                    <span class="text text-amount">1</span>
+                                    <div class="plus">+</div>
+                                </div>
+                                <!-- 加减对话框 -->
+                            </td>
+                            <td class="subtotal">
+                                <span>￥</span>
+                                <span class="subtotal-price">1900.02</span>
+                            </td>
+                            <td>
+                                <span class="delete">删除</span>
+                            </td>
+                        </tr>
+                        <!-- 商品循环结束 -->
+                    </tbody>
+                    <tfoot>
+                        <tr class="bottom-title">
+                            <td>
+                                <i e-check-all e-check=0 class="all-choose">
+                                    <img src="..ui/img/icon/e-check.png" alt="">全选
+                                </i>
+                            </td>
+                            <td class="goods-del cursor">删除</td>
+                            <td colspan="3">
+                                <span class="right20">已选商品<span class="orange total-num">0</span>件</span>
+                                <span>
+                                    <span>合计￥</span><span class="total orange">0</span>
+                                </span>
+                            </td>
+                            <td>
+                                <a class="save" href="javascript:void(0);">
+                                    <p class="all-settlement fr">结算</p>
+                                </a>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <!-- 主体结束 -->
+    </div>
+    <!-- 页面底部结束 -->
+    <!-- 必须要引用的JS开始 -->
+    <!-- 百度CDN库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 调用本地jQuery库文件 -->
+    <script>
+    window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')
+    </script>
+    <script src=../ui/js/shopping-cart.js "></script>
+    <!-- 加减法样式开始 -->
+    <script type="text/javascript ">
+    $(function() {
+        $(".goods-list ").hover(function() {
+            $(this).find(".delete ").show();
+            $(this).find(".delete ").css("display ", "inline-block ");
+            $(this).addClass("color ")
+
+        }, function() {
+            $(this).find(".delete ").hide();
+            $(this).removeClass("color ")
+        })
+        $(".delete ").click(function() {
+            layer.confirm('你确定要删除该推广吗？', {
+                btn: ['确认', '取消'] //按钮
+            }, function() {
+                layer.msg('删除成功', {
+                    icon: 1
+                });
+            });
+        });
+    })
+    </script>
+</body>
+
+</html>

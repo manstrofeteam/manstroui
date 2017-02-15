@@ -237,28 +237,13 @@ img {
  */
 
 a,
-a:active,
-a:hover {
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
     outline: none;
-}
-
-/*
- * Define outline as thin dotted
- * Improves appearance displayed oddly in C10
-*/
-
-a:focus {
-    outline: thin dotted;
-}
-a,
-a:link {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-a:visited {
-    text-decoration: none;
+    color:#444;
 }
 
 /*Hide only visually,but have it available for screenreaders*/

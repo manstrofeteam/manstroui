@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function createXml(str) {　　
+        if (document.all) {　　
+            var xmlDom = new ActiveXObject("Microsoft.XMLDOM");　　
+            xmlDom.loadXML(str);　　
+            return xmlDom;　　
+        }　　
+        else {
+            return new DOMParser().parseFromString(str, "text/xml")
+        }　　
+    }
+
+    function bindchange(id, fun) {
+        var old_val = jQuery(id).val();
+        setInterval(function() {
+            var new_val = jQuery(id).val();
+            if (old_val != new_val) {
+                fun(id);
+                old_val = new_val;
+            }
+        }, 1000);
+    }
+
+    function testfun(id) {
+        var ids = jQuery(id).val();
+        jQuery.ajax({
+            type: 'POST',
+            url: "/GetJsonAjax.jsp",
+            data: "ids=" + ids,
+            success: success,
+            error: error,
+            dataType: "json"
+        });
+
+        function success(data) {
+            for (var index = 0; index < data.length; index++) {
+                //alert("text:"+data[index].id+" value:"+data[index].lastname ); 
+                var fieldindex = jQuery("#indexnum0").val();
+                addRow0(0);
+                _setValue(8677, fieldindex, data[index].lastname, data[index].id, 3, 1, 1);
+
+                _setValue(8680, fieldindex, data[index].departmentname, data[index].departmentid, 3, 1, 4);
+
+                _setValue(8678, fieldindex, data[index].workcode, data[index].workcode, 1, 1, 1);
+
+                _setValue(8679, fieldindex, data[index].sex, data[index].sex, 5, 1, 1);
+            }
+        }
+
+        function _setValue(fieldid, fieldindex, name, key, htmltype, isdetail, type) {
+            var thisfieldid = fieldid + "_" + fieldindex;
+            var fieldidtmp = fieldid;
+            var xml = "<information>";
+            xml += "<name>" + name + "</name>";
+            xml += "<key>" + key + "</key>";
+            xml += "<htmltype>" + htmltype + "</htmltype>";
+            xml += "<isdetail>" + isdetail + "</isdetail>";
+            xml += "<type>" + type + "</type>";
+            xml += "</information>";
+            setFieldValueAjax(createXml(xml), thisfieldid, fieldidtmp, false);
+        }
+
+        function error(msg, b) {
+
+        }
+    }
+    jQuery(document).ready(function() {
+
+        bindchange("#field8676", testfun);
+    });
+    </script>
+
+</body>
+
+</html>

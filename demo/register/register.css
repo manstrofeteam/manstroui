@@ -1,0 +1,113 @@
+.form-field {
+    margin-top: 25px;
+    overflow: hidden;
+}
+.form-field label {
+    font-size: 14px;
+}
+.form-field .input,
+.password input {
+    width: 214px;
+    height: 25px;
+    border: 1px solid #ddd;
+    margin-left: 12px;
+}
+.form-field:nth-child(1) label {
+    margin-top: 30px;
+}
+.form-field:nth-child(4) .input,
+.form-field:nth-child(5) .input {
+    width: 120px;
+    float: left;
+}
+.form-field:nth-child(4) a {
+    margin-left: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: #444;
+}
+.identifying-code {
+    width: 50px;
+    height: 25px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    float: left;
+    margin-left: 4px;
+}
+.activation-code {
+    width: 70px;
+    height: 18px;
+    background-color: #fff;
+    float: left;
+    margin-left: 5px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    background-color: #559CC6;
+    margin-top: 4px;
+}
+.form-field:nth-child(4) label,
+.form-field:nth-child(5) label {
+    letter-spacing: 6px;
+    float: left;
+    margin-top: 5px;
+}
+.email-register-btn {
+    width: 200px;
+    height: 30px;
+    color: #fff;
+    border: 1px solid #F9C350;
+    background-color: #F9C350;
+    margin-top: 20px;
+}
+
+/*验证密码强度开始*/
+
+#check-pwd-strong input {
+    position: relative;
+    left: 18px;
+    float: left;
+    font-size: 12px;
+    width: 210px;
+    font-family: arial;
+    height: 28px !important;
+}
+#check-pwd-strong .correct {
+    border: 1px solid green;
+}
+#check-pwd-strong .error {
+    border: 1px solid red;
+}
+#check-pwd-strong #tips {
+    float: left;
+    margin: 6px 0 0 72px;
+    width: 216px;
+    position: relative;
+}
+#check-pwd-strong #tips span {
+    float: left;
+    width: 52px;
+    height: 20px;
+    color: #fff;
+    overflow: hidden;
+    background: #ccc;
+    margin-right: 2px;
+    line-height: 20px;
+    text-align: center;
+}
+#check-pwd-strong #tips.s1 .active {
+    background: #f30;
+}
+#check-pwd-strong #tips.s2 .active {
+    background: #fc0;
+}
+#check-pwd-strong #tips.s3 .active {
+    background: #cc0;
+}
+#check-pwd-strong #tips.s4 .active {
+    background: #090;
+}
+
+/*验证密码强度结束*/
+

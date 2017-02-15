@@ -1,0 +1,288 @@
+.fr {
+    float: right;
+}
+.right20 {
+    margin-right: 20px;
+}
+.orange {
+    color: #FF9560;
+}
+.bread {
+    margin-top: 20px;
+    font-size: 16px;
+}
+.myposition {
+    color: #777777;
+    margin-right: 10px;
+}
+
+/* 数量加减框结束 */
+
+.buy-num {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.item-amount {
+    position: relative;
+    height: 25px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    width: 84px;
+    left: 70px;
+}
+.minus {
+    width: 25px;
+    border-right: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 22px;
+    position: absolute;
+    font-size: 16px;
+    height: 30px;
+}
+.plus {
+    width: 25px;
+    border-left: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 26px;
+    position: absolute;
+    font-size: 16px;
+    height: 30px;
+}
+.text-amount {
+    height: 30px;
+    width: 40px;
+    text-align: center;
+    margin-left: 24px;
+    line-height: 30px;
+    display: inline-block;
+}
+.item-amount .plus {
+    right: 0;
+    margin-top: -30px;
+    cursor: pointer;
+}
+.item-amount .minus {
+    cursor: pointer;
+}
+
+/* 数量加减框结束 */
+
+.flow-content {
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+.goods-car {
+    height: 600px;
+    margin: 20px auto 0;
+    width: 1140px;
+}
+.top-text {
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #eee;
+}
+.all-cost {
+    float: right;
+    font-size: 15px;
+}
+.all-cost p {
+    float: left;
+}
+.already-goods {
+    margin-top: 5px;
+    width: 110px;
+}
+.all-price {
+    width: 135px;
+}
+.settlement {
+    width: 80px;
+    height: 30px;
+    background-color: #FF7B0C;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+.all-cost .number {
+    color: #FF7B0C;
+}
+.all-cost .price {
+    font-size: 20px;
+}
+
+/* 商品列表开始 */
+
+table tr td:nth-child(6) {
+    width: 162.167px;
+}
+.text-amount {
+    height: 30px;
+    width: 35px;
+    text-align: center;
+    margin-left: 1px;
+    line-height: 30px;
+    display: inline-block;
+}
+.img-info {
+    width: 320px;
+}
+.img-info img {
+    width: 100px;
+    height: 80px;
+    float: left;
+}
+.info {
+    width: 155px;
+    display: inline-block;
+    float: left;
+    position: relative;
+    top: 22px;
+    text-align: left;
+    margin-left: 20px;
+}
+.goods-title {
+    font-size: 15px;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.bottom-title {
+    font-size: 15px;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.bottom-title td:nth-child(2) {
+    text-align: left;
+}
+.bottom-title td:nth-child(3) {
+    text-align: right;
+}
+.goods-list {
+    height: 84px;
+    border-bottom: 1px solid #eee;
+}
+.color {
+    background-color: #FFFDFD;
+    box-shadow: 0 0 3px #aaa;
+}
+.goods-list .goods-img {
+    width: 50px;
+    height: 50px;
+}
+.goods-list .goods-img img {
+    width: 100%;
+    height: 100%;
+}
+.goods-new {
+    position: relative;
+}
+.choose-item {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.choosed-item {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+.all-choose {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.all-choosed {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    padding-left: 35px;
+    line-height: 25px;
+    cursor: pointer;
+    display: inline-block;
+}
+.number-price {
+    color: #ff7b0c;
+    font-size: 15px;
+}
+.delete {
+    width: 60px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    background-color: #FF9560;
+    display: none;
+}
+
+/* 商品列表结束 */
+
+.goods-cart {
+    width: 1152px;
+    margin: 0 auto;
+}
+table {
+    width: 1150px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+table tr td {
+    text-align: center;
+}
+table tr td:nth-child(3) {
+    width: 135px;
+}
+.top-choose {
+    height: 50px;
+    border-bottom: 1px solid #D2D2D2;
+}
+.bottom-choose {
+    background-color: #f0f0f0;
+    height: 50px;
+    margin: 20px 0;
+}
+.left-choose {
+    float: left;
+    font-size: 15px;
+    margin-top: 13px;
+}
+.left-choose p {
+    float: left;
+}
+.left-choose .full-choose {
+    margin-left: 25px;
+    width: 150px;
+}
+.left-choose .full-choose .all-input {
+    margin-left: 20px;
+}
+.left-choose .delete {
+    width: 100px;
+}
+.left-choose .move {
+    width: 100px;
+}
+.right-choose {
+    margin-top: 9px;
+}
+.all-settlement {
+    background-color: #FF9560;
+    color: #fff;
+    font-size: 18px;
+    height: 34px;
+    line-height: 34px;
+    margin-top: -1px;
+    text-align: center;
+    width: 100px;
+}
+.marginr30 {
+    margin-right: 30px;
+}
+#unit-price {
+    width: 100%;
+}
+

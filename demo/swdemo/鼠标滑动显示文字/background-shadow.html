@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1选中效果例子</title>
+    <link rel="stylesheet" type="text/css" href="css/background-shadow.css">
+</head>
+
+<body>
+    <!-- 价格区间开始 -->
+    <div class="rank-list">
+        <div class="goods-price">
+            <ul>
+                <li class="left-price">
+                    <span class="income-text">收入比率</span>
+                    <input type="text" name="" value=""><span class="number-text">%~</span>
+                    <input type="text" name="" value=""><span class="number-text">%</span>
+                    <p class="confirm-button button">确定</p>
+                </li>
+                <li class="right-price"><span class="income-text">价格</span>
+                    <input type="text" name="" value=""><span class="number-text">元~</span>
+                    <input type="text" name="" value=""><span class="number-text">元</span>
+                    <p class="confirm-text button">确定</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--  价格区间结束 -->
+    <!-- 引用本地js -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+
+        //鼠标滑动显示文字
+        $(".goods-price ul li").mouseover(function() {
+            $(this).children('.button').show();
+        })
+        $(".goods-price ul li").mouseout(function() {
+            $(this).children('.button').hide();
+        });
+
+        //排序筛选
+
+    });
+    </script>
+</body>
+
+</html>

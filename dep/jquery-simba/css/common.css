@@ -1,0 +1,144 @@
+/*
+	ERIC
+	2014.9.16
+	公共 css
+	*/
+
+	/*自定义颜色  and  背景色*/
+	.c1{color: #787878;}
+
+	.bg1{background-color: #15568e}
+
+
+	/*自定义边框*/
+	.b1{border: 1px solid #15568e;}
+	.bb1{border-bottom: 1px solid #FFF;}
+
+	/*项目*/
+	.body{
+		margin: 20px auto;
+		padding:20px;
+		width: 900px;
+		box-shadow: 0 0 10px 10px #dcdcdc;
+		background: #FFF;
+	}
+	.title{height: 40px;line-height: 40px;}
+	.content{padding: 20px;border: 1px dashed #ccc;}
+	.pop-a{color: #787878;}
+	.demoDo{padding: 10px;}
+	.demo-list{}
+	.demo-list>li{
+		float: left;
+		margin: 0 10px;
+		height: 40px;
+		line-height: 40px;
+	}
+	.demo-list span{
+		float: left;
+	}
+	.demo-list li>input{
+		float: left;
+		margin-top: 4px;
+		width: 100px;
+		border:1px solid #ccc;
+		padding: 5px;
+		height: 20px;
+		line-height: 20px;
+		font-family: "Microsoft YaHei";
+	}
+	.demo-list .demoDrop{
+		float: left;
+		margin-top: 4px;
+		width: 100px;
+		height: 30px;
+		border:1px solid #ccc;
+	}
+	.demoDrop ul{
+		border:1px solid #ccc;
+	}
+	.demo-a{
+		display: block;
+		width: 120px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		background-color: #ee248d;
+		color: #fff;
+		border-radius: 5px;
+	}
+	.demo-a:hover{
+		background-color: #c61e75;
+	}
+	.demo-a:active{
+		background-color: #9d175d;
+	}
+
+
+
+	/**/
+	div[e-fun = "tab"] a{display: block;padding: 5px;width: 20px;text-align: center;float: left;background: #ee248d;color: #FFF;cursor: pointer;}
+	div[e-fun = "tab"] a.choo{background: #872558;}
+
+	/*下拉框*/
+	.dropBox{
+		position: relative;
+		width: 140px;
+		height: 30px;
+		border: 1px solid #dcdcdc;
+	}
+	.dropBox ul{
+		border: 1px solid #dcdcdc;
+	}
+
+
+	/*弹出框*/
+	.popBox{
+		position: fixed;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		
+		background-color: rgba(0,0,0,.6);
+	}
+	.popCon{
+		margin: 10% auto;
+		padding: 20px;
+		width: 80%;
+		background-color: #fff;
+	}
+
+	/*全选*/
+	.checkList li{
+		height: 40px;
+		line-height: 40px;
+	}
+	.checkList i{
+		display: block;
+		cursor: pointer;
+	}
+	.secCheck i{
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	/*轮播*/
+	.slider{
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	/*弹框*/
+	.btn{
+		display: inline-block;
+		padding: 5px 10px;
+		background-color: #005fd5;
+		color: #fff;
+	}
+	.btn:hover{
+		background-color: #004293;
+	}
+	.btn:active{
+		background-color: #00285a;
+	}

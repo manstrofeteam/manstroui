@@ -1,0 +1,46 @@
+/* 排序开始 */
+
+.rank-list {
+    width: 800px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+.different-class {
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #eee;
+    background-color: #F5F5F7;
+}
+.different-class ul li {
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    height: 50px;
+    width: 105px;
+    text-align: center;
+    line-height: 50px;
+    list-style: none;
+}
+.different-class ul li.active {
+    background-color: #fff;
+    color: #ff9560;
+}
+.different-class .rank-img {
+    width: 16px;
+    height: 8px;
+    margin-top: 22px;
+}
+.different-class .rank-text {
+    margin-left: -40px;
+}
+.flipy {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+/*排序结束*/
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>全选/反选</title>
+    <link rel="stylesheet" href="css/select-all.css">
+</head>
+
+<body>
+    <!--多选框-->
+    <div class="select-all" id="a">
+        <h1 class="title">图片式多选框+计算总价</h1>
+        <div class="content">
+            <!--多选-->
+            <div class="" e-fun="check">
+                <ul class="checkList">
+                    <li class="fristCheck">
+                        <div class="li-item" e-check-all e-check=0>
+                            <img src="img/e-check.png" alt="" /> 全选
+                            <span class="total">0</span>
+                        </div>
+                    </li>
+                    <li class="secCheck clear">
+                        <div class="li-item" e-check-one e-check=0>
+                            <img src="img/e-check.png" alt="" />
+                            <span>选项1</span>
+                            <!-- 测试总价计算 -->
+                            <span class="price">12</span>
+                        </div>
+                        <div class="li-item" e-check-one e-check=0>
+                            <img src="img/e-check.png" alt="" />
+                            <span>选项2</span>
+                            <!-- 测试总价计算 -->
+                            <span class="price">22</span>
+                        </div>
+                        <div class="li-item" e-check-one e-check=0>
+                            <img src="img/e-check.png" alt="" />
+                            <span>选项3</span>
+                            <!-- 测试总价计算 -->
+                            <span class="price">32</span>
+                        </div>
+                        <div class="li-item" e-check-one e-check=0>
+                            <img src="img/e-check.png" alt="" />
+                            <span>选项4</span>
+                            <!-- 测试总价计算 -->
+                            <span class="price">42</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--js-->
+    <script type="text/javascript" src="../../dep/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/select-all.js"></script>
+</body>
+
+</html>

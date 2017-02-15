@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>固定边栏滚动效果</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .left {
+        float: left;
+        width: 66%;
+        height: 2000px;
+        border: 1px solid #ddd;
+        background-image: -webkit-linear-gradient(to top, orange, green);
+        background-image: linear-gradient(to top, orange, green);
+    }
+    .right article {
+        position: absolute;
+        top: 100px;
+        left: 60px;
+    }
+    .right {
+        float: right;
+        width: 33%;
+        height: 800px;
+        background-color: #eee;
+    }
+    .div1 {
+        width: 100%;
+        height: 300px;
+        background-image: -webkit-linear-gradient(to top, orange, green);
+        background-image: linear-gradient(to top, orange, green);
+    }
+    .div2 {
+        position: relative;
+        width: 100%;
+        height: 500px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left">
+        </div>
+        <div class="right">
+            <div class="div1"></div>
+            <div class="div2">
+                <article>
+                    <h3>右侧固定边栏效果，使用到的知识点：</h3>
+                    <ol>
+                        <li>position:fixed;</li>
+                        <li>鼠标监听</li>
+                    </ol>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/jquery-1.11.1.js"></script>
+
+<script>
+//这个没有考虑到IE6的情况
+var jWindow = $(window);
+jWindow.scroll(function() {
+    var scrollHeight = jWindow.scrollTop();
+    var screenHeight = jWindow.height();
+    var sideHeight = $(".right").height();
+    if (scrollHeight + screenHeight > sideHeight) {
+        $(".right").css({
+            'position': 'fixed',
+            'top': -(sideHeight - screenHeight),
+            'right': 0
+        });
+    } else {
+        $(".right").css({
+            'position': 'static'
+        });
+    }
+});
+window.onload = function() {
+    jWindow.trigger('scroll');
+};
+window.resize(function() {
+    jWindow.trigger('scroll');
+});
+</script>
+
+</html>

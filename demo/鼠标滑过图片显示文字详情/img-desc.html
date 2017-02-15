@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>鼠标滑过显示图片详情</title>
+    <link rel="stylesheet" href="../../ui/css/base.css">
+    <link rel="stylesheet" href="css/img-desc.css">
+</head>
+
+<body>
+    <!-- 鼠标滑过图片显示详情开始 -->
+    <div id="img-txt">
+        <!-- 介绍开始 -->
+        <div class="img-txt-desc">
+            <p>====================================================================</p>
+            <h2>此处展现鼠标滑过图片显示文字详情</h2>
+            <p>依赖于jquery-1.11.1.min.js，只需要引入img-desc.css和img-desc.js即可</p>
+            <p>后续会将本组件封装到组件库中，到时引用组件库封装的css和js即可。</p>
+            <p>====================================================================</p>
+        </div>
+        <!-- 介绍结束 -->
+        <!-- 示例一开始 -->
+        <div class="demo1">
+            <h1 class="demo-title">示例一</h1>
+            <p>====================================================================</p>
+            <p>特别注意：图片文字介绍的css</p>
+            <pre>
+                .img-txt-item .item-txt {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0; //注意定位在底部
+                    width: 750px;
+                    height: 249px;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    z-index: 1000;
+                }
+            </pre>
+            <p>====================================================================</p>
+            <!-- 代码实现开始 -->
+            <div id="demo1-html">
+                <div class="img-txt-item">
+                    <img src="img/demo.png" alt="" class="item-img" />
+                    <!-- 文字详情开始 -->
+                    <div class="item-txt">
+                        <ul>
+                            <li>
+                                <i class="icon-circle-brown"></i>
+                                <span>第一站:动植物的时间——西双版纳</span>
+                            </li>
+                            <li>
+                                <i class="icon-circle-brown"></i>
+                                <span>第二站:昆明“石林”</span>
+                            </li>
+                            <li>
+                                <i class="icon-circle-brown"></i>
+                                <span>第三站:丽江古城</span>
+                            </li>
+                            <li>
+                                <i class="icon-circle-brown"></i>
+                                <span>第四站:大理“花海”</span>
+                            </li>
+                            <li>
+                                <i class="icon-circle-brown"></i>
+                                <span>第五站:双廊</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 文字详情结束 -->
+                </div>
+            </div>
+            <!-- 代码实现结束 -->
+            <!-- 代码展示开始 -->
+            <div id="demo1-html-code" class="show-code"></div>
+            <!-- 代码展示结束 -->
+        </div>
+        <!-- 示例一结束 -->
+        <!-- 示例二开始 -->
+        <div class="demo2">
+            <h1 class="demo-title">示例二</h1>
+            <!-- 代码实现开始 -->
+            <div id="demo2-html">
+                <div class="img-txt-item">
+                    <img src="img/demo.png" class="item-img" />
+                    <div class="item-txt">
+                        <p class="title">丽江古城 </p>
+                        <p>丽江是宁静的，你可以坐在洒满阳光的院落里发呆良久。这座充斥了爱与奇遇的风情古城，承载了满满情意与感性。也许是丽江古城内小桥流水人家的柔软风情让人在经意中左思右想，或是夜晚风格各异的酒吧让人魅惑张扬</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 代码实现结束 -->
+            <!-- 代码展示开始 -->
+            <div id="demo2-html-code" class="show-code"></div>
+            <!-- 代码展示结束 -->
+        </div>
+        <!-- 示例二结束 -->
+    </div>
+    <!-- 鼠标滑过图片显示详情结束 -->
+    <script type="text/javascript" src="../../dep/jquery-1.11.1.min.js"></script>
+    <!-- 显现html代码js -->
+    <script src="../../dep/jquery.htmlcode-1.0.js"></script>
+    <script type="text/javascript" src="js/img-desc.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        // 显现html代码
+        $("#demo1-html").htmlcode($("#demo1-html-code"), {
+            indent: true
+        });
+        $("#demo2-html").htmlcode($("#demo2-html-code"), {
+            indent: true
+        });
+    });
+    </script>
+</body>
+
+</html>

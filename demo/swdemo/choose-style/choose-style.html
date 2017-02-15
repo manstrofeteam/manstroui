@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1选中效果例子</title>
+    <link rel="stylesheet" type="text/css" href="css/choose-style.css">
+</head>
+
+<body>
+    <div class="sigining-list">
+        <ul>
+            <li class="order-address">
+                <img class="order-img" src="img/pay-success.png" alt="">1签约营地
+            </li>
+            <li class="order-address">
+                <img class="order-img" src="img/pay-success.png" alt=""> 2签约营地
+            </li>
+            <li class="order-address">
+                <img class="order-img" src="img/pay-success.png" alt="">3签约营地
+            </li>
+            <li class="order-address">
+                <img class="order-img" src="img/pay-success.png" alt="">4签约营地
+            </li>
+            <li class="order-address">
+                <img class="order-img" src="img/pay-success.png" alt="">5签约营地
+            </li>
+            <li class="order-address">
+                <img class="order-img" src="img/pay-success.png" alt=""> 6签约营地
+            </li>
+        </ul>
+    </div>
+    <!-- 引用本地js -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        //选择签约营地的方法
+        $(".sigining-list ul li").click(function() {
+            $(".order-img").hide();
+            $(this).children('.order-img').show();
+            $(".sigining-list ul li").removeClass("out-border");
+            $(this).addClass("out-border");
+        });
+    })
+    </script>
+</body>
+
+</html>

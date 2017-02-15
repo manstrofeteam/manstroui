@@ -1,0 +1,27 @@
+.name {
+    color: #cbcbcb;
+    height: 34px;
+}
+.pw {
+    position: relative;
+    width: 272px;
+    height: 34px;
+}
+.login {
+    width: 239px;
+    position: relative;
+}
+.login .btn {
+    width: 150px !important;
+    height: 26px;
+    background: #da8427;
+    color: #fff;
+    font-family: "微软雅黑";
+    border: 1px solid #da8427;
+    letter-spacing: 10px;
+    text-align: center;
+    line-height: 26px;
+    cursor: pointer;
+    font-size: 14px;
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="../../ui/css/base.css">
+    <link rel="stylesheet" href="navigation.css">
+</head>
+
+<body>
+    <div class="header" active="home">
+        <!-- 主导航开始 -->
+        <div class="main-nav">
+            <ul class="nav-center">
+                <li class="home active"><a href="#">首页</a></li>
+                <li class="first"><a href="#">限时特惠</a></li>
+                <li class="second"><a href="#">最新产品</a></li>
+                <li class="thread"><a href="#">推广专区</a></li>
+                <li class="fours"><a href="#" target="_blank">营销学堂</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 主导航结束 -->
+    </div>
+    <script src="../../dep/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+    //顶部导航切换效果
+    var active = $(".header").attr("active");
+    // 添加菜单导航选中状态
+    addLiActive(active);
+    //导航菜单
+    function addLiActive(name) {
+        $(".main-nav ." + name).addClass("active");
+        $(".main-nav ." + name).siblings().removeClass("active");
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>左侧列表菜单例子</title>
+    <link rel="stylesheet" type="text/css" href="css/if-menu.css">
+</head>
+
+<body>
+    <div class="main-lf-menu">
+        <!-- 订单中心菜单 -->
+        <div class="lf-menu-title">
+            <i class="manstro-icon icon-order right10"></i>
+            <a href="personal-center.html">
+                <span class="font16 right10">我的首页</span></a>
+        </div>
+        <div class="lf-menu-title user-set">
+            <i class="manstro-icon icon-setuser right10"></i>
+            <span class="font16 right10">账户设置</span>
+            <i class="manstro-icon icon-caret"></i>
+        </div>
+        <ul class="lf-menu-list personal-information">
+            <li><a href="my-account/my-info.html">个人资料</a></li>
+            <li><a href="my-account/account-safety.html">账户安全</a></li>
+            <li><a href="my-account/my-address.html">收货地址</a></li>
+            <li><a href="my-account/my-avatar.html">我的头像</a></li>
+        </ul>
+        <!-- 个人中心菜单 -->
+        <div class="lf-menu-title">
+            <i class="manstro-icon icon-usercenter right10"></i>
+            <span class="font16 right10">个人中心</span>
+            <i class="manstro-icon icon-caret"></i>
+        </div>
+        <ul class="lf-menu-list personal">
+            <li><a href="my-spread.html">我的推广<i class="manstro-icon icon-new"></i></a></li>
+            <li><a href="my-order.html">我的订单</a></li>
+            <li><a href="my-growth.html">我的成长</a></li>
+        </ul>
+        <!-- 服务中心菜单 -->
+        <div class="lf-menu-title">
+            <i class="manstro-icon icon-money right10"></i>
+            <span class="font16 right10">我的资产</span>
+            <i class="manstro-icon icon-caret"></i>
+        </div>
+        <ul class="lf-menu-list my-zch">
+            <li><a href="my-purse.html">我的钱包<i class="manstro-icon icon-new"></i></a></li>
+            <li><a href="my-integral.html">我的积分<i class="manstro-icon icon-new"></i></a></li>
+        </ul>
+    </div>
+    <!-- 引用本地js -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        //个人中心左侧菜单收缩
+        $(".lf-menu-title").click(function() {
+            //切换上下箭头
+            $(this).children(".icon-caret").toggleClass("flipy");
+            //收缩列表
+            $(this).next(".lf-menu-list").slideToggle(400);
+        })
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #666;
+    background: #2E363F;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.admin-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.admin-wrap .admin-header {
+    position: relative;
+    height: 70px;
+    background-color: #1f262d;
+}
+
+.admin-wrap .admin-header .logo {
+    display: block;
+    width: 218px;
+    height: 70px;
+    border-right: 1px solid #2e363f;
+}
+
+.admin-wrap .admin-header .logo img {
+    position: relative;
+    top: 10px;
+    left: 30px;
+    width: 150px;
+    height: 44px;
+    overflow: hidden;
+}
+
+
+/*左侧菜单开始*/
+
+.admin-wrap .lf-menu-nav {
+    display: block;
+    float: left;
+    position: relative;
+    width: 220px;
+    z-index: 16;
+}
+
+.admin-wrap .lf-menu-nav li {
+    line-height: 40px;
+    padding-left: 40px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.lf-menu-nav .manstro-icon {
+    margin-right: 10px;
+}
+
+.lf-menu-nav a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*icon图标集开始*/
+
+.manstro-icon {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}
+
+.icon-home {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/nochoose-home.png);
+    background-size: 96%;
+}
+
+.icon-order {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/nochoose-order.png);
+    background-size: 96%;
+}
+
+.active .icon-home,
+.lf-menu-nav li:hover .icon-home {
+    background-image: url(../img/choose-home.png);
+}
+
+.active .icon-order,
+.lf-menu-nav li:hover .icon-order {
+    background-image: url(../img/choose-order.png);
+}
+
+.lf-menu-nav .active,
+.lf-menu-nav li:hover {
+    background-color: #4C9ED9;
+}
+
+.lf-menu-nav .arrow {
+    display: none;
+}
+
+.active .arrow,
+.lf-menu-nav li:hover .arrow {
+    float: right;
+    display: inline-block;
+    margin-top: 14px;
+    border-right: 8px solid #f1f1f1;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+
+/*左侧菜单结束*/
+
+.admin-wrap .rg-content {
+    background: none repeat scroll 0 0 #eeeeee;
+    margin-left: 220px;
+    margin-right: 0;
+    padding-bottom: 25px;
+    position: relative;
+    min-height: 100%;
+    width: auto;
+}
+
+
+/*面包屑导航开始*/
+
+.admin-wrap #breadcrumb {
+    margin-top: -30px;
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #e3ebed;
+}
+
+.admin-wrap #breadcrumb a {
+    padding: 8px 20px 8px 10px;
+    display: inline-block;
+    background-image: url('../img/breadcrumb.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    font-size: 11px;
+    color: #666666;
+}
+
+.admin-wrap #breadcrumb a.current {
+    font-weight: bold;
+    color: #444444;
+}
+
+.admin-wrap #breadcrumb a:last-child {
+    background-image: none;
+}
+
+
+/*面包屑导航结束*/
+
+.admin-wrap .admin-footer {
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+
+.admin-wrap .admin-footer a {
+    color: #fff;
+}

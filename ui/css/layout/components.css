@@ -66,6 +66,29 @@
     border: 1px dashed #ddd;
     background-color: #f0f3f9;
 }
+#components #ueditor p {
+    line-height: 1.75;
+    margin-bottom: 10px;
+}
 
 /*组件库样式布局结束*/
+
+
+/*代码高亮显示样式优化开始*/
+
+pre {
+    background-color: rgb(240, 243, 249);
+    border: 1px dashed rgb(221, 221, 221);
+}
+pre span {
+    color: #000;
+    padding-top: 4px;
+    display: inline-block;
+}
+.prettyprint.linenums ol li,
+pre.prettyprint.linenums ol li {
+    padding-left: 25px !important;
+}
+
+/*代码高亮显示样式优化结束*/
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unslider Demo</title>
+    <link rel="stylesheet" href="unslider/css/unslider.css">
+    <link rel="stylesheet" href="unslider/css/style.css">
+    <link rel="stylesheet" href="unslider/css/unslider-dots.css">
+
+</head>
+
+<body>
+    <div class="banner">
+        <ul>
+            <li style="background-image: url(&quot;unslider/img/sunset.jpg&quot;); width: 25%;">
+                <div class="inner">
+                    <h1>The jQuery slider that just slides.</h1>
+                    <p>就是这个不到3kb的插件！没有奇特的特效或无用的标签。</p>
+
+                    <a class="btn" href="#download">下载</a>
+                </div>
+            </li>
+            <li style="background-image: url(&quot;unslider/img/wood.jpg&quot;); width: 25%;">
+                <div class="inner">
+                    <h1>Fluid, flexible, fantastically minimal.</h1>
+                    <p>Use any HTML in your slides, extend with CSS. You have full control.</p>
+
+                    <a class="btn" href="#download">下载</a>
+                </div>
+            </li>
+            <li style="background-image: url(&quot;unslider/img/subway.jpg&quot;); width: 25%;">
+                <div class="inner">
+                    <h1>开源</h1>
+                    <p>Unslider的所有源码都托管在GitHub上。</p>
+
+                    <a class="btn" href="#">参与</a>
+                </div>
+            </li>
+            <li style="background-image: url(&quot;unslider/img/shop.jpg&quot;); width: 25%;">
+                <div class="inner">
+                    <h1>Uh, that’s about it.</h1>
+                    <p>I just wanted to show you another slide.</p>
+
+                    <a class="btn" href="#download">下载</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="unslider/js/unslider-min.js"></script>
+    <script>
+    $(function() {
+        $(".banner").unslider({
+            autoplay: true,
+            speed: 1000, //  The speed to animate each slide (in milliseconds)
+            delay: 3000 //  The delay between slide animations (in milliseconds)
+        });
+    })
+    </script>
+</body>
+
+</html>

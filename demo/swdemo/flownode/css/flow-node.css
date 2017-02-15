@@ -1,0 +1,61 @@
+/*流程节点开始*/
+
+.flow-node {
+    width: 1140px;
+    height: 40px;
+    text-align: center;
+    margin: 23px auto;
+}
+.flow-node li {
+    float: left;
+    margin-right: 10px;
+    width: 355px;
+    list-style: none;
+}
+.flow-node .node-underline {
+    position: relative;
+    top: 4px;
+    width: 370px;
+    height: 10px;
+    text-align: center;
+    line-height: 10px;
+}
+.flow-node .node-underline .disc {
+    position: absolute;
+    display: inline-block;
+    top: 2px;
+    left: 171px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+.flow-node .node-underline .underline {
+    display: inline-block;
+    width: 340px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ccc;
+}
+.first-node li:first-child .node-name,
+.second-node li:nth-child(2) .node-name,
+.third-node li:nth-child(3) .node-name,
+.fourth-node li:nth-child(4) .node-name,
+.fifth-node li:nth-child(5) .node-name {
+    color: #4C9ED9;
+}
+.first-node li:first-child .disc,
+.first-node li:first-child .underline,
+.second-node li:nth-child(2) .disc,
+.second-node li:nth-child(2) .underline,
+.third-node li:nth-child(3) .disc,
+.third-node li:nth-child(3) .underline,
+.fourth-node li:nth-child(4) .disc,
+.fourth-node li:nth-child(4) .underline,
+.fifth-node li:nth-child(5) .disc,
+.fifth-node li:nth-child(5) .underline {
+    background-color: #4C9ED9;
+}
+
+/*流程节点结束*/
+
