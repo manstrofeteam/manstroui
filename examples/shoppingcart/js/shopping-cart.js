@@ -29,30 +29,36 @@
 
         /*---------数量的加减----------*/
         $(".plus").click(function() {
+
+
             //获取当前物品最大库存量
             var maxNum = $(this).siblings(".maxNum").val();
             //当前下单数量
             var num = $(this).siblings(".text-amount");
-            var currGoodsNum = parseInt($.trim(num.text()));
+            var currGoodsNum = parseInt($.trim(num.val()));
             //单价
             var unitPrice = $(this).parent().parent().siblings(".unit-price").find(".price");
             var price = parseFloat($.trim(unitPrice.text()));
             //小计
             var $subtotal = $(this).parent().parent().siblings(".subtotal").find(".subtotal-price");
             if (currGoodsNum < maxNum) {
+
                 currGoodsNum = currGoodsNum + 1;
-                num.text(currGoodsNum);
+                num.val(currGoodsNum);
                 //防止数量计算时出现失真，故添加toFixed()
                 var subtotal = parseFloat(price * currGoodsNum).toFixed(2);
                 $subtotal.text(subtotal);
 
                 /*判断当前物品的选中状态   0表示未选中  1表示选中 */
-                var thischeck = $(this).parent().parent().siblings(".e-check").children("i").attr("e-check");
+                var thischeck = $(this).parent().parent().siblings(".e-check").children("span").attr("e-check");
+
                 if (thischeck == "1") {
                     //当前总选中数
                     var $totalNum = $(".top-choose .total-num");
                     var currNum = parseInt($.trim($totalNum.text()));
-                    currNum += 1;
+                    console.log(currNum);
+                    currNum = (parseInt(currNum) + 1).toFixed(0);
+                    // currNum += 1;
                     $(".total-num").text(currNum);
 
 
@@ -68,7 +74,7 @@
         $(".minus").click(function() {
             //当前下单数量
             var num = $(this).siblings(".text-amount");
-            var currGoodsNum = parseInt($.trim(num.text()));
+            var currGoodsNum = parseInt($.trim(num.val()));
             //单价
             var unitPrice = $(this).parent().parent().siblings(".unit-price").find(".price");
             var price = parseFloat($.trim(unitPrice.text()));
@@ -77,7 +83,7 @@
 
 
             /*判断当前物品的选中状态   0表示未选中  1表示选中 */
-            var thischeck = $(this).parent().parent().siblings(".e-check").children("i").attr("e-check");
+            var thischeck = $(this).parent().parent().siblings(".e-check").children("span").attr("e-check");
             if (thischeck == "1") {
                 //选中
                 //当前总选中数
@@ -89,7 +95,7 @@
 
                 //当前下单数量
                 var num = $(this).siblings(".text-amount");
-                var currGoodsNum = parseInt($.trim(num.text()));
+                var currGoodsNum = parseInt($.trim(num.val()));
 
                 if (currGoodsNum > 1) {
                     //总选中数量减1
@@ -99,7 +105,7 @@
 
                     //当前数
                     currGoodsNum = currGoodsNum - 1;
-                    num.text(currGoodsNum);
+                    num.val(currGoodsNum);
                     //计算小计  防止数量计算时出现失真，故添加toFixed()
                     var subtotal = parseFloat(price * currGoodsNum).toFixed(2);
                     $subtotal.text(subtotal);
@@ -110,7 +116,7 @@
                 //没有选中
                 if (currGoodsNum > 1) {
                     currGoodsNum = currGoodsNum - 1;
-                    num.text(currGoodsNum);
+                    num.val(currGoodsNum);
                     //防止数量计算时出现失真，故添加toFixed()
                     var subtotal = parseFloat(price * currGoodsNum).toFixed(2);
                     $subtotal.text(subtotal);
@@ -136,8 +142,8 @@
                 totalNum = 0;
                 //计算总选中数
                 $(".text-amount").each(function() {
-                        var goodsNum = parseFloat($.trim($(this).text()));
-                        totalNum = (parseFloat(totalNum) + parseFloat(goodsNum)).toFixed(2);
+                        var goodsNum = parseFloat($.trim($(this).val()));
+                        totalNum = (parseFloat(totalNum) + parseFloat(goodsNum)).toFixed(0);
                     })
                     //所有单选对应的小计价格计算总价
                 $(".subtotal-price").each(function() {
@@ -176,7 +182,7 @@
             }
 
             //获取当前商品  所下的订单数
-            var checkOneNum = parseFloat($(this).parent().siblings(".number-box").find(".text-amount").text());
+            var checkOneNum = parseFloat($(this).parent().siblings(".number-box").find(".text-amount").val());
             //单价
             var unitPrice = parseFloat($(this).parent().siblings(".unit-price").children(".price").text());
             //小计
@@ -210,6 +216,87 @@
                 obj.find("img").attr("src", opts.checkSrc);
             }
         };
+        //鼠标浮动到单个商品记录 效果
+        $(".goods-list ").hover(function() {
+            $(this).find(".delete ").show();
+            $(this).find(".delete ").css("display ", "inline-block ");
+            $(this).addClass("active");
+        }, function() {
+            $(this).find(".delete ").hide();
+            $(this).removeClass("active");
+        })
+
+        //删除单个商品
+        $(".delete ").click(function() {
+            /*layer.confirm('你确定要删除该商品吗？', {
+                btn: ['确认', '取消'] //按钮
+            }, function() {
+                //执行删除
+            });*/
+
+            $(this).parent().parent().remove();
+
+            //初始化值
+            total = 0;
+            totalNum = 0;
+            //计算总选中数
+            $(".choose-item[e-check='1']").each(function() {
+                var $currTr = $(this).parent().parent();
+
+                var goodsNum = parseFloat($.trim($currTr.find(".text-amount").val()));
+                totalNum = (parseFloat(totalNum) + parseFloat(goodsNum)).toFixed(0);
+
+                var price = parseFloat($.trim($currTr.find(".subtotal-price").text()));
+                total = (parseFloat(total) + parseFloat(price)).toFixed(2);
+
+            })
+            $(".total-num").text(totalNum);
+            $(".total").text(total);
+
+            //判断全选的选中状态
+            var thischeck = $checkAll.attr("e-check") == 0 ? 1 : 0;
+            //自身check改变
+            $checkAll.attr("e-check", thischeck);
+            //图片链接替换
+            checkSrcChange(thischeck, $checkAll);
+
+
+        });
+        //删除多个商品
+        $(".goods-del").click(function() {
+            /*layer.confirm('你确定要删除选中的商品吗？', {
+                btn: ['确认', '取消'] //按钮
+            }, function() {
+                //执行删除
+            });*/
+            $(".choose-item[e-check='1']").each(function() {
+                $(this).parent().parent().remove();
+            });
+            //初始化值
+            total = 0;
+            totalNum = 0;
+            //计算总选中数
+            $(".choose-item[e-check='1']").each(function() {
+                var $currTr = $(this).parent().parent();
+
+                var goodsNum = parseFloat($.trim($currTr.find(".text-amount").val()));
+                totalNum = (parseFloat(totalNum) + parseFloat(goodsNum)).toFixed(0);
+
+                var price = parseFloat($.trim($currTr.find(".subtotal-price").text()));
+                total = (parseFloat(total) + parseFloat(price)).toFixed(2);
+
+            })
+            $(".total-num").text(totalNum);
+            $(".total").text(total);
+
+            //判断全选的选中状态
+            var thischeck = $checkAll.attr("e-check") == 0 ? 1 : 0;
+            //自身check改变
+            $checkAll.attr("e-check", thischeck);
+            //图片链接替换
+            checkSrcChange(thischeck, $checkAll);
+
+        });
 
 
     };
@@ -222,4 +309,3 @@
     });
 
 })(jQuery);
-
