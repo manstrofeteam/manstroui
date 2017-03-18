@@ -1,288 +1,179 @@
+.fl {
+    float: left;
+}
+
 .fr {
     float: right;
 }
+
 .right20 {
     margin-right: 20px;
 }
+
 .orange {
     color: #FF9560;
 }
-.bread {
-    margin-top: 20px;
+
+.font16 {
     font-size: 16px;
 }
-.myposition {
-    color: #777777;
-    margin-right: 10px;
-}
 
-/* 数量加减框结束 */
-
-.buy-num {
-    margin-top: 10px;
-    overflow: hidden;
-}
-.item-amount {
-    position: relative;
-    height: 25px;
-    overflow: hidden;
-    border: 1px solid #eee;
-    width: 84px;
-    left: 70px;
-}
-.minus {
-    width: 25px;
-    border-right: 1px solid #e5e5e5;
-    text-align: center;
-    line-height: 22px;
-    position: absolute;
-    font-size: 16px;
-    height: 30px;
-}
-.plus {
-    width: 25px;
-    border-left: 1px solid #e5e5e5;
-    text-align: center;
-    line-height: 26px;
-    position: absolute;
-    font-size: 16px;
-    height: 30px;
-}
-.text-amount {
-    height: 30px;
-    width: 40px;
-    text-align: center;
-    margin-left: 24px;
-    line-height: 30px;
-    display: inline-block;
-}
-.item-amount .plus {
-    right: 0;
-    margin-top: -30px;
+.cursor {
     cursor: pointer;
 }
-.item-amount .minus {
-    cursor: pointer;
-}
-
-/* 数量加减框结束 */
-
-.flow-content {
-    overflow: hidden;
-    margin-bottom: 80px;
-}
-.goods-car {
-    height: 600px;
-    margin: 20px auto 0;
-    width: 1140px;
-}
-.top-text {
-    width: 100%;
-    height: 40px;
-    border-bottom: 2px solid #eee;
-}
-.all-cost {
-    float: right;
-    font-size: 15px;
-}
-.all-cost p {
-    float: left;
-}
-.already-goods {
-    margin-top: 5px;
-    width: 110px;
-}
-.all-price {
-    width: 135px;
-}
-.settlement {
-    width: 80px;
-    height: 30px;
-    background-color: #FF7B0C;
-    text-align: center;
-    line-height: 30px;
-    color: #fff;
-}
-.all-cost .number {
-    color: #FF7B0C;
-}
-.all-cost .price {
-    font-size: 20px;
-}
-
-/* 商品列表开始 */
-
-table tr td:nth-child(6) {
-    width: 162.167px;
-}
-.text-amount {
-    height: 30px;
-    width: 35px;
-    text-align: center;
-    margin-left: 1px;
-    line-height: 30px;
-    display: inline-block;
-}
-.img-info {
-    width: 320px;
-}
-.img-info img {
-    width: 100px;
-    height: 80px;
-    float: left;
-}
-.info {
-    width: 155px;
-    display: inline-block;
-    float: left;
-    position: relative;
-    top: 22px;
-    text-align: left;
-    margin-left: 20px;
-}
-.goods-title {
-    font-size: 15px;
-    height: 50px;
-    border-bottom: 1px solid #ddd;
-}
-.bottom-title {
-    font-size: 15px;
-    height: 50px;
-    border-bottom: 1px solid #ddd;
-}
-.bottom-title td:nth-child(2) {
-    text-align: left;
-}
-.bottom-title td:nth-child(3) {
-    text-align: right;
-}
-.goods-list {
-    height: 84px;
-    border-bottom: 1px solid #eee;
-}
-.color {
-    background-color: #FFFDFD;
-    box-shadow: 0 0 3px #aaa;
-}
-.goods-list .goods-img {
-    width: 50px;
-    height: 50px;
-}
-.goods-list .goods-img img {
-    width: 100%;
-    height: 100%;
-}
-.goods-new {
-    position: relative;
-}
-.choose-item {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-.choosed-item {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-}
-.all-choose {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    margin-top: 4px;
-    cursor: pointer;
-}
-.all-choosed {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    margin-top: 4px;
-    padding-left: 35px;
-    line-height: 25px;
-    cursor: pointer;
-    display: inline-block;
-}
-.number-price {
-    color: #ff7b0c;
-    font-size: 15px;
-}
-.delete {
-    width: 60px;
-    height: 20px;
-    display: inline-block;
-    text-align: center;
-    line-height: 20px;
-    color: #fff;
-    background-color: #FF9560;
-    display: none;
-}
-
-/* 商品列表结束 */
 
 .goods-cart {
-    width: 1152px;
-    margin: 0 auto;
+    width: 1140px;
+    min-height: 600px;
+    margin: 20px auto 0;
+    overflow: hidden;
 }
-table {
-    width: 1150px;
-    border: 1px solid #ddd;
-    margin-top: 20px;
-}
-table tr td {
-    text-align: center;
-}
-table tr td:nth-child(3) {
-    width: 135px;
-}
-.top-choose {
-    height: 50px;
+
+.goods-cart .top-choose {
+    padding-top: 20px;
+    height: 40px;
     border-bottom: 1px solid #D2D2D2;
 }
-.bottom-choose {
+
+.goods-cart .go-pay {
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #FF9560;
+    color: #fff;
+    font-size: 16px;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.goods-cart .top-choose .go-pay {
+    margin-right: 35px;
+}
+
+.goods-cart .top-choose .all-sett .bottom-choose {
     background-color: #f0f0f0;
     height: 50px;
     margin: 20px 0;
 }
-.left-choose {
-    float: left;
+
+.goods-cart .all-cost {
+    float: right;
     font-size: 15px;
-    margin-top: 13px;
-}
-.left-choose p {
-    float: left;
-}
-.left-choose .full-choose {
-    margin-left: 25px;
-    width: 150px;
-}
-.left-choose .full-choose .all-input {
-    margin-left: 20px;
-}
-.left-choose .delete {
-    width: 100px;
-}
-.left-choose .move {
-    width: 100px;
-}
-.right-choose {
-    margin-top: 9px;
-}
-.all-settlement {
-    background-color: #FF9560;
-    color: #fff;
-    font-size: 18px;
-    height: 34px;
-    line-height: 34px;
-    margin-top: -1px;
-    text-align: center;
-    width: 100px;
-}
-.marginr30 {
-    margin-right: 30px;
-}
-#unit-price {
-    width: 100%;
 }
 
+.goods-cart .all-cost .total {
+    margin-right: 26px;
+}
+
+.goods-cart table {
+    width: 1138px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.goods-cart table tr td {
+    text-align: center;
+}
+
+thead,
+tfoot {
+    font-size: 15px;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+tfoot tr td:nth-child(2) {
+    text-align: left;
+}
+
+tfoot tr td:nth-child(3) {
+    text-align: right;
+}
+
+.goods-list {
+    height: 84px;
+    border-bottom: 1px solid #eee;
+}
+
+.goods-list .img-info img {
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+}
+
+.goods-list .img-info .info {
+    width: 155px;
+    display: inline-block;
+    position: relative;
+    top: 22px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.active {
+    background-color: #FFFDFD;
+    box-shadow: 0 0 3px #aaa;
+}
+
+.goods-list .e-check {
+    cursor: pointer;
+}
+
+.goods-cart .unit-price {
+    min-width: 100px;
+}
+
+.goods-list .subtotal {
+    min-width: 116px;
+}
+
+.goods-list .delete {
+    display: none;
+    margin: 0 auto;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    background-color: #FF9560;
+    cursor: pointer;
+}
+
+.plus-minus {
+    margin: 0 auto;
+    width: 80px;
+    line-height: 26px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.plus-minus span {
+    float: left;
+    display: inline-block;
+    width: 18px;
+    text-align: center;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+.plus-minus .minus {
+    border-right: 1px solid #e5e5e5;
+}
+
+.plus-minus .plus {
+    border-left: 1px solid #e5e5e5;
+}
+
+.plus-minus .text-amount {
+    float: left;
+    padding: 0 2px;
+    width: 38px;
+    height: 26px;
+    text-align: center;
+    border: none;
+}
+
+
+/* 数量加减框结束 */
