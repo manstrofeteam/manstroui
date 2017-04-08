@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>解决IE下不支持placeholder属性</title>
+    <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+    <style type="text/css">
+        .text{width: 200px;padding: 10px;}
+    </style>
+    <script type="text/javascript">
+        /**
+         * 解决IE下不支持placeholder属性
+         * author : MR chen  370489175@qq.com
+         * Date: 16-01-19
+         * 可以根据自己的需要去扩展
+         * ps:写的很简单  根据自己的需求来  不喜勿喷
+         */
+        ;(function($){
+            $.fn.placeholder = function(options){
+                var opts = $.extend({}, $.fn.placeholder.defaults, options);
+                var isIE = document.all ? true : false;
+                return this.each(function(){
+                    var _this = this,
+                        placeholderValue =_this.getAttribute("placeholder"); //缓存默认的placeholder值
+                    if(isIE){
+                        _this.setAttribute("value",placeholderValue);
+                        _this.onfocus = function(){
+                            $.trim(_this.value) == placeholderValue ? _this.value = "" : '';
+                        };
+                        _this.onblur = function(){
+                            $.trim(_this.value) == "" ? _this.value = placeholderValue : '';
+                        };
+                    }
+                });
+            };
+        })(jQuery);
+    </script>
+</head>
+
+<body>
+    <input placeholder="请输入用户名111" type="text" class="text" />
+    <input placeholder="请输入用户名222" type="text" class="text" />
+
+    <script type="text/javascript">
+        $("input").placeholder();
+    </script>
+</body>
+</html>
