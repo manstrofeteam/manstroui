@@ -207,6 +207,9 @@ body {
     color: #444;
     /*#444 looks better than black*/
     height: 100%;
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b体,sans-serif;
+color: #666;
+
 }
 body,
 button input,

@@ -298,7 +298,7 @@ select::-ms-expand {
 /*页数加减框*/
 
 
-/*数量*/
+/*数量加减开始*/
 
 .plus-minus {
     width: 80px;
@@ -329,7 +329,7 @@ select::-ms-expand {
     border: none;
 }
 
-/*数量*/
+/*数量加减结束*/
 
 
 /*简单分页样式开始*/

@@ -1,0 +1,50 @@
+<html>
+<head>
+ <meta charset="utf-8">
+<title>星形投票示例(无图片) - Liehuo.net</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+<body>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var nowindex = 1;   //默认几个星
+var startnum = 10;  //星的个数
+var selectedcolor = "red";  //选上的颜色
+var uselectedcolor = "gray";    //未选的颜色
+function _$(id)
+{
+return document.getElementById(id);
+}
+function setstar(index)
+{
+for(var i=1;i<=index;i++){
+_$("s"+i).style.color=selectedcolor;
+_$("s"+i).style.cursor="hand";
+}
+for(var i=(index+1);i<=startnum;i++){
+_$("s"+i).style.color=uselectedcolor;
+_$("s"+i).style.cursor="hand";
+}
+}
+function initstar()
+{
+for(var i=1;i<=startnum;i++){
+document.write('<span id="s'+i+'" onclick="clickstar('+i+')" title="'+i+'星" onmouseout="setstar(nowindex)" onmouseover="setstar('+i+')">★</span>');
+}
+setstar(nowindex)
+}
+function clickstar(index)
+{
+alert(index+"星");
+}
+//-->
+</SCRIPT>
+<div style="font-size:48pt;">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+initstar()
+//-->
+</SCRIPT>
+</div>
+</body>
+</html><br /><center>如不能显示效果，请按Ctrl+F5刷新本页，更多网页代码：<a href='http://www.veryhuo.com/' target='_blank'>http://www.veryhuo.com/</a></center>
