@@ -16,7 +16,6 @@
 <div id="dropdown-code" class="show-code"></div>
 <!-- 下拉列表结束 -->
 <script type="text/javascript">
-$(function(){
 /*下拉列表开始*/
 $('.dropdown .dropdown-title').click(function() {
     $('.dropdown-menu').slideToggle(400);
@@ -26,18 +25,8 @@ $('.dropdown-menu li').click(function() {
     $('.dropdown-title span').text(liTxt);
     $('.dropdown-menu').slideToggle(400);
 });
-/*下拉列表的方法*/
-/*$(".dropdown .dropdown-title").click(function(){
-    $(".dropdown-menu").slideToggle(400);
-});
-$(".dropdown-menu li").click(function(){
-    var name = $(this).text();
-    $(".dropdown span").text(name);
-    $(".dropdown-menu").slideToggle(400);
-})*/
 /*下拉列表结束*/
 $("#dropdown-html").htmlcode($("#dropdown-code"), {
     indent: true
 });
-})
 </script>

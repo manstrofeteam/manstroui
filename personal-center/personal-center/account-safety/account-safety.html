@@ -1,0 +1,126 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/view/taglib/common.jsp" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>账户安全</title>
+    <%@ include file="/portal/public-module/head.jsp"%>
+    <link rel="stylesheet" href="${ctx_webUI}/css/personal-center/personal-center-public.css">
+    <link rel="stylesheet" href="${ctx_webUI}/css/personal-center/account-safety/account-safety.css">
+</head>
+<body>
+    <div id="account-safety" class="account-setting">
+        <!-- 顶部导航开始 -->
+        <div class="personal-header" active="account-setting">
+	      <%@ include file="/portal/personal-center/public-module/personal-header.jsp" %> 
+        </div>
+        <!-- 顶部导航结束 -->
+        <!-- 主体开始 -->
+        <div class="main personal-main">
+            <!-- 左侧菜单开始 -->
+            <div class="personal-lf-menu" active="account-safety">
+            	<%@ include file="/portal/personal-center/public-module/setting-lf-menu.jsp" %> 
+            </div>
+            <!-- 左侧菜单结束 -->
+            <!-- 右侧详情开始 -->
+            <div class="personal-rg-desc">
+                <!-- 定位页面导航 -->
+            	<div class="page-breadnav ">
+            		<span class="page-title">个人资料</span>
+            	</div>
+                <!-- 详细内容 -->
+                <div class="rg-desc-content">
+                    <ul class="font14">
+                        <li>
+                            <i class="manstro-icon flag-setting icon-right-big-green "></i>
+                            <span class="safety-type">登录密码</span>
+                            <span>用于提高账户的安全性，服务于账户支付。</span>
+                            <a class="operate change-pwd main-color2 fr" href="${ctx}/portal/personal-center/account-safety/change-pwd.jsp">修改</a>
+                        </li>
+                        <li>
+                            <i class="manstro-icon flag-setting icon-right-big-green "></i>
+                            <span class="safety-type">安全问题</span>
+                            <span>安全问题用于找回密码，进一步提高账户安全性。</span>
+                            <a class="operate set-question main-color2 fr " href="${ctx}/portal/personal-center/account-safety/safety-question/set-question.jsp">设置</a>
+                            <a class="operate change-question main-color2 fr" href="${ctx}/portal/personal-center/account-safety/safety-question/check-old-question.jsp">修改</a>
+                        </li>
+                        <li>
+                            <i class="manstro-icon flag-setting icon-right-big-green "></i>
+                            <span class="safety-type">手机验证</span>
+                            <span>手机153****3242已经通过验证</span>
+                            <!-- <span>该功能暂未开放</span> -->
+                            <span class="hidden">手机未验证</span>
+                            <a class="operate change-phone main-color2 fr " href="${ctx}/portal/personal-center/account-safety/change-phone/validate-old-phone.jsp">更改手机</a>
+                        </li>
+                        <li class="">
+                            <i class="manstro-icon flag-setting icon-right-big-grey "></i>
+                            <span class="safety-type">身份认证</span>
+                            <span>使用银行卡进行身份验证，服务于佣金提现和服务续费</span>
+                            <!-- 跳转到银行卡绑定页面，绑定完成跳转回来 -->
+                            <a class="operate bind-bankcard main-color2 fr " href="${ctx}/portal/personal-center/account-safety/validate-true-name/bind-bankcard.jsp">进行认证</a>
+                            <span class="operate change-phone main-color2 fr  hidden">已经认证</span>
+                        </li>
+                        <li class="login-safety">
+                            <i class="manstro-icon flag-setting icon-right-big-green "></i>
+                            <span class="safety-type">异地登录提醒</span>
+                            <span>开放异地登录提醒更加安全</span>
+                            <div class="safety-switch fr">
+                            	<!-- //设置开关的状态  开1 关2 -->
+                            	<input class="status-val" type="hidden" value="1" >
+	                            <i class="manstro-icon icon-switch"></i>
+	                            <span class="status-txt">开</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧详情结束 -->
+        </div>
+        <!-- 主体结束 -->
+        <!-- 页尾开始 -->
+        <div class="personal-footer">
+        	 <%@ include file="/portal/personal-center/public-module/personal-footer.jsp" %>
+        </div>
+        <!-- 页尾结束 -->
+    </div>
+    <script>
+    	$(function(){
+    		//设置异地登录提醒开关  开1 关2
+		    $(".safety-switch").click(function() {
+		        $(this).children(".icon-switch").toggleClass('icon-switch-close');
+		        var $status = $(this).children('.status-val');
+		        var $statusTxt = $(this).children(".status-txt");
+		
+		        var flag = $status.val() == 1 ? 2 : 1;
+		        $status.val(flag);
+		        if (flag == "1") {
+		            $statusTxt.text("开");
+		            //调用开关方法
+		            switchSafety(flag);
+		        } else {
+		            $statusTxt.text("关");
+		          	//调用开关方法
+		            switchSafety(flag);
+		        }
+		    })
+    	})
+    	//调用控制开关的方法 flag 开1 关2
+    	function switchSafety(flag){
+    		//Step1 调用ajax实现，
+    		
+    		//Step2 成功之后切换当前安全标志 为绿色
+    		var $loginSafe=$(".login-safety .flag-setting");
+			if (flag == "1") {
+				$loginSafe.removeClass("icon-right-big-grey");
+				$loginSafe.addClass("icon-right-big-green");
+	        } else {
+	        	$loginSafe.removeClass("icon-right-big-green");
+	        	$loginSafe.addClass("icon-right-big-grey");
+	        }
+    	}
+    </script>
+</body>
+
+</html>
