@@ -1,0 +1,35 @@
+<!-- 下拉列表开始 -->
+<div id="dropdown-html">
+    <div class="dropdown">
+        <p class="dropdown-title">
+            <span>列表一</span>
+            <i class="manstro-icon icon-caret"></i>
+        </p>
+        <ul class="dropdown-menu">
+            <li>列表一</li>
+            <li>列表二</li>
+            <li>列表三</li>
+        </ul>
+    </div>
+</div>
+<!-- 这里显示下拉列表的html代码 -->
+<div id="dropdown-code" class="show-code"></div>
+<!-- 下拉列表结束 -->
+<script type="text/javascript">
+$(function() {
+    /*下拉列表开始*/
+    $('.dropdown .dropdown-title').click(function() {
+        $('.dropdown-menu').slideToggle(400);
+    });
+    $('.dropdown-menu li').click(function() {
+        var liTxt = $(this).text();
+        $('.dropdown-title span').text(liTxt);
+        $('.dropdown-menu').slideToggle(400);
+    });
+    /*下拉列表结束*/
+
+    $("#dropdown-html").htmlcode($("#dropdown-code"), {
+        indent: true
+    });
+})
+</script>
