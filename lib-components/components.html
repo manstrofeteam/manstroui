@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="../ui/css/layout/prettify.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="../ui/css/layout/docs-layout.css">
-    <script src="../dep/jquery-1.11.1.min.js"></script>
+    <script src="../ui/js/jquery-1.11.1.min.js"></script>
+    <script src="../ui/js/prettify.js"></script>
+    <script src="../ui/js/jquery.htmlcode-1.0.js"></script>
 </head>
 
 <body onload="prettyPrint()">
@@ -66,11 +68,78 @@
             <article class="rg-content">
                 <section id="dropdown">
                     <h2>下拉列表  Dropdown</h2>
-                    <div data-load="modules/dropdown.html"></div>
+                    <!-- 下拉列表开始 -->
+                    <div id="dropdown-html">
+                        <div class="dropdown">
+                            <p class="dropdown-title">
+                                <span>列表一</span>
+                                <i class="manstro-icon icon-caret"></i>
+                            </p>
+                            <ul class="dropdown-menu">
+                                <li>列表一</li>
+                                <li>列表二</li>
+                                <li>列表三</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 这里显示下拉列表的html代码 -->
+                    <div id="dropdown-code" class="show-code"></div>
+                    <!-- 下拉列表结束 -->
+                    <script type="text/javascript">
+                    $(function() {
+                        /*下拉列表开始*/
+                        $('.dropdown .dropdown-title').click(function() {
+                            $('.dropdown-menu').slideToggle(400);
+                        });
+                        $('.dropdown-menu li').click(function() {
+                            var liTxt = $(this).text();
+                            $('.dropdown-title span').text(liTxt);
+                            $('.dropdown-menu').slideToggle(400);
+                        });
+                        /*下拉列表结束*/
+
+                        $("#dropdown-html").htmlcode($("#dropdown-code"), {
+                            indent: true
+                        });
+                    })
+                    </script>
                 </section>
                 <section id="plus-minus">
                     <h2>数字加减框  Plus-minus</h2>
-                    <div data-load="modules/plus-minus.html"></div>
+                    <!-- 数字加减框开始 -->
+                    <div id="plus-minus-html">
+                        <div class="plus-minus">
+                            <span class="minus">-</span>
+                            <input type="text" value="1" class="text-amount">
+                            <span class="plus">+</span>
+                        </div>
+                    </div>
+                    <!-- 数字加减框结束 -->
+                    <!-- 这里显示下拉列表的html代码 -->
+                    <div id="plus-minus-code" class="show-code"></div>
+                    <script type="text/javascript">
+                    /*---------数量的加减开始----------*/
+                    $(".plus-minus .plus").click(function() {
+                        var num = $(this).siblings(".text-amount");
+                        var val = Number(num.val());
+                        if (val < 1000) {
+                            val = val + 1;
+                            num.attr("value", val);
+                        };
+                    });
+                    $("plus-minus .minus").click(function() {
+                        var num = $(this).siblings(".text-amount");
+                        var val = Number(num.val());
+                        if (val > 1) {
+                            val = val - 1;
+                            num.attr("value", val);
+                        };
+                    });
+                    $("#plus-minus-html").htmlcode($("#plus-minus-code"), {
+                        indent: true
+                    });
+                    /*---------数量的加减结束----------*/
+                    </script>
                 </section>
                 <section id="page-num">
                     <h2>页数加减框  Page</h2>
@@ -132,9 +201,9 @@
                             // 设定默认日期
                             defaultDate: datenow
                         });
-                        $("#birthday-html").htmlcode($("#birthday-code"), {
-                            indent: true
-                        })
+                        // $("#birthday-html").htmlcode($("#birthday-code"), {
+                        //     indent: true
+                        // })
                     });
                     </script>
                     <pre class="prettyprint linenums">
@@ -218,9 +287,8 @@
         <!-- 返回顶部结束 -->
     </div>
     <script src="../ui/js/public.js"></script>
-    <script src="../ui/js/prettify.js"></script>
-    <script src="../dep/jquery.htmlcode-1.0.js"></script>
-    <script src="../dep/jquery.waypoints.min.js"></script>
+
+    <script src="../ui/js/jquery.waypoints.min.js"></script>
     <script src="../dep/pca/city2.js"></script>
     <script src="../dep/pca/citySelect2.js"></script>
     <!-- 让IE兼容H5的标签 -->
