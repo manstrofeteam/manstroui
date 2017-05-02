@@ -1,0 +1,275 @@
+/*float left*/
+
+.fl {
+    float: left;
+}
+
+
+/*float right*/
+
+.fr {
+    float: right;
+}
+
+.img-fl {
+    float: left;
+    margin: 4px 10px 4px 0;
+}
+
+.img-fr {
+    float: right;
+    margin: 4px 0 4px 10px;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+.font26 {
+    font-size: 26px;
+}
+
+
+/*公共布局样式开始*/
+
+.docs-layout header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: #463265;
+    z-index: 100;
+}
+
+.docs-layout header li {
+    float: left;
+    padding-left: 20px;
+    text-align: right;
+    font-size: 14px;
+}
+.docs-layout header a,
+.docs-layout header a:link {
+    padding:0 20px;
+    display: block;
+    color: #fff;
+}
+.docs-layout header a:hover,
+.docs-layout header a.active {
+    color: #3FB8DD;
+}
+.docs-layout header.light a,
+.docs-layout header.light a:link {
+    color: #463265;
+}
+.docs-layout header.light a:hover,
+.docs-layout header.light a.active {
+    background-color: #f9f9f9;
+}
+
+.docs-layout header.dark {
+    background-color: #294A5D;
+}
+.docs-layout header.dark a,
+.docs-layout header.dark a:link {
+    color: #fff;
+}
+
+.docs-layout .align-center,
+.docs-layout .main {
+    margin: 0px auto;
+    width: 1100px;
+    overflow: hidden;
+}
+
+.docs-layout footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #99979c;
+    background-color: #2a2730;
+    color: #fff;
+}
+
+.docs-layout footer a {
+    color: #fff;
+}
+
+
+/*公共布局样式结束*/
+
+.docs-layout .docs-header {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 30px 0;
+    color: #cdbfe3;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    background-color: #6f5499;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#563d7c), to(#6f5499));
+    background-image: -webkit-linear-gradient(top, #563d7c 0, #6f5499 100%);
+    background-image: -o-linear-gradient(top, #563d7c 0, #6f5499 100%);
+    background-image: linear-gradient(to bottom, #563d7c 0, #6f5499 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+    background-repeat: repeat-x;
+}
+
+.docs-layout aside {
+    float: left;
+    width: 200px;
+    min-height: 500px;
+    border: 1px solid #ddd;
+}
+
+.docs-layout .align-center {
+    margin-bottom: 20px;
+}
+
+.docs-layout aside ul {
+    height: 500px;
+    overflow-y: auto;
+}
+
+.docs-layout .nav-fixed {
+    position: fixed;
+    top: 10px;
+}
+
+.docs-layout .rg-content {
+    float: right;
+    width: 860px;
+    min-height: 500px;
+    margin-bottom: 360px;
+}
+
+.docs-layout section {
+    margin-bottom: 20px;
+    padding: 20px;
+    min-height: 180px;
+    border: 1px solid #ddd;
+}
+
+.docs-layout section h2 {
+    margin-bottom: 10px;
+}
+
+.docs-layout .lf-nav {
+    float: left;
+    min-height: 600px;
+    border: 1px solid #ddd;
+}
+
+.docs-layout .lf-nav .lf-nav-title {
+    padding-left: 12px;
+    font-size: 18px;
+    line-height: 40px;
+    background-color: #efefef;
+}
+
+.docs-layout .lf-nav li {
+    width: 160px;
+    padding: 4px 0 4px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #767676;
+    cursor: pointer;
+}
+
+.docs-layout .lf-nav .children-nav {
+    display: none;
+}
+
+.docs-layout .lf-nav .children-nav:first-child {
+    display: block;
+}
+
+.docs-layout .lf-nav .parent-nav > li >a,
+.docs-layout .lf-nav .children-nav > li >a {
+    display: block;
+    padding-left: 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #767676;
+}
+
+.docs-layout .lf-nav .parent-nav > li:hover >a,
+.docs-layout .lf-nav .children-nav > li:hover >a {
+    padding-left: 16px;
+    color: #563d7c;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 2px solid #563d7c;
+}
+
+.docs-layout .lf-nav .parent-nav > li.active >a,
+.docs-layout .lf-nav .children-nav > li.active >a {
+    padding-left: 17px;
+    font-weight: 700;
+    color: #563d7c;
+    background-color: transparent;
+    border-left: 2px solid #563d7c;
+}
+
+.docs-layout .show-code {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px dashed #ddd;
+    background-color: #f0f3f9;
+}
+
+.docs-layout #ueditor p {
+    line-height: 1.75;
+    margin-bottom: 10px;
+}
+
+
+/*组件库样式布局结束*/
+
+
+/*代码高亮显示样式优化开始*/
+
+pre {
+    background-color: rgb(240, 243, 249);
+    border: 1px dashed rgb(221, 221, 221);
+}
+
+pre span {
+    color: #000;
+    padding-top: 4px;
+    display: inline-block;
+}
+
+.prettyprint.linenums ol li,
+pre.prettyprint.linenums ol li {
+    padding-left: 25px !important;
+}
+
+
+/*代码高亮显示样式优化结束*/
+
+
+/*-返回顶部开始*/
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    right: 40px;
+    bottom: 80px;
+    width: 34px;
+    height: 34px;
+    background-image: url('../../img/public/back-to-top.png');
+    cursor: pointer;
+    z-index: 99;
+}
+
+.back-to-top:hover {
+    background-position: 0 -34px;
+}
+
+
+/*-返回顶部结束*/

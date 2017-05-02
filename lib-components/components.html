@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>万洲嘉智组件库</title>
+    <link rel="shortcut icon" href="../ui/img/favicon.ico">
+    <link rel="stylesheet" href="../ui/css/base.css">
+    <link rel="stylesheet" href="../ui/css/layout/prettify.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="../ui/css/layout/docs-layout.css">
+    <script src="../dep/jquery-1.11.1.min.js"></script>
+</head>
+
+<body onload="prettyPrint()">
+    <div id="components" class="docs-layout">
+        <!-- 页面顶部开始 -->
+        <header class="light">
+          <div class="align-center">
+              <a href="../index.html" title="ManstroUI"><span class="logo fl font26">ManstroUI</span></a>
+              <nav class="fr">
+                  <ul>
+                      <li><a href="../index.html" title="ManstroUI">开始学习</a></li>
+                      <li><a href="../standard/semver.html" title="语义化版本">语义化版本</a></li>
+                      <li><a href="../standard/codeguide.html" title="前端规范">前端规范</a></li>
+                      <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
+                      <li><a href="../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                      <li><a href="../lib-components/components.html" title="组件库">组件库</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </header>
+        <div class="docs-header">
+            <div class="align-center">
+                <h1>万洲嘉智组件库</h1>
+                <p>集成可复用的组件，包括下拉列表、加减框、多种分页效果等更多功能。</p>
+            </div>
+        </div>
+        <!-- 页面顶部结束 -->
+        <!-- 主体部分开始 -->
+        <div class="main">
+            <!-- 左侧导航开始 -->
+            <aside class="lf-nav">
+                <nav>
+                    <p class="lf-nav-title">组件列表</p>
+                    <ul class="parent-nav">
+                        <li name="dropdown"><a href="#dropdown">下拉列表</a></li>
+                        <li name="plus-minus"><a href="#plus-minus">加减框</a></li>
+                        <li name="page-num"><a href="#">页数加减框</a></li>
+                        <li name="pagination"><a href="#">简单分页样式</a></li>
+                        <li name="laypage"><a href="#">动态分页演示</a></li>
+                        <li name="check-strong"><a href="#">验证密码强度</a></li>
+                        <li name="search"><a href="#">两种搜索框</a></li>
+                        <li name="spinner"><a href="#">下拉框列表</a></li>
+                        <li name="progress-bar"><a href="#">进度条</a></li>
+                        <li name="birthday-out"><a href="#">生日</a></li>
+                        <li name="pca"><a href="#">省市区联动</a></li>
+                        <li name="ueditor"><a href="#">ueditor编辑器</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- 左侧导航结束 -->
+            <!-- 各组件开始 -->
+            <article class="rg-content">
+                <section id="dropdown">
+                    <h2>下拉列表  Dropdown</h2>
+                    <div data-load="modules/dropdown.html"></div>
+                </section>
+                <section id="plus-minus">
+                    <h2>数字加减框  Plus-minus</h2>
+                    <div data-load="modules/plus-minus.html"></div>
+                </section>
+                <section id="page-num">
+                    <h2>页数加减框  Page</h2>
+                    <div data-load="modules/page.html"></div>
+                </section>
+                <section id="pagination">
+                    <h2>简单分页样式 Pagination</h2>
+                    <div data-load="modules/pagination.html"></div>
+                </section>
+                <section id="laypage">
+                    <h2>动态分页演示 Laypage</h2>
+                    <div data-load="modules/laypage.html"></div>
+                    <!-- 需要引入资源库中的laypage.js -->
+                    <script src="../dep/laypage/laypage.js"></script>
+                </section>
+                <section id="check-strong">
+                    <h2>验证密码强度 Pwd-strength</h2>
+                    <div data-load="modules/pwd-strongth.html"></div>
+                </section>
+                <section id="search">
+                    <h2>两种搜索框</h2>
+                    <div data-load="modules/search.html"></div>
+                </section>
+                <section id="spinner">
+                    <h2>下拉框列表</h2>
+                    <div data-load="modules/spinner.html"></div>
+                </section>
+                <section id="progress-bar">
+                    <h2>进度条</h2>
+                    <div data-load="modules/progress-bar.html"></div>
+                </section>
+                <section id="birthday-out">
+                    <h2>生日</h2>
+                    <div id="birthday-html">
+                        <label>生日：</label>
+                        <div id="birthday"></div>
+                    </div>
+                    <pre>
+                        <h2>使用方法</h2>
+                        <p>直接写id="birthday"的空div</p>
+                        &lt;div id="birthday"&gt;&lt;/div&gt;
+                         <p>加上下面js并引入bday-picker.js和public.js</p>
+                        <p>后续会将css和js进行封装，到时直接引入ManstroUI库文件即可了。</p>
+                    </pre>
+                    <script src="../dep/birthdaypicker/bday-picker.js"></script>
+                    <script>
+                    $(function() {
+                        var datenow = new Date().Format("yyyy-MM-dd");
+                        //用户生日
+                        var birthday = '1991-04-14';
+                        if (birthday != '') {
+                            datenow = birthday;
+                        }
+                        $("#birthday").birthdaypicker({
+                            dateFormat: "bigEndian",
+                            monthFormat: "short",
+                            placeholder: true,
+                            hiddenDate: true,
+                            // 设定默认日期
+                            defaultDate: datenow
+                        });
+                        $("#birthday-html").htmlcode($("#birthday-code"), {
+                            indent: true
+                        })
+                    });
+                    </script>
+                    <pre class="prettyprint linenums">
+                                <span>用到的JS</span>
+                                $(function() {
+                                    var datenow = new Date().Format("yyyy-MM-dd");
+                                    //用户生日
+                                    var birthday = '1991-04-14';
+                                    if (birthday != '') {
+                                        datenow = birthday;
+                                    }
+                                    $("#birthday").birthdaypicker({
+                                        dateFormat: "bigEndian",
+                                        monthFormat: "short",
+                                        placeholder: true,
+                                        hiddenDate: true,
+                                        // 设定默认日期
+                                        defaultDate: datenow
+                                    });
+                                });
+                    </pre>
+                </section>
+                <section id="pca">
+                    <h2>省市区联动</h2>
+                    <!--  <div data-load="modules/pca.html"> -->
+                    <div id="pca-html">
+                        <form action="">
+                            <span class="goodsAddress">所在地区：</span>
+                            <select id="prov" name="province" data-code=""></select>省
+                            <select id="city" name="city" data-code=""></select>市
+                            <select id="area" name="area" data-code=""></select>区
+                        </form>
+                    </div>
+                    <script type="text/javascript">
+                    $(function() {
+                        //初始化
+                        var selectVal = new CitySelect({
+                            data: data,
+                            provId: "#prov",
+                            cityId: '#city',
+                            areaId: '#area',
+                            isSelect: true // 默认为true 选择第一项 如果页面有指定省市区项时，就显示指定项。
+                                // 如果false，就选中 "请选择"
+                        });
+                    })
+                    </script>
+                    <!--  </div> -->
+                    <p>格式如下</p>
+                    &lt;form action=""&gt;
+                    </p>
+                    <p>
+                        &lt;select id="prov" name="province" data-code=""&gt;&lt;/select&gt;省
+                    </p>
+                    <p>
+                        &lt;select id="city" name="city" data-code=""&gt;&lt;/select&gt;市
+                    </p>
+                    <p>
+                        &lt;select id="area" name="area" data-code=""&gt;&lt;/select&gt;区
+                    </p>
+                    <p>
+                        &lt;/form&gt;
+                    </p>
+                </section>
+                <section id="ueditor">
+                    <h2>UEditor富文本编辑器</h2>
+                    <p> <a href="../demo/ueditor/index.html">本地示例demo</a> 具体写法请查看页面html代码</p>
+                    <p>这是百度前端团队开发的轻量、可定制、注重用户体验的一个编辑器。具体API详情请看链接<a href=http://fex.baidu.com/ueditor/ "">http://fex.baidu.com/ueditor/</a>
+                    </p>
+                </section>
+            </article>
+            <!-- 各组件结束 -->
+        </div>
+        <!-- 主体部分结束 -->
+        <!-- 页尾开始 -->
+        <footer>
+          Copyright &copy; 2016-2017 <a href="www.manstro.com">万洲嘉智信息科技有限公司</a>. All Rights Reserved
+        </footer>
+        <!-- 页尾结束 -->
+        <!-- 返回顶部开始 -->
+        <div class="back-to-top"></div>
+        <!-- 返回顶部结束 -->
+    </div>
+    <script src="../ui/js/public.js"></script>
+    <script src="../ui/js/prettify.js"></script>
+    <script src="../dep/jquery.htmlcode-1.0.js"></script>
+    <script src="../dep/jquery.waypoints.min.js"></script>
+    <script src="../dep/pca/city2.js"></script>
+    <script src="../dep/pca/citySelect2.js"></script>
+    <!-- 让IE兼容H5的标签 -->
+    <!--[if IE]>
+        <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+</body>
+
+</html>

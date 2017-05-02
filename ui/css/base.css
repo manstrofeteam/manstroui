@@ -35,6 +35,7 @@ textarea {
     padding: 0;
 }
 
+
 /*
  * Add block display for HTML5 elements
  * Corrects block display not defined in IE6/7/8/9 & FF3
@@ -53,6 +54,7 @@ section {
     display: block;
 }
 
+
 /* =============================================================================
    Typography
    ========================================================================== */
@@ -69,6 +71,7 @@ dfn[title] {
     cursor: help;
 }
 
+
 /*
  * Define font family as monospace
  * Corrects font family set oddly in IE6 S5 C10
@@ -83,6 +86,7 @@ samp {
     _font-family: 'Courier New', monospace, sans-serif;
     font-size: 1em;
 }
+
 
 /*
  * Add line wrapping
@@ -100,6 +104,7 @@ pre {
     /*IE*/
 }
 
+
 /*
  * Remove quotes
  * 1. Addresses CSS quotes not supported in IE6/7
@@ -110,6 +115,7 @@ blockquote,
 q {
     quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -117,6 +123,7 @@ q:after {
     content: '';
     content: none;
 }
+
 
 /*
  * Define font size
@@ -126,6 +133,7 @@ q:after {
 small {
     font-size: 75%;
 }
+
 
 /*
  * Define font size and alignment
@@ -140,12 +148,15 @@ sup {
     position: relative;
     vertical-align: baseline;
 }
+
 sup {
     top: -0.5em;
 }
+
 sub {
     bottom: -0.25em;
 }
+
 
 /*Clear floats 
  *The Magnificent CLEARFIX:Updated fo prevent margin-collapsing on child elements 
@@ -158,21 +169,26 @@ sub {
     height: 0;
     visibility: hidden;
 }
+
 .clearfix {
     zoom: 1;
     /*IE<8*/
 }
+
 .clearfix:after {
     clear: both;
 }
+
 * html .clearfix {
     zoom: 1;
     /* IE6 */
 }
+
 *:first-child+html .clearfix {
     zoom: 1;
     /* IE7 */
 }
+
 
 /*
  * Add inline-block display for HTML5 elements
@@ -186,6 +202,7 @@ video {
     *display: inline;
     *zoom: 1;
 }
+
 html {
     font-size: 100.01%;
     /*To Prevent bugs in IE and Opera*/
@@ -201,6 +218,7 @@ html {
     -webkit-text-size-adjust: 100%;
     /* Define maximum text display as 100% to document Corrects text displayed oddly after orientation change in handheld browsers */
 }
+
 body {
     background-color: #fff;
     /*Not all browsers set white as the default background color*/
@@ -208,22 +226,26 @@ body {
     /*#444 looks better than black*/
     height: 100%;
 }
+
 body,
 button input,
 select,
 textarea {
-    font: 12px/1.5 sans-serif;
+    font: 14px/1.5 sans-serif;
 }
+
 img,
 fieldset {
     border: 0 none;
     /*Remove border   Improves readability when inside <a> element in all browsers*/
 }
+
 img {
     vertical-align: top;
     -ms-interpolation-mode: bicubic;
     /*Add high quality bicubic image resampling Improves visual appearance when scaled in IE7*/
 }
+
 
 /* =============================================================================
    Links
@@ -243,8 +265,9 @@ a:hover,
 a:active {
     text-decoration: none;
     outline: none;
-    color:#444;
+    color: #444;
 }
+
 
 /*Hide only visually,but have it available for screenreaders*/
 
@@ -261,6 +284,7 @@ a:active {
     width: 1px;
 }
 
+
 /* =============================================================================
     Lists
    ========================================================================== */
@@ -270,6 +294,7 @@ ol {
     list-style: none;
 }
 
+
 /* =============================================================================
    Forms
    ========================================================================== */
@@ -277,10 +302,12 @@ ol {
 form {
     overflow: visible;
 }
+
 fieldset {
     line-height: 1;
     /*line height helps to set the vertical alignment of radio buttons and check boxes*/
 }
+
 
 /*
  * Add negative left margin
@@ -290,6 +317,7 @@ fieldset {
 legend {
     *margin-left: -7px;
 }
+
 
 /*
  * Define consistent vertical alignment display in all browsers
@@ -302,6 +330,7 @@ textarea {
     vertical-align: baseline;
     *vertical-align: middle;
 }
+
 
 /*
  * 1. Define line-height as normal
@@ -317,6 +346,7 @@ input {
     *overflow: visible;
     /* 2 */
 }
+
 
 /*
  * 1. Display hand cursor for clickable form elements
@@ -337,6 +367,7 @@ input[type="submit"],
     /* 2 */
 }
 
+
 /*
  * Define box sizing
  * Addresses box sizing set to content-box in IE8/9
@@ -346,20 +377,24 @@ input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box;
 }
+
 input[type="checkbox"] {
     vertical-align: bottom;
     /*Vertical alignment of checkboxes*/
     *vertical-align: baseline;
     /*IE7*/
 }
+
 input[type="radio"] {
     vertical-align: text-bottom;
     /*Vertical alignment of radio buttons*/
 }
+
 input {
     _vertical-align: text-bottom;
     /*Vertical alignment of input fields for IE6*/
 }
+
 
 /*
  * Define box sizing and appearance
@@ -374,6 +409,7 @@ input[type="search"] {
     box-sizing: content-box;
 }
 
+
 /*
  * Remove inner padding and border
  * Fixes appearance displayed oddly in FF3/4
@@ -385,6 +421,7 @@ input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
+
 
 /*
  * 1. Disable default vertical scrollbar
@@ -399,6 +436,7 @@ textarea {
     vertical-align: top;
     /* 2 */
 }
+
 input[type="email"],
 input[type="text"],
 input[type="password"],
@@ -409,24 +447,29 @@ textarea,
 select {
     border: 1px solid #7F9DB9;
 }
+
 input:focus,
 textarea:focus,
 select:focus {
     outline-width: 0;
     /*No outline border for Safary*/
 }
+
 select {
     background-color: transparent;
     /*In Webkit/Mac, select fails to inherit color,font-*,etc if there is no other styling like background for example(border will do to)*/
 }
+
 label {
     font-weight: normal;
 }
+
 label.required:after {
     content: "*";
     color: red;
     font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
 }
+
 button,
 input[type="submit"],
 input[type="reset"],
@@ -436,6 +479,7 @@ input[type="button"],
     *width: 1;
     overflow: visible;
 }
+
 
 /* =============================================================================
    Tables
@@ -451,12 +495,14 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 th,
 td {
     padding: 0;
     text-align: left;
     vertical-align: middle;
 }
+
 
 /*
  *Header
@@ -465,19 +511,23 @@ td {
 h1 {
     font-size: 2em;
 }
+
 h2 {
     font-size: 1.5em;
 }
+
 h3 {
     font-size: 1.17em;
 }
+
 h4 {
     font-size: 1em;
 }
+
 h5 {
     font-size: 0.83em;
 }
+
 h6 {
     font-size: 0.67em;
 }
-

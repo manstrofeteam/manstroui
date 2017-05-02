@@ -12,55 +12,40 @@
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <meta name="author" content="manstro,manstro@manstro.com">
     <meta name="apple-mobile-web-app-title" content="标题">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta content="telephone=no" name="format-detection" />
-    <meta content="email=no" name="format-detection" />
     <meta name="keywords" content="组件">
     <meta name="description" content="万洲嘉智组件库">
     <link rel="shortcut icon" href="ui/img/favicon.ico">
     <link rel="stylesheet" href="ui/css/base.css">
-    <link rel="stylesheet" href="ui/css/layout.css">
+    <link rel="stylesheet" href="ui/css/layout/docs-layout.css">
     <link rel="stylesheet" href="ui/css/index.css">
 </head>
 
 <body>
-    <div id="index" class="manstro-ui ui-layout">
-        <!-- banner开始 -->
-        <div class="main-section section1">
-            <header data-load="public-module/header.html"> </header>
-            <div class="main-banner">
-                <h1>ManstroUI搭建中，敬请期待……</h1>
-                <p>此框架的思想学习了Bootstrap框架，并有自己的扩展，如需了解请移步<a href="http://http://www.bootcss.com/">Bootstrap中文网</a></p>
-                <p>内容包括：语义化版本说明；万洲嘉智前端规范文档；全局样式库；组件库；JavaScript插件</p>
-            </div>
+    <div id="index" class="manstro-ui docs-layout">
+        <header>
+          <div class="align-center">
+              <a href="index.html" title="ManstroUI"><span class="logo fl font26">ManstroUI</span></a>
+              <nav class="fr">
+                  <ul>
+                      <li><a href="index.html" title="ManstroUI">开始学习</a></li>
+                      <li><a href="standard/semver.html" title="语义化版本">语义化版本</a></li>
+                      <li><a href="standard/codeguide.html" title="前端规范">前端规范</a></li>
+                      <li><a href="http://www.appinn.com/markdown/" target="_blank" title="Markdown语法说明">Markdown语法说明</a></li>
+                      <li><a href="lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                      <li><a href="lib-components/components.html" title="组件库">组件库</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </header>
+        <div class="main-banner">
+            <h1>ManstroUI搭建中，敬请期待……</h1>
+            <p>此框架的思想学习了Bootstrap框架，并有自己的扩展，如需了解请移步<a href="http://http://www.bootcss.com/">Bootstrap中文网</a></p>
+            <p>内容包括：语义化版本说明；万洲嘉智前端规范文档；全局样式库；组件库；JavaScript插件</p>
         </div>
-        <!-- banner结束 -->
-        <div class="index-main hidden">
-            <!-- 版块一开始 -->
-            <div class="main-section section2"></div>
-            <!-- 版块一结束 -->
-            <!-- 版块二开始 -->
-            <div class="main-section section3"></div>
-            <!-- 版块二结束 -->
-            <!-- 版块三开始 -->
-            <div class="main-section section4"></div>
-            <!-- 版块三结束 -->
-            <!-- 版块四开始 -->
-            <div class="main-section section5"></div>
-            <!-- 版块四结束 -->
-        </div>
-        <footer data-load="public-module/footer.html"></footer>
+        <footer>
+          Copyright &copy; 2016-2017 <a href="www.manstro.com">万洲嘉智信息科技有限公司</a>. All Rights Reserved
+        </footer>
     </div>
-    <!-- 必须要引用的JS开始 -->
-    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-    window.jQuery || document.write('<script src="ui/js/jquery-1.11.1.min.js"><\/script>')
-    </script>
-    <!--[if IE]>
-        <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
-    <script type="text/javascript" src="ui/js/public/data-load.js"></script>
 </body>
 
 </html>
