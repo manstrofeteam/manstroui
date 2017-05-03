@@ -1,41 +1,144 @@
-/*float left*/
+@charset "UTF-8";
+/* ======== 基础颜色和布局样式开始 ======== */
 
-.fl {
+.font12 {
+    font-size: 1.2rem;
+}
+
+.font14 {
+    font-size: 1.4rem;
+}
+
+.font16 {
+    font-size: 1.6rem;
+}
+
+.font18 {
+    font-size: 1.8rem;
+}
+
+.font20 {
+    font-size: 2rem;
+}
+
+.color-black {
+    color: #444;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.color-grey {
+    color: #888;
+}
+
+.color-red {
+    color: #ff4611;
+}
+
+.color-green {
+    color: #429842;
+}
+
+.color-blue {
+    color: #4c9ed9;
+}
+
+.color-yellow {
+    color: #e38d13;
+}
+
+.bg-red {
+    background-color: #ff4611;
+}
+
+.bg-green {
+    background-color: #429842;
+}
+
+.bg-blue {
+    background-color: #4c9ed9;
+}
+
+.bg-yellow {
+    background-color: #e38d13;
+}
+
+.right10 {
+    margin-right: 1rem;
+}
+
+.right20 {
+    margin-right: 2rem;
+}
+
+.bottom10 {
+    margin-bottom: 1rem;
+}
+
+.bottom20 {
+    margin-bottom: 2rem;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+
+/* 左右浮动 */
+
+.ms-fl {
     float: left;
 }
 
-
-/*float right*/
-
-.fr {
+.ms-fr {
     float: right;
 }
 
-.img-fl {
-    float: left;
-    margin: 4px 10px 4px 0;
+
+/*水平翻转*/
+
+.ms-flipx {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    /*IE*/
+    filter: FlipH;
 }
 
-.img-fr {
-    float: right;
-    margin: 4px 0 4px 10px;
+
+/*垂直翻转*/
+
+.ms-flipy {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
 }
 
-.nopadding {
-    padding: 0;
+
+/*固定宽度，超出部分用…代替*/
+
+.ms-fixed-width {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.nomargin {
-    margin: 0;
-}
 
-.font26 {
-    font-size: 26px;
-}
+/* ======== 基础颜色和布局样式结束 ======== */
+
+
+
+
 
 
 /*公共布局样式开始*/
-
+.docs-layout .logo {
+    font-size: 26px;
+}
 .docs-layout header {
     width: 100%;
     height: 60px;
@@ -126,9 +229,6 @@
     border: 1px solid #ddd;
 }
 
-.docs-layout .align-center {
-    margin-bottom: 20px;
-}
 
 .docs-layout aside ul {
     height: 500px;
@@ -232,22 +332,6 @@
 
 
 /*代码高亮显示样式优化开始*/
-
-pre {
-    background-color: rgb(240, 243, 249);
-    border: 1px dashed rgb(221, 221, 221);
-}
-
-pre span {
-    color: #000;
-    padding-top: 4px;
-    display: inline-block;
-}
-
-.prettyprint.linenums ol li,
-pre.prettyprint.linenums ol li {
-    padding-left: 25px !important;
-}
 
 
 /*代码高亮显示样式优化结束*/

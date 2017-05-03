@@ -6,6 +6,8 @@
     <title>全局样式库</title>
     <link rel="shortcut icon" href="../ui/img/favicon.ico">
     <link rel="stylesheet" href="../ui/css/base.css">
+    <link rel="stylesheet" href="../dep/prism/prism.css">
+    <link rel="stylesheet" href="global-styles.css">
     <link rel="stylesheet" href="../ui/css/layout/docs-layout.css">
     <script src="../ui/js/jquery-1.11.1.min.js"></script>
 </head>
@@ -14,25 +16,25 @@
     <div id="global-styles" class="docs-layout">
         <!-- 页面顶部开始 -->
         <header class="light">
-          <div class="align-center">
-              <a href="../index.html" title="ManstroUI"><span class="logo fl font26">ManstroUI</span></a>
-              <nav class="fr">
-                  <ul>
-                      <li><a href="../index.html" title="ManstroUI">开始学习</a></li>
-                      <li><a href="../standard/semver.html" title="语义化版本">语义化版本</a></li>
-                      <li><a href="../standard/codeguide.html" title="前端规范">前端规范</a></li>
-                      <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
-                      <li><a href="../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
-                      <li><a href="../lib-components/components.html" title="组件库">组件库</a></li>
-                  </ul>
-              </nav>
-          </div>
+            <div class="align-center">
+                <a href="../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
+                <nav class="ms-fr">
+                    <ul>
+                        <li><a href="../index.html" title="ManstroUI">开始学习</a></li>
+                        <li><a href="../standard/semver.html" title="语义化版本">语义化版本</a></li>
+                        <li><a href="../standard/codeguide.html" title="前端规范">前端规范</a></li>
+                        <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
+                        <li><a href="../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                        <li><a href="../lib-components/components.html" title="组件库">组件库</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <!-- 页面顶部结束 -->
         <div class="docs-header">
             <div class="align-center">
                 <h1>万洲嘉智全局样式库</h1>
-                <p>定义常用的全局样式库，比如表单、按钮、弹出层等等；</p>
+                <p>定义常用的全局样式库，比如表格、表单、按钮、弹出层等等；</p>
             </div>
         </div>
         <!-- 主体部分开始 -->
@@ -42,61 +44,301 @@
                 <nav>
                     <p class="lf-nav-title">组件列表</p>
                     <ul class="parent-nav">
-                        <li name="ms-button" title="">按钮</li>
-                        <li name="plus-minus" title="">表单</li>
-                        <li name="page-num" title="">弹出层对话框</li>
-                        <li name="pagination" title="">简单分页样式</li>
-                        <li name="laypage" title="">动态分页演示</li>
-                        <li name="check-strong" title="">验证密码强度</li>
-                        <li name="search" title="">两种搜索框</li>
-                        <li name="spinner" title="">下拉框列表</li>
-                        <li name="progress-bar" title="">进度条</li>
-                        <li name="birthday-out" title="">生日</li>
-                        <li name="pca" title="">省市区联动</li>
-                        <li name="ueditor" title="">ueditor编辑器</li>
+                        <li name="ms-table"><a href="#ms-table">表格</a></li>
+                        <li name="ms-form"><a href="#ms-form">表单</a></li>
+                        <li name="ms-button"><a href="#ms-button">按钮</a></li>
                     </ul>
                 </nav>
             </aside>
             <!-- 左侧导航结束 -->
             <!-- 各组件开始 -->
             <article class="rg-content">
-                <section id="ms-button">
-                    <h2>按钮样式</h2>
-                    <div data-load="modules/ms-button.html"></div>
+                <section id="ms-table">
+                    <h2>表格</h2>
+                    <div class="bottom20 ms-article">
+                        <h3>默认表格样式</h3>
+                        <p class="ms-article">只需要增加ms-table的类即可</p>
+                        <table class='ms-table border-radius'>
+                            <thead>
+                                <tr>
+                                    <th>标题一</th>
+                                    <th>标题二</th>
+                                    <th>标题三</th>
+                                    <th>标题四</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>内容一</td>
+                                    <td>内容二</td>
+                                    <td>内容三</td>
+                                    <td>内容四</td>
+                                </tr>
+                                <tr>
+                                    <td>内容一</td>
+                                    <td>内容二</td>
+                                    <td>内容三</td>
+                                    <td>内容四</td>
+                                </tr>
+                                <tr>
+                                    <td>内容一</td>
+                                    <td>内容二</td>
+                                    <td>内容三</td>
+                                    <td>内容四</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <pre><code class="language-markup">&lt;table class="ms-table"&gt;···&lt;/table&gt;</code></pre>
+                    </div>
+                    <div class="bottom20 ms-article">
+                        <h3>带边框表格样式</h3>
+                        <p>增加table-bordered的类即可</p>
+                        <table class='ms-table table-bordered'>
+                            <thead>
+                                <tr>
+                                    <th>标题一</th>
+                                    <th>标题二</th>
+                                    <th>标题三</th>
+                                    <th>标题四</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>内容一</td>
+                                    <td>内容二</td>
+                                    <td>内容三</td>
+                                    <td>内容四</td>
+                                </tr>
+                                <tr>
+                                    <td>内容一</td>
+                                    <td>内容二</td>
+                                    <td>内容三</td>
+                                    <td>内容四</td>
+                                </tr>
+                                <tr>
+                                    <td>内容一</td>
+                                    <td>内容二</td>
+                                    <td>内容三</td>
+                                    <td>内容四</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <pre class=" language-markup"><code>&lt;table class="ms-table table-bordered"&gt;···&lt;/table&gt;</code></pre>
+                    </div>
+                    <div class="bottom20 ms-article">
+                        <h3>圆角表格样式</h3>
+                        <p>添加border-radius的类即可</p>
+                        <table class='ms-table border-radius'>
+                            <thead>
+                                <tr>
+                                    <th>标题一</th>
+                                    <th>标题二</th>
+                                    <th>标题三</th>
+                                    <th>标题四</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>内容一</td>
+                                    <td>内容二</td>
+                                    <td>内容三</td>
+                                    <td>内容四</td>
+                                </tr>
+                                <tr>
+                                    <td>内容一</td>
+                                    <td>内容二</td>
+                                    <td>内容三</td>
+                                    <td>内容四</td>
+                                </tr>
+                                <tr>
+                                    <td>内容一</td>
+                                    <td>内容二</td>
+                                    <td>内容三</td>
+                                    <td>内容四</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <pre class="language-markup"><code>&lt;table class="ms-table border-radius"&gt;···&lt;/table&gt;</code></pre>
+                    </div>
+                </section>
+                <section id="ms-form">
+                    <div class="bottom20 ms-article">
+                        <h2>表单</h2>
+                        <p>因公司项目中所有的表单都是水平排列设计的，故默认表单样式为水平排列。</p>
+                        <form class="ms-form">
+                            <div class="form-item">
+                                <label for="username">姓名：</label>
+                                <input type="text" name="username" id="username" class="form-control" placeholder="请输入姓名……">
+                            </div>
+                            <div class="form-item">
+                                <label for="pwd">密码：</label>
+                                <input type="password" name="pwd" id="pwd" class="form-control" placeholder="请输入密码……">
+                            </div>
+                            <div class="form-item">
+                                <label for="remarks">备注：</label>
+                                <textarea name="name" id="remarks" class="ms-textarea" placeholder="请输入备注……"></textarea>
+                            </div>
+                            <div class="form-item">
+                                <label>下拉列表：</label>
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="checkbox">
+                                <input id="agree" type="checkbox">
+                                <label for="agree">阅读协议并同意《**网站协议》</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="myradio" id="radio1">
+                                <label for="radio1"> 单选一</label>
+                                <input type="radio" name="myradio" id="radio2">
+                                <label for="radio2">单选二</label>
+                            </div>
+                            <div class="form-item">
+                                <button class="btn btn-default" type="reset">重置</button>
+                                <button class="btn btn-primary" type="button">保存</button>
+                            </div>
+                        </form>
+                    </div>
+                    <pre class="language-markup">
+<code class="language-markup">
+&lt;form class="ms-form"&gt;
+    &lt;div class="form-item"&gt;
+        &lt;label for="username"&gt;姓名：&lt;/label&gt;
+        &lt;input type="text" name="username" id="username" class="form-control" placeholder="请输入姓名……"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-item"&gt;
+        &lt;label for="pwd"&gt;密码：&lt;/label&gt;
+        &lt;input type="password" name="pwd" id="pwd" class="form-control" placeholder="请输入密码……"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-item"&gt;
+        &lt;label for="remarks"&gt;备注：&lt;/label&gt;
+        &lt;textarea name="name" id="remarks" class="ms-textarea" placeholder="请输入备注……"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div class="form-item"&gt;
+        &lt;label&gt;下拉列表：&lt;/label&gt;
+        &lt;select class="form-control"&gt;
+            &lt;option&gt;1&lt;/option&gt;
+            &lt;option&gt;2&lt;/option&gt;
+            &lt;option&gt;3&lt;/option&gt;
+            &lt;option&gt;4&lt;/option&gt;
+            &lt;option&gt;5&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;div class="checkbox"&gt;
+        &lt;input id="agree" type="checkbox"&gt;
+        &lt;label for="agree"&gt;阅读协议并同意《**网站协议》&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="radio"&gt;
+        &lt;input type="radio" name="myradio" id="radio1"&gt;
+        &lt;label for="radio1"&gt; 单选一&lt;/label&gt;
+        &lt;input type="radio" name="myradio" id="radio2"&gt;
+        &lt;label for="radio2"&gt;单选二&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-item"&gt;
+        &lt;button class="btn btn-default" type="reset"&gt;重置&lt;/button&gt;
+        &lt;button class="btn btn-primary" type="button"&gt;保存&lt;/button&gt;
+    &lt;/div>
+&lt;/form&gt;
+</code>
+</pre>
                 </section>
                 <section id="ms-button">
-                    <h2>按钮样式</h2>
-                    <div data-load="modules/ms-button.html"></div>
-                </section>
-                <section id="ms-button">
-                    <h2>按钮样式</h2>
-                    <div data-load="modules/ms-button.html"></div>
-                </section>
-                <section id="ms-button">
-                    <h2>按钮样式</h2>
-                    <div data-load="modules/ms-button.html"></div>
-                </section>
-                <section id="ms-button">
-                    <h2>按钮样式</h2>
-                    <div data-load="modules/ms-button.html"></div>
-                </section>
-                <section id="ms-button">
-                    <h2>按钮样式</h2>
-                    <div data-load="modules/ms-button.html"></div>
+                    <h2>按钮</h2>
+                    <div class="bottom20 ms-article">
+                        <h3>可作为按钮使用的元素</h3>
+                        <p>最好使用 button 元素来获得在各个浏览器上获得相匹配的绘制效果</p>
+                        <a class="btn btn-default" href="#" role="button">Link</a>
+                        <button class="btn btn-default" type="button">Button</button>
+                        <button class="btn btn-default" type="submit">Submit</button>
+                        <input class="btn btn-default" type="button" value="Input">
+                        <input class="btn btn-default" type="submit" value="Submit">
+                        <pre><code class="language-markup">
+&lt;a class="btn btn-default" href="#" role="button">Link&lt;/a&gt;
+&lt;button class="btn btn-default" type="submit">Button&lt;/button&gt;
+&lt;input class="btn btn-default" type="button" value="Input"&gt;
+&lt;input class="btn btn-default" type="submit" value="Submit"&gt;
+                      </code></pre>
+                    </div>
+                    <div class="bottom20 ms-article">
+                        <h3>带有预订样式的按钮</h3>
+                        <p>当然了如果按钮样式不符合实际开发效果，可做相应修改，依具体情况定。</p>
+                        <button type="button" class="btn btn-default">（默认样式）Default</button>
+                        <button type="button" class="btn btn-primary">（首选项）Primary</button>
+                        <button type="button" class="btn btn-success">（成功）Success</button>
+                        <button type="button" class="btn btn-info">（一般信息）Info</button>
+                        <button type="button" class="btn btn-warning">（警告）Warning</button>
+                        <button type="button" class="btn btn-danger">（危险）Danger</button>
+                        <button type="button" class="btn btn-transparent">（透明）Transparent</button>
+                        <pre><code class="language-markup">
+&lt;button type="button" class="btn btn-default"&gt;（默认样式）Default&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary"&gt;（首选项）Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;（成功）Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-info"&gt;（一般信息）Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning"&gt;（警告）Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;（危险）Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-transparent"&gt;（透明）Transparent&lt;/button&gt;
+                        </code></pre>
+                    </div>
+                    <div class="bottom20 ms-article ms-article">
+                        <h3>不同尺寸的按钮</h3>
+                        <p>使用 .btn-lg .btn-sm . btn-xs改变按钮的默认大小</p>
+                        <p>
+                            <button type="button" class="btn btn-primary btn-lg">（大按钮）Large button</button>
+                            <button type="button" class="btn btn-default btn-lg">（大按钮）Large button</button>
+                        </p>
+                        <p>
+                            <button type="button" class="btn btn-primary">（默认尺寸）Default button</button>
+                            <button type="button" class="btn btn-default">（默认尺寸）Default button</button>
+                        </p>
+                        <p>
+                            <button type="button" class="btn btn-primary btn-sm">（小按钮）Small button</button>
+                            <button type="button" class="btn btn-default btn-sm">（小按钮）Small button</button>
+                        </p>
+                        <p>
+                            <button type="button" class="btn btn-primary btn-xs">（超小尺寸）Extra small button</button>
+                            <button type="button" class="btn btn-default btn-xs">（超小尺寸）Extra small button</button>
+                        </p>
+                        <pre><code class="language-markup">
+&lt;p&gt;
+    &lt;button type="button" class="btn btn-primary btn-lg"&gt;（大按钮）Large button&lt;/button&gt;
+    &lt;button type="button" class="btn btn-default btn-lg"&gt;（大按钮）Large button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;（默认尺寸）Default button&lt;/button&gt;
+    &lt;button type="button" class="btn btn-default"&gt;（默认尺寸）Default button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    &lt;button type="button" class="btn btn-primary btn-sm"&gt;（小按钮）Small button&lt;/button&gt;
+    &lt;button type="button" class="btn btn-default btn-sm"&gt;（小按钮）Small button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    &lt;button type="button" class="btn btn-primary btn-xs"&gt;（超小尺寸）Extra small button&lt;/button&gt;
+    &lt;button type="button" class="btn btn-default btn-xs"&gt;（超小尺寸）Extra small button&lt;/button&gt;
+&lt;/p&gt;
+                        </code></pre>
+                    </div>
                 </section>
             </article>
         </div>
         <!-- 主体部分结束 -->
         <!-- 页尾开始 -->
         <footer>
-          Copyright &copy; 2016-2017 <a href="www.manstro.com">万洲嘉智信息科技有限公司</a>. All Rights Reserved
+            Copyright &copy; 2016-2017 <a href="www.manstro.com">万洲嘉智信息科技有限公司</a>. All Rights Reserved
         </footer>
         <!-- 页尾结束 -->
         <!-- 返回顶部开始 -->
         <div class="back-to-top"></div>
         <!-- 返回顶部结束 -->
     </div>
-    <script src="../ui/js/data-load.js"></script>
+    <script src="../dep/prism/prism.js"></script>
     <script src="../ui/js/public.js"></script>
     <script src="../ui/js/jquery.waypoints.min.js"></script>
 </body>

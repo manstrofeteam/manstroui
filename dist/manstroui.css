@@ -1,0 +1,803 @@
+@charset "UTF-8";
+
+/* ======== 基础颜色和布局样式开始 ======== */
+
+.font12 {
+    font-size: 1.2rem;
+}
+
+.font14 {
+    font-size: 1.4rem;
+}
+
+.font16 {
+    font-size: 1.6rem;
+}
+
+.font18 {
+    font-size: 1.8rem;
+}
+
+.font20 {
+    font-size: 2rem;
+}
+
+.color-black {
+    color: #444;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.color-grey {
+    color: #888;
+}
+
+.color-red {
+    color: #ff4611;
+}
+
+.color-green {
+    color: #429842;
+}
+
+.color-blue {
+    color: #4c9ed9;
+}
+
+.color-yellow {
+    color: #e38d13;
+}
+
+.bg-red {
+    background-color: #ff4611;
+}
+
+.bg-green {
+    background-color: #429842;
+}
+
+.bg-blue {
+    background-color: #4c9ed9;
+}
+
+.bg-yellow {
+    background-color: #e38d13;
+}
+
+.right10 {
+    margin-right: 1rem;
+}
+
+.right20 {
+    margin-right: 2rem;
+}
+
+.bottom10 {
+    margin-bottom: 1rem;
+}
+
+.bottom20 {
+    margin-bottom: 2rem;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+
+/* 左右浮动 */
+
+.ms-fl {
+    float: left;
+}
+
+.ms-fr {
+    float: right;
+}
+
+
+/*水平翻转*/
+
+.ms-flipx {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    /*IE*/
+    filter: FlipH;
+}
+
+
+/*垂直翻转*/
+
+.ms-flipy {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+
+/*固定宽度，超出部分用…代替*/
+
+.ms-fixed-width {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ======== 基础颜色和布局样式结束 ======== */
+
+
+/* 遮罩层 */
+
+.ms-overlay {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 100;
+}
+
+
+/* ======= 弹出层公共样式开始 ======= */
+
+.ms-dialog{
+    display: none;
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+    background-color: #fff;
+}
+.ms-fixed{
+	 position: fixed;
+}
+.ms-absolute{
+	 position: absolute;
+}
+.ms-dialog-mini {
+    width: 400px;
+    height: 300px;
+    margin-left: -200px;
+    margin-top: -150px;
+}
+
+.ms-dialog-sm {
+    width: 520px;
+    height: 420px;
+    margin-left: -260px;
+    margin-top: -210px;
+}
+
+.ms-dialog-default {
+    width: 650px;
+    height: 430px;
+    margin-left: -325px;
+    margin-top: -215px;
+}
+.ms-dialog-lg {
+    width: 800px;
+    height: 600px;
+    margin-left: -400px;
+    margin-top: -300px;
+}
+
+.ms-dialog .ms-dialog-title {
+    padding-left: 14px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #00a1c3;
+}
+
+.ms-dialog .ms-dialog-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.ms-dialog .ms-dialog-content{
+	height: 500px;
+	padding:10px 20px 20px;
+	overflow-y:auto;
+}
+
+
+/* ======= 弹出层公共样式结束 ======= */
+/* ======= 文章样式 ======= */
+.ms-article{
+	line-height:1.75;
+}
+.ms-article p{
+	margin-bottom:4px;
+}
+
+
+/* textarea 还剩字数统计开始 */
+
+.word-count {
+    position: relative;
+    min-width: 600px;
+}
+
+.word-count textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+.word-count .wordwrap {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+}
+
+.word-count .word {
+    color: red;
+    padding: 0 4px;
+}
+
+
+/* textarea 还剩字数统计结束 */
+
+
+/* ======= 表单公共样式结束 ======= */
+
+
+
+
+/* ======= nav-tabs标签开始 ======= */
+
+.ms-nav-tab .nav-tabs {
+    margin: 0 auto;
+    height: 42px;
+    border-bottom: 2px solid #209EF6;
+}
+
+.ms-nav-tab .nav-tabs li {
+    float: left;
+    margin-right: 10px;
+    width: 130px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    border: 2px solid #DDD;
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.ms-nav-tab .nav-tabs .active {
+    color: #209EF6;
+    border: 2px solid #209EF6;
+    border-bottom-color: #FFF;
+}
+
+.ms-nav-tab .tab-content {
+    padding: 20px;
+    height: 300px;
+    border: 2px solid #209EF6;
+    border-top: none;
+}
+
+
+/* ======= nav-tabs页签结束 ======= */
+
+
+/* ======= nav-lines页签开始 ======= */
+
+.ms-nav-line .nav-lines {
+    width: 321px;
+    overflow: hidden;
+}
+
+.ms-nav-line .nav-lines li {
+    float: left;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 27px;
+    text-align: center;
+    width: 70px;
+    cursor: pointer;
+}
+
+.ms-nav-line .nav-lines li.active,
+.ms-nav-line .nav-lines li:hover {
+    border-bottom: 2px solid #dd1136;
+    color: #dd1136;
+    display: inline-block;
+}
+
+.ms-nav-line .nav-lines li {
+    height: 40px;
+    display: inline-block;
+    width: 80px;
+}
+
+.ms-nav-line .tab-content {
+    padding-top: 20px;
+    min-height: 300px;
+}
+
+
+/* ======= nav-lines页签结束 ======= */
+
+.ms-bar {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    content: " ";
+    width: 4px;
+    height: 18px;
+    background-color: #ccc;
+}
+
+
+/* ======= icon图标集开始 =======*/
+
+.ms-icon {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    cursor: pointer;
+    overflow: hidden;
+    text-indent: -9999px;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+.icon-close {
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/icon-close.png");
+}
+
+
+/*占位图片开始*/
+
+.icon-default16 {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/16.png);
+}
+
+.icon-default32 {
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/32.png);
+}
+
+.icon-default64 {
+    width: 64px;
+    height: 64px;
+    background-image: url(../img/64.png);
+}
+
+.icon-default128 {
+    width: 128px;
+    height: 128px;
+    background-image: url(../img/128.png);
+}
+
+
+/*占位图片结束*/
+
+.icon-caret {
+    width: 11px;
+    height: 7px;
+    background-image: url(../img/icon-caret-grey.png);
+}
+
+.icon-caret-left {
+    width: 7px;
+    height: 10px;
+    background-image: url(../img/icon-caret-grey-lf.png);
+}
+
+.icon-caret-white {
+    width: 13px;
+    height: 10px;
+    background-image: url(../img/icon-caret-white.png);
+}
+
+
+.icon-right {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icon-right-grey.png);
+}
+
+
+/*搜索标志*/
+
+.icon-search {
+    background-image: url(../img/icon-search.png);
+}
+
+
+/*电话标志*/
+
+.icon-phone-big {
+    width: 38px;
+    height: 38px;
+    background-image: url(../img/icon-phone-big.png);
+}
+
+
+/*定位*/
+
+.icon-location {
+    width: 20px;
+    height: 24px;
+    background-image: url(../img/icon-location.png);
+}
+
+
+/*星级图标*/
+
+.icon-grade {
+    width: 14px;
+    height: 14px;
+    background-position: 0 0;
+    background-image: url(../img/icon-grade.png);
+}
+
+.icon-grade1 {
+    width: 16px;
+}
+
+.icon-grade2 {
+    width: 32px;
+}
+
+.icon-grade3 {
+    width: 47px;
+}
+
+.icon-grade4 {
+    width: 63px;
+}
+
+.icon-grade5 {
+    width: 60px;
+}
+
+
+/*订单标志*/
+
+.icon-order {
+    width: 25px;
+    height: 23px;
+    background-image: url(../img/icon-order.png);
+}
+
+
+/*新增标志*/
+
+.icon-new {
+    width: 32px;
+    height: 23px;
+    background-image: url(../img/icon-new.png);
+}
+
+
+/*钱袋标志*/
+
+.icon-money {
+    width: 25px;
+    height: 23px;
+    background-image: url(../img/icon-money.png);
+}
+
+
+/*服务中心标志*/
+
+.icon-help {
+    width: 25px;
+    height: 23px;
+    background-image: url(../img/icon-help.png);
+}
+
+
+/*连接标志*/
+
+.icon-link {
+    width: 26px;
+    height: 25px;
+    background-image: url(../img/icon-link.png);
+}
+
+
+/*问号标志*/
+
+.icon-question {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/icon-question.png);
+}
+
+
+/*会员等级标志*/
+
+.icon-lv {
+    width: 38px;
+    height: 13px;
+}
+
+.icon-lv1 {
+    background-image: url(../img/icon-lv1.png);
+}
+
+.icon-lv2 {
+    background-image: url(../img/icon-lv2.png);
+}
+
+.icon-lv3 {
+    background-image: url(../img/icon-lv3.png);
+}
+
+.icon-lv4 {
+    background-image: url(../img/icon-lv4.png);
+}
+
+.icon-lv5 {
+    background-image: url(../img/icon-lv5.png);
+}
+
+.icon-lv6 {
+    background-image: url(../img/icon-lv6.png);
+}
+
+.icon-close-white{
+	width:32px;
+	height:32px;
+	background: transparent url("../img/icon-close-white.png") no-repeat
+		scroll 0 0;
+}
+.icon-success-big{
+	width:64px;
+	height:64px;
+	background: transparent url("../img/icon-success-big.png") no-repeat
+		scroll 0 0;
+}
+
+.icon-search{
+	width:32px;
+	height:32px;
+	background: transparent url("../img/icon-search.png") no-repeat
+		scroll 0 0;
+}
+.icon-smile{
+	width:64px;
+	height:64px;
+	background: transparent url("../img/icon-smile.png") no-repeat
+		scroll 0 0;
+}
+.icon-caret-grey{
+	width:23px;
+	height:16px;
+	background: transparent url("../img/icon-caret-down-grey.png") no-repeat
+		scroll 0 0;
+}
+.icon-caret-black{
+	width:23px;
+	height:16px;
+	background: transparent url("../img/icon-caret-down-black.png") no-repeat
+		scroll 0 0;
+}
+
+.icon-caret-white{
+	width:13px;
+	height:10px;
+	background: transparent url("../img/icon-caret-white.png") no-repeat
+		scroll 0 0;
+}
+.icon-caret-black-lt{
+	width:13px;
+	height:10px;
+	background: transparent url("../img/icon-caret-down-black.png") no-repeat
+		scroll 0 0;
+		background-size: 100%;
+}
+
+.icon-caret-down{
+	width:13px;
+	height:10px;
+	background: transparent url("../img/icon-caret-down-black.png") no-repeat
+		scroll 0 0;
+	background-size: 100%;
+}
+.active .icon-caret-down{
+	background: transparent url("../img/icon-caret-white.png") no-repeat
+		scroll 0 0;
+}
+.icon-time{
+	width:64px;
+	height:64px;
+	background: transparent url("../img/icon-time.png") no-repeat
+		scroll 0 0;
+}
+.icon-card-type{
+	width:64px;
+	height:64px;
+	background: transparent url("../img/icon-card-type.png") no-repeat
+		scroll 0 0;
+}
+.icon-question{
+	width:20px;
+	height:20px;
+	background: transparent url("../img/icon-question.png") no-repeat
+		scroll 0 0;
+		background-size:90%;
+}
+.icon-wxpay{
+	width: 119px;
+	height: 33px;
+	background-image: url(../img/icon-wxpay.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.icon-alipay{
+	width: 94px;
+	height: 33px;
+	background-image: url("../img/icon-alipay.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.icon-right-big-green {
+    width: 33px;
+    height: 33px;
+    background-image: url(../img/icon-right-big-green.png);
+}
+.icon-right-big-grey {
+    width: 33px;
+    height: 33px;
+    background-image: url(../img/icon-right-big-grey.png);
+}
+.icon-switch {
+    width: 40px;
+    height: 28px;
+    background-image: url(http://www.manstrosmart.com/campPortal/static/webUI/img/public/icon-switch.png);
+    background-size: 98%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.icon-switch-close {
+    background-position: 0 -28px;
+}
+
+.icon-add{
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/icon-add.png);
+    background-size:100%;
+}
+.icon-point{
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/icon-point.png);
+}
+.icon-money{
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/icon-money.png);
+}
+
+.icon-check{
+    width:24px;
+	height:24px;
+    background-image: url(../img/icon-check.png);
+}
+.icon-checked{
+    width:24px;
+	height:24px;
+    background-image: url(../img/icon-checked.png);
+}
+
+/* ======= icon图标集结束 =======*/
+
+
+/* ======= 数量加减组件开始 ======= */
+
+.ms-plus-minus {
+    width: 80px;
+    line-height: 26px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.ms-plus-minus span {
+    float: left;
+    display: inline-block;
+    width: 18px;
+    text-align: center;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+.ms-plus-minus .minus {
+    border-right: 1px solid #ddd;
+}
+
+.ms-plus-minus .plus {
+    border-left: 1px solid #ddd;
+}
+.ms-plus-minus .text-amount {
+    float: left;
+    padding: 0 2px;
+    width: 38px;
+    height: 26px;
+    text-align: center;
+    border: none;
+}
+
+
+/* ======= 数量加减组件结束 ======= */
+
+
+/*验证密码强度开始*/
+
+#check-pwd-strong {
+    position: relative;
+    margin-bottom: 10px;
+    height: 64px;
+}
+
+#check-pwd-strong input {
+    width: 240px;
+    height: 24px;
+    padding: 2px;
+}
+
+#check-pwd-strong .correct {
+    border: 1px solid green;
+}
+
+#check-pwd-strong .error {
+    border: 1px solid red;
+}
+
+#check-pwd-strong #tips {
+    margin-top: 10px;
+    margin-left: 83px;
+}
+
+#check-pwd-strong #tips span {
+    float: left;
+    width: 50px;
+    height: 20px;
+    color: #fff;
+    overflow: hidden;
+    background: #ccc;
+    margin-right: 2px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#check-pwd-strong #tips.s1 .active {
+    background: #f30;
+}
+
+#check-pwd-strong #tips.s2 .active {
+    background: #fc0;
+}
+
+#check-pwd-strong #tips.s3 .active {
+    background: #cc0;
+}
+
+#check-pwd-strong #tips.s4 .active {
+    background: #090;
+}
+
+
+/*验证密码强度结束*/

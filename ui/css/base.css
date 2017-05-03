@@ -1,13 +1,15 @@
-/**
- *Copyright (c) 2016-05-09, manstro.com. All rights reserved
- *Author:thone_xing
- *Based on W3CPLUS 
- */
+/* ====== 浏览器重置样式开始 ======  */
 
+html {
+    font-size: 62.5%;
+}
 
-/**
-*Remove Spacing
-*/
+body {
+    font: 14px "Microsoft YaHei", tahoma, arial, Hiragino Sans GB, \\5b8b体, sans-serif;
+    background-color: #fff;
+    color: #444;
+    height: 100%;
+}
 
 body,
 dl,
@@ -35,12 +37,6 @@ textarea {
     padding: 0;
 }
 
-
-/*
- * Add block display for HTML5 elements
- * Corrects block display not defined in IE6/7/8/9 & FF3
- */
-
 article,
 aside,
 details,
@@ -54,29 +50,11 @@ section {
     display: block;
 }
 
-
-/* =============================================================================
-   Typography
-   ========================================================================== */
-
-
-/*
- * Add bottom border
- * Corrects styling not present in IE7/8/9 S5 Chrome
- */
-
 abbr[title],
 dfn[title] {
     border-bottom: 1px dotted;
     cursor: help;
 }
-
-
-/*
- * Define font family as monospace
- * Corrects font family set oddly in IE6 S5 C10
- * en.wikipedia.org/wiki/User:Davidgothberg/Test59
- */
 
 pre,
 code,
@@ -87,29 +65,12 @@ samp {
     font-size: 1em;
 }
 
-
-/*
- * Add line wrapping
- * Improves readability of pre-formatted text in all browsers
- */
-
 pre {
     white-space: pre;
-    /*CSS2*/
     white-space: pre-wrap;
-    /*CSS2.1*/
     white-space: pre-line;
-    /*CSS3*/
     word-wrap: break-word;
-    /*IE*/
 }
-
-
-/*
- * Remove quotes
- * 1. Addresses CSS quotes not supported in IE6/7
- * 2. Addresses quote attributes not supported in S4
- */
 
 blockquote,
 q {
@@ -124,22 +85,9 @@ q:after {
     content: none;
 }
 
-
-/*
- * Define font size
- * Improves appearance in all browsers
- */
-
 small {
     font-size: 75%;
 }
-
-
-/*
- * Define font size and alignment
- * Improves appearance without affecting line-height in all browsers
- * gist.github.com/413930
- */
 
 sub,
 sup {
@@ -157,44 +105,6 @@ sub {
     bottom: -0.25em;
 }
 
-
-/*Clear floats 
- *The Magnificent CLEARFIX:Updated fo prevent margin-collapsing on child elements 
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    visibility: hidden;
-}
-
-.clearfix {
-    zoom: 1;
-    /*IE<8*/
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-* html .clearfix {
-    zoom: 1;
-    /* IE6 */
-}
-
-*:first-child+html .clearfix {
-    zoom: 1;
-    /* IE7 */
-}
-
-
-/*
- * Add inline-block display for HTML5 elements
- * Corrects inline-block display not defined in IE6/7/8/9 & FF3
- */
-
 audio[controls],
 canvas,
 video {
@@ -203,60 +113,10 @@ video {
     *zoom: 1;
 }
 
-html {
-    font-size: 100.01%;
-    /*To Prevent bugs in IE and Opera*/
-    /*Using height 100% on html and body allows to style containers with a 100% height*/
-    cursor: default;
-    /* Add normal cursor  Improves visual focus of page during mouse use in all browsers */
-    overflow-y: auto;
-    /* Add vertical scrollbar  Keeps page centered in all browsers regardless of content height */
-    -webkit-tap-highlight-color: transparent;
-    /* Add vertical scrollbar  Keeps page centered in all browsers regardless of content height */
-    -ms-text-size-adjust: 100%;
-    /* Define maximum text display as 100% to document Corrects text displayed oddly after orientation change in handheld browsers */
-    -webkit-text-size-adjust: 100%;
-    /* Define maximum text display as 100% to document Corrects text displayed oddly after orientation change in handheld browsers */
-}
-
-body {
-    background-color: #fff;
-    /*Not all browsers set white as the default background color*/
-    color: #444;
-    /*#444 looks better than black*/
-    height: 100%;
-}
-
-body,
-button input,
-select,
-textarea {
-    font: 14px/1.5 sans-serif;
-}
-
 img,
 fieldset {
     border: 0 none;
-    /*Remove border   Improves readability when inside <a> element in all browsers*/
 }
-
-img {
-    vertical-align: top;
-    -ms-interpolation-mode: bicubic;
-    /*Add high quality bicubic image resampling Improves visual appearance when scaled in IE7*/
-}
-
-
-/* =============================================================================
-   Links
-   ========================================================================== */
-
-
-/*
- * Remove outline
- * Improves appearance when active or hovered in all browsers
- * people.opera.com/patrickl/experiments/keyboard/test
- */
 
 a,
 a:link,
@@ -265,11 +125,7 @@ a:hover,
 a:active {
     text-decoration: none;
     outline: none;
-    color: #444;
 }
-
-
-/*Hide only visually,but have it available for screenreaders*/
 
 .hidden {
     border: 0 !important;
@@ -284,20 +140,34 @@ a:active {
     width: 1px;
 }
 
+.clearfix:before,
+.clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 
-/* =============================================================================
-    Lists
-   ========================================================================== */
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+* html .clearfix {
+    zoom: 1;
+}
+
+*:first-child+html .clearfix {
+    zoom: 1;
+}
 
 ul,
 ol {
     list-style: none;
 }
-
-
-/* =============================================================================
-   Forms
-   ========================================================================== */
 
 form {
     overflow: visible;
@@ -305,73 +175,34 @@ form {
 
 fieldset {
     line-height: 1;
-    /*line height helps to set the vertical alignment of radio buttons and check boxes*/
 }
-
-
-/*
- * Add negative left margin
- * Corrects alignment displayed oddly in IE6/7
- */
 
 legend {
     *margin-left: -7px;
 }
 
-
-/*
- * Define consistent vertical alignment display in all browsers
- */
-
 button,
 input,
 select,
 textarea {
+    font: 14px/1.5;
     vertical-align: baseline;
     *vertical-align: middle;
 }
 
-
-/*
- * 1. Define line-height as normal
- *    Corrects FF3/4 setting it using !important in the UA stylesheet
- * 2. Make visible overflow
- *    Fixes spacing displayed oddly in IE6/7
- */
-
 button,
 input {
     line-height: normal;
-    /* 1 */
     *overflow: visible;
-    /* 2 */
 }
-
-
-/*
- * 1. Display hand cursor for clickable form elements
- *    Improves usability and consistency of cursor style between image-type <input /> and others
- * 2. Define appearance for clickable form elements
- *    Corrects inability to style clickable <input /> types in iOS
- */
 
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"],
-.form-btn,
-.btn {
+input[type="submit"] {
     cursor: pointer;
-    /* 1 */
     -webkit-appearance: button;
-    /* 2 */
 }
-
-
-/*
- * Define box sizing
- * Addresses box sizing set to content-box in IE8/9
- */
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -379,42 +210,9 @@ input[type="radio"] {
 }
 
 input[type="checkbox"] {
-    vertical-align: bottom;
-    /*Vertical alignment of checkboxes*/
-    *vertical-align: baseline;
-    /*IE7*/
+    vertical-align: middle;
+    margin-top: -2px;
 }
-
-input[type="radio"] {
-    vertical-align: text-bottom;
-    /*Vertical alignment of radio buttons*/
-}
-
-input {
-    _vertical-align: text-bottom;
-    /*Vertical alignment of input fields for IE6*/
-}
-
-
-/*
- * Define box sizing and appearance
- * Addresses box sizing set to border-box in S5 Chrome (include -moz to future-proof)
- * Addresses appearance set to searchfield in S5 Chrome
- */
-
-input[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-}
-
-
-/*
- * Remove inner padding and border
- * Fixes appearance displayed oddly in FF3/4
- * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
- */
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -422,19 +220,9 @@ input::-moz-focus-inner {
     padding: 0;
 }
 
-
-/*
- * 1. Disable default vertical scrollbar
- *    Corrects scrollbar displayed oddly in IE6/7/8/9
- * 2. Add top vertical alignment
- *    Improves readability and aligment in all browsers
- */
-
 textarea {
     overflow: auto;
-    /* 1 */
     vertical-align: top;
-    /* 2 */
 }
 
 input[type="email"],
@@ -445,19 +233,17 @@ input[type="search"],
 input[type="file"],
 textarea,
 select {
-    border: 1px solid #7F9DB9;
+    border: 1px solid #ddd;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
     outline-width: 0;
-    /*No outline border for Safary*/
 }
 
 select {
     background-color: transparent;
-    /*In Webkit/Mac, select fails to inherit color,font-*,etc if there is no other styling like background for example(border will do to)*/
 }
 
 label {
@@ -473,23 +259,11 @@ label.required:after {
 button,
 input[type="submit"],
 input[type="reset"],
-input[type="button"],
-.form-btn {
+input[type="button"] {
     width: auto;
     *width: 1;
     overflow: visible;
 }
-
-
-/* =============================================================================
-   Tables
-   ========================================================================== */
-
-
-/* 
- * Remove spacing between table cells
- * Improves vertical and horizontal alignment in all browsers
- */
 
 table {
     border-collapse: collapse;
@@ -502,11 +276,6 @@ td {
     text-align: left;
     vertical-align: middle;
 }
-
-
-/*
- *Header
- */
 
 h1 {
     font-size: 2em;
@@ -531,3 +300,6 @@ h5 {
 h6 {
     font-size: 0.67em;
 }
+
+
+/* ====== 浏览器重置样式结束 ======  */
