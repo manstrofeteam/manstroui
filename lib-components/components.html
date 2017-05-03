@@ -50,16 +50,15 @@
                     <ul class="parent-nav">
                         <li name="dropdown"><a href="#dropdown">下拉列表</a></li>
                         <li name="plus-minus"><a href="#plus-minus">加减框</a></li>
-                        <li name="page-num"><a href="#">页数加减框</a></li>
-                        <li name="pagination"><a href="#">简单分页样式</a></li>
-                        <li name="laypage"><a href="#">动态分页演示</a></li>
-                        <li name="check-strong"><a href="#">验证密码强度</a></li>
-                        <li name="search"><a href="#">两种搜索框</a></li>
-                        <li name="spinner"><a href="#">下拉框列表</a></li>
-                        <li name="progress-bar"><a href="#">进度条</a></li>
-                        <li name="birthday-out"><a href="#">生日</a></li>
-                        <li name="pca"><a href="#">省市区联动</a></li>
-                        <li name="ueditor"><a href="#">ueditor编辑器</a></li>
+
+                        <li name="laypage"><a href="#laypage">动态分页演示</a></li>
+                        <li name="check-strong"><a href="#check-strong">验证密码强度</a></li>
+
+                        <li name="spinner"><a href="#spinner">下拉框列表</a></li>
+                        <li name="progress-bar"><a href="#progress-bar">进度条</a></li>
+                        <li name="birthday-out"><a href="#birthday-out">生日</a></li>
+                        <li name="pca"><a href="#pca">省市区联动</a></li>
+                        <li name="ueditor"><a href="#ueditor">ueditor编辑器</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -141,35 +140,256 @@
                     /*---------数量的加减结束----------*/
                     </script>
                 </section>
-                <section id="page-num">
-                    <h2>页数加减框  Page</h2>
-                    <div data-load="modules/page.html"></div>
-                </section>
-                <section id="pagination">
-                    <h2>简单分页样式 Pagination</h2>
-                    <div data-load="modules/pagination.html"></div>
-                </section>
+
                 <section id="laypage">
                     <h2>动态分页演示 Laypage</h2>
-                    <div data-load="modules/laypage.html"></div>
+                    <!-- 动态分页演示开始 -->
+                    <ul id="biuuu_city_list" style="margin-bottom: 20px;"></ul>
+                    <div id="biuuu_city"></div>
+                    <div style="width:800px; margin:20px 0 0; font-size:14px;">
+                        <p>====================================================================</p>
+                        <p>把laypage整个目录放入你的项目，只需引入laypage.js即可，其它一律无视。</p>
+                        <p>详细文档打开demo，或者直接进入官网：<a href="http://laypage.layui.com">http://laypage.layui.com</a></p>
+                        <p>使用时请保留来源，感谢支持。</p>
+                        <p>MIT 最终解释权：贤心 - layui.com</p>
+                    </div>
+                    <!-- 动态分页演示结束 -->
                     <!-- 需要引入资源库中的laypage.js -->
                     <script src="../dep/laypage/laypage.js"></script>
+                    <script>
+                    //测试数据
+                    var data = [
+                        '北京',
+                        '上海',
+                        '广州',
+                        '深圳',
+                        '杭州',
+                        '长沙',
+                        '合肥',
+                        '宁夏',
+                        '成都',
+                        '西安',
+                        '南昌',
+                        '上饶',
+                        '沈阳',
+                        '济南',
+                        '厦门',
+                        '福州',
+                        '九江',
+                        '宜春',
+                        '赣州',
+                        '宁波',
+                        '绍兴',
+                        '无锡',
+                        '苏州',
+                        '徐州',
+                        '东莞',
+                        '佛山',
+                        '中山',
+                        '成都',
+                        '武汉',
+                        '青岛',
+                        '天津',
+                        '重庆',
+                        '南京',
+                        '九江',
+                        '香港',
+                        '澳门',
+                        '台北'
+                    ];
+
+                    var nums = 5; //每页出现的数量
+                    var pages = Math.ceil(data.length / nums); //得到总页数
+                    var thisDate = function(curr) {
+                        //此处只是演示，实际场景通常是返回已经当前页已经分组好的数据
+                        var str = '',
+                            last = curr * nums - 1;
+                        last = last >= data.length ? (data.length - 1) : last;
+                        for (var i = (curr * nums - nums); i <= last; i++) {
+                            str += '<li>' + data[i] + '</li>';
+                        }
+                        return str;
+                    };
+
+                    //调用分页
+                    laypage({
+                        cont: 'biuuu_city',
+                        pages: pages,
+                        skin: 'molv', //皮肤
+                        jump: function(obj) {
+                            document.getElementById('biuuu_city_list').innerHTML = thisDate(obj.curr);
+                            // obj.curr 表示当前页码    console.log(obj.curr);
+                        }
+                    })
+                    </script>
+
+
                 </section>
                 <section id="check-strong">
                     <h2>验证密码强度 Pwd-strength</h2>
-                    <div data-load="modules/pwd-strongth.html"></div>
+                    <div id="pwd-strong-html">
+                        <!-- 验证密码强度开始 -->
+                        <div id="check-pwd-strong">
+                            <input type="password" value="" maxlength="16" />
+                            <div id="tips">
+                                <span>弱</span>
+                                <span>中</span>
+                                <span>强</span>
+                                <span>非常好</span>
+                            </div>
+                        </div>
+                        <!-- 验证密码强度结束 -->
+                    </div>
+                    <!-- 这里显示下拉列表的html代码 -->
+                    <div id="pwd-strong-code" class="show-code"></div>
+                    <script type="text/javascript">
+                    /** 强度规则
+                         + ------------------------------------------------------- +
+                         1) 任何少于6个字符的组合，弱；任何字符数的同类字符组合，弱；
+                         2) 任何字符数的两类字符组合，中；
+                         3) 12位字符数以下的三类或四类字符组合，强；
+                         4) 12位字符数以上的三类或四类字符组合，非常好。
+                         + ------------------------------------------------------- +
+                        **/
+                    //检测密码强度
+                    function checkStrong(sValue) {
+                        var modes = 0;
+                        if (sValue.length < 6) return modes;
+                        if (/\d/.test(sValue)) modes++; //数字
+                        if (/[a-z]/.test(sValue)) modes++; //小写
+                        if (/[A-Z]/.test(sValue)) modes++; //大写
+                        if (/\W/.test(sValue)) modes++; //特殊字符
+                        switch (modes) {
+                            case 1:
+                                return 1;
+                                break;
+                            case 2:
+                                return 2;
+                            case 3:
+                            case 4:
+                                return sValue.length < 12 ? 3 : 4
+                                break;
+                        }
+                    }
+
+                    /*---------密码强度验证开始----------*/
+                    var oTips = $("#check-pwd-strong #tips");
+                    var oInput = $("#check-pwd-strong input");
+                    var aSpan = oTips.children("span");
+                    oInput.bind('focus keyup blur', function() {
+                        var index = checkStrong(this.value);
+                        // 改变输入框边框颜色
+                        this.className = index ? "correct" : "error";
+                        //改变右侧强度标识的颜色
+                        oTips.attr("class", "s" + index);
+                        for (var i = 0; i < aSpan.length; i++) {
+                            aSpan[i].className = "";
+                            index && (aSpan[index - 1].className = "active");
+                        }
+                    });
+                    /*---------密码强度验证结束----------*/
+                    $("#pwd-strong-html").htmlcode($("#pwd-strong-code"), {
+                        indent: true
+                    });
+                    </script>
                 </section>
-                <section id="search">
-                    <h2>两种搜索框</h2>
-                    <div data-load="modules/search.html"></div>
-                </section>
+
                 <section id="spinner">
                     <h2>下拉框列表</h2>
-                    <div data-load="modules/spinner.html"></div>
+                    <div id="bike-html">
+                        <div class="bike-list bike-list-first">
+                            <div class="list-content">
+                                查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情
+                                <span class="see-desc"><span class="text">查看详情</span><i class="write-arrow"></i></span>
+                            </div>
+                            <div class="bike-desc">
+                                查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情
+                            </div>
+                        </div>
+                        <div class="bike-list">
+                            <div class="list-content">
+                                查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情
+                                <span class="see-desc"><span class="text">查看详情</span><i class="write-arrow"></i></span>
+                            </div>
+                            <div class="bike-desc">
+                                查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情查看详情
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 这里显示下拉列表的html代码 -->
+                    <div id="bike-code" class="show-code"></div>
+                    <script type="text/javascript">
+                    $(".see-desc").click(function() {
+                        $(this).children(".write-arrow").toggleClass("flipy");
+                        $(this).parent().siblings(".bike-desc").toggleClass("show")
+                        var txt = $(this).children(".text").text();
+                        if (txt == "查看详情") {
+                            $(this).children(".text").text("收起详情");
+                        } else if (txt == "收起详情") {
+                            $(this).children(".text").text("查看详情");
+                        }
+                    })
+                    $("#bike-html").htmlcode($("#bike-code"), {
+                        indent: true
+                    })
+                    </script>
                 </section>
                 <section id="progress-bar">
                     <h2>进度条</h2>
-                    <div data-load="modules/progress-bar.html"></div>
+                    <div id="line-html">
+                        <div class="line-item site-grade">
+                            <!-- 进度条 -->
+                            <div class="progress-bar-grey"></div>
+                            <div class="progress-bar-yellow"></div>
+                            <!-- 等级标志位置 -->
+                            <div class="grade-name">
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv1"></i>
+                                    <span class="grade-num">0</span>
+                                </div>
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv2"></i>
+                                    <span class="grade-num">100</span>
+                                </div>
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv3"></i>
+                                    <span class="grade-num">500</span>
+                                </div>
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv4"></i>
+                                    <span class="grade-num">1000</span>
+                                </div>
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv5"></i>
+                                    <span class="grade-num">2000</span>
+                                </div>
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv6"></i>
+                                    <span class="grade-num">5000</span>
+                                </div>
+                            </div>
+                            <!-- 等级标志位置 -->
+                        </div>
+                        <label>请输入积分数值：
+                            <input class="input" value="" type="number" />
+                        </label>
+                        <button class="sure" type="submit">确定</button>
+                    </div>
+                    <!-- 这里显示下拉列表的html代码 -->
+                    <div id="line-code" class="show-code"></div>
+                    <script type="text/javascript">
+                    $(".sure").click(function() {
+                        var val = $(".input").val();
+
+                        $(".progress-bar-yellow").stop().animate({
+                            width: val
+                        })
+
+                    })
+                    $("#line-html").htmlcode($("#line-code"), {
+                        indent: true
+                    });
+                    </script>
                 </section>
                 <section id="birthday-out">
                     <h2>生日</h2>
@@ -201,9 +421,7 @@
                             // 设定默认日期
                             defaultDate: datenow
                         });
-                        // $("#birthday-html").htmlcode($("#birthday-code"), {
-                        //     indent: true
-                        // })
+
                     });
                     </script>
                     <pre class="prettyprint linenums">
@@ -228,7 +446,6 @@
                 </section>
                 <section id="pca">
                     <h2>省市区联动</h2>
-                    <!--  <div data-load="modules/pca.html"> -->
                     <div id="pca-html">
                         <form action="">
                             <span class="goodsAddress">所在地区：</span>
@@ -250,22 +467,14 @@
                         });
                     })
                     </script>
-                    <!--  </div> -->
-                    <p>格式如下</p>
-                    &lt;form action=""&gt;
-                    </p>
-                    <p>
-                        &lt;select id="prov" name="province" data-code=""&gt;&lt;/select&gt;省
-                    </p>
-                    <p>
-                        &lt;select id="city" name="city" data-code=""&gt;&lt;/select&gt;市
-                    </p>
-                    <p>
-                        &lt;select id="area" name="area" data-code=""&gt;&lt;/select&gt;区
-                    </p>
-                    <p>
-                        &lt;/form&gt;
-                    </p>
+                    <pre class="prettyprint linenums">
+                        <p>格式如下</p>
+                        &lt;form action=""&gt;
+                            &lt;select id="prov" name="province" data-code=""&gt;&lt;/select&gt;省
+                            &lt;select id="city" name="city" data-code=""&gt;&lt;/select&gt;市
+                            &lt;select id="area" name="area" data-code=""&gt;&lt;/select&gt;区
+                            &lt;/form&gt;
+                      </pre>
                 </section>
                 <section id="ueditor">
                     <h2>UEditor富文本编辑器</h2>
