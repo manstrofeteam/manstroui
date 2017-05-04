@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<script src="${ctx_assets}/laypage/laypage.js"></script>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第三方组件库</title>
+    <link rel="shortcut icon" href="../ui/img/favicon.ico">
+    <link rel="stylesheet" href="../ui/css/base.css">
+    <link rel="stylesheet" href="prism/prism.css">
+    <link rel="stylesheet" href="../ui/css/layout/docs-layout.css">
+    <link rel="stylesheet" href="third-components.css">
+    <script src="../ui/js/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+    <div id="components" class="docs-layout ms-ui">
+        <!-- 页面顶部开始 -->
+        <header class="light">
+            <div class="align-center">
+                <a href="../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
+                <nav class="ms-fr">
+                    <ul>
+                        <li><a href="../index.html" title="ManstroUI">开始学习</a></li>
+                        <li><a href="../standard/semver.html" title="语义化版本">语义化版本</a></li>
+                        <li><a href="../standard/codeguide.html" title="前端规范">前端规范</a></li>
+                        <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
+                        <li><a href="../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                        <li><a href="../lib-components/components.html" title="组件库">组件库</a></li>
+                        <li><a class="active" href="third-components.html" title="组件库">第三方组件库</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="docs-header">
+            <div class="align-center">
+                <h1>第三方组件库</h1>
+                <p>展示常用的第三方组件，包括下拉列表、加减框、多种分页效果等更多功能。</p>
+            </div>
+        </div>
+        <!-- 页面顶部结束 -->
+        <!-- 主体部分开始 -->
+        <div class="main">
+            <!-- 左侧导航开始 -->
+            <aside class="lf-nav">
+                <nav>
+                    <p class="lf-nav-title">组件列表</p>
+                    <ul class="parent-nav">
+                        <li name="laypage"><a href="#laypage">动态分页演示</a></li>
+                        <li name="birthday-out"><a href="#birthday-out">生日</a></li>
+                        <li name="pca"><a href="#pca">省市区联动</a></li>
+                        <li name="ueditor"><a href="#ueditor">ueditor编辑器</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- 左侧导航结束 -->
+            <!-- 各组件开始 -->
+            <article class="rg-content">
+                <section id="laypage">
+                    <h2>动态分页演示 Laypage</h2>
+                    <!-- 动态分页演示开始 -->
+                    <div id="pagination"></div>
+                    <p>====================================================================</p>
+                    <p>把laypage整个目录放入你的项目，只需引入laypage.js即可，其它一律无视。</p>
+                    <p>详细文档直接进入官网：<a href="http://laypage.layui.com">http://laypage.layui.com</a></p>
+                    <pre class="language-js"><code>&lt;script src="laypage/laypage.js"&gt;&lt;/script&gt;</code></pre>
+                    <p>初始化js</p>
+                    <pre class="language-js"><code>
+laypage({
+    cont: $('#pagination'), //容器。值支持id名、原生dom对象，jquery对象,
+    pages: 20, //总页数
+    skip: true, //是否开启跳页
+    skin: '#d9534f',
+    groups: 3 //连续显示分页数
+});
+                    </code></pre>
+                    <!-- 动态分页演示结束 -->
+                    <!-- 需要引入资源库中的laypage.js -->
+                </section>
+                <section id="birthday-out">
+                    <h2>生日</h2>
+                    <div id="birthday-html">
+                        <label>生日：</label>
+                        <div id="birthday"></div>
+                    </div>
+                    <div class="docs-article">
+                        <h2>使用方法</h2>
+                        <p>直接写id="birthday"的空div</p>
+                        <pre class="language-markup"><code> &lt;div id="birthday"&gt;&lt;/div&gt;</code></pre>
+                        <p>并引入bday-picker.js和lib-components.js</p>
+                        <pre class="language-js"><code>&lt;script src="birthdaypicker/bday-picker.js"&gt;&lt;/script&gt;
+&lt;script src="js/lib-components.js"&gt;&lt;/script&gt;</code></pre>
+                    </div>
+                    <span>生日初始化的JS调用</span>
+                    <pre class="language-js"><code>$(function() {
+    var datenow = new Date().Format("yyyy-MM-dd");
+    //用户生日
+    var birthday = '1991-05-20';
+    if (birthday != '') {
+        datenow = birthday;
+    }
+    $("#birthday").birthdaypicker({
+        dateFormat: "bigEndian",
+        monthFormat: "short",
+        placeholder: true,
+        hiddenDate: true,
+        // 设定默认日期
+        defaultDate: datenow
+    });
+});</code></pre>
+                </section>
+                <section id="pca" class="docs-article">
+                    <h2>省市区联动</h2>
+                    <div class="bottom10">
+                        <form action="">
+                            <span class="goodsAddress">所在地区：</span>
+                            <select id="prov" name="province" data-code=""></select>省
+                            <select id="city" name="city" data-code=""></select>市
+                            <select id="area" name="area" data-code=""></select>区
+                        </form>
+                    </div>
+                    <p>创建地址表单html</p>
+                    <pre class="language-markup"><code>&lt;form action=""&gt;
+    &lt;select id="prov" name="province" data-code=""&gt;&lt;/select&gt;省
+    &lt;select id="city" name="city" data-code=""&gt;&lt;/select&gt;市
+    &lt;select id="area" name="area" data-code=""&gt;&lt;/select&gt;区
+&lt;/form&gt;</code></pre>
+                    <p>引入js</p>
+                    <pre class="language-js"><code>&lt;script src="pca/city2.js"&gt;&lt;/script&gt;
+&lt;script src="pca/citySelect2.js"&gt;&lt;/script&gt;
+&lt;script src="js/lib-components.js"&gt;&lt;/script&gt;</code></pre>
+                    <p>地址js初始化</p>
+                    <pre class="language-js"><code>var selectVal = new CitySelect({
+    data: data,
+    provId: "#prov",
+    cityId: '#city',
+    areaId: '#area',
+    isSelect: true // 默认为true 选择第一项 如果页面有指定省市区项时，就显示指定项。
+        // 如果false，就选中 "请选择"
+});</code></pre>
+                </section>
+                <section id="ueditor">
+                    <h2>UEditor富文本编辑器</h2>
+                    <p> <a href="../examples/ueditor/index.html">本地示例demo</a> 具体写法请查看页面html代码</p>
+                    <p>这是百度前端团队开发的轻量、可定制、注重用户体验的一个编辑器。具体API详情请看链接<a href=http://fex.baidu.com/ueditor/ "">http://fex.baidu.com/ueditor/</a>
+                    </p>
+                </section>
+            </article>
+            <!-- 各组件结束 -->
+        </div>
+        <!-- 主体部分结束 -->
+        <!-- 页尾开始 -->
+        <footer>
+            Copyright &copy; 2016-2017 <a href="www.manstro.com">万洲嘉智信息科技有限公司</a>. All Rights Reserved
+        </footer>
+        <!-- 页尾结束 -->
+        <!-- 返回顶部开始 -->
+        <div class="back-to-top"></div>
+        <!-- 返回顶部结束 -->
+    </div>
+    <script src="../ui/js/public.js"></script>
+    <script src="../ui/js/jquery.waypoints.min.js"></script>
+    <script src="laypage/laypage.js"></script>
+    <script src="birthdaypicker/bday-picker.js"></script>
+    <script src="pca/city2.js"></script>
+    <script src="pca/citySelect2.js"></script>
+    <script src="prism/prism.js"></script>
+    <script src="third-components.js"></script>
+</body>
+
+</html>

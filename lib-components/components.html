@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../ui/css/base.css">
     <link rel="stylesheet" href="../dep/prism/prism.css">
     <link rel="stylesheet" href="../lib-global-styles/global-styles.css">
-    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="../ui/css/layout/docs-layout.css">
+    <link rel="stylesheet" href="components.css">
     <script src="../ui/js/jquery-1.11.1.min.js"></script>
 </head>
 
@@ -30,6 +30,7 @@
                         <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
                         <li><a href="../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
                         <li><a class="active" href="../lib-components/components.html" title="组件库">组件库</a></li>
+                        <li><a href="../dep/third-components.html" title="组件库">第三方组件库</a></li>
                     </ul>
                 </nav>
             </div>
@@ -52,12 +53,9 @@
                         <li name="ms-dialog"><a href="#ms-overlay">弹出层</a></li>
                         <li name="dropdown"><a href="#dropdown">下拉列表</a></li>
                         <li name="plus-minus"><a href="#plus-minus">加减框</a></li>
-                        <li name="laypage"><a href="#laypage">动态分页演示</a></li>
                         <li name="check-strong"><a href="#check-strong">验证密码强度</a></li>
                         <li name="progress-bar"><a href="#progress-bar">进度条</a></li>
-                        <li name="birthday-out"><a href="#birthday-out">生日</a></li>
-                        <li name="pca"><a href="#pca">省市区联动</a></li>
-                        <li name="ueditor"><a href="#ueditor">ueditor编辑器</a></li>
+                        <li name="ueditor"><a href="#ueditor">其他组件</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -228,54 +226,6 @@ $(".ms-dialog .dialog-close").click(function() {
                     <script type="text/javascript">
                     </script>
                 </section>
-                <section id="laypage">
-                    <h2>动态分页演示 Laypage</h2>
-                    <!-- 动态分页演示开始 -->
-                    <div id="pagination"></div>
-                    <p>====================================================================</p>
-                    <p>把laypage整个目录放入你的项目，只需引入laypage.js即可，其它一律无视。</p>
-                    <p>详细文档直接进入官网：<a href="http://laypage.layui.com">http://laypage.layui.com</a></p>
-                    <pre class="language-js"><code>&lt;script src="../dep/laypage/laypage.js"&gt;&lt;/script&gt;</code></pre>
-                    <p>初始化js</p>
-                    <pre class="language-js"><code>
-laypage({
-    cont: $('#pagination'), //容器。值支持id名、原生dom对象，jquery对象,
-    pages: 20, //总页数
-    skip: true, //是否开启跳页
-    skin: '#d9534f',
-    groups: 3 //连续显示分页数
-});
-                    </code></pre>
-                    <!-- 动态分页演示结束 -->
-                    <!-- 需要引入资源库中的laypage.js -->
-                </section>
-                <section id="check-strong">
-                    <h2>验证密码强度 Pwd-strength</h2>
-                    <div id="pwd-strong-html">
-                        <!-- 验证密码强度开始 -->
-                        <div id="ms-pwd-strong">
-                            <input type="password" maxlength="16" />
-                            <div id="tips">
-                                <span>弱</span>
-                                <span>中</span>
-                                <span>强</span>
-                                <span>非常好</span>
-                            </div>
-                        </div>
-                        <!-- 验证密码强度结束 -->
-                    </div>
-                    <pre class="language-markup"><code>
-&lt;div id="ms-pwd-strong"&gt;
-    &lt;input type="password" value="" maxlength="16" /&gt;
-    &lt;div id="tips"&gt;
-        &lt;span&gt;弱&lt;/span&gt;
-        &lt;span&gt;中&lt;/span&gt;
-        &lt;span&gt;强&lt;/span&gt;
-        &lt;span&gt;非常好&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                        </code></pre>
-                </section>
                 <section id="progress-bar" class="docs-article">
                     <h2>进度条</h2>
                     <p>key值对应当前进度条的百分比</p>
@@ -288,74 +238,6 @@ laypage({
     &lt;div class="progress-bar" key="40%"&gt;40%&lt;/div&gt;
 &lt;/div&gt;
                     </code></pre>
-                </section>
-                <section id="birthday-out">
-                    <h2>生日</h2>
-                    <div id="birthday-html">
-                        <label>生日：</label>
-                        <div id="birthday"></div>
-                    </div>
-                    <div class="docs-article">
-                        <h2>使用方法</h2>
-                        <p>直接写id="birthday"的空div</p>
-                        <pre class="language-markup"><code> &lt;div id="birthday"&gt;&lt;/div&gt;</code></pre>
-                        <p>并引入bday-picker.js和lib-components.js</p>
-                        <pre class="language-js"><code>&lt;script src="../dep/birthdaypicker/bday-picker.js"&gt;&lt;/script&gt;
-&lt;script src="js/lib-components.js"&gt;&lt;/script&gt;</code></pre>
-                    </div>
-                    <span>生日初始化的JS调用</span>
-                    <pre class="language-js"><code>$(function() {
-    var datenow = new Date().Format("yyyy-MM-dd");
-    //用户生日
-    var birthday = '1991-05-20';
-    if (birthday != '') {
-        datenow = birthday;
-    }
-    $("#birthday").birthdaypicker({
-        dateFormat: "bigEndian",
-        monthFormat: "short",
-        placeholder: true,
-        hiddenDate: true,
-        // 设定默认日期
-        defaultDate: datenow
-    });
-});</code></pre>
-                </section>
-                <section id="pca" class="docs-article">
-                    <h2>省市区联动</h2>
-                    <div class="bottom10">
-                        <form action="">
-                            <span class="goodsAddress">所在地区：</span>
-                            <select id="prov" name="province" data-code=""></select>省
-                            <select id="city" name="city" data-code=""></select>市
-                            <select id="area" name="area" data-code=""></select>区
-                        </form>
-                    </div>
-                    <p>创建地址表单html</p>
-                    <pre class="language-markup"><code>&lt;form action=""&gt;
-    &lt;select id="prov" name="province" data-code=""&gt;&lt;/select&gt;省
-    &lt;select id="city" name="city" data-code=""&gt;&lt;/select&gt;市
-    &lt;select id="area" name="area" data-code=""&gt;&lt;/select&gt;区
-&lt;/form&gt;</code></pre>
-                    <p>引入js</p>
-                    <pre class="language-js"><code>&lt;script src="../dep/pca/city2.js"&gt;&lt;/script&gt;
-&lt;script src="../dep/pca/citySelect2.js"&gt;&lt;/script&gt;
-&lt;script src="js/lib-components.js"&gt;&lt;/script&gt;</code></pre>
-                    <p>地址js初始化</p>
-                    <pre class="language-js"><code>var selectVal = new CitySelect({
-    data: data,
-    provId: "#prov",
-    cityId: '#city',
-    areaId: '#area',
-    isSelect: true // 默认为true 选择第一项 如果页面有指定省市区项时，就显示指定项。
-        // 如果false，就选中 "请选择"
-});</code></pre>
-                </section>
-                <section id="ueditor">
-                    <h2>UEditor富文本编辑器</h2>
-                    <p> <a href="../examples/ueditor/index.html">本地示例demo</a> 具体写法请查看页面html代码</p>
-                    <p>这是百度前端团队开发的轻量、可定制、注重用户体验的一个编辑器。具体API详情请看链接<a href=http://fex.baidu.com/ueditor/ "">http://fex.baidu.com/ueditor/</a>
-                    </p>
                 </section>
             </article>
             <!-- 各组件结束 -->
@@ -371,13 +253,9 @@ laypage({
         <!-- 返回顶部结束 -->
     </div>
     <script src="../ui/js/public.js"></script>
-    <script src="../dep/laypage/laypage.js"></script>
-    <script src="../dep/birthdaypicker/bday-picker.js"></script>
-    <script src="../dep/pca/city2.js"></script>
-    <script src="../dep/pca/citySelect2.js"></script>
-    <script src="js/lib-components.js"></script>
-    <script src="../ui/js/jquery.waypoints.min.js"></script>
     <script src="../dep/prism/prism.js"></script>
+    <script src="../ui/js/jquery.waypoints.min.js"></script>
+    <script src="components.js"></script>
 </body>
 
 </html>
