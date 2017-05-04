@@ -10,13 +10,14 @@
     <link rel="shortcut icon" href="../ui/img/favicon.ico">
     <link rel="stylesheet" href="../ui/css/base.css">
     <link rel="stylesheet" href="../dep/prism/prism.css">
+    <link rel="stylesheet" href="../lib-global-styles/global-styles.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="../ui/css/layout/docs-layout.css">
     <script src="../ui/js/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
-    <div id="components" class="docs-layout">
+    <div id="components" class="docs-layout ms-ui">
         <!-- 页面顶部开始 -->
         <header class="light">
             <div class="align-center">
@@ -47,6 +48,8 @@
                 <nav>
                     <p class="lf-nav-title">组件列表</p>
                     <ul class="parent-nav">
+                        <li name="ms-overlay"><a href="#ms-overlay">遮罩层</a></li>
+                        <li name="ms-dialog"><a href="#ms-overlay">弹出层</a></li>
                         <li name="dropdown"><a href="#dropdown">下拉列表</a></li>
                         <li name="plus-minus"><a href="#plus-minus">加减框</a></li>
                         <li name="laypage"><a href="#laypage">动态分页演示</a></li>
@@ -61,14 +64,120 @@
             <!-- 左侧导航结束 -->
             <!-- 各组件开始 -->
             <article class="rg-content">
+                <section id="ms-overlay" class="docs-article">
+                    <h2>遮罩层</h2>
+                    <div class="ms-overlay"></div>
+                    <button class="btn btn-info bottom10" type="button" onclick="showOverlay();">显示遮罩层</button>
+                    <p>定义class="ms-overlay"的空div</p>
+                    <pre class="language-markup"><code>&lt;div class="ms-overlay"&gt;&lt;/div&gt;</code></pre>
+                    <p>js方法调用，显示/隐藏遮罩层</p>
+                    <pre class="language-js"><code>showOverlay();  //显示遮罩层
+hideOverlay();  //隐藏遮罩层
+</code></pre>
+                </section>
+                <section id="ms-dialog" class="">
+                    <h2>弹出层</h2>
+                    <h3 class="bottom10">默认弹出层展示</h3>
+                    <p class="bottom10">使用.ms-dialog、.dialog-default类名定义基础的弹出层</p>
+                    <button type="button" class="show-dialog btn btn-info ">点击显示弹出层</button>
+                    <div class="ms-dialog dialog-default">
+                        <p class="dialog-title">默认弹出层示例</p>
+                        <i class="dialog-close ms-icon icon-close"></i>
+                        <div class="dialog-content">
+                            <p>秋风起，墨如雪，一曲清歌扶幽月，一支洞箫廖佳人。记忆，似水东流，再难回头。波光似玉，佳人胜月。却怎堪，斜屋漏巷。莫不是光阴悠悠白了少年头?一杯热饮，月下独酌，别是一番滋味在心头。一将功成万骨枯，写尽秋瓷与谁读?</p>
+                            <p>心若年轻，则岁月不老，无论时光如何流转，守住心中的那一季春暖花开，其实，我们想要的幸福一直都在。若得夕阳无限好，何须惆怅近黄昏，错过了风，我们会收获雨;错失了夏花绚烂，必将会走进秋叶静美。</p>
+                            <p>悠悠尘世，浮浮年华，听风、听雨、听那落红飘飞时划过苍茫天空的那声低叹，谁的心痕落在雨中，融合了那把伞下的心，把情韵绘刻得栩栩如生。一个人，到底流多少泪?到底经多少雨?到底留多少背影？</p>
+                            <p>人生就是遗忘的过程。生命，是一树花开，或安静或热烈，或寂寞或璀璨。日子，就在岁月的年轮中渐次厚重，那些天真的、跃动的、抑或沉思的灵魂，就在繁华与喧嚣中，被刻上深深浅浅、或浓或淡的印痕。</p>
+                            <p>再好的东西，都有失去的一天。再深的记忆，也有淡忘的一天。再爱的人，也有远走的一天。再美的梦，也有苏醒的一天。该放弃的决不挽留。该珍惜的决不放手，分手后不可以做朋友，因为彼此伤害过!也不可以做敌人。</p>
+                            <p>烟火流年，如梦蹁跹。那时，岁月的信笺上，一袭烟雨，湿湿的，宛如一些飘渺久远的往事。初到乌镇的那个日子，空蒙烟雨，撑起墨笔油纸伞，兜转在青石路板上，走走停停，寻摸着一个动人的小镇故事。</p>
+                            <p>一帘雨，一窗风，可以让尘封在书页间的句子，散落成秋水的披风，云雾一般朦胧。穿过时光的罅隙，思念晕染了季节的眉梢，温润如琥玻色。小城的秋终是深了，一株清幽的桂花，在墙角独自芬芳，着一袭暗香，在细雨中寻觅熟悉的影子。</p>
+                        </div>
+                    </div>
+                    <pre class="language-markup"><code>&lt;div class="ms-dialog dialog-default"&gt;
+    &lt;p class="dialog-title"&gt;弹出层示例&lt;/p&gt;
+    &lt;i class="dialog-close ms-icon icon-close"&gt;&lt;/i&gt;
+    &lt;div class="dialog-content"&gt;···&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <p>js方法调用，显示</p>
+                    <pre class="language-js"><code>// 点击显示弹出层
+$(".show-dialog").click(function() {
+    showOverlay();
+    $(this).next(".ms-dialog").show();
+});
+//点击关闭按钮隐藏弹出层
+$(".ms-dialog .dialog-close").click(function() {
+    hideOverlay();
+    $(this).parent().hide();
+});</code></pre>
+                    <h3 class="bottom10">不同大小的弹出层展示</h3>
+                    <p class="bottom10">使用.dialog-lg、.dialog-default、.dialog-sm、.dialog-xs类名定义不同尺寸的弹出层</p>
+                    <button type="button" class="show-dialog btn btn-info ">点击显示大弹出层</button>
+                    <div class="ms-dialog dialog-lg">
+                        <p class="dialog-title">大弹出层示例</p>
+                        <i class="dialog-close ms-icon icon-close"></i>
+                        <div class="dialog-content">
+                            <p>秋风起，墨如雪，一曲清歌扶幽月，一支洞箫廖佳人。记忆，似水东流，再难回头。波光似玉，佳人胜月。却怎堪，斜屋漏巷。莫不是光阴悠悠白了少年头?一杯热饮，月下独酌，别是一番滋味在心头。一将功成万骨枯，写尽秋瓷与谁读?</p>
+                            <p>心若年轻，则岁月不老，无论时光如何流转，守住心中的那一季春暖花开，其实，我们想要的幸福一直都在。若得夕阳无限好，何须惆怅近黄昏，错过了风，我们会收获雨;错失了夏花绚烂，必将会走进秋叶静美。</p>
+                            <p>悠悠尘世，浮浮年华，听风、听雨、听那落红飘飞时划过苍茫天空的那声低叹，谁的心痕落在雨中，融合了那把伞下的心，把情韵绘刻得栩栩如生。一个人，到底流多少泪?到底经多少雨?到底留多少背影？</p>
+                            <p>人生就是遗忘的过程。生命，是一树花开，或安静或热烈，或寂寞或璀璨。日子，就在岁月的年轮中渐次厚重，那些天真的、跃动的、抑或沉思的灵魂，就在繁华与喧嚣中，被刻上深深浅浅、或浓或淡的印痕。</p>
+                            <p>再好的东西，都有失去的一天。再深的记忆，也有淡忘的一天。再爱的人，也有远走的一天。再美的梦，也有苏醒的一天。该放弃的决不挽留。该珍惜的决不放手，分手后不可以做朋友，因为彼此伤害过!也不可以做敌人。</p>
+                            <p>烟火流年，如梦蹁跹。那时，岁月的信笺上，一袭烟雨，湿湿的，宛如一些飘渺久远的往事。初到乌镇的那个日子，空蒙烟雨，撑起墨笔油纸伞，兜转在青石路板上，走走停停，寻摸着一个动人的小镇故事。</p>
+                            <p>一帘雨，一窗风，可以让尘封在书页间的句子，散落成秋水的披风，云雾一般朦胧。穿过时光的罅隙，思念晕染了季节的眉梢，温润如琥玻色。小城的秋终是深了，一株清幽的桂花，在墙角独自芬芳，着一袭暗香，在细雨中寻觅熟悉的影子。</p>
+                            <p>镜中伊人，花影对月容，皆以零散，若尘世无缘，洗净铅华，修颜遮挡心扉，情如风随水，红尘深锁，只缘感伊一回顾，展颜轻笑，我此生不负相思。只缘感你，展颜回顾，倾城一暖。只想让你回眸一次，便能看见我的深情。</p>
+                            <p> 年华，温柔了岁月，惊艳了时光;花开，芬芳了流年，美丽了相遇。季节轮回，那些来自心灵深处温暖，每每忆起，总能激起心底层层涟漪;天涯相隔，见与不见，念与不念，都是牵念，都是温暖。我们生活在四季风景里，心中有爱。</p>
+                            <p> 似水年华，染指涵芳。回眸间，诗梦穿越千年的长廊暗香浮动，在一朵花的时光里行走，在一卷画卷里浏览观光，如诗岁月，借素卷吟唱。窗外阳光明媚，鸟语花香，共品春色阑珊，携清风细雨，挽霞拥梦。只要心中充满希望，就会有美好的明天，拥抱美好的春天，让世界充满爱！</p>
+                            <p>夜静谧，佳人为何泪悄落，一丝纠缠，谁倾了天涯的思念，道是相思不成双，抹不去别离相思，留不下相思别离，终是缠绵开始，陌路离去;难言难说，爱是离别失落，却是那一回眸中，背影淡淡的萧瑟，真是难过，言尽了白头偕老的承诺，走到各自一方的角落，独自数落，忧伤的生活。</p>
+                        </div>
+                    </div>
+                    <pre class="language-markup"><code>&lt;div class="ms-dialog dialog-lg"&gt;
+    &lt;p class="dialog-title"&gt;弹出层示例&lt;/p&gt;
+    &lt;i class="dialog-close ms-icon icon-close"&gt;&lt;/i&gt;
+    &lt;div class="dialog-content"&gt;···&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <button type="button" class="show-dialog btn btn-info ">点击显示小弹出层</button>
+                    <div class="ms-dialog dialog-sm">
+                        <p class="dialog-title">小弹出层示例</p>
+                        <i class="dialog-close ms-icon icon-close"></i>
+                        <div class="dialog-content">
+                            <p>秋风起，墨如雪，一曲清歌扶幽月，一支洞箫廖佳人。记忆，似水东流，再难回头。波光似玉，佳人胜月。却怎堪，斜屋漏巷。莫不是光阴悠悠白了少年头?一杯热饮，月下独酌，别是一番滋味在心头。一将功成万骨枯，写尽秋瓷与谁读?</p>
+                            <p>心若年轻，则岁月不老，无论时光如何流转，守住心中的那一季春暖花开，其实，我们想要的幸福一直都在。若得夕阳无限好，何须惆怅近黄昏，错过了风，我们会收获雨;错失了夏花绚烂，必将会走进秋叶静美。</p>
+                            <p>悠悠尘世，浮浮年华，听风、听雨、听那落红飘飞时划过苍茫天空的那声低叹，谁的心痕落在雨中，融合了那把伞下的心，把情韵绘刻得栩栩如生。一个人，到底流多少泪?到底经多少雨?到底留多少背影？</p>
+                            <p>人生就是遗忘的过程。生命，是一树花开，或安静或热烈，或寂寞或璀璨。日子，就在岁月的年轮中渐次厚重，那些天真的、跃动的、抑或沉思的灵魂，就在繁华与喧嚣中，被刻上深深浅浅、或浓或淡的印痕。</p>
+                            <p>再好的东西，都有失去的一天。再深的记忆，也有淡忘的一天。再爱的人，也有远走的一天。再美的梦，也有苏醒的一天。该放弃的决不挽留。该珍惜的决不放手，分手后不可以做朋友，因为彼此伤害过!也不可以做敌人。</p>
+                            <p>烟火流年，如梦蹁跹。那时，岁月的信笺上，一袭烟雨，湿湿的，宛如一些飘渺久远的往事。初到乌镇的那个日子，空蒙烟雨，撑起墨笔油纸伞，兜转在青石路板上，走走停停，寻摸着一个动人的小镇故事。</p>
+                        </div>
+                    </div>
+                    <pre class="language-markup"><code>&lt;div class="ms-dialog dialog-sm"&gt;
+    &lt;p class="dialog-title"&gt;弹出层示例&lt;/p&gt;
+    &lt;i class="dialog-close ms-icon icon-close"&gt;&lt;/i&gt;
+    &lt;div class="dialog-content"&gt;···&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <button type="button" class="show-dialog btn btn-info ">点击显示超小弹出层</button>
+                    <div class="ms-dialog dialog-xs">
+                        <p class="dialog-title">超小弹出层示例</p>
+                        <i class="dialog-close ms-icon icon-close"></i>
+                        <div class="dialog-content">
+                            <p>秋风起，墨如雪，一曲清歌扶幽月，一支洞箫廖佳人。记忆，似水东流，再难回头。波光似玉，佳人胜月。却怎堪，斜屋漏巷。莫不是光阴悠悠白了少年头?一杯热饮，月下独酌，别是一番滋味在心头。一将功成万骨枯，写尽秋瓷与谁读?</p>
+                            <p>心若年轻，则岁月不老，无论时光如何流转，守住心中的那一季春暖花开，其实，我们想要的幸福一直都在。若得夕阳无限好，何须惆怅近黄昏，错过了风，我们会收获雨;错失了夏花绚烂，必将会走进秋叶静美。</p>
+                            <p>悠悠尘世，浮浮年华，听风、听雨、听那落红飘飞时划过苍茫天空的那声低叹，谁的心痕落在雨中，融合了那把伞下的心，把情韵绘刻得栩栩如生。一个人，到底流多少泪?到底经多少雨?到底留多少背影？</p>
+                            <p>人生就是遗忘的过程。生命，是一树花开，或安静或热烈，或寂寞或璀璨。日子，就在岁月的年轮中渐次厚重，那些天真的、跃动的、抑或沉思的灵魂，就在繁华与喧嚣中，被刻上深深浅浅、或浓或淡的印痕。</p>
+                            <p>再好的东西，都有失去的一天。再深的记忆，也有淡忘的一天。再爱的人，也有远走的一天。再美的梦，也有苏醒的一天。该放弃的决不挽留。该珍惜的决不放手，分手后不可以做朋友，因为彼此伤害过!也不可以做敌人。</p>
+                        </div>
+                    </div>
+                    <pre class="language-markup"><code>&lt;div class="ms-dialog dialog-sm"&gt;
+    &lt;p class="dialog-title"&gt;弹出层示例&lt;/p&gt;
+    &lt;i class="dialog-close ms-icon icon-close"&gt;&lt;/i&gt;
+    &lt;div class="dialog-content"&gt;···&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </section>
                 <section id="dropdown">
                     <h2>下拉列表  Dropdown</h2>
                     <!-- 下拉列表开始 -->
                     <div id="dropdown-html">
-                        <div class="dropdown">
+                        <div class="ms-dropdown">
                             <p class="dropdown-title">
                                 <span>列表一</span>
-                                <i class="manstro-icon icon-caret"></i>
+                                <i class="ms-icon icon-caret"></i>
                             </p>
                             <ul class="dropdown-menu">
                                 <li>列表一</li>
@@ -80,10 +189,10 @@
                     <!-- 这里显示下拉列表的html代码 -->
                     <div id="dropdown-code">
                         <pre class="language-markup"><code>
-&lt;div class="dropdown"&gt;
+&lt;div class="ms-dropdown"&gt;
     &lt;p class="dropdown-title"&gt;
         &lt;span&gt;列表一&lt;/span&gt;
-        &lt;i class="manstro-icon icon-caret"&gt;&lt;/i&gt;
+        &lt;i class="ms-icon icon-caret"&gt;&lt;/i&gt;
     &lt;/p&gt;
     &lt;ul class="dropdown-menu"&gt;
         &lt;li&gt;列表一&lt;/li&gt;
@@ -99,9 +208,9 @@
                     <h2>数字加减框  Plus-minus</h2>
                     <!-- 数字加减框开始 -->
                     <div id="plus-minus-html">
-                        <div class="plus-minus">
+                        <div class="ms-plus-minus">
                             <span class="minus">-</span>
-                            <input type="text" value="1" class="text-amount">
+                            <input class="text-amount" type="text" value="1">
                             <span class="plus">+</span>
                         </div>
                     </div>
@@ -109,9 +218,9 @@
                     <!-- 这里显示下拉列表的html代码 -->
                     <div id="plus-minus-code">
                         <pre class="language-markup"><code>
-&lt;div class="plus-minus"&gt;
+&lt;div class="ms-plus-minus"&gt;
     &lt;span class="minus"&gt;-&lt;/span&gt;
-    &lt;input type="text" value="1" class="text-amount"&gt;
+    &lt;input class="text-amount" type="text" value="1"&gt;
     &lt;span class="plus"&gt;+&lt;/span&gt;
 &lt;/div>
 </code></pre>
@@ -123,11 +232,11 @@
                     <h2>动态分页演示 Laypage</h2>
                     <!-- 动态分页演示开始 -->
                     <div id="pagination"></div>
-                    <div>
-                        <p>====================================================================</p>
-                        <p>把laypage整个目录放入你的项目，只需引入laypage.js即可，其它一律无视。</p>
-                        <p>详细文档直接进入官网：<a href="http://laypage.layui.com">http://laypage.layui.com</a></p>
-                    </div>
+                    <p>====================================================================</p>
+                    <p>把laypage整个目录放入你的项目，只需引入laypage.js即可，其它一律无视。</p>
+                    <p>详细文档直接进入官网：<a href="http://laypage.layui.com">http://laypage.layui.com</a></p>
+                    <pre class="language-js"><code>&lt;script src="../dep/laypage/laypage.js"&gt;&lt;/script&gt;</code></pre>
+                    <p>初始化js</p>
                     <pre class="language-js"><code>
 laypage({
     cont: $('#pagination'), //容器。值支持id名、原生dom对象，jquery对象,
@@ -144,8 +253,8 @@ laypage({
                     <h2>验证密码强度 Pwd-strength</h2>
                     <div id="pwd-strong-html">
                         <!-- 验证密码强度开始 -->
-                        <div id="check-pwd-strong">
-                            <input type="password" value="" maxlength="16" />
+                        <div id="ms-pwd-strong">
+                            <input type="password" maxlength="16" />
                             <div id="tips">
                                 <span>弱</span>
                                 <span>中</span>
@@ -156,7 +265,7 @@ laypage({
                         <!-- 验证密码强度结束 -->
                     </div>
                     <pre class="language-markup"><code>
-&lt;div id="check-pwd-strong"&gt;
+&lt;div id="ms-pwd-strong"&gt;
     &lt;input type="password" value="" maxlength="16" /&gt;
     &lt;div id="tips"&gt;
         &lt;span&gt;弱&lt;/span&gt;
@@ -167,82 +276,17 @@ laypage({
 &lt;/div&gt;
                         </code></pre>
                 </section>
-                <section id="progress-bar">
+                <section id="progress-bar" class="docs-article">
                     <h2>进度条</h2>
-                    <div id="line-html">
-                        <div class="line-item site-grade">
-                            <!-- 进度条 -->
-                            <div class="progress-bar-grey"></div>
-                            <div class="progress-bar-yellow"></div>
-                            <!-- 等级标志位置 -->
-                            <div class="grade-name">
-                                <div class="grade-img-text">
-                                    <i class="manstro-icon icon-lv icon-lv1"></i>
-                                    <span class="grade-num">0</span>
-                                </div>
-                                <div class="grade-img-text">
-                                    <i class="manstro-icon icon-lv icon-lv2"></i>
-                                    <span class="grade-num">100</span>
-                                </div>
-                                <div class="grade-img-text">
-                                    <i class="manstro-icon icon-lv icon-lv3"></i>
-                                    <span class="grade-num">500</span>
-                                </div>
-                                <div class="grade-img-text">
-                                    <i class="manstro-icon icon-lv icon-lv4"></i>
-                                    <span class="grade-num">1000</span>
-                                </div>
-                                <div class="grade-img-text">
-                                    <i class="manstro-icon icon-lv icon-lv5"></i>
-                                    <span class="grade-num">2000</span>
-                                </div>
-                                <div class="grade-img-text">
-                                    <i class="manstro-icon icon-lv icon-lv6"></i>
-                                    <span class="grade-num">5000</span>
-                                </div>
-                            </div>
-                            <!-- 等级标志位置 -->
-                        </div>
-                        <label>请输入积分数值：
-                            <input class="input" value="" type="number" />
-                        </label>
-                        <button class="sure" type="submit">确定</button>
+                    <p>key值对应当前进度条的百分比</p>
+                    <!-- 进度条 -->
+                    <div class="ms-progress">
+                        <div class="progress-bar" key="40%">40%</div>
                     </div>
                     <pre class="language-markup"><code>
-&lt;div class="line-item site-grade"&gt;
-    &lt;div class="progress-bar-grey"&gt;&lt;/div&gt;
-    &lt;div class="progress-bar-yellow"&gt;&lt;/div&gt;
-    &lt;div class="grade-name"&gt;
-        &lt;div class="grade-img-text"&gt;
-            &lt;i class="manstro-icon icon-lv icon-lv1"&gt;&lt;/i&gt;
-            &lt;span class="grade-num"&gt;0&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="grade-img-text"&gt;
-            &lt;i class="manstro-icon icon-lv icon-lv2"&gt;&lt;/i&gt;
-            &lt;span class="grade-num"&gt;100&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="grade-img-text"&gt;
-            &lt;i class="manstro-icon icon-lv icon-lv3"&gt;&lt;/i&gt;
-            &lt;span class="grade-num"&gt;500&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="grade-img-text"&gt;
-            &lt;i class="manstro-icon icon-lv icon-lv4"&gt;&lt;/i&gt;
-            &lt;span class="grade-num"&gt;1000&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="grade-img-text"&gt;
-            &lt;i class="manstro-icon icon-lv icon-lv5"&gt;&lt;/i&gt;
-            &lt;span class="grade-num"&gt;2000&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="grade-img-text"&gt;
-            &lt;i class="manstro-icon icon-lv icon-lv6"&gt;&lt;/i&gt;
-            &lt;span class="grade-num"&gt;5000&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+&lt;div class="ms-progress"&gt;
+    &lt;div class="progress-bar" key="40%"&gt;40%&lt;/div&gt;
 &lt;/div&gt;
-&lt;label&gt;请输入积分数值：
-    &lt;input class="input" value="" type="number" /&gt;
-&lt;/label&gt;
-&lt;button class="sure" type="submit"&gt;确定&lt;/button&gt;
                     </code></pre>
                 </section>
                 <section id="birthday-out">
@@ -251,18 +295,19 @@ laypage({
                         <label>生日：</label>
                         <div id="birthday"></div>
                     </div>
-                    <div>
+                    <div class="docs-article">
                         <h2>使用方法</h2>
                         <p>直接写id="birthday"的空div</p>
-                        &lt;div id="birthday"&gt;&lt;/div&gt;
-                        <p>加上下面js并引入bday-picker.js和public.js</p>
+                        <pre class="language-markup"><code> &lt;div id="birthday"&gt;&lt;/div&gt;</code></pre>
+                        <p>并引入bday-picker.js和lib-components.js</p>
+                        <pre class="language-js"><code>&lt;script src="../dep/birthdaypicker/bday-picker.js"&gt;&lt;/script&gt;
+&lt;script src="js/lib-components.js"&gt;&lt;/script&gt;</code></pre>
                     </div>
-                    <span>用到的JS</span>
-                    <pre class="language-js"><code>
-$(function() {
+                    <span>生日初始化的JS调用</span>
+                    <pre class="language-js"><code>$(function() {
     var datenow = new Date().Format("yyyy-MM-dd");
     //用户生日
-    var birthday = '1991-04-14';
+    var birthday = '1991-05-20';
     if (birthday != '') {
         datenow = birthday;
     }
@@ -276,9 +321,9 @@ $(function() {
     });
 });</code></pre>
                 </section>
-                <section id="pca">
+                <section id="pca" class="docs-article">
                     <h2>省市区联动</h2>
-                    <div id="pca-html">
+                    <div class="bottom10">
                         <form action="">
                             <span class="goodsAddress">所在地区：</span>
                             <select id="prov" name="province" data-code=""></select>省
@@ -286,12 +331,25 @@ $(function() {
                             <select id="area" name="area" data-code=""></select>区
                         </form>
                     </div>
-                    <pre class="language-markup"><code>
-&lt;form action=""&gt;
+                    <p>创建地址表单html</p>
+                    <pre class="language-markup"><code>&lt;form action=""&gt;
     &lt;select id="prov" name="province" data-code=""&gt;&lt;/select&gt;省
     &lt;select id="city" name="city" data-code=""&gt;&lt;/select&gt;市
     &lt;select id="area" name="area" data-code=""&gt;&lt;/select&gt;区
 &lt;/form&gt;</code></pre>
+                    <p>引入js</p>
+                    <pre class="language-js"><code>&lt;script src="../dep/pca/city2.js"&gt;&lt;/script&gt;
+&lt;script src="../dep/pca/citySelect2.js"&gt;&lt;/script&gt;
+&lt;script src="js/lib-components.js"&gt;&lt;/script&gt;</code></pre>
+                    <p>地址js初始化</p>
+                    <pre class="language-js"><code>var selectVal = new CitySelect({
+    data: data,
+    provId: "#prov",
+    cityId: '#city',
+    areaId: '#area',
+    isSelect: true // 默认为true 选择第一项 如果页面有指定省市区项时，就显示指定项。
+        // 如果false，就选中 "请选择"
+});</code></pre>
                 </section>
                 <section id="ueditor">
                     <h2>UEditor富文本编辑器</h2>

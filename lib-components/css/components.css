@@ -7,7 +7,7 @@
 
 /*select样式优化代码开始*/
 
-select {
+.ms-ui select {
     /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
     border: solid 1px #ddd;
     /*很关键：将默认的select选择框样式清除*/
@@ -23,16 +23,291 @@ select {
 
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
 
-select::-ms-expand {
+.ms-ui select::-ms-expand {
     display: none;
 }
 
 /*select样式优化代码结束*/
 
 
+/* 遮罩层开始 */
+
+.ms-overlay {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 100;
+}
+
+/*遮罩层结束*/
+
+
+/* ======= 弹出层公共样式开始 ======= */
+
+.ms-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+    background-color: #fff;
+}
+.dialog-lg {
+    width: 800px;
+    height: 600px;
+    margin-left: -400px;
+    margin-top: -300px;
+}
+.dialog-default {
+    width: 650px;
+    height: 450px;
+    margin-left: -325px;
+    margin-top: -225px;
+}
+.dialog-sm {
+    width: 520px;
+    height: 420px;
+    margin-left: -260px;
+    margin-top: -210px;
+}
+.dialog-xs {
+    width: 400px;
+    height: 300px;
+    margin-left: -200px;
+    margin-top: -150px;
+}
+.ms-dialog .dialog-title {
+    padding-left: 14px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #00a1c3;
+}
+.ms-dialog .dialog-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 27px;
+    height: 27px;
+    background-image: url("../img/icon-close.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.ms-dialog .dialog-content {
+    padding: 10px 20px;
+    line-height: 1.45;
+    overflow-y: auto;
+}
+.ms-dialog .dialog-content p {
+    margin-bottom: 10px;
+}
+.dialog-lg .dialog-content {
+    height: 530px;
+}
+.dialog-default .dialog-content {
+    height: 380px;
+}
+.dialog-sm .dialog-content {
+    height: 350px;
+}
+.dialog-xs .dialog-content {
+    height: 220px;
+}
+
+/* ======= 弹出层公共样式结束 ======= */
+
+
+/*下拉列表开始*/
+
+.ms-dropdown {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    cursor: pointer;
+}
+.ms-dropdown .dropdown-title {
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+}
+.ms-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+}
+.ms-dropdown .dropdown-menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+/*下拉列表结束*/
+
+
+/*数量*/
+
+.ms-plus-minus {
+    width: 80px;
+    line-height: 26px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+.ms-plus-minus span {
+    float: left;
+    display: inline-block;
+    width: 18px;
+    text-align: center;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+.ms-plus-minus .minus {
+    border-right: 1px solid #e5e5e5;
+}
+.ms-plus-minus .plus {
+    border-left: 1px solid #e5e5e5;
+}
+.ms-plus-minus .text-amount {
+    float: left;
+    padding: 0 2px;
+    width: 38px;
+    height: 26px;
+    text-align: center;
+    border: none;
+}
+
+/*数量*/
+
+
+/*验证密码强度开始*/
+
+#ms-pwd-strong {
+    overflow: hidden;
+}
+#ms-pwd-strong input {
+    margin-bottom: 10px;
+    width: 205px;
+    height: 30px;
+    padding: 6px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#ms-pwd-strong .correct {
+    border: 1px solid green;
+}
+#ms-pwd-strong .error {
+    border: 1px solid red;
+}
+#ms-pwd-strong #tips {
+    font-size: 12px;
+}
+#ms-pwd-strong #tips span {
+    float: left;
+    width: 50px;
+    height: 20px;
+    color: #fff;
+    overflow: hidden;
+    background: #ccc;
+    margin-right: 2px;
+    line-height: 20px;
+    text-align: center;
+}
+#ms-pwd-strong #tips.s1 .active {
+    background: #f30;
+}
+#ms-pwd-strong #tips.s2 .active {
+    background: #fc0;
+}
+#ms-pwd-strong #tips.s3 .active {
+    background: #cc0;
+}
+#ms-pwd-strong #tips.s4 .active {
+    background: #090;
+}
+
+/*验证密码强度结束*/
+
+.icon-16 {
+    width: 16px;
+    height: 16px;
+}
+.manstro-icon {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}
+
+/*进度条*/
+
+.ms-progress {
+    width: 500px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.progress-bar {
+    width: 0;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: #FBC85B;
+}
+
+/*进度条*/
+
+
+/*======= 文章开始=======*/
+
+.ms-article h3 {
+    line-height: 2;
+}
+.ms-article p {
+    margin-bottom: 10px;
+}
+
+/*======= 文章结束=======*/
+
+
+/*生日开始*/
+
+fieldset {
+    padding: 0;
+    border: none;
+}
+#birthday, label {
+    float: left;
+}
+#birthday-html {
+    width: 100%;
+    height: 21px;
+}
+
+/*生日结束*/
+
+
 /*icon图标集开始*/
 
-.manstro-icon {
+.ms-icon {
     display: inline-block;
     position: relative;
     top: -1px;
@@ -206,432 +481,3 @@ select::-ms-expand {
 }
 
 /*icon图标集结束*/
-
-
-/*下拉列表开始*/
-
-.dropdown {
-    position: relative;
-    width: 100px;
-    text-align: center;
-    line-height: 30px;
-    border: 1px solid #ddd;
-    border-bottom: none;
-    cursor: pointer;
-}
-.dropdown .dropdown-title {
-    width: 100%;
-    height: 30px;
-    background-color: #ddd;
-}
-.dropdown .dropdown-menu {
-    display: none;
-    position: absolute;
-    width: 100%;
-    background-color: #fff;
-}
-.dropdown .dropdown-menu li {
-    border-bottom: 1px solid #ddd;
-}
-
-/*下拉列表结束*/
-
-
-
-
-
-/*数量*/
-
-.plus-minus {
-    width: 80px;
-    line-height: 26px;
-    overflow: hidden;
-    border: 1px solid #eee;
-}
-.plus-minus span {
-    float: left;
-    display: inline-block;
-    width: 18px;
-    text-align: center;
-    background: #f0f0f0;
-    cursor: pointer;
-}
-.plus-minus .minus {
-    border-right: 1px solid #e5e5e5;
-}
-.plus-minus .plus {
-    border-left: 1px solid #e5e5e5;
-}
-.plus-minus .text-amount {
-    float: left;
-    padding: 0 2px;
-    width: 38px;
-    height: 26px;
-    text-align: center;
-    border: none;
-}
-
-/*数量*/
-
-
-/*简单分页样式开始*/
-
-.pagination {
-    overflow: hidden;
-}
-.pagination li {
-    float: left;
-    margin-right: 2px;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    border: 1px solid #ddd;
-    cursor: pointer;
-}
-.pagination .active,
-.pagination li:hover {
-    color: #E43E4D;
-    background-color: #F5F5F5;
-}
-.pagination li:last-child {
-    margin-right: 0;
-}
-.pagination .prev {
-    width: 70px;
-    background-image: url(../img/icon-caret-grey-lf.png);
-    background-repeat: no-repeat;
-    background-position: 15% 56%;
-}
-.pagination .next {
-    width: 70px;
-    background-image: url(../img/icon-caret-grey-rt.png);
-    background-repeat: no-repeat;
-    background-position: 89% 53%;
-}
-.pagination .prev:hover {
-    background-image: url(../img/icon-caret-red-lf.png);
-}
-.pagination .next:hover {
-    background-image: url(../img/icon-caret-red-rt.png);
-}
-.pagination .page-num {
-    width: 34px;
-}
-
-/*简单分页样式结束*/
-
-
-/*验证密码强度开始*/
-
-#check-pwd-strong {
-    overflow: hidden;
-}
-#check-pwd-strong input {
-    float: left;
-    font-size: 12px;
-    width: 150px;
-    font-family: arial;
-    border: 1px solid #ccc;
-    padding: 3px;
-}
-#check-pwd-strong .correct {
-    border: 1px solid green;
-}
-#check-pwd-strong .error {
-    border: 1px solid red;
-}
-#check-pwd-strong #tips {
-    float: left;
-    margin: 2px 0 0 20px;
-}
-#check-pwd-strong #tips span {
-    float: left;
-    width: 50px;
-    height: 20px;
-    color: #fff;
-    overflow: hidden;
-    background: #ccc;
-    margin-right: 2px;
-    line-height: 20px;
-    text-align: center;
-}
-#check-pwd-strong #tips.s1 .active {
-    background: #f30;
-}
-#check-pwd-strong #tips.s2 .active {
-    background: #fc0;
-}
-#check-pwd-strong #tips.s3 .active {
-    background: #cc0;
-}
-#check-pwd-strong #tips.s4 .active {
-    background: #090;
-}
-
-/*验证密码强度结束*/
-
-
-/*搜索框开始*/
-
-.header-search {
-    margin-bottom: 20px;
-}
-.search-body {
-    width: 501px;
-    height: 42px;
-}
-.blue-border {
-    border: 2px solid #008CD6;
-}
-.orange-border {
-    border: 2px solid #FF9560;
-}
-.search-body .search-type {
-    position: relative;
-    width: 100px;
-    height: 100%;
-    border-right: 1px solid #ddd;
-    background-color: #F2FBFF;
-}
-.search-body .search-type .chosen-key {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    line-height: 40px;
-    cursor: pointer;
-}
-.search-body .search-key .icon-caret {
-    position: absolute;
-    top: 18px;
-    right: 6px;
-    width: 10px;
-    height: 7px;
-    background-image: url(../img/icon-caret-grey.png);
-}
-.search-body .key-body {
-    display: none;
-    position: absolute;
-    top: 37px;
-    right: 6px;
-}
-.search-body .key-body .top-arrow {
-    position: absolute;
-    top: -8px;
-    right: 0;
-    z-index: 104;
-    border-bottom: 8px solid rgb(255, 255, 255);
-    border-right: 8px solid rgba(0, 0, 0, 0);
-    border-left: 8px solid rgba(0, 0, 0, 0);
-}
-.search-body .key-body .keys {
-    position: relative;
-    width: 110px;
-    line-height: 30px;
-    text-align: center;
-    box-shadow: 0 0 6px #ccc;
-    background-color: #FFF;
-    z-index: 103;
-    left: 6px;
-}
-.search-body .keys li {
-    font-size: 14px;
-    color: #909090;
-    cursor: pointer;
-}
-.search-body .keys li:hover {
-    color: #343434;
-}
-.search-body .keys li:last-child {
-    border: none;
-}
-.search-body .search-input input {
-    display: block;
-    padding-left: 4px;
-    width: 320px;
-    height: 40px;
-    border: none;
-    border-radius: 0;
-}
-.icon-16 {
-    width: 16px;
-    height: 16px;
-}
-.manstro-icon {
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    vertical-align: middle;
-}
-.search-body .search-btn {
-    width: 75px;
-    height: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 14px;
-    color: #fff;
-    cursor: pointer;
-}
-.bg-blue {
-    background-color: #008CD6;
-}
-.bg-orange {
-    background-color: #FF9560;
-}
-.icon-search {
-    background-image: url(../img/icon-search.png);
-}
-.fr {
-    float: right;
-}
-.fl {
-    float: left;
-}
-
-/*搜索框结束*/
-
-
-/*下拉框列表*/
-
-.bike-list-first {
-    border-top: 1px solid #ddd !important;
-}
-.bike-list {
-    width: 460px;
-    border: 1px solid #ddd;
-    border-top: none;
-}
-.list-content {
-    width: 440px;
-    height: 100px;
-    margin: 0 auto;
-}
-.see-desc {
-    width: 100px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    color: #fff;
-    background-color: #FF9560;
-    float: right;
-    margin-top: 34px;
-    cursor: pointer;
-}
-.write-arrow {
-    position: absolute;
-    width: 12px;
-    height: 6px;
-    margin: 13px 0 0 6px;
-    background-image: url(../img/icon-weite-arrow.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-.bike-desc {
-    display: none;
-    height: 100px;
-}
-.show {
-    display: block;
-}
-
-/*垂直翻转*/
-
-.flipy {
-    -moz-transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
-    -o-transform: scaleY(-1);
-    transform: scaleY(-1);
-}
-
-/*下拉框列表*/
-
-
-/*进度条*/
-
-#my-growth .line-item {
-    line-height: 40px;
-}
-.line-item {
-    position: relative;
-    line-height: 63px;
-    overflow: hidden;
-}
-.progress-bar-grey {
-    position: absolute;
-    width: 600px;
-    height: 13px;
-    top: 5px;
-    border: 1px solid #EAE7E9;
-    border-radius: 17px;
-    background-color: #ddd;
-}
-.progress-bar-yellow {
-    position: absolute;
-    width: 0px;
-    height: 13px;
-    top: 5px;
-    border-radius: 17px;
-    background-color: #FBC85B;
-}
-#my-growth .line-item {
-    line-height: 40px;
-}
-#my-growth .grade-name {
-    overflow: hidden;
-}
-.line-item {
-    line-height: 63px;
-}
-.grade-img-text {
-    float: left;
-    width: 100px;
-    margin-top: 16px;
-}
-.icon-lv1 {
-    background-image: url(../img/icon-lv1.png);
-}
-.icon-lv2 {
-    background-image: url(../img/icon-lv2.png);
-}
-.icon-lv3 {
-    background-image: url(../img/icon-lv3.png);
-}
-.icon-lv4 {
-    background-image: url(../img/icon-lv4.png);
-}
-.icon-lv5 {
-    background-image: url(../img/icon-lv5.png);
-}
-.icon-lv6 {
-    background-image: url(../img/icon-lv6.png);
-}
-.icon-lv {
-    width: 38px;
-    height: 13px;
-}
-.manstro-icon {
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    vertical-align: middle;
-}
-
-/*进度条*/
-
-
-/*生日开始*/
-
-fieldset {
-    padding: 0;
-    border: none;
-}
-#birthday,
-label {
-    float: left;
-}
-#birthday-html {
-    width: 100%;
-    height: 21px;
-}
-
-/*生日结束*/
