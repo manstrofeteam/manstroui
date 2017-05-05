@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>多层级购物车</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="../../../ui/css/layout/docs-layout.css">
+    <link rel="stylesheet" href="css/shopping-cart-complex.css">
+</head>
+
+<body>
+    <div id="shopping-cart-complex" class="docs-layout">
+        <!-- 页面顶部开始 -->
+        <header class="dark">
+            <div class="align-center">
+                <a href="../../../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
+                <nav class="ms-fr menu-nav">
+                    <ul>
+                        <li><a href="../../../index.html" title="ManstroUI">开始学习</a></li>
+                        <li><a href="../../../standard/semver.html" title="语义化版本">语义化版本</a></li>
+                        <li><a href="../../../standard/codeguide.html" title="前端规范">前端规范</a></li>
+                        <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
+                        <li><a href="../../../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                        <li><a class="active" href="../../../lib-components/components.html" title="组件库">组件库</a></li>
+                        <li><a href="../../../dep/third-components.html" title="组件库">第三方组件库</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="demos-article">
+            <h2>多层购物车效果示例</h2>
+            <p>具体详情请查看源代码</p>
+        </div>
+        <div class="shopping-cart-complex">
+            <!-- 顶部数据统计开始 -->
+            <div class="top-choose">
+                <div class=" right-choose all-cost">
+                    <p class="already-goods">已选商品<span class="number total-num">0</span>件</p>
+                    <p class="all-price">总价
+                        <span class="number">￥</span>
+                        <span class="red price total">0</span>
+                    </p>
+                    <a href="pay-order.html">
+                        <p class="all-settlement">结算</p>
+                    </a>
+                </div>
+            </div>
+            <!-- 顶部数据统计结束 -->
+            <!-- 商品列表开始 -->
+            <table e-fun="check">
+                <tr class="goods-list deta">
+                    <td>
+                        <i class="check-all" e-check="0">
+                            <img src="img/e-check.png" alt="">
+                            </i>
+                        <span class="date"><b>2016年6月16日</b></span>
+                    </td>
+                </tr>
+                <!-- 早餐开始 -->
+                <tbody>
+                    <tr class="goods-title goods-list">
+                        <td>
+                            <i class="check-group" e-check=0>
+                            <img src="img/e-check.png" alt="">
+                            早餐
+                            </i></td>
+                        <td class="goods-new">菜品信息</td>
+                        <td>价格</td>
+                        <td>数量</td>
+                        <td>小计</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <!-- 菜品循环开始 -->
+                    <tr class="goods-list">
+                        <td class="e-check">
+                            <i class="check-one" id="test" e-check=0>
+                            <img src="img/e-check.png" alt="">
+                            </i>
+                        </td>
+                        <td class="img-info">
+                            <img src="img/demo.jpg" alt=""> 清炒土豆丝
+                        </td>
+                        <td class="unit-price">
+                            <span>￥</span>
+                            <span class="price">1900.02</span>
+                        </td>
+                        <!-- 加减对话框 -->
+                        <td class="number-box">
+                            <div class="item-amount">
+                                <!-- 该物品最大库存量 -->
+                                <input type="hidden" value="10" class="maxNum" />
+                                <div class="minus">-</div>
+                                <span class="text text-amount">1</span>
+                                <div class="plus">+</div>
+                            </div>
+                        </td>
+                        <!-- 加减对话框 -->
+                        <td class="subtotal">
+                            <span>￥</span>
+                            <span class="subtotal-price">1900.02</span>
+                        </td>
+                    </tr>
+                    <tr class="goods-list">
+                        <td class="e-check">
+                            <i class="check-one" id="test" e-check=0>
+                            <img src="img/e-check.png" alt="">
+                            </i>
+                        </td>
+                        <td class="img-info">
+                            <img src="img/demo.jpg" alt=""> 清炒土豆丝
+                        </td>
+                        <td class="unit-price">
+                            <span>￥</span>
+                            <span class="price">1900.02</span>
+                        </td>
+                        <!-- 加减对话框 -->
+                        <td class="number-box">
+                            <div class="item-amount">
+                                <!-- 该物品最大库存量 -->
+                                <input type="hidden" value="10" class="maxNum" />
+                                <div class="minus">-</div>
+                                <span class="text text-amount">1</span>
+                                <div class="plus">+</div>
+                            </div>
+                        </td>
+                        <!-- 加减对话框 -->
+                        <td class="subtotal">
+                            <span>￥</span>
+                            <span class="subtotal-price">1900.02</span>
+                        </td>
+                    </tr>
+                    <!-- 菜品循环结束 -->
+                </tbody>
+                <!-- 早餐结束 -->
+                <!-- 午餐开始 -->
+                <tbody>
+                    <tr class="goods-title goods-list">
+                        <td>
+                            <i class="check-group" e-check=0>
+                            <img src="img/e-check.png" alt="">
+                            午餐
+                            </i></td>
+                        <td class="goods-new">菜品信息</td>
+                        <td>价格</td>
+                        <td>数量</td>
+                        <td>小计</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr class="goods-list">
+                        <td class="e-check">
+                            <i class="check-one" id="test" e-check=0>
+                            <img src="img/e-check.png" alt="">
+                            </i>
+                        </td>
+                        <td class="img-info">
+                            <img src="img/demo.jpg" alt=""> 清炒土豆丝
+                        </td>
+                        <td class="unit-price">
+                            <span>￥</span>
+                            <span class="price">1900.02</span>
+                        </td>
+                        <!-- 加减对话框 -->
+                        <td class="number-box">
+                            <div class="item-amount">
+                                <!-- 该物品最大库存量 -->
+                                <input type="hidden" value="10" class="maxNum" />
+                                <div class="minus">-</div>
+                                <span class="text text-amount">1</span>
+                                <div class="plus">+</div>
+                            </div>
+                        </td>
+                        <!-- 加减对话框 -->
+                        <td class="subtotal">
+                            <span>￥</span>
+                            <span class="subtotal-price">1900.02</span>
+                        </td>
+                    </tr>
+                    <tr class="goods-list">
+                        <td class="e-check">
+                            <i class="check-one" id="test" e-check=0>
+                            <img src="img/e-check.png" alt="">
+                            </i>
+                        </td>
+                        <td class="img-info">
+                            <img src="img/demo.jpg" alt=""> 清炒土豆丝
+                        </td>
+                        <td class="unit-price">
+                            <span>￥</span>
+                            <span class="price">1900.02</span>
+                        </td>
+                        <!-- 加减对话框 -->
+                        <td class="number-box">
+                            <div class="item-amount">
+                                <!-- 该物品最大库存量 -->
+                                <input type="hidden" value="10" class="maxNum" />
+                                <div class="minus">-</div>
+                                <span class="text text-amount">1</span>
+                                <div class="plus">+</div>
+                            </div>
+                        </td>
+                        <!-- 加减对话框 -->
+                        <td class="subtotal">
+                            <span>￥</span>
+                            <span class="subtotal-price">1900.02</span>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 午餐结束 -->
+            </table>
+            <!-- 商品列表结束 -->
+            <!-- 下边部分开始 -->
+            <div class="bottom-choose">
+                <div class="left-choose">
+                    <p class="full-choose">
+                        <i class="check-all" e-check=0>
+                            <img src="img/e-check.png" alt="">
+                            </i>
+                    </p>
+                    <span class="qx">全选</span>
+                    <p class="delete">删除</p>
+                </div>
+                <div class=" right-choose all-cost">
+                    <p class="already-goods">已选商品<span class="number total-num">0</span>件</p>
+                    <p class="all-price">总价
+                        <span class="number">￥</span>
+                        <span class="red price total">0</span>
+                    </p>
+                    <a href="pay-order.html">
+                        <p class="all-settlement">结算</p>
+                    </a>
+                </div>
+            </div>
+            <!-- 下边部分结束 -->
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/shopping-cart-complex.js"></script>
+</body>
+
+</html>

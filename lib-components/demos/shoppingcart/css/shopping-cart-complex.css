@@ -1,0 +1,267 @@
+ .shopping-cart-complex {
+     width: 1100px;
+     margin: 0 auto;
+     overflow: hidden;
+ }
+ .shopping-cart-complex table {
+     width: 100%;
+     border: 1px solid #ddd;
+ }
+ .shopping-cart-complex th, .shopping-cart-complex td {
+     width: 236px;
+     text-align: center;
+ }
+ .shopping-cart-complex .img-info {
+     /*这里暂定使用line-height控制居中，以后根据实际情况设定*/
+     line-height: 60px;
+ }
+ .shopping-cart-complex .img-info img {
+     width: 80px;
+     height: 60px;
+     float: left;
+ }
+ /*数字加减框开始*/
+ 
+ .shopping-cart-complex .plus-minus {
+     width: 50px;
+     position: relative;
+     margin-left: 84px;
+     margin-bottom: 16px;
+ }
+ .shopping-cart-complex .plus-minus .text-amount {
+     width: 20px;
+     height: 20px;
+     display: inline-block;
+     line-height: 20px;
+     text-align: center;
+     border-top: 1px solid #CFCFCF;
+     border-bottom: 1px solid #CFCFCF;
+     left: 25px;
+     position: absolute;
+ }
+ .shopping-cart-complex .plus-minus .plus {
+     width: 20px;
+     height: 20px;
+     cursor: pointer;
+     border: 1px solid #CFCFCF;
+     text-align: center;
+     line-height: 20px;
+     display: inline-block;
+     position: absolute;
+     left: 45px;
+ }
+ .shopping-cart-complex .plus-minus .minus {
+     width: 20px;
+     height: 20px;
+     cursor: pointer;
+     border: 1px solid #CFCFCF;
+     text-align: center;
+     line-height: 20px;
+     display: inline-block;
+     position: absolute;
+     left: 3px;
+ }
+ .shopping-cart-complex .light-grey {
+     background-color: #F0F0F0;
+ }
+ /*数字加减框结束*/
+ 
+ .shopping-cart-complex .all-cost {
+     float: right;
+     font-size: 15px;
+ }
+ .shopping-cart-complex .all-cost p {
+     float: left;
+ }
+ .shopping-cart-complex .already-goods {
+     margin-top: 6px;
+     margin-right: 10px;
+     min-width: 110px;
+ }
+ .shopping-cart-complex .all-price {
+     margin-right: 20px;
+     min-width: 135px;
+ }
+ .shopping-cart-complex .settlement {
+     width: 80px;
+     height: 30px;
+     background-color: #FF7B0C;
+     text-align: center;
+     line-height: 30px;
+     color: #fff;
+ }
+ .shopping-cart-complex .all-cost .number {
+     color: #FF7B0C;
+     font-size: 15px;
+ }
+ .shopping-cart-complex .all-cost .price {
+     font-size: 20px;
+ }
+ /* 商品列表开始 */
+ 
+ .shopping-cart-complex .check-all {
+     cursor: pointer;
+ }
+ .shopping-cart-complex .deta td {
+     text-align: left !important;
+     margin: 22px 0 0 10px;
+     display: inline-block;
+ }
+ .shopping-cart-complex .goods-title {
+     background-color: #f0f0f0;
+     font-size: 15px;
+ }
+ .shopping-cart-complex .goods-list {
+     height: 64px;
+     border-bottom: 1px solid #eee;
+ }
+ .shopping-cart-complex .goods-list .goods-img {
+     width: 50px;
+     height: 50px;
+ }
+ .shopping-cart-complex .goods-list .goods-img img {
+     width: 100%;
+     height: 100%;
+ }
+ .shopping-cart-complex .goods-new {
+     position: relative;
+ }
+ .shopping-cart-complex .choose-one {
+     position: relative;
+     width: 30px;
+     height: 30px;
+     cursor: pointer;
+ }
+ .shopping-cart-complex .choosed-item {
+     position: relative;
+     width: 30px;
+     height: 30px;
+     display: inline-block;
+     cursor: pointer;
+ }
+ .shopping-cart-complex .all-choose {
+     position: relative;
+     width: 30px;
+     height: 30px;
+     margin-top: 4px;
+     cursor: pointer;
+ }
+ .shopping-cart-complex .all-choosed {
+     position: relative;
+     width: 30px;
+     height: 30px;
+     margin-top: 4px;
+     padding-left: 35px;
+     line-height: 25px;
+     cursor: pointer;
+     display: inline-block;
+ }
+ .shopping-cart-complex .moring {
+     margin-left: 20px;
+     display: inline-block;
+ }
+ /* 加减对话框开始 */
+ 
+ .shopping-cart-complex .number-box {
+     position: absolute;
+     margin-left: 15px;
+     margin-top: 20px;
+ }
+ .shopping-cart-complex .item-amount {
+     border: 1px solid #eee;
+     height: 25px;
+     left: 58px;
+     overflow: hidden;
+     position: absolute;
+     width: 77px;
+     z-index: 1;
+ }
+ .shopping-cart-complex .item-amount div {
+     width: 17px;
+     border: 1px solid #e5e5e5;
+     background: #f0f0f0;
+     text-align: center;
+     line-height: 23px;
+     position: absolute;
+ }
+ .shopping-cart-complex .text-amount {
+     height: 31px;
+     width: 39px;
+     margin-top: -3px;
+     text-align: center;
+     margin-left: 0px;
+ }
+ .shopping-cart-complex .item-amount .plus {
+     right: 0;
+     margin-top: -30px;
+     cursor: pointer;
+ }
+ .shopping-cart-complex .item-amount .minus {
+     cursor: pointer;
+ }
+ /* 加减对话框结束 */
+ 
+ .shopping-cart-complex .subtotal-price {
+     color: #ff7b0c;
+     font-size: 15px;
+ }
+ .shopping-cart-complex .qx {
+     float: left;
+     margin-left: -102px;
+ }
+ /* 商品列表结束 */
+ 
+ .shopping-cart-complex .top-choose {
+     height: 50px;
+     margin: 20px 0;
+ }
+ .shopping-cart-complex .bottom-choose {
+     background-color: #f0f0f0;
+     height: 50px;
+     margin: 20px 0 260px 0;
+ }
+ .shopping-cart-complex .left-choose {
+     float: left;
+     font-size: 15px;
+     margin-top: 13px;
+ }
+ .shopping-cart-complex .left-choose p {
+     float: left;
+ }
+ .shopping-cart-complex .left-choose .full-choose {
+     margin-left: 25px;
+     width: 150px;
+ }
+ .shopping-cart-complex .left-choose .full-choose .all-input {
+     margin-left: 20px;
+ }
+ .shopping-cart-complex .left-choose .delete {
+     width: 100px;
+ }
+ .shopping-cart-complex .left-choose .move {
+     width: 100px;
+ }
+ .shopping-cart-complex .right-choose {
+     margin-top: 9px;
+ }
+ .shopping-cart-complex .all-settlement {
+     background-color: #ff7b0c;
+     color: #fff;
+     font-size: 18px;
+     height: 34px;
+     line-height: 34px;
+     margin-top: -1px;
+     text-align: center;
+     width: 100px;
+ }
+ .shopping-cart-complex .right-choose a, .shopping-cart-complex .top-choose .all-price a {
+     width: 100px;
+     height: 34px;
+     display: inline-block;
+ }
+ .shopping-cart-complex .choose-item img {
+     cursor: pointer;
+ }
+ .shopping-cart-complex .check-one img, .shopping-cart-complex .check-group img {
+     cursor: pointer;
+ }

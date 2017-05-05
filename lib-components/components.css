@@ -5,32 +5,7 @@
 */
 
 
-/*select样式优化代码开始*/
-
-.ms-ui select {
-    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
-    border: solid 1px #ddd;
-    /*很关键：将默认的select选择框样式清除*/
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    /*在选择框的最右侧中间显示小箭头图片*/
-    background: url(../img/icon-caret-grey.png) no-repeat scroll right center transparent;
-    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
-    padding-right: 14px;
-    margin-right: 10px;
-}
-
-/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
-
-.ms-ui select::-ms-expand {
-    display: none;
-}
-
-/*select样式优化代码结束*/
-
-
-/* 遮罩层开始 */
+/* ======= 遮罩层开始  ======= */
 
 .ms-overlay {
     display: none;
@@ -45,7 +20,7 @@
     z-index: 100;
 }
 
-/*遮罩层结束*/
+/* ======= 遮罩层结束 ======= */
 
 
 /* ======= 弹出层公共样式开始 ======= */
@@ -96,7 +71,7 @@
     right: 10px;
     width: 27px;
     height: 27px;
-    background-image: url("../img/icon-close.png");
+    background-image: url("img/icon-close.png");
     background-size: 100%;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -125,7 +100,7 @@
 /* ======= 弹出层公共样式结束 ======= */
 
 
-/*下拉列表开始*/
+/* ======= 下拉列表开始 ======= */
 
 .ms-dropdown {
     position: relative;
@@ -151,10 +126,10 @@
     border-bottom: 1px solid #ddd;
 }
 
-/*下拉列表结束*/
+/* ======= 下拉列表结束 ======= */
 
 
-/*数量*/
+/* ======= 数量 ======= */
 
 .ms-plus-minus {
     width: 80px;
@@ -185,10 +160,10 @@
     border: none;
 }
 
-/*数量*/
+/* ======= 数量 ======= */
 
 
-/*验证密码强度开始*/
+/* ======= 验证密码强度开始 ======= */
 
 #ms-pwd-strong {
     overflow: hidden;
@@ -240,20 +215,10 @@
     background: #090;
 }
 
-/*验证密码强度结束*/
+/* ======= 验证密码强度结束 ======= */
 
-.icon-16 {
-    width: 16px;
-    height: 16px;
-}
-.manstro-icon {
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    vertical-align: middle;
-}
 
-/*进度条*/
+/* ======= 进度条开始 ======= */
 
 .ms-progress {
     width: 500px;
@@ -273,7 +238,7 @@
     background-color: #FBC85B;
 }
 
-/*进度条*/
+/* ======= 进度条结束 ======= */
 
 
 /*======= 文章开始=======*/
@@ -288,24 +253,7 @@
 /*======= 文章结束=======*/
 
 
-/*生日开始*/
-
-fieldset {
-    padding: 0;
-    border: none;
-}
-#birthday, label {
-    float: left;
-}
-#birthday-html {
-    width: 100%;
-    height: 21px;
-}
-
-/*生日结束*/
-
-
-/*icon图标集开始*/
+/*======= 图标库整理开始 =======*/
 
 .ms-icon {
     display: inline-block;
@@ -313,171 +261,20 @@ fieldset {
     top: -1px;
     vertical-align: middle;
 }
-
-/*占位图片开始*/
-
-.icon-default {
-    width: 16px;
-    height: 16px;
-    background-image: url(../img/16.png);
-}
-
-/*占位图片结束*/
-
 .icon-caret {
     width: 11px;
     height: 7px;
-    background-image: url(../img/icon-caret-grey.png);
+    background-image: url(img/icon-caret-grey.png);
 }
 .icon-caret-left {
     width: 7px;
     height: 10px;
-    background-image: url(../img/icon-caret-grey-lf.png);
+    background-image: url(img/icon-caret-grey-lf.png);
 }
 .icon-caret-white {
     width: 13px;
     height: 10px;
-    background-image: url(../img/icon-caret-white.png);
-}
-.icon-14 {
-    width: 14px;
-    height: 14px;
+    background-image: url(img/icon-caret-white.png);
 }
 
-/*人物头像标志*/
-
-.icon-user {
-    background-image: url(../img/icon-user-grey.png);
-}
-.icon-user-big {
-    width: 25px;
-    height: 23px;
-    background-image: url(../img/icon-user-big.png);
-}
-.icon-right {
-    background-image: url(../img/icon-right-grey.png);
-}
-.icon-16 {
-    width: 16px;
-    height: 16px;
-}
-
-/*搜索标志*/
-
-.icon-search {
-    background-image: url(../img/icon-search.png);
-}
-
-/*电话标志*/
-
-.icon-phone-big {
-    width: 38px;
-    height: 38px;
-    background-image: url(../img/icon-phone-big.png);
-}
-
-/*定位*/
-
-.icon-location {
-    width: 20px;
-    height: 24px;
-    background-image: url(../img/icon-location.png);
-}
-
-/*星级图标*/
-
-.icon-grade {
-    height: 14px;
-    background-position: 0 0;
-    background-image: url(../img/icon-grade.png);
-}
-.icon-grade1 {
-    width: 16px;
-}
-.icon-grade2 {
-    width: 32px;
-}
-.icon-grade3 {
-    width: 47px;
-}
-.icon-grade4 {
-    width: 63px;
-}
-.icon-grade5 {
-    width: 60px;
-}
-
-/*订单标志*/
-
-.icon-order {
-    width: 25px;
-    height: 23px;
-    background-image: url(../img/icon-order.png);
-}
-
-/*新增标志*/
-
-.icon-new {
-    width: 32px;
-    height: 23px;
-    background-image: url(../img/icon-new.png);
-}
-
-/*钱袋标志*/
-
-.icon-money {
-    width: 25px;
-    height: 23px;
-    background-image: url(../img/icon-money.png);
-}
-
-/*服务中心标志*/
-
-.icon-help {
-    width: 25px;
-    height: 23px;
-    background-image: url(../img/icon-help.png);
-}
-
-/*连接标志*/
-
-.icon-link {
-    width: 26px;
-    height: 25px;
-    background-image: url(../img/icon-link.png);
-}
-
-/*问号标志*/
-
-.icon-question {
-    width: 25px;
-    height: 25px;
-    background-image: url(../img/icon-question.png);
-}
-
-/*会员等级标志*/
-
-.icon-lv {
-    width: 38px;
-    height: 13px;
-}
-.icon-lv1 {
-    background-image: url(../img/icon-lv1.png);
-}
-.icon-lv2 {
-    background-image: url(../img/icon-lv2.png);
-}
-.icon-lv3 {
-    background-image: url(../img/icon-lv3.png);
-}
-.icon-lv4 {
-    background-image: url(../img/icon-lv4.png);
-}
-.icon-lv5 {
-    background-image: url(../img/icon-lv5.png);
-}
-.icon-lv6 {
-    background-image: url(../img/icon-lv6.png);
-}
-
-/*icon图标集结束*/
+/*======= 图标库整理结束 =======*/

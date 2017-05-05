@@ -22,7 +22,7 @@
         <header class="light">
             <div class="align-center">
                 <a href="../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
-                <nav class="ms-fr">
+                <nav class="ms-fr menu-nav">
                     <ul>
                         <li><a href="../index.html" title="ManstroUI">开始学习</a></li>
                         <li><a href="../standard/semver.html" title="语义化版本">语义化版本</a></li>
@@ -45,20 +45,26 @@
         <!-- 主体部分开始 -->
         <div class="main">
             <!-- 左侧导航开始 -->
-            <aside class="lf-nav">
-                <nav>
-                    <p class="lf-nav-title">组件列表</p>
-                    <ul class="parent-nav">
-                        <li name="ms-overlay"><a href="#ms-overlay">遮罩层</a></li>
-                        <li name="ms-dialog"><a href="#ms-overlay">弹出层</a></li>
-                        <li name="dropdown"><a href="#dropdown">下拉列表</a></li>
-                        <li name="plus-minus"><a href="#plus-minus">加减框</a></li>
-                        <li name="check-strong"><a href="#check-strong">验证密码强度</a></li>
-                        <li name="progress-bar"><a href="#progress-bar">进度条</a></li>
-                        <li name="ueditor"><a href="#ueditor">其他组件</a></li>
-                    </ul>
-                </nav>
-            </aside>
+            <div class="lf-nav">
+                <p class="lf-nav-title">组件列表</p>
+                <ul class="parent-nav">
+                    <li name="ms-overlay"><a href="#ms-overlay">遮罩层</a></li>
+                    <li name="ms-dialog"><a href="#ms-overlay">弹出层</a></li>
+                    <li name="dropdown"><a href="#dropdown">下拉列表</a></li>
+                    <li name="plus-minus"><a href="#plus-minus">加减框</a></li>
+                    <li name="check-strong"><a href="#check-strong">验证密码强度</a></li>
+                    <li name="progress-bar"><a href="#progress-bar">进度条</a></li>
+                    <li name="count-down"><a href="#count-down">验证码倒计时</a></li>
+                    <li>
+                        <a href="#name-rule">其他组件示例</a>
+                        <ul class="children-nav">
+                            <li><a href="demos/choose-payment/choose-payment.html">选择支付方式</a></li>
+                            <li><a href="demos/shoppingcart/shopping-cart.html">常见购物车示例</a></li>
+                            <li><a href="demos/shoppingcart/shopping-cart-complex.html">多层购物车示例</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <!-- 左侧导航结束 -->
             <!-- 各组件开始 -->
             <article class="rg-content">
@@ -238,6 +244,43 @@ $(".ms-dialog .dialog-close").click(function() {
     &lt;div class="progress-bar" key="40%"&gt;40%&lt;/div&gt;
 &lt;/div&gt;
                     </code></pre>
+                </section>
+                <section id="count-down" class="docs-article">
+                    <h2>验证码倒计时</h2>
+                    <p>现使用按钮样式进行样式，可根据需要自行修改按钮样式</p>
+                    <button type="button" class="btn btn-info send-code bottom10">获取验证码</button>
+                    <p>定义普通倒计时按钮</p>
+                    <pre class="language-markup"><code>&lt;button type="button" class="btn btn-info send-code"&gt;获取验证码&lt;/button&gt;</code></pre>
+                    <p>倒计时方法定义</p>
+                    <pre class="language-js"><code>//倒计时间
+var countTime = 60;
+//定时器
+var countTimer;
+//倒计时方法
+function countTimeFC() {
+    var $T = $(".send-code");
+    //挂失申请
+    if (countTime == "0") {
+        $T.attr("disabled", false);
+        $T.text("获取验证码");
+        countTime = 60;
+    } else {
+        $T.attr("disabled", true);
+        var text = "重新发送(" + countTime + ")";
+        $T.text(text);
+        countTime--;
+        countTimer = window.setTimeout(function() {
+            countTimeFC();
+        }, 1000);
+    }
+}       </code></pre>
+                    <p>js方法调用，显示</p>
+                    <pre class="language-js"><code>$(".send-code").click(function() {
+    $(this).toggleClass("btn-info").toggleClass("btn-default");
+    window.clearTimeout(countTimer);
+    countTime = 60;
+    countTimeFC();
+});</code></pre>
                 </section>
             </article>
             <!-- 各组件结束 -->

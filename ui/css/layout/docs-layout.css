@@ -109,7 +109,10 @@
 /*公共布局样式开始*/
 
 .docs-layout .logo {
-    font-size: 26px;
+    font-family: 'Clicker Script', cursive;
+    font-weight: normal;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .docs-layout header {
     width: 100%;
@@ -125,17 +128,20 @@
     font-size: 14px;
 }
 .docs-layout header a, .docs-layout header a:link {
+    color: #fff;
+}
+.docs-layout header .menu-nav a, .docs-layout header .menu-nav a:link {
     padding: 0 20px;
     display: block;
     color: #fff;
 }
-.docs-layout header a:hover, .docs-layout header a.active {
+.docs-layout header .menu-nav a:hover, .docs-layout header .menu-nav a.active {
     color: #3FB8DD;
 }
 .docs-layout header.light a, .docs-layout header.light a:link {
     color: #463265;
 }
-.docs-layout header.light a:hover, .docs-layout header.light a.active {
+.docs-layout header.light .menu-nav a:hover, .docs-layout header.light .menu-nav a.active {
     background-color: #f9f9f9;
 }
 .docs-layout header.dark {
@@ -143,6 +149,9 @@
 }
 .docs-layout header.dark a, .docs-layout header.dark a:link {
     color: #fff;
+}
+.docs-layout header.dark .menu-nav a:hover, .docs-layout header.dark .menu-nav a.active {
+    color: #3FB8DD;
 }
 .docs-layout .align-center, .docs-layout .main {
     margin: 0px auto;
@@ -183,7 +192,7 @@
 }
 .docs-layout aside {
     float: left;
-    width: 200px;
+    width: 180px;
     min-height: 500px;
     border: 1px solid #ddd;
 }
@@ -197,7 +206,7 @@
 }
 .docs-layout .rg-content {
     float: right;
-    width: 860px;
+    width: 880px;
     min-height: 500px;
     margin-bottom: 360px;
 }
@@ -229,6 +238,13 @@
     font-weight: 500;
     color: #767676;
     cursor: pointer;
+}
+.docs-layout .lf-nav li a {
+    display: block;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .docs-layout .lf-nav .children-nav {
     display: none;
@@ -281,6 +297,29 @@
 }
 
 /*文章结束*/
+
+
+/*demos示例说明文字开始*/
+
+.demos-article {
+    margin: 20px auto 10px;
+    width: 1100px;
+}
+.demos-article h2 {
+    font-size: 24px;
+}
+.demos-article h2, .demos-article p {
+    line-height: 2em;
+    font-family: 'Clicker Script', cursive;
+    font-weight: normal;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+.demos-article p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/*demos示例说明文字结束*/
 
 
 /*-返回顶部开始*/

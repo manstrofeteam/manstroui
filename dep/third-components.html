@@ -21,7 +21,7 @@
         <header class="light">
             <div class="align-center">
                 <a href="../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
-                <nav class="ms-fr">
+                <nav class="ms-fr menu-nav">
                     <ul>
                         <li><a href="../index.html" title="ManstroUI">开始学习</a></li>
                         <li><a href="../standard/semver.html" title="语义化版本">语义化版本</a></li>
@@ -89,9 +89,8 @@ laypage({
                         <h2>使用方法</h2>
                         <p>直接写id="birthday"的空div</p>
                         <pre class="language-markup"><code> &lt;div id="birthday"&gt;&lt;/div&gt;</code></pre>
-                        <p>并引入bday-picker.js和lib-components.js</p>
-                        <pre class="language-js"><code>&lt;script src="birthdaypicker/bday-picker.js"&gt;&lt;/script&gt;
-&lt;script src="js/lib-components.js"&gt;&lt;/script&gt;</code></pre>
+                        <p>并引入bday-picker.js</p>
+                        <pre class="language-js"><code>&lt;script src="birthdaypicker/bday-picker.js"&gt;</code></pre>
                     </div>
                     <span>生日初始化的JS调用</span>
                     <pre class="language-js"><code>$(function() {
@@ -129,8 +128,7 @@ laypage({
 &lt;/form&gt;</code></pre>
                     <p>引入js</p>
                     <pre class="language-js"><code>&lt;script src="pca/city2.js"&gt;&lt;/script&gt;
-&lt;script src="pca/citySelect2.js"&gt;&lt;/script&gt;
-&lt;script src="js/lib-components.js"&gt;&lt;/script&gt;</code></pre>
+&lt;script src="pca/citySelect2.js"&gt;&lt;/script&gt;</code></pre>
                     <p>地址js初始化</p>
                     <pre class="language-js"><code>var selectVal = new CitySelect({
     data: data,
@@ -143,7 +141,8 @@ laypage({
                 </section>
                 <section id="ueditor">
                     <h2>UEditor富文本编辑器</h2>
-                    <p> <a href="../examples/ueditor/index.html">本地示例demo</a> 具体写法请查看页面html代码</p>
+                    <p> <a href="ueditor/index.html">本地完整示例demo</a> 具体写法请查看页面html代码</p>
+                    <p> <a href="ueditor/mini.html">自定义示例demo</a> 具体写法请查看页面html代码</p>
                     <p>这是百度前端团队开发的轻量、可定制、注重用户体验的一个编辑器。具体API详情请看链接<a href=http://fex.baidu.com/ueditor/ "">http://fex.baidu.com/ueditor/</a>
                     </p>
                 </section>

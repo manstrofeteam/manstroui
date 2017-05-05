@@ -1,0 +1,31 @@
+input,
+img {
+    vertical-align: middle;
+    outline: none;
+}
+li {
+    list-style: none;
+}
+.select-all {
+    margin: 20px auto;
+    padding: 20px;
+    width: 900px;
+    box-shadow: 0 0 10px 10px #dcdcdc;
+    background: #FFF;
+}
+.content {
+    padding: 20px;
+    border: 1px dashed #ccc;
+}
+.checkList li,
+#check-all {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.secCheck i {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+

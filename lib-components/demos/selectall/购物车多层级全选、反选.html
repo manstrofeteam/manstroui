@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>多层级全选/反选</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../ui/css/public/base.css"> -->
+    <link rel="stylesheet" href="css/select-all2.css">
+</head>
+
+<body>
+    <!--多选框-->
+    <div class="select-all" id="a">
+        <h1 class="title">多层级图片式多选框</h1>
+        <div class="content">
+            <!-- 选择所有 -->
+            <div e-fun="check-all">
+                <i id="check-all" e-check="0"><img src="img/e-check.png" alt="" />全选</i>
+                <!--多选-->
+                <div class="" e-fun="check">
+                    <ul class="checkList">
+                        <li class="check-group" e-check="0"><img src="img/e-check.png" alt="" />全选一</li>
+                        <li class="secCheck clear">
+                            <i class="check-one" e-check="0"><img src="img/e-check.png" alt="" />多选1</i>
+                            <i class="check-one" e-check="0"><img src="img/e-check.png" alt="" />多选2</i>
+                            <i class="check-one" e-check="0"><img src="img/e-check.png" alt="" />多选3</i>
+                            <i class="check-one" e-check="0"><img src="img/e-check.png" alt="" />多选4</i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="" e-fun="check">
+                    <ul class="checkList">
+                        <li class="check-group" e-check="0"><img src="img/e-check.png" alt="" />全选二</li>
+                        <li class="secCheck clear">
+                            <i class="check-one" e-check="0"><img src="img/e-check.png" alt="" />多选1</i>
+                            <i class="check-one" e-check="0"><img src="img/e-check.png" alt="" />多选2</i>
+                            <i class="check-one" e-check="0"><img src="img/e-check.png" alt="" />多选3</i>
+                            <i class="check-one" e-check="0"><img src="img/e-check.png" alt="" />多选4</i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--js-->
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/select-all2.js"></script>
+</body>
+
+</html>

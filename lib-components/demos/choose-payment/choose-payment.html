@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>pay切换</title>
+    <link rel="stylesheet" href="../../../ui/css/base.css">
+    <link rel="stylesheet" href="../../../ui/css/layout/docs-layout.css">
+    <link rel="stylesheet" href="choose-payment.css">
+</head>
+
+<body>
+    <div id="choose-payment" class="docs-layout">
+        <!-- 页面顶部开始 -->
+        <header class="dark">
+            <div class="align-center">
+                <a href="../../../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
+                <nav class="ms-fr menu-nav">
+                    <ul>
+                        <li><a href="../../../index.html" title="ManstroUI">开始学习</a></li>
+                        <li><a href="../../../standard/semver.html" title="语义化版本">语义化版本</a></li>
+                        <li><a href="../../../standard/codeguide.html" title="前端规范">前端规范</a></li>
+                        <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
+                        <li><a href="../../../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                        <li><a class="active" href="../../../lib-components/components.html" title="组件库">组件库</a></li>
+                        <li><a href="../../../dep/third-components.html" title="组件库">第三方组件库</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="demos-article">
+            <h2>支付方式切换效果示例</h2>
+            <p>具体详情请查看源代码</p>
+        </div>
+        <div class="choose-payment">
+            <ul class="payment-nav">
+                <li id="weixin-pay" class="active">微信支付</li>
+                <li id="xyk-pay">信用卡支付</li>
+                <li id="chuxu-pay">储蓄卡快捷</li>
+                <li id="online-pay">网上支付</li>
+                <li id="other-pay">第三方支付</li>
+            </ul>
+            <div class="switch">
+                <!-- 微信支付 -->
+                <div class="weixin-pay payment">
+                    <img src="img/wechat.png" alt="">
+                    <p class="lineHeight30">提示：点击“下一步”后，请打开手机微信的“扫一扫”，扫描二维码</p>
+                </div>
+                <!-- 信用卡支付 -->
+                <div class="xyk-pay payment hidden">
+                    <ul>
+                        <li>
+                            <i class="cards ccb"></i>
+                        </li>
+                        <li>
+                            <i class="cards abc"></i>
+                        </li>
+                        <li>
+                            <i class="cards icbc"></i>
+                        </li>
+                        <li>
+                            <i class="cards boc"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 储蓄开快捷 -->
+                <div class="chuxu-pay payment hidden">
+                    <ul>
+                        <li>
+                            <i class="cards ccb"></i>
+                        </li>
+                        <li>
+                            <i class="cards abc"></i>
+                        </li>
+                        <li>
+                            <i class="cards icbc"></i>
+                        </li>
+                        <li>
+                            <i class="cards boc"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 网上支付 -->
+                <div class="online-pay payment hidden">
+                    <ul>
+                        <li>
+                            <i class="cards icbc"></i>
+                        </li>
+                        <li>
+                            <i class="cards boc"></i>
+                        </li>
+                        <li>
+                            <i class="cards ccb"></i>
+                        </li>
+                        <li>
+                            <i class="cards abc"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 第三方支付 -->
+                <div class="other-pay payment hidden">
+                    <ul>
+                        <li>
+                            <i class="cards alipay"></i>
+                        </li>
+                        <li>
+                            <i class="cards unionpay"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../ui/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+    //切换支付方式 tab标签页
+    $(".payment-nav li").click(function() {
+        $(this).addClass("active");
+        $(this).siblings().removeClass('active')
+        var idTxt = $(this).attr("id");
+        $(".switch .payment").addClass("hidden");
+        $("." + idTxt).removeClass("hidden");
+    });
+    //选择支付方式
+    $(".switch li").click(function() {
+        $(".switch li").removeClass("click");
+        $(this).addClass("click");
+
+    });
+    </script>
+</body>
+
+</html>
