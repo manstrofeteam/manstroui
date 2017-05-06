@@ -209,3 +209,13 @@ function countTimeFC() {
     }
 }
 /*========倒计时结束========*/
+/*========标签页切换开始========*/
+$(".tab-nav li").click(function() {
+    var tabLabel = $(this).attr("id");
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+    $(".tab-content .tab-pane").hide();
+    $("." + tabLabel).show();
+});
+
+/*========标签页切换结束========*/

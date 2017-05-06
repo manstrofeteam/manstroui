@@ -49,12 +49,19 @@
                 <p class="lf-nav-title">组件列表</p>
                 <ul class="parent-nav">
                     <li name="ms-overlay"><a href="#ms-overlay">遮罩层</a></li>
-                    <li name="ms-dialog"><a href="#ms-overlay">弹出层</a></li>
+                    <li name="ms-dialog"><a href="#ms-dialog">弹出层</a></li>
                     <li name="dropdown"><a href="#dropdown">下拉列表</a></li>
                     <li name="plus-minus"><a href="#plus-minus">加减框</a></li>
-                    <li name="check-strong"><a href="#check-strong">验证密码强度</a></li>
+                    <li name="check-pwd"><a href="#check-pwd">验证密码强度</a></li>
                     <li name="progress-bar"><a href="#progress-bar">进度条</a></li>
                     <li name="count-down"><a href="#count-down">验证码倒计时</a></li>
+                    <li name="ms-tab">
+                        <a href="#ms-tab">标签页</a>
+                        <ul class="children-nav">
+                            <li><a href="#tab-default">默认标签页</a></li>
+                            <li><a href="#tab-line">下划线式标签页</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="#name-rule">其他组件示例</a>
                         <ul class="children-nav">
@@ -232,6 +239,28 @@ $(".ms-dialog .dialog-close").click(function() {
                     <script type="text/javascript">
                     </script>
                 </section>
+                <section id="check-pwd" class="ms-article">
+                    <h2>验证密码强度</h2>
+                    <div id="ms-pwd-strong" class="bottom10">
+                        <input type="password" value="" maxlength="16" />
+                        <div id="tips">
+                            <span>弱</span>
+                            <span>中</span>
+                            <span>强</span>
+                            <span>非常好</span>
+                        </div>
+                    </div>
+                    <p>#ms-pwd-strong定义密码强度验证</p>
+                    <pre class="language-markup"><code>&lt;div id="ms-pwd-strong"&gt;
+    &lt;input type="password" value="" maxlength="16" /&gt;
+    &lt;div id="tips"&gt;
+        &lt;span&gt;弱&lt;/span&gt;
+        &lt;span&gt;中&lt;/span&gt;
+        &lt;span&gt;强&lt;/span&gt;
+        &lt;span&gt;非常好&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt; </code></pre>
+                </section>
                 <section id="progress-bar" class="docs-article">
                     <h2>进度条</h2>
                     <p>key值对应当前进度条的百分比</p>
@@ -281,6 +310,114 @@ function countTimeFC() {
     countTime = 60;
     countTimeFC();
 });</code></pre>
+                </section>
+                <section id="ms-tab">
+                    <h2 class="bottom10">标签页</h2>
+                    <p class="bottom10">标签页分很多种类，现在只列举两个类型默认和下划线式，具体可依据实际情况相应修改样式</p>
+                    <h3 id="tab-default" class="bottom10">默认标签页</h3>
+                    <p class="bottom10">使用.ms-tab、.tab-default类进行标记</p>
+                    <div class="ms-tab tab-defalut bottom10">
+                        <ul class="tab-nav">
+                            <li id="first-tab" class="active">美文一</li>
+                            <li id="second-tab">美文二</li>
+                            <li id="third-tab">美文三</li>
+                            <li id="fouth-tab">美文四</li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane first-tab">
+                                <p>秋风起，墨如雪，一曲清歌扶幽月，一支洞箫廖佳人。记忆，似水东流，再难回头。波光似玉，佳人胜月。却怎堪，斜屋漏巷。莫不是光阴悠悠白了少年头?一杯热饮，月下独酌，别是一番滋味在心头。一将功成万骨枯，写尽秋瓷与谁读?</p>
+                                <p>
+                                    心若年轻，则岁月不老，无论时光如何流转，守住心中的那一季春暖花开，其实，我们想要的幸福一直都在。若得夕阳无限好，何须惆怅近黄昏，错过了风，我们会收获雨;错失了夏花绚烂，必将会走进秋叶静美。</p>
+                                <p>
+                                    悠悠尘世，浮浮年华，听风、听雨、听那落红飘飞时划过苍茫天空的那声低叹，谁的心痕落在雨中，融合了那把伞下的心，把情韵绘刻得栩栩如生。一个人，到底流多少泪?到底经多少雨?到底留多少背影？</p>
+                            </div>
+                            <div class="tab-pane second-tab">
+                                <p>再好的东西，都有失去的一天。再深的记忆，也有淡忘的一天。再爱的人，也有远走的一天。再美的梦，也有苏醒的一天。该放弃的决不挽留。该珍惜的决不放手，分手后不可以做朋友，因为彼此伤害过!也不可以做敌人。</p>
+                                <p>烟火流年，如梦蹁跹。那时，岁月的信笺上，一袭烟雨，湿湿的，宛如一些飘渺久远的往事。初到乌镇的那个日子，空蒙烟雨，撑起墨笔油纸伞，兜转在青石路板上，走走停停，寻摸着一个动人的小镇故事。</p>
+                                <p>一帘雨，一窗风，可以让尘封在书页间的句子，散落成秋水的披风，云雾一般朦胧。穿过时光的罅隙，思念晕染了季节的眉梢，温润如琥玻色。小城的秋终是深了，一株清幽的桂花，在墙角独自芬芳，着一袭暗香，在细雨中寻觅熟悉的影子。</p>
+                                <p>镜中伊人，花影对月容，皆以零散，若尘世无缘，洗净铅华，修颜遮挡心扉，情如风随水，红尘深锁，只缘感伊一回顾，展颜轻笑，我此生不负相思。只缘感你，展颜回顾，倾城一暖。只想让你回眸一次，便能看见我的深情。</p>
+                            </div>
+                            <div class="tab-pane third-tab">
+                                <p>一帘雨，一窗风，可以让尘封在书页间的句子，散落成秋水的披风，云雾一般朦胧。穿过时光的罅隙，思念晕染了季节的眉梢，温润如琥玻色。小城的秋终是深了，一株清幽的桂花，在墙角独自芬芳，着一袭暗香，在细雨中寻觅熟悉的影子。</p>
+                                <p>镜中伊人，花影对月容，皆以零散，若尘世无缘，洗净铅华，修颜遮挡心扉，情如风随水，红尘深锁，只缘感伊一回顾，展颜轻笑，我此生不负相思。只缘感你，展颜回顾，倾城一暖。只想让你回眸一次，便能看见我的深情。</p>
+                                <p>年华，温柔了岁月，惊艳了时光;花开，芬芳了流年，美丽了相遇。季节轮回，那些来自心灵深处温暖，每每忆起，总能激起心底层层涟漪;天涯相隔，见与不见，念与不念，都是牵念，都是温暖。我们生活在四季风景里，心中有爱。</p>
+                                <p>似水年华，染指涵芳。回眸间，诗梦穿越千年的长廊暗香浮动，在一朵花的时光里行走，在一卷画卷里浏览观光，如诗岁月，借素卷吟唱。窗外阳光明媚，鸟语花香，共品春色阑珊，携清风细雨，挽霞拥梦。只要心中充满希望，就会有美好的明天，拥抱美好的春天，让世界充满爱！</p>
+                            </div>
+                            <div class="tab-pane fouth-tab ">
+                                <p>年华，温柔了岁月，惊艳了时光;花开，芬芳了流年，美丽了相遇。季节轮回，那些来自心灵深处温暖，每每忆起，总能激起心底层层涟漪;天涯相隔，见与不见，念与不念，都是牵念，都是温暖。我们生活在四季风景里，心中有爱。</p>
+                                <p>似水年华，染指涵芳。回眸间，诗梦穿越千年的长廊暗香浮动，在一朵花的时光里行走，在一卷画卷里浏览观光，如诗岁月，借素卷吟唱。窗外阳光明媚，鸟语花香，共品春色阑珊，携清风细雨，挽霞拥梦。只要心中充满希望，就会有美好的明天，拥抱美好的春天，让世界充满爱！</p>
+                                <p>夜静谧，佳人为何泪悄落，一丝纠缠，谁倾了天涯的思念，道是相思不成双，抹不去别离相思，留不下相思别离，终是缠绵开始，陌路离去;难言难说，爱是离别失落，却是那一回眸中，背影淡淡的萧瑟，真是难过，言尽了白头偕老的承诺，走到各自一方的角落，独自数落，忧伤的生活。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <pre class="language-markup"><code>
+&lt;div class="ms-tab tab-defalut"&gt;
+    &lt;ul class="tab-nav"&gt;
+        &lt;li id="first-tab" class="active"&gt;美文一&lt;/li&gt;
+        &lt;li id="second-tab"&gt;美文二&lt;/li&gt;
+        &lt;li id="third-tab"&gt;美文三&lt;/li&gt;
+        &lt;li id="fouth-tab"&gt;美文四&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="tab-content"&gt;
+        &lt;div class="tab-pane first-tab"&gt;···&lt;/div&gt;
+        &lt;div class="tab-pane second-tab"&gt;···&lt;/div&gt;
+        &lt;div class="tab-pane third-tab"&gt;···&lt;/div&gt;
+        &lt;div class="tab-pane fouth-tab"&gt;···&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                    </code></pre>
+                    <h3 id="tab-line" class="bottom10">下划线式标签页</h3>
+                    <p class="bottom10">使用.ms-tab、.tab-line类进行标记</p>
+                    <div class="ms-tab tab-line">
+                        <ul class="tab-nav">
+                            <li id="first-tab" class="active">美文一</li>
+                            <li id="second-tab">美文二</li>
+                            <li id="third-tab">美文三</li>
+                            <li id="fouth-tab">美文四</li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane first-tab">
+                                <p>秋风起，墨如雪，一曲清歌扶幽月，一支洞箫廖佳人。记忆，似水东流，再难回头。波光似玉，佳人胜月。却怎堪，斜屋漏巷。莫不是光阴悠悠白了少年头?一杯热饮，月下独酌，别是一番滋味在心头。一将功成万骨枯，写尽秋瓷与谁读?</p>
+                                <p>
+                                    心若年轻，则岁月不老，无论时光如何流转，守住心中的那一季春暖花开，其实，我们想要的幸福一直都在。若得夕阳无限好，何须惆怅近黄昏，错过了风，我们会收获雨;错失了夏花绚烂，必将会走进秋叶静美。</p>
+                                <p>
+                                    悠悠尘世，浮浮年华，听风、听雨、听那落红飘飞时划过苍茫天空的那声低叹，谁的心痕落在雨中，融合了那把伞下的心，把情韵绘刻得栩栩如生。一个人，到底流多少泪?到底经多少雨?到底留多少背影？</p>
+                            </div>
+                            <div class="tab-pane second-tab">
+                                <p>再好的东西，都有失去的一天。再深的记忆，也有淡忘的一天。再爱的人，也有远走的一天。再美的梦，也有苏醒的一天。该放弃的决不挽留。该珍惜的决不放手，分手后不可以做朋友，因为彼此伤害过!也不可以做敌人。</p>
+                                <p>烟火流年，如梦蹁跹。那时，岁月的信笺上，一袭烟雨，湿湿的，宛如一些飘渺久远的往事。初到乌镇的那个日子，空蒙烟雨，撑起墨笔油纸伞，兜转在青石路板上，走走停停，寻摸着一个动人的小镇故事。</p>
+                                <p>一帘雨，一窗风，可以让尘封在书页间的句子，散落成秋水的披风，云雾一般朦胧。穿过时光的罅隙，思念晕染了季节的眉梢，温润如琥玻色。小城的秋终是深了，一株清幽的桂花，在墙角独自芬芳，着一袭暗香，在细雨中寻觅熟悉的影子。</p>
+                                <p>镜中伊人，花影对月容，皆以零散，若尘世无缘，洗净铅华，修颜遮挡心扉，情如风随水，红尘深锁，只缘感伊一回顾，展颜轻笑，我此生不负相思。只缘感你，展颜回顾，倾城一暖。只想让你回眸一次，便能看见我的深情。</p>
+                            </div>
+                            <div class="tab-pane third-tab">
+                                <p>一帘雨，一窗风，可以让尘封在书页间的句子，散落成秋水的披风，云雾一般朦胧。穿过时光的罅隙，思念晕染了季节的眉梢，温润如琥玻色。小城的秋终是深了，一株清幽的桂花，在墙角独自芬芳，着一袭暗香，在细雨中寻觅熟悉的影子。</p>
+                                <p>镜中伊人，花影对月容，皆以零散，若尘世无缘，洗净铅华，修颜遮挡心扉，情如风随水，红尘深锁，只缘感伊一回顾，展颜轻笑，我此生不负相思。只缘感你，展颜回顾，倾城一暖。只想让你回眸一次，便能看见我的深情。</p>
+                                <p>年华，温柔了岁月，惊艳了时光;花开，芬芳了流年，美丽了相遇。季节轮回，那些来自心灵深处温暖，每每忆起，总能激起心底层层涟漪;天涯相隔，见与不见，念与不念，都是牵念，都是温暖。我们生活在四季风景里，心中有爱。</p>
+                                <p>似水年华，染指涵芳。回眸间，诗梦穿越千年的长廊暗香浮动，在一朵花的时光里行走，在一卷画卷里浏览观光，如诗岁月，借素卷吟唱。窗外阳光明媚，鸟语花香，共品春色阑珊，携清风细雨，挽霞拥梦。只要心中充满希望，就会有美好的明天，拥抱美好的春天，让世界充满爱！</p>
+                            </div>
+                            <div class="tab-pane fouth-tab ">
+                                <p>年华，温柔了岁月，惊艳了时光;花开，芬芳了流年，美丽了相遇。季节轮回，那些来自心灵深处温暖，每每忆起，总能激起心底层层涟漪;天涯相隔，见与不见，念与不念，都是牵念，都是温暖。我们生活在四季风景里，心中有爱。</p>
+                                <p>似水年华，染指涵芳。回眸间，诗梦穿越千年的长廊暗香浮动，在一朵花的时光里行走，在一卷画卷里浏览观光，如诗岁月，借素卷吟唱。窗外阳光明媚，鸟语花香，共品春色阑珊，携清风细雨，挽霞拥梦。只要心中充满希望，就会有美好的明天，拥抱美好的春天，让世界充满爱！</p>
+                                <p>夜静谧，佳人为何泪悄落，一丝纠缠，谁倾了天涯的思念，道是相思不成双，抹不去别离相思，留不下相思别离，终是缠绵开始，陌路离去;难言难说，爱是离别失落，却是那一回眸中，背影淡淡的萧瑟，真是难过，言尽了白头偕老的承诺，走到各自一方的角落，独自数落，忧伤的生活。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <pre class="language-markup"><code>
+&lt;div class="ms-tab tab-line"&gt;
+    &lt;ul class="tab-nav"&gt;
+        &lt;li id="first-tab" class="active"&gt;美文一&lt;/li&gt;
+        &lt;li id="second-tab"&gt;美文二&lt;/li&gt;
+        &lt;li id="third-tab"&gt;美文三&lt;/li&gt;
+        &lt;li id="fouth-tab"&gt;美文四&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="tab-content"&gt;
+        &lt;div class="tab-pane first-tab"&gt;···&lt;/div&gt;
+        &lt;div class="tab-pane second-tab"&gt;···&lt;/div&gt;
+        &lt;div class="tab-pane third-tab"&gt;···&lt;/div&gt;
+        &lt;div class="tab-pane fouth-tab"&gt;···&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                    </code></pre>
                 </section>
             </article>
             <!-- 各组件结束 -->
