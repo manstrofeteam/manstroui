@@ -13,6 +13,7 @@
  }
  .shopping-cart-complex .img-info {
      /*这里暂定使用line-height控制居中，以后根据实际情况设定*/
+     line-height: 60px;
  }
  .shopping-cart-complex .img-info img {
      width: 80px;
@@ -189,11 +190,10 @@
      margin-top: -3px;
      text-align: center;
      margin-left: 0px;
-     line-height:27px;
  }
  .shopping-cart-complex .item-amount .plus {
      right: 0;
-     margin-top: -27px;
+     margin-top: -30px;
      cursor: pointer;
  }
  .shopping-cart-complex .item-amount .minus {
