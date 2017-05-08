@@ -3,130 +3,68 @@
 html {
     font-size: 62.5%;
 }
-
 body {
     font: 14px "Microsoft YaHei", tahoma, arial, Hiragino Sans GB, \\5b8b体, sans-serif;
     background-color: #fff;
     color: #444;
     height: 100%;
 }
-
-body,
-dl,
-dd,
-ul,
-ol,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-pre,
-blockquote,
-form,
-fieldset,
-legend,
-input,
-button,
-select,
-textarea {
+body, dl, dd, ul, ol, figure, h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, fieldset, legend, input, button, select, textarea {
     margin: 0;
     padding: 0;
 }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
     display: block;
 }
-
-abbr[title],
-dfn[title] {
+abbr[title], dfn[title] {
     border-bottom: 1px dotted;
     cursor: help;
 }
-
-pre,
-code,
-kbd,
-samp {
+pre, code, kbd, samp {
     font-family: monospace, sans-serif;
     _font-family: 'Courier New', monospace, sans-serif;
     font-size: 1em;
 }
-
 pre {
     white-space: pre;
     white-space: pre-wrap;
     white-space: pre-line;
     word-wrap: break-word;
 }
-
-blockquote,
-q {
+blockquote, q {
     quotes: none;
 }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
 }
-
 small {
     font-size: 75%;
 }
-
-sub,
-sup {
+sub, sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
 }
-
 sup {
     top: -0.5em;
 }
-
 sub {
     bottom: -0.25em;
 }
-
-audio[controls],
-canvas,
-video {
+audio[controls], canvas, video {
     display: inline-block;
     *display: inline;
     *zoom: 1;
 }
-
-img,
-fieldset {
+img, fieldset {
     border: 0 none;
 }
-
-a,
-a:link,
-a:visited,
-a:hover,
-a:active {
+a, a:link, a:visited, a:hover, a:active {
     text-decoration: none;
     outline: none;
 }
-
 .hidden {
     border: 0 !important;
     clip: rect(1px 1px 1px 1px);
@@ -139,167 +77,112 @@ a:active {
     position: absolute !important;
     width: 1px;
 }
-
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
     content: "\0020";
     display: block;
     height: 0;
     visibility: hidden;
 }
-
 .clearfix {
     zoom: 1;
 }
-
 .clearfix:after {
     clear: both;
 }
-
 * html .clearfix {
     zoom: 1;
 }
-
 *:first-child+html .clearfix {
     zoom: 1;
 }
-
-ul,
-ol {
+ul, ol {
     list-style: none;
 }
-
 form {
     overflow: visible;
 }
-
 fieldset {
     line-height: 1;
 }
-
 legend {
     *margin-left: -7px;
 }
-
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
     font: 14px/1.5;
     vertical-align: baseline;
     *vertical-align: middle;
 }
-
-button,
-input {
+button, input {
     line-height: normal;
     *overflow: visible;
 }
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button, input[type="button"], input[type="reset"], input[type="submit"] {
     cursor: pointer;
     -webkit-appearance: button;
 }
-
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
     box-sizing: border-box;
 }
-
 input[type="checkbox"] {
     vertical-align: middle;
     margin-top: -2px;
 }
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
-
 textarea {
     overflow: auto;
     vertical-align: top;
 }
-
-input[type="email"],
-input[type="text"],
-input[type="password"],
-input[type="select"],
-input[type="search"],
-input[type="file"],
-textarea,
-select {
+input[type="email"], input[type="text"], input[type="password"], input[type="select"], input[type="search"], input[type="file"], textarea, select {
     border: 1px solid #ddd;
 }
-
-input:focus,
-textarea:focus,
-select:focus {
+input:focus, textarea:focus, select:focus {
     outline-width: 0;
 }
-
 select {
     background-color: transparent;
 }
-
 label {
     font-weight: normal;
 }
-
 label.required:after {
     content: "*";
     color: red;
     font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
 }
-
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+button, input[type="submit"], input[type="reset"], input[type="button"] {
     width: auto;
     *width: 1;
     overflow: visible;
 }
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
-th,
-td {
+th, td {
     padding: 0;
     text-align: left;
     vertical-align: middle;
 }
-
 h1 {
     font-size: 2em;
 }
-
 h2 {
     font-size: 1.5em;
 }
-
 h3 {
     font-size: 1.17em;
 }
-
 h4 {
     font-size: 1em;
 }
-
 h5 {
     font-size: 0.83em;
 }
-
 h6 {
     font-size: 0.67em;
 }
-
 
 /* ====== 浏览器重置样式结束 ======  */
