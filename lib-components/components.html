@@ -146,7 +146,7 @@ $(".ms-dialog .dialog-close").click(function() {
     &lt;div class="dialog-content"&gt;···&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                     <button type="button" class="show-dialog btn btn-info ">点击显示小弹出层</button>
-                    <div class="ms-dialog dialog-sm">
+                    <div class="ms-dialog dialog-xs">
                         <p class="dialog-title">小弹出层示例</p>
                         <i class="dialog-close ms-icon icon-close"></i>
                         <div class="dialog-content">
@@ -273,6 +273,11 @@ $(".ms-dialog .dialog-close").click(function() {
     &lt;div class="progress-bar" key="40%"&gt;40%&lt;/div&gt;
 &lt;/div&gt;
                     </code></pre>
+                    <p>js方法调用，显示</p>
+                    <pre class="language-js"><code>var progressVal = $(".ms-progress .progress-bar").attr("key");
+$(".progress-bar").stop().animate({
+    width: progressVal
+});</code></pre>
                 </section>
                 <section id="count-down" class="docs-article">
                     <h2>验证码倒计时</h2>
