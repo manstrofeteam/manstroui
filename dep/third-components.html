@@ -52,6 +52,9 @@
                         <li name="birthday-out"><a href="#birthday-out">生日</a></li>
                         <li name="pca"><a href="#pca">省市区联动</a></li>
                         <li name="ueditor"><a href="#ueditor">ueditor编辑器</a></li>
+                        <li name="ECharts"><a href="#ECharts">ECharts</a></li>
+                        <li name="layer"><a href="#layer">layer弹出层组件</a></li>
+                        <li name="cropper" title="cropper头像上传截取"><a href="cropper/my-avatar.html">cropper头像上传截取</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -141,10 +144,32 @@ laypage({
                 </section>
                 <section id="ueditor">
                     <h2>UEditor富文本编辑器</h2>
-                    <p> <a href="ueditor/index.html">本地完整示例demo</a> 具体写法请查看页面html代码</p>
-                    <p> <a href="ueditor/mini.html">自定义示例demo</a> 具体写法请查看页面html代码</p>
-                    <p>这是百度前端团队开发的轻量、可定制、注重用户体验的一个编辑器。具体API详情请看链接<a href=http://fex.baidu.com/ueditor/ "">http://fex.baidu.com/ueditor/</a>
+                    <p> <a href="ueditor/index.html" class="color-red">本地完整示例demo</a> 具体写法请查看页面html代码</p>
+                    <p> <a href="ueditor/mini.html" class="color-red">自定义示例demo</a> 具体写法请查看页面html代码</p>
+                    <p>这是百度前端团队开发的轻量、可定制、注重用户体验的一个编辑器。具体API详情请看链接<a href="http://fex.baidu.com/ueditor/ " class="color-red">http://fex.baidu.com/ueditor/</a>
                     </p>
+                </section>
+                <section id="ECharts" class="docs-article">
+                    <h2>ECharts</h2>
+                    <p>百度前端团队作品，详情请查看<a class="color-red" href="http://echarts.baidu.com/index.html">ECharts官网</a></p>
+                    <p>更多实例<a class="color-red" href="http://echarts.baidu.com/examples.html">查看</a></p>
+                    <p>ECharts，一个纯 Javascript 的图表库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等），底层依赖轻量级的 Canvas 类库 ZRender，提供直观，生动，可交互，可高度个性化定制的数据可视化图表。</p>
+                    <p> ECharts 3 中更是加入了更多丰富的交互功能以及更多的可视化效果，并且对移动端做了深度的优化。</p>
+                    <p>ECharts 提供了常规的折线图，柱状图，散点图，饼图，K线图，用于统计的盒形图，用于地理数据可视化的地图，热力图，线图，用于关系数据可视化的关系图，treemap，多维数据可视化的平行坐标，还有用于 BI 的漏斗图，仪表盘，并且支持图与图之间的混搭。</p>
+                </section>
+                <section id="layer" class="docs-article">
+                    <h2>layer弹出层组件</h2>
+                    <p>layer是一款近年来备受青睐的web弹层组件，她具备全方位的解决方案，致力于服务各水平段的开发人员，您的页面会轻松地拥有丰富友好的操作体验。 </p>
+                    <p>只引用layer.js即可使用相应功能</p>
+                    <pre class="language-js"><code>
+&lt;script src="layer.js的路径"&gt;&lt;/script&gt;
+//方法调用示例
+$('#test1').click(function(){
+  layer.msg('Hello layer');
+});
+                </code></pre>
+                    <p> 更多详情请参考 <a href="http://layer.layui.com/" class="color-red">Layer官网说明文档</a></p>
+                    <p>这里是如何使用layer的指引文档 <a href="http://layer.layui.com/hello.html" class="color-red">开始使用layer</a></p>
                 </section>
             </article>
             <!-- 各组件结束 -->

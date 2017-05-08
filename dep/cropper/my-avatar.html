@@ -5,54 +5,81 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>我的头像</title>
+    <link rel="shortcut icon" href="../../../ui/img/favicon.ico">
+    <link rel="stylesheet" href="../../../ui/css/base.css">
+    <link rel="stylesheet" href="../../../ui/css/layout/docs-layout.css">
     <link rel="stylesheet" href="dist/cropper.min.css">
     <link rel="stylesheet" href="css/avatar.css">
 </head>
 
 <body>
-    <div class="container" id="my-avatar">
-        <!-- 当前头像 -->
-        <div class="avatar-view" title="Change the avatar">
-            <img src="img/picture.jpg" alt="Avatar">
-        </div>
-        <!-- 头像上传开始 -->
-        <form class="avatar-form" action="crop.php" enctype="multipart/form-data" method="post">
-            <div class="avatar-body">
-                <!-- 左侧上传开始 -->
-                <div class="lf-big-img">
-                    <label class="avatar-upload">
-                        <span class="font20 black">+</span>
-                        <span>上传头像</span>
-                        <!-- 头像路径 -->
-                        <input type="hidden" class="avatar-src" name="avatar_src">
-                        <!-- 头像数据 -->
-                        <input type="hidden" class="avatar-data" name="avatar_data">
-                        <input type="file" class="avatar-input hidden" id="avatarInput" name="avatar_file">
-                    </label>
-                    <span class="upload-tip">请上传JPEG、PNG、GIF格式的图片，文件大小小于4M。</span>
-                    <div class="avatar-wrapper"></div>
-                    <button type="submit" class="btn avatar-save">确认保存</button>
-                </div>
-                <!-- 左侧上传结束 -->
-                <!-- 右侧头像预览开始 -->
-                <div class="rg-lt-img">
-                    <p class="title font16">头像预览</p>
-                    <p class="tip-txt">您上传的图片会自动生成以下两种尺寸，请注意小尺寸的头像是否清晰。</p>
-                    <div class="avatar-preview preview-98"> </div>
-                    <p class="tip-txt">98*98像素</p>
-                    <div class="avatar-preview preview-48"> </div>
-                    <p class="tip-txt">48*48像素</p>
-                    <div class="avatar-preview preview-18"> </div>
-                    <p class="tip-txt">18*18像素</p>
-                </div>
-                <!-- 右侧头像预览开始 -->
+    <div class="container docs-layout" id="my-avatar">
+        <!-- 页面顶部开始 -->
+        <header class="dark">
+            <div class="align-center">
+                <a href="../../../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
+                <nav class="ms-fr menu-nav">
+                    <ul>
+                        <li><a href="../../../index.html" title="ManstroUI">开始学习</a></li>
+                        <li><a href="../../../standard/semver.html" title="语义化版本">语义化版本</a></li>
+                        <li><a href="../../../standard/codeguide.html" title="前端规范">前端规范</a></li>
+                        <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
+                        <li><a href="../../../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                        <li><a class="active" href="../../../lib-components/components.html" title="组件库">组件库</a></li>
+                        <li><a href="../../../dep/third-components.html" title="组件库">第三方组件库</a></li>
+                    </ul>
+                </nav>
             </div>
-        </form>
-        <!-- 头像上传结束 -->
-        <!-- Loading state -->
-        <div class="loading" role="img" tabindex="-1"></div>
+        </header>
+        <div class="demos-article">
+            <h2>Cropper头像上传截取效果示例</h2>
+            <p>具体详情请查看源代码</p>
+        </div>
+        <!-- 主体开始 -->
+        <div class="main">
+            <!-- 当前头像 -->
+            <div class="avatar-view" title="Change the avatar">
+                <img src="img/picture.jpg" alt="Avatar">
+            </div>
+            <!-- 头像上传开始 -->
+            <form class="avatar-form" action="crop.php" enctype="multipart/form-data" method="post">
+                <div class="avatar-body">
+                    <!-- 左侧上传开始 -->
+                    <div class="lf-big-img">
+                        <label class="avatar-upload">
+                            <span class="font20 black">+</span>
+                            <span>上传头像</span>
+                            <!-- 头像路径 -->
+                            <input type="hidden" class="avatar-src" name="avatar_src">
+                            <!-- 头像数据 -->
+                            <input type="hidden" class="avatar-data" name="avatar_data">
+                            <input type="file" class="avatar-input hidden" id="avatarInput" name="avatar_file">
+                        </label>
+                        <span class="upload-tip">请上传JPEG、PNG、GIF格式的图片，文件大小小于4M。</span>
+                        <div class="avatar-wrapper"></div>
+                        <button type="submit" class="btn avatar-save">确认保存</button>
+                    </div>
+                    <!-- 左侧上传结束 -->
+                    <!-- 右侧头像预览开始 -->
+                    <div class="rg-lt-img">
+                        <p class="title font16">头像预览</p>
+                        <p class="tip-txt">您上传的图片会自动生成以下两种尺寸，请注意小尺寸的头像是否清晰。</p>
+                        <div class="avatar-preview preview-98"> </div>
+                        <p class="tip-txt">98*98像素</p>
+                        <div class="avatar-preview preview-48"> </div>
+                        <p class="tip-txt">48*48像素</p>
+                        <div class="avatar-preview preview-18"> </div>
+                        <p class="tip-txt">18*18像素</p>
+                    </div>
+                    <!-- 右侧头像预览开始 -->
+                </div>
+            </form>
+            <!-- 头像上传结束 -->
+            <!-- Loading state -->
+            <div class="loading" role="img" tabindex="-1"></div>
+        </div>
     </div>
-    <script type="text/javascript" src="../../dep/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../../ui/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="dist/cropper.min.js"></script>
     <script type="text/javascript" src="js/avatar.js"></script>
 </body>
