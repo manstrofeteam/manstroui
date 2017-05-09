@@ -284,6 +284,13 @@ $(".progress-bar").stop().animate({
                     <button type="button" class="btn btn-info send-code bottom10">获取验证码</button>
                     <p>定义普通倒计时按钮</p>
                     <pre class="language-markup"><code>&lt;button type="button" class="btn btn-info send-code"&gt;获取验证码&lt;/button&gt;</code></pre>
+                    <p>js方法调用，显示</p>
+                    <pre class="language-js"><code>$(".send-code").click(function() {
+    $(this).toggleClass("btn-info").toggleClass("btn-default");
+    window.clearTimeout(countTimer);
+    countTime = 60;
+    countTimeFC();
+});</code></pre>
                     <p>倒计时方法定义</p>
                     <pre class="language-js"><code>//倒计时间
 var countTime = 60;
@@ -307,13 +314,6 @@ function countTimeFC() {
         }, 1000);
     }
 }       </code></pre>
-                    <p>js方法调用，显示</p>
-                    <pre class="language-js"><code>$(".send-code").click(function() {
-    $(this).toggleClass("btn-info").toggleClass("btn-default");
-    window.clearTimeout(countTimer);
-    countTime = 60;
-    countTimeFC();
-});</code></pre>
                 </section>
                 <section id="ms-tab">
                     <h2 class="bottom10">标签页</h2>
