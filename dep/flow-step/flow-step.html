@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../../../ui/img/favicon.ico">
+    <link rel="stylesheet" href="../../../ui/css/base.css">
+    <link rel="stylesheet" href="../../../ui/css/layout/docs-layout.css">
+    <link type="text/css" href="ui-step.css" rel="stylesheet">
+    <title>流程节点组件Step</title>
+</head>
+
+<body>
+    <div id="flow-step" class="docs-layout">
+        <!-- 页面顶部开始 -->
+        <header class="dark">
+            <div class="align-center">
+                <a href="../../../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
+                <nav class="ms-fr menu-nav">
+                    <ul>
+                        <li><a href="../../../index.html" title="ManstroUI">开始学习</a></li>
+                        <li><a href="../../../standard/semver.html" title="语义化版本">语义化版本</a></li>
+                        <li><a href="../../../standard/codeguide.html" title="前端规范">前端规范</a></li>
+                        <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
+                        <li><a href="../../../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                        <li><a href="../../../lib-components/components.html" title="组件库">组件库</a></li>
+                        <li><a class="active" href="../../../dep/third-components.html" title="组件库">第三方组件库</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="demos-article">
+            <h2>流程节点组件Step示例</h2>
+            <p>具体详情请查看源代码</p>
+        </div>
+        <!-- 主体开始 -->
+        <div class="main">
+            <h5>默认风格：</h5>
+            <ol class="ui-step ui-step-4">
+                <li class="step-start step-done">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">1</span>
+                        <span class="ui-step-cont-text">填写信息</span>
+                    </div>
+                </li>
+                <li class="step-done">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">2</span>
+                        <span class="ui-step-cont-text">上传资料</span>
+                    </div>
+                </li>
+                <li class="step-active">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">3</span>
+                        <span class="ui-step-cont-text">审核填写信息审核填写信息</span>
+                    </div>
+                </li>
+                <li class="step-end">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">4</span>
+                        <span class="ui-step-cont-text">完成注册</span>
+                    </div>
+                </li>
+            </ol>
+            <p>&nbsp;</p>
+            <h5>黄色风格：</h5>
+            <ol class="ui-step ui-step-yellow ui-step-3">
+                <li class="step-start step-done">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">1</span>
+                        <span class="ui-step-cont-text">填写资料</span>
+                    </div>
+                </li>
+                <li class="step-active">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">2</span>
+                        <span class="ui-step-cont-text">审核填写信息</span>
+                    </div>
+                </li>
+                <li class="step-end">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">3</span>
+                        <span class="ui-step-cont-text">完成注册</span>
+                    </div>
+                </li>
+            </ol>
+            <p>&nbsp;</p>
+            <h5>红色风格：</h5>
+            <ol class="ui-step ui-step-red ui-step-3">
+                <li class="step-start step-done">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">1</span>
+                        <span class="ui-step-cont-text">填写资料</span>
+                    </div>
+                </li>
+                <li class="step-active">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">2</span>
+                        <span class="ui-step-cont-text">审核填写信息</span>
+                    </div>
+                </li>
+                <li class="step-end">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">3</span>
+                        <span class="ui-step-cont-text">完成注册</span>
+                    </div>
+                </li>
+            </ol>
+            <p>&nbsp;</p>
+            <h5>蓝色风格：</h5>
+            <ol class="ui-step ui-step-3">
+                <li class="step-start step-done">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">1</span>
+                        <span class="ui-step-cont-text">填写资料</span>
+                    </div>
+                </li>
+                <li class="step-active">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">2</span>
+                        <span class="ui-step-cont-text">审核填写信息审核填写信息</span>
+                    </div>
+                </li>
+                <li class="step-end">
+                    <div class="ui-step-line"></div>
+                    <div class="ui-step-cont">
+                        <span class="ui-step-cont-number">3</span>
+                        <span class="ui-step-cont-text">完成注册</span>
+                    </div>
+                </li>
+            </ol>
+        </div>
+</body>
+
+</html>
