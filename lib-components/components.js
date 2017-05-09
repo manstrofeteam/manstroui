@@ -180,14 +180,14 @@ $(function() {
     $(".send-code").click(function() {
         $(this).toggleClass("btn-info").toggleClass("btn-default");
         window.clearTimeout(countTimer);
-        countTime = 60;
+        countTime = 6;
         countTimeFC();
     });
     /*======点击发送验证码结束======*/
 });
 /*========倒计时开始========*/
 //倒计时间
-var countTime = 60;
+var countTime;
 //定时器
 var countTimer;
 //倒计时方法
@@ -197,6 +197,7 @@ function countTimeFC() {
     if (countTime == "0") {
         $T.attr("disabled", false);
         $T.text("获取验证码");
+        $T.toggleClass("btn-info").toggleClass("btn-default");
         countTime = 60;
     } else {
         $T.attr("disabled", true);

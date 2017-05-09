@@ -303,6 +303,7 @@ function countTimeFC() {
     if (countTime == "0") {
         $T.attr("disabled", false);
         $T.text("获取验证码");
+        $T.toggleClass("btn-info").toggleClass("btn-default");
         countTime = 60;
     } else {
         $T.attr("disabled", true);
