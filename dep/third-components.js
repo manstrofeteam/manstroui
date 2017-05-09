@@ -103,6 +103,47 @@ function checkStrong(sValue) {
     }
 }
 
+//二维码字符串转码
+function toUtf8(str) {
+    var out, i, len, c;
+    out = "";
+    len = str.length;
+    for (i = 0; i < len; i++) {
+        c = str.charCodeAt(i);
+        if ((c >= 0x0001) && (c <= 0x007F)) {
+            out += str.charAt(i);
+        } else if (c > 0x07FF) {
+            out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+            out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+            out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+        } else {
+            out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+            out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+        }
+    }
+    return out;
+}
+
+//获得两个日期间  差几天
+function getDays(strDateStart, strDateEnd) {
+    var strSeparator = "-"; //日期分隔符
+    var oDate1;
+    var oDate2;
+    var iDays;
+    oDate1 = strDateStart.split(strSeparator);
+    oDate2 = strDateEnd.split(strSeparator);
+    var strDateS = new Date(oDate1[0], oDate1[1] - 1, oDate1[2]);
+    var strDateE = new Date(oDate2[0], oDate2[1] - 1, oDate2[2]);
+    iDays = parseInt(Math.abs(strDateS - strDateE) / 1000 / 60 / 60 / 24) //把相差的毫秒数转换为天数
+    return iDays;
+}
+
+
+
+
+
+
+
 $(function() {
     // 点击遮罩层本身隐藏
     $(".ms-overlay").click(function() {
@@ -131,7 +172,9 @@ $(function() {
         $('.dropdown-title span').text(liTxt);
         $('.dropdown-menu').slideToggle(400);
     });
-    /*下拉列表结束*/
+    /*------------下拉列表结束---------*/
+
+
     /*---------数量的加减开始----------*/
     $(".ms-plus-minus .plus").click(function() {
         var num = $(this).siblings(".text-amount");
@@ -204,7 +247,6 @@ $(function() {
     /*---------生日插件结束----------*/
 
     /*---------省市区联动开始----------*/
-    //初始化
     var selectVal = new CitySelect({
         data: data,
         provId: "#prov",
@@ -215,4 +257,41 @@ $(function() {
     });
     /*---------省市区联动结束----------*/
 
+    /*---------生成二维码开始----------*/
+    $("#createcode").click(function() {
+        var key = $(this).prev().val();
+        console.log(key);
+        var str = toUtf8(key);
+        $("#showcode").empty();
+        $("#showcode").qrcode({
+            render: "table",
+            width: 140,
+            height: 140,
+            text: str
+        });
+    });
+    /*---------生成二维码结束----------*/
+
+    /*---------M97日期插件开始----------*/
+    // 初始化入住退房时间
+    initDate();
+    /*---------M97日期插件结束----------*/
+
+
 });
+// 初始化入住退房时间
+function initDate() {
+    var curDate = new Date();
+    var nowDate = curDate.Format("yyyy-MM-dd");
+    var nextDay = new Date((curDate / 1000 + 86400) * 1000)
+        .Format("yyyy-MM-dd");
+    $("#start-date").val(nowDate);
+    $("#end-date").val(nextDay);
+} //计算间隔天数方法
+function countDays() {
+    var startDate = $("#start-date").val();
+    var endDate = $("#end-date").val();
+
+    var days = getDays(startDate, endDate);
+    $(".days").text(days);
+}

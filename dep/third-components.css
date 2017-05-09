@@ -11,7 +11,7 @@
     padding: 0;
     border: none;
 }
-#birthday, label {
+#birthday, #birthday-out label {
     float: left;
 }
 #birthday-html {
@@ -20,3 +20,15 @@
 }
 
 /* ======= 生日结束 ======= */
+
+
+/*========二维码临时展示效果开始=======*/
+
+#showcode {
+    padding: 5px;
+    width: 140px;
+    height: 140px;
+    box-shadow: 0 0 2px #ddd;
+}
+
+/*========二维码临时展示效果结束=======*/

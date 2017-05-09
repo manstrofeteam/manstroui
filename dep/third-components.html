@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="../ui/img/favicon.ico">
     <link rel="stylesheet" href="../ui/css/base.css">
     <link rel="stylesheet" href="prism/prism.css">
+    <link rel="stylesheet" href="../lib-global-styles/global-styles.css">
     <link rel="stylesheet" href="../ui/css/layout/docs-layout.css">
     <link rel="stylesheet" href="third-components.css">
     <script src="../ui/js/jquery-1.11.1.min.js"></script>
@@ -56,6 +57,8 @@
                         <li name="cropper" title="cropper头像上传截取"><a href="cropper/my-avatar.html">cropper头像上传截取</a></li>
                         <li name="owl-carousel" title="owl-carousel轮播图"><a href="owl-carousel/API/index.html">owl-carousel轮播图</a></li>
                         <li name="unslider" title="unslider轮播图"><a href="#unslider">unslider轮播图</a></li>
+                        <li name="qrcode" title="二维码生成"><a href="#qrcode">二维码生成</a></li>
+                        <li name="My97DatePicker" title="My97DatePicker日期插件"><a href="#My97DatePicker">My97日期插件</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -178,6 +181,121 @@ $('#test1').click(function(){
                     <p>跨浏览器、支持键盘导航、自动调整亮度、支持响应式布局</p>
                     <p>如何使用<a href="http://www.bootcss.com/p/unslider/" class="color-red">请查看</a></p>
                 </section>
+                <section id="qrcode" class="docs-article">
+                    <h2>qrcode二维码生成</h2>
+                    <p>请在下面输入框中输入内容，然后点击【生成二维码】查看效果</p>
+                    <form class="ms-form bottom20">
+                        <label for="codekey">请输入内容：</label>
+                        <input type="text" id="codekey" class="form-control">
+                        <button id="createcode" class="btn btn-info" type="button">生成二维码</button>
+                    </form>
+                    <p>展示二维码</p>
+                    <div id="showcode" class="bottom10"></div>
+                    <p>html代码</p>
+                    <pre class="language-markup"><code>&lt;form class="ms-form bottom20"&gt;
+    &lt;label for="codekey"&gt;请输入内容：&lt;/label&gt;
+    &lt;input type="text" id="codekey" class="form-control"&gt;
+    &lt;button id="createcode" class="btn btn-info" type="button"&gt;生成二维码&lt;/button&gt;
+&lt;/form&gt;
+&lt;p&gt;展示二维码&lt;/p&gt;
+&lt;div id="showcode"&gt;&lt;/div&gt;</code></pre>
+                    <p>js方法调用</p>
+                    <pre class="language-js"><code>//引入js
+&lt;script src="jquery.qrcode.min.js"&gt;&lt;/script&gt;
+//js方法调用
+$("#createcode").click(function() {
+    var key = $(this).prev().val();
+    console.log(key);
+    var str = toUtf8(key);
+    $("#showcode").empty();
+    $("#showcode").qrcode({
+        render: "table",
+        width: 140,
+        height: 140,
+        text: str
+    });
+});
+//二维码字符串转码
+function toUtf8(str) {
+    var out, i, len, c;
+    out = "";
+    len = str.length;
+    for (i = 0; i < len; i++) {
+        c = str.charCodeAt(i);
+        if ((c >= 0x0001) && (c <= 0x007F)) {
+            out += str.charAt(i);
+        } else if (c > 0x07FF) {
+            out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+            out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+            out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+        } else {
+            out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+            out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+        }
+    }
+    return out;
+}</code></pre>
+                </section>
+                <section id="My97DatePicker" class="docs-article">
+                    <h2>M97DatePicker日期插件</h2>
+                    <form class="ms-form">
+                        <label for="start-date">选择入住日期：</label>
+                        <input type="text" id="start-date" class="Wdate form-control" onfocus="WdatePicker({minDate:'%y-%M-%d',maxDate:'#F{$dp.$D(\'end-date\')}',doubleCalendar:true,dateFmt:'yyyy-MM-dd',onpicked:function(dp){countDays();}})" />
+                        <label for="end-date">选择退房日期：</label>
+                        <input type="text" id="end-date" class="Wdate right10 form-control" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'start-date\')|| %y-%M-%d}',doubleCalendar:true,dateFmt:'yyyy-MM-dd',onpicked:function(dp){countDays();}})" />
+                        <span>共计</span>
+                        <span class="color-red days">1</span>
+                        <span>天</span>
+                    </form>
+                    <p>html代码</p>
+                    <pre class="language-markup"><code>&lt;form class="ms-form"&gt;
+    &lt;label for="start-date"&gt;选择入住日期：&lt;/label&gt;
+    &lt;input type="text" id="start-date" class="Wdate form-control" onfocus="WdatePicker({minDate:'%y-%M-%d',maxDate:'#F{$dp.$D(\'end-date\')}',doubleCalendar:true,dateFmt:'yyyy-MM-dd',onpicked:function(dp){countDays();}})" /&gt;
+    &lt;label for="end-date"&gt;选择退房日期：&lt;/label&gt;
+    &lt;input type="text" id="end-date" class="Wdate right10 form-control" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'start-date\')|| %y-%M-%d}',doubleCalendar:true,dateFmt:'yyyy-MM-dd',onpicked:function(dp){countDays();}})" /&gt;
+    &lt;span&gt;共计&lt;/span&gt;
+    &lt;span class="color-red days"&gt;1&lt;/span&gt;
+    &lt;span&gt;天&lt;/span&gt;
+&lt;/form&gt;</code></pre>
+                    <p>js方法调用</p>
+                    <pre class="language-js"><code>
+// 初始化入住退房时间
+initDate();
+
+// 初始化时间
+function initDate() {
+    var curDate = new Date();
+    var nowDate = curDate.Format("yyyy-MM-dd");
+    var nextDay = new Date((curDate / 1000 + 86400) * 1000)
+        .Format("yyyy-MM-dd");
+    $("#start-date").val(nowDate);
+    $("#end-date").val(nextDay);
+}
+
+//计算间隔天数方法
+function countDays() {
+    var startDate = $("#start-date").val();
+    var endDate = $("#end-date").val();
+
+    var days = getDays(startDate, endDate);
+    $(".days").text(days);
+}
+
+//获得两个日期间  差几天
+function getDays(strDateStart, strDateEnd) {
+    var strSeparator = "-"; //日期分隔符
+    var oDate1;
+    var oDate2;
+    var iDays;
+    oDate1 = strDateStart.split(strSeparator);
+    oDate2 = strDateEnd.split(strSeparator);
+    var strDateS = new Date(oDate1[0], oDate1[1] - 1, oDate1[2]);
+    var strDateE = new Date(oDate2[0], oDate2[1] - 1, oDate2[2]);
+    iDays = parseInt(Math.abs(strDateS - strDateE) / 1000 / 60 / 60 / 24) //把相差的毫秒数转换为天数
+    return iDays;
+}
+</code></pre>
+                </section>
             </article>
             <!-- 各组件结束 -->
         </div>
@@ -193,11 +311,20 @@ $('#test1').click(function(){
     </div>
     <script src="../ui/js/public.js"></script>
     <script src="../ui/js/jquery.waypoints.min.js"></script>
+    <!-- 分页插件js -->
     <script src="laypage/laypage.js"></script>
+    <!-- 生日插件js -->
     <script src="birthdaypicker/bday-picker.js"></script>
+    <!-- 省市区插件js -->
     <script src="pca/city2.js"></script>
     <script src="pca/citySelect2.js"></script>
+    <!-- 生成二维码js -->
+    <script src="jquery.qrcode.min.js"></script>
+    <!-- 代码展示效果优化js -->
     <script src="prism/prism.js"></script>
+    <!-- My97DatePicker日期插件 -->
+    <script src="My97DatePicker/WdatePicker.js"></script>
+    <!-- 自己封装的js -->
     <script src="third-components.js"></script>
 </body>
 
