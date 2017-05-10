@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WebUploader演示</title>
+    <link rel="shortcut icon" href="../../../ui/img/favicon.ico">
+    <link rel="stylesheet" href="../../../ui/css/base.css">
+    <link rel="stylesheet" href="../../../ui/css/layout/docs-layout.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/webuploader.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css" />
+</head>
+
+<body>
+    <div id="webuploader" class="docs-layout">
+        <!-- 页面顶部开始 -->
+        <header class="dark">
+            <div class="align-center">
+                <a href="../../../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
+                <nav class="ms-fr menu-nav">
+                    <ul>
+                        <li><a href="../../../index.html" title="ManstroUI">开始学习</a></li>
+                        <li><a href="../../../standard/semver.html" title="语义化版本">语义化版本</a></li>
+                        <li><a href="../../../standard/codeguide.html" title="前端规范">前端规范</a></li>
+                        <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
+                        <li><a href="../../../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                        <li><a href="../../../lib-components/components.html" title="组件库">组件库</a></li>
+                        <li><a class="active" href="../../../dep/third-components.html" title="组件库">第三方组件库</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="demos-article">
+            <h2>百度WebUploader效果示例</h2>
+            <p>具体详情请查看<a class="color-red" href="http://fex.baidu.com/webuploader/">官方网站</a></p>
+        </div>
+        <!-- 主体开始 -->
+        <div class="main">
+            <div id="uploader">
+                <div class="queueList">
+                    <div id="dndArea" class="placeholder">
+                        <div id="filePicker"></div>
+                        <p>或将照片拖到这里，单次最多可选300张</p>
+                    </div>
+                </div>
+                <div class="statusBar" style="display:none;">
+                    <div class="progress">
+                        <span class="text">0%</span>
+                        <span class="percentage"></span>
+                    </div>
+                    <div class="info"></div>
+                    <div class="btns">
+                        <div id="filePicker2"></div>
+                        <div class="uploadBtn">开始上传</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 主体结束 -->
+    </div>
+    <script type="text/javascript" src="dist/js/jquery.js"></script>
+    <script type="text/javascript" src="dist/js/webuploader.js"></script>
+    <script type="text/javascript" src="dist/js/upload.js"></script>
+</body>
+
+</html>
