@@ -318,6 +318,55 @@
 /*======= 文章结束=======*/
 
 
+/*======= 评分开始=======*/
+
+#ms-star {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+}
+#ms-star ul, #ms-star .tip {
+    float: left;
+    display: inline;
+    height: 19px;
+    line-height: 19px;
+}
+#ms-star li {
+    float: left;
+    width: 24px;
+    cursor: pointer;
+    text-indent: -9999px;
+    background: url(img/star.png) no-repeat;
+}
+#ms-star strong {
+    color: #dd1136;
+    padding-left: 10px;
+}
+#ms-star li.on {
+    background-position: 0 -28px;
+}
+#ms-star p {
+    position: absolute;
+    top: 30px;
+    width: 78px;
+    height: 24px;
+    display: none;
+    background: url(img/icon.gif) no-repeat;
+    padding: 4px;
+    background-size: cover;
+    line-height: 24px;
+    text-align: center;
+    z-index: 100;
+}
+#ms-star p em {
+    color: #dd1136;
+    display: block;
+    font-style: normal;
+}
+
+/*======= 评分结束=======*/
+
+
 /*======= 图标库整理开始 =======*/
 
 .ms-icon {
