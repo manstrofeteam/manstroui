@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Full Example</title>
+    <link rel="shortcut icon" href="../../../ui/img/favicon.ico">
+    <link rel="stylesheet" href="../../../ui/css/base.css">
+    <link rel="stylesheet" href="../../../ui/css/layout/docs-layout.css">
+    <link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+    <div id="full-example" class="docs-layout">
+        <!-- 页面顶部开始 -->
+        <header class="dark">
+            <div class="align-center">
+                <a href="../../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
+                <nav class="ms-fr menu-nav">
+                    <ul>
+                        <li><a href="../../../index.html" title="ManstroUI">开始学习</a></li>
+                        <li><a href="../../../standard/semver.html" title="语义化版本">语义化版本</a></li>
+                        <li><a href="../../../standard/codeguide.html" title="前端规范">前端规范</a></li>
+                        <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
+                        <li><a href="../../../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                        <li><a href="../../../lib-components/components.html" title="组件库">组件库</a></li>
+                        <li><a class="active" href="../../../dep/third-components.html" title="组件库">第三方组件库</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="demos-article">
+            <h2>nice Validator表单验证示例</h2>
+            <p>详情请查看源代码，更多API介绍请查看<a class="color-red" href="https://validator.niceue.com/">官网网站</a></p>
+        </div>
+        <!-- 主体开始 -->
+        <div class="main">
+            <form class="form" data-validator-option="{timely:2, focusCleanup:true}">
+                <div class="form-item">
+                    <label class="label">Username</label>
+                    <input type="text" name="username" data-rule="required;username;" data-rule-username="[/[\w\d]{4,30}/, 'Please enter 3-12 digits, letters, underscores']" data-tip="You can use letters, numbers and periods">
+                </div>
+                <div class="form-item">
+                    <label class="label">Password</label>
+                    <input type="password" name="pwd" data-rule="Password: required; length(8~16)" data-tip="Please fill in at least eight characters">
+                </div>
+                <div class="form-item">
+                    <label class="label">Verify Password</label>
+                    <input type="password" name="pwdAgain" data-rule="Verify Password: required; match(pwd)">
+                </div>
+                <div class="form-item">
+                    <label class="label">Gender</label>
+                    <select name="gender" data-rule="required">
+                        <option value="">select ...</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Other</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label class="label">Email</label>
+                    <input type="text" name="email" data-rule="required;email">
+                </div>
+                <div class="form-item">
+                    <label class="label">Interest</label>
+                    <label>
+                        <input type="checkbox" name="interest" data-rule="checked">sports</label>
+                    <label>
+                        <input type="checkbox" name="interest">movie</label>
+                    <label>
+                        <input type="checkbox" name="interest">game</label>
+                </div>
+                <div class="form-item">
+                    <label class="label">Note</label>
+                    <textarea data-rule="required;"></textarea>
+                </div>
+                <div class="form-item">
+                    <label>
+                        <input type="checkbox" id="agree_arguments" data-rule="checked">I agree to the service agreement.</label>
+                </div>
+                <div class="form-item">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="http://dn-nice.qbox.me/libs/jquery/1.x/jquery.min.js"></script>
+    <script src="../jquery.validator.js?local=zh-CN"></script>
+</body>
+
+</html>
