@@ -59,6 +59,7 @@
                         <li name="owl-carousel" title="owl-carousel轮播图"><a href="owl-carousel/API/index.html">owl-carousel轮播图</a></li>
                         <li name="unslider" title="unslider轮播图"><a href="#unslider">unslider轮播图</a></li>
                         <li name="qrcode" title="二维码生成"><a href="#qrcode">二维码生成</a></li>
+                        <li name="barcode" title="条形码生成"><a href="#barcode">条形码生成</a></li>
                         <li name="My97DatePicker" title="My97DatePicker日期插件"><a href="#My97DatePicker">My97日期插件</a></li>
                         <li name="flow-step" title="流程节点"><a href="flow-step/flow-step.html">流程节点组件Step</a></li>
                         <li name="webuploader" title="百度图片上传"><a href="#webuploader">百度图片上传插件</a></li>
@@ -72,10 +73,10 @@
                 <section id="tianqi" class="docs-aritcle">
                     <h2>天气插件</h2>
                     <p>引入2345天气插件，效果如下：</p>
-                    <iframe allowtransparency="true" frameborder="0" width="410" height="98" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=2&t=1&v=0&d=2&bd=0&k=000000&f=&q=1&e=0&a=1&c=54511&w=410&h=98&align=center"></iframe>
+                    <!-- <iframe allowtransparency="true" frameborder="0" width="410" height="98" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=2&t=1&v=0&d=2&bd=0&k=000000&f=&q=1&e=0&a=1&c=54511&w=410&h=98&align=center"></iframe> -->
                     <p>html代码</p>
                     <pre class="language-markup"><code>&lt;iframe allowtransparency="true" frameborder="0" width="410" height="98" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=2&t=1&v=0&d=2&bd=0&k=000000&f=&q=1&e=0&a=1&c=54511&w=410&h=98&align=center"&gt;&lt;/iframe&gt;</code></pre>
-                    <p>详情查看 <a class="color-red" href="http://tianqi.2345.com/plugin/">2345天气插件</a>，选择自己喜欢的样式</p>
+                    <p>详情查看 <a class="color-blue" href="http://tianqi.2345.com/plugin/">2345天气插件</a>，选择自己喜欢的样式</p>
                 </section>
                 <section id="laypage">
                     <h2>动态分页演示 Laypage</h2>
@@ -167,8 +168,8 @@ laypage({
                 </section>
                 <section id="ECharts" class="docs-article">
                     <h2>ECharts</h2>
-                    <p>百度前端团队作品，详情请查看<a class="color-red" href="http://echarts.baidu.com/index.html">ECharts官网</a></p>
-                    <p>更多实例<a class="color-red" href="http://echarts.baidu.com/examples.html">查看</a></p>
+                    <p>百度前端团队作品，详情请查看<a class="color-blue" href="http://echarts.baidu.com/index.html">ECharts官网</a></p>
+                    <p>更多实例<a class="color-blue" href="http://echarts.baidu.com/examples.html">查看</a></p>
                     <p>ECharts，一个纯 Javascript 的图表库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等），底层依赖轻量级的 Canvas 类库 ZRender，提供直观，生动，可交互，可高度个性化定制的数据可视化图表。</p>
                     <p> ECharts 3 中更是加入了更多丰富的交互功能以及更多的可视化效果，并且对移动端做了深度的优化。</p>
                     <p>ECharts 提供了常规的折线图，柱状图，散点图，饼图，K线图，用于统计的盒形图，用于地理数据可视化的地图，热力图，线图，用于关系数据可视化的关系图，treemap，多维数据可视化的平行坐标，还有用于 BI 的漏斗图，仪表盘，并且支持图与图之间的混搭。</p>
@@ -248,6 +249,59 @@ function toUtf8(str) {
     return out;
 }</code></pre>
                 </section>
+                <section id="barcode" class="docs-article">
+                    <h2>JsBarcode条形码</h2>
+                    <h3>条码支持的有:</h3>
+                    <ul class="first-nav">
+                        <li>CODE128</li>
+                        <ul class="second-nav">
+                            <li>CODE128 (automatic mode switching)</li>
+                            <li>CODE128 A/B/C (force mode)</li>
+                        </ul>
+                        <li>EAN</li>
+                        <ul class="second-nav">
+                            <li>EAN-13</li>
+                            <li>EAN-8</li>
+                            <li>EAN-5</li>
+                            <li>EAN-2</li>
+                            <li>UPC (A)</li>
+                        </ul>
+                        <li>CODE39</li>
+                        <li> ITF-14</li>
+                        <li>MSI</li>
+                        <ul class="second-nav">
+                            <li>MSI10</li>
+                            <li>MSI11</li>
+                            <li>MSI1010</li>
+                            <li>MSI1110</li>
+                        </ul>
+                        <li>Pharmacode</li>
+                        <li>Codabar</li>
+                    </ul>
+                    <svg id="svgcode"></svg>
+                    <canvas id="canvascode"></canvas>
+                    <img id="imgcode" />
+                    <p>html代码</p>
+                    <p>可以使用下面三种标签创建</p>
+                    <pre class="language-markup"><code> &lt;svg id="svgcode"&gt;&lt;/svg&gt;
+&lt;canvas id="canvascode"&gt;&lt;/canvas&gt;
+&lt;img id="imgcode" /&gt;</code></pre>
+                    <p>引用js和方法调用</p>
+                    <p class="docs-tip">方法调用时需要在当前html或jsp页面中使用，不可放置到外链js文件中引入</p>
+                    <pre class="language-markup"><code>&lt;!-- 生成条形码 --&gt;
+&lt;script src="JsBarcode.all.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    /*========条形码生成开始========*/
+    JsBarcode("#svgcode", "Hi");
+    JsBarcode("#canvascode", "Hello");
+    JsBarcode("#imgcode", "ManstroUI");
+    /*========条形码生成结束========*/
+&lt;/script&gt;</code></pre>
+                    <h3>了解更多详情请查看：</h3>
+                    <p>GitHub：<a class="color-blue" href="https://github.com/lindell/JsBarcode">https://github.com/lindell/JsBarcode</a></p>
+                    <p>条码生成器：<a class="color-blue" href="http://lindell.me/JsBarcode/generator/">http://lindell.me/JsBarcode/generator/</a></p>
+                    <p>JsBarcode示例与设置：<a class="color-blue" href="http://codepen.io/lindell/pen/mPvLXx?editors=1010">http://codepen.io/lindell/pen/mPvLXx?editors=1010</a></p>
+                </section>
                 <section id="My97DatePicker" class="docs-article">
                     <h2>M97DatePicker日期插件</h2>
                     <form class="ms-form">
@@ -312,14 +366,14 @@ function getDays(strDateStart, strDateEnd) {
                     <h2>百度上传组件WebUploader</h2>
                     <p>WebUploader是由Baidu WebFE(FEX)团队开发的一个简单的以HTML5为主，FLASH为辅的现代文件上传组件。在现代的浏览器里面能充分发挥HTML5的优势，同时又不摒弃主流IE浏览器，沿用原来的FLASH运行时，兼容IE6+，iOS 6+, android 4+。两套运行时，同样的调用方式，可供用户任意选用。</p>
                     <p>采用大文件分片并发上传，极大的提高了文件上传效率。</p>
-                    <p>点击查看<a class="color-red" href="webuploader/webuploader.html">本地demo</a></p>
-                    <p>具体详情请查看<a class="color-red" href="http://fex.baidu.com/webuploader/">官方网站</a></p>
+                    <p>点击查看<a class="color-blue" href="webuploader/webuploader.html">本地demo</a></p>
+                    <p>具体详情请查看<a class="color-blue" href="http://fex.baidu.com/webuploader/">官方网站</a></p>
                 </section>
                 <section id="nice-validator" class="docs-article">
                     <h2>nice Validator表单验证</h2>
                     <p>口号：领先的表单验证解决方案</p>
-                    <p>点击查看<a class="color-red" href="nice-validator/demo/full-example.html">本地demo</a></p>
-                    <p>更多详情请查看<a class="color-red" href="https://validator.niceue.com/">官网网站</a></p>
+                    <p>点击查看<a class="color-blue" href="nice-validator/demo/full-example.html">本地demo</a></p>
+                    <p>更多详情请查看<a class="color-blue" href="https://validator.niceue.com/">官网网站</a></p>
                 </section>
             </article>
             <!-- 各组件结束 -->
@@ -345,6 +399,15 @@ function getDays(strDateStart, strDateEnd) {
     <script src="pca/citySelect2.js"></script>
     <!-- 生成二维码js -->
     <script src="jquery.qrcode.min.js"></script>
+    <!-- 生成条形码 -->
+    <script src="JsBarcode.all.min.js"></script>
+    <script type="text/javascript">
+    /*========条形码生成开始========*/
+    JsBarcode("#svgcode", "Hi");
+    JsBarcode("#canvascode", "Hello");
+    JsBarcode("#imgcode", "ManstroUI");
+    /*========条形码生成结束========*/
+    </script>
     <!-- 代码展示效果优化js -->
     <script src="prism/prism.js"></script>
     <!-- My97DatePicker日期插件 -->

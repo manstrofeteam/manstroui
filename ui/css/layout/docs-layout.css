@@ -33,7 +33,7 @@
     color: #429842;
 }
 .color-blue {
-    color: #4c9ed9;
+    color: #0366d6;
 }
 .color-yellow {
     color: #e38d13;
@@ -340,3 +340,32 @@
 }
 
 /*-返回顶部结束*/
+
+
+/*一级导航列表开始*/
+
+.first-nav {
+    padding-left: 16px;
+    font-size: 16px;
+    color: #444;
+}
+.first-nav >li {
+    list-style-type: disc;
+}
+.second-nav {
+    color: #666;
+    padding-left: 16px;
+}
+.second-nav li {
+    list-style-type: circle;
+}
+
+/*一级导航列表结束*/
+
+.docs-tip {
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #e38d13
+}

@@ -240,6 +240,19 @@ $(function() {
         countTimeFC();
     });
     /*======点击发送验证码结束======*/
+
+    /*========标签页切换开始========*/
+    $(".tab-nav li").click(function() {
+        var tabLabel = $(this).attr("id");
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        $(".tab-content .tab-pane").hide();
+        $("." + tabLabel).show();
+    });
+
+    /*========标签页切换结束========*/
+
+
 });
 /*========倒计时开始========*/
 //倒计时间
@@ -266,13 +279,3 @@ function countTimeFC() {
     }
 }
 /*========倒计时结束========*/
-/*========标签页切换开始========*/
-$(".tab-nav li").click(function() {
-    var tabLabel = $(this).attr("id");
-    $(this).siblings().removeClass("active");
-    $(this).addClass("active");
-    $(".tab-content .tab-pane").hide();
-    $("." + tabLabel).show();
-});
-
-/*========标签页切换结束========*/
