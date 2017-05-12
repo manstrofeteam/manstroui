@@ -4,7 +4,7 @@ html {
     font-size: 62.5%;
 }
 body {
-    font: 14px "Microsoft YaHei", tahoma, arial, Hiragino Sans GB, \\5b8b体, sans-serif;
+    font: 14px/1.75 "Microsoft YaHei", tahoma, arial, Hiragino Sans GB, \\5b8b体, sans-serif;
     background-color: #fff;
     color: #444;
     height: 100%;

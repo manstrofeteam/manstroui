@@ -41,23 +41,35 @@
         <!-- 主体部分开始 -->
         <div class="main">
             <!-- 左侧导航开始 -->
-            <aside class="lf-nav">
-                <nav>
-                    <p class="lf-nav-title">组件列表</p>
-                    <ul class="parent-nav">
-                        <li name="ms-table"><a href="#ms-table">表格</a></li>
-                        <li name="ms-form"><a href="#ms-form">表单</a></li>
-                        <li name="ms-button"><a href="#ms-button">按钮</a></li>
-                    </ul>
-                </nav>
-            </aside>
+            <div class="lf-nav">
+                <p class="lf-nav-title">组件列表</p>
+                <ul class="parent-nav">
+                    <li name="ms-table">
+                        <a href="#ms-table">表格</a>
+                        <ul class="children-nav">
+                            <li name="table-default"><a href="#table-default">默认表格</a></li>
+                            <li name="table-bordered"><a href="#table-bordered">带边框表格</a></li>
+                            <li name="table-radius"><a href="#table-radius">圆角表格</a></li>
+                        </ul>
+                    </li>
+                    <li name="ms-form"><a href="#ms-form">表单</a></li>
+                    <li name="ms-button">
+                        <a href="#ms-button">按钮</a>
+                        <ul class="children-nav">
+                            <li name="button-target"><a href="#button-target">可作为按钮使用的元素</a></li>
+                            <li name="button-class"><a href="#button-class">带有预订样式的按钮</a></li>
+                            <li name="button-size"><a href="#button-size">不同尺寸的按钮</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <!-- 左侧导航结束 -->
             <!-- 各组件开始 -->
             <article class="rg-content">
-                <section id="ms-table">
+                <section class="section-title" id="ms-table">
                     <h2>表格</h2>
                     <div class="bottom20 ms-article">
-                        <h3>默认表格样式</h3>
+                        <h3 class="section-title" id="table-default">默认表格样式</h3>
                         <p class="ms-article">只需要增加ms-table的类即可</p>
                         <table class='ms-table border-radius'>
                             <thead>
@@ -93,7 +105,7 @@
                         <pre><code class="language-markup">&lt;table class="ms-table"&gt;···&lt;/table&gt;</code></pre>
                     </div>
                     <div class="bottom20 ms-article">
-                        <h3>带边框表格样式</h3>
+                        <h3 class="section-title" id="table-bordered">带边框表格样式</h3>
                         <p>增加table-bordered的类即可</p>
                         <table class='ms-table table-bordered'>
                             <thead>
@@ -129,7 +141,7 @@
                         <pre class=" language-markup"><code>&lt;table class="ms-table table-bordered"&gt;···&lt;/table&gt;</code></pre>
                     </div>
                     <div class="bottom20 ms-article">
-                        <h3>圆角表格样式</h3>
+                        <h3 class="section-title" id="table-radius">圆角表格样式</h3>
                         <p>添加border-radius的类即可</p>
                         <table class='ms-table border-radius'>
                             <thead>
@@ -165,49 +177,47 @@
                         <pre class="language-markup"><code>&lt;table class="ms-table border-radius"&gt;···&lt;/table&gt;</code></pre>
                     </div>
                 </section>
-                <section id="ms-form">
-                    <div class="bottom20 ms-article">
-                        <h2>表单</h2>
-                        <p>因公司项目中所有的表单都是水平排列设计的，故默认表单样式为水平排列。</p>
-                        <form class="ms-form">
-                            <div class="form-item">
-                                <label for="username">姓名：</label>
-                                <input type="text" name="username" id="username" class="form-control" placeholder="请输入姓名……">
-                            </div>
-                            <div class="form-item">
-                                <label for="pwd">密码：</label>
-                                <input type="password" name="pwd" id="pwd" class="form-control" placeholder="请输入密码……">
-                            </div>
-                            <div class="form-item">
-                                <label for="remarks">备注：</label>
-                                <textarea name="name" id="remarks" class="ms-textarea" placeholder="请输入备注……"></textarea>
-                            </div>
-                            <div class="form-item">
-                                <label>下拉列表：</label>
-                                <select class="form-control">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-                            <div class="checkbox">
-                                <input id="agree" type="checkbox">
-                                <label for="agree">阅读协议并同意《**网站协议》</label>
-                            </div>
-                            <div class="radio">
-                                <input type="radio" name="myradio" id="radio1">
-                                <label for="radio1"> 单选一</label>
-                                <input type="radio" name="myradio" id="radio2">
-                                <label for="radio2">单选二</label>
-                            </div>
-                            <div class="form-item">
-                                <button class="btn btn-default" type="reset">重置</button>
-                                <button class="btn btn-primary" type="button">保存</button>
-                            </div>
-                        </form>
-                    </div>
+                <section class="section-title ms-article" id="ms-form">
+                    <h2>表单</h2>
+                    <p>因公司项目中所有的表单都是水平排列设计的，故默认表单样式为水平排列。</p>
+                    <form class="ms-form">
+                        <div class="form-item">
+                            <label for="username">姓名：</label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="请输入姓名……">
+                        </div>
+                        <div class="form-item">
+                            <label for="pwd">密码：</label>
+                            <input type="password" name="pwd" id="pwd" class="form-control" placeholder="请输入密码……">
+                        </div>
+                        <div class="form-item">
+                            <label for="remarks">备注：</label>
+                            <textarea name="name" id="remarks" class="ms-textarea" placeholder="请输入备注……"></textarea>
+                        </div>
+                        <div class="form-item">
+                            <label>下拉列表：</label>
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="checkbox">
+                            <input id="agree" type="checkbox">
+                            <label for="agree">阅读协议并同意《**网站协议》</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="myradio" id="radio1">
+                            <label for="radio1"> 单选一</label>
+                            <input type="radio" name="myradio" id="radio2">
+                            <label for="radio2">单选二</label>
+                        </div>
+                        <div class="form-item">
+                            <button class="btn btn-default" type="reset">重置</button>
+                            <button class="btn btn-primary" type="button">保存</button>
+                        </div>
+                    </form>
                     <pre class="language-markup">
 <code class="language-markup">
 &lt;form class="ms-form"&gt;
@@ -251,10 +261,10 @@
 </code>
 </pre>
                 </section>
-                <section id="ms-button">
+                <section class="section-title" id="ms-button">
                     <h2>按钮</h2>
                     <div class="bottom20 ms-article">
-                        <h3>可作为按钮使用的元素</h3>
+                        <h3 class="section-title" id="button-target">可作为按钮使用的元素</h3>
                         <p>最好使用 button 元素来获得在各个浏览器上获得相匹配的绘制效果</p>
                         <a class="btn btn-default" href="#" role="button">Link</a>
                         <button class="btn btn-default" type="button">Button</button>
@@ -269,7 +279,7 @@
                       </code></pre>
                     </div>
                     <div class="bottom20 ms-article">
-                        <h3>带有预订样式的按钮</h3>
+                        <h3 class="section-title" id="button-class">带有预订样式的按钮</h3>
                         <p>当然了如果按钮样式不符合实际开发效果，可做相应修改，依具体情况定。</p>
                         <button type="button" class="btn btn-default">（默认样式）Default</button>
                         <button type="button" class="btn btn-primary">（首选项）Primary</button>
@@ -289,7 +299,7 @@
                         </code></pre>
                     </div>
                     <div class="bottom20 ms-article ms-article">
-                        <h3>不同尺寸的按钮</h3>
+                        <h3 class="section-title" id="button-size">不同尺寸的按钮</h3>
                         <p>使用 .btn-lg .btn-sm . btn-xs改变按钮的默认大小</p>
                         <p>
                             <button type="button" class="btn btn-primary btn-lg">（大按钮）Large button</button>

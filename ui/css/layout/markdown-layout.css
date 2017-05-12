@@ -1,6 +1,6 @@
 @charset "UTF-8";
-ol {
-    list-style: n;
+.markdown-body {
+    margin-bottom: 20px;
 }
 .markdown-body a:active, .markdown-body a:hover {
     outline: 0;

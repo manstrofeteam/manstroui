@@ -60,7 +60,7 @@
                             <li name="name-rule5"><a href="#name-rule5">JS文件命名</a></li>
                         </ul>
                     </li>
-                    <li name="">
+                    <li name="html-rule">
                         <a href="#html-rule">HTML</a>
                         <ul class="children-nav">
                             <li name="html-rule1"><a href="#html-rule1">语法</a></li>
@@ -120,51 +120,50 @@
                 </ul>
             </div>
             <!-- 左侧菜单结束 -->
-            <article class="markdown-body">
-                <!-- 右侧内容开始 -->
-                <div class="rg-content">
-                    <h1 id="name-rule">命名规则</h1>
-                    <h2 id="name-rule1">项目命名</h2>
-                    <blockquote>
-                        <p>全部采用大驼峰命名。
-                            <br /> 例：SmartCamp
-                        </p>
-                    </blockquote>
-                    <h2 id="name-rule2">目录命名</h2>
-                    <blockquote>
-                        <p>全部采用小写方式，命名较长时以中横线分隔。
-                            <br /> 例：ui、js、css、public-module
-                        </p>
-                    </blockquote>
-                    <h2 id="name-rule3">HTML文件命名</h2>
-                    <blockquote>
-                        <p>参照目录命名规则。
-                            <br /> 例：public.html、public-module.html
-                        </p>
-                    </blockquote>
-                    <h2 id="name-rule4">CSS文件命名</h2>
-                    <blockquote>
-                        <p>参照目录命名规则。
-                            <br /> 例：public.css、public-module.css
-                        </p>
-                    </blockquote>
-                    <h2 id="name-rule5">JS文件命名</h2>
-                    <blockquote>
-                        <p>参照目录命名规则。
-                            <br /> 例：public.js、public-module.js
-                        </p>
-                    </blockquote>
-                    <h1 id="html-rule">HTML</h1>
-                    <h2 id="html-rule1">语法</h2>
-                    <ul>
-                        <li>缩进使用soft tab（4个空格）；</li>
-                        <li>嵌套的节点应该缩进；</li>
-                        <li>在属性上，使用双引号，不要使用单引号；</li>
-                        <li>属性名全小写，用中划线做分隔符；</li>
-                        <li>不要在自动闭合标签结尾处使用斜线（HTML5 规范 指出他们是可选的）；</li>
-                        <li>不要忽略可选的关闭标签，例：&lt;/li&gt; 和 &lt;/body&gt;。</li>
-                    </ul>
-                    <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+            <!-- 右侧内容开始 -->
+            <div class="rg-content markdown-body">
+                <h1 class="section-title" id="name-rule">命名规则</h1>
+                <h2 class="section-title" id="name-rule1">项目命名</h2>
+                <blockquote>
+                    <p>全部采用大驼峰命名。
+                        <br /> 例：SmartCamp
+                    </p>
+                </blockquote>
+                <h2 class="section-title" id="name-rule2">目录命名</h2>
+                <blockquote>
+                    <p>全部采用小写方式，命名较长时以中横线分隔。
+                        <br /> 例：ui、js、css、public-module
+                    </p>
+                </blockquote>
+                <h2 class="section-title" id="name-rule3">HTML文件命名</h2>
+                <blockquote>
+                    <p>参照目录命名规则。
+                        <br /> 例：public.html、public-module.html
+                    </p>
+                </blockquote>
+                <h2 class="section-title" id="name-rule4">CSS文件命名</h2>
+                <blockquote>
+                    <p>参照目录命名规则。
+                        <br /> 例：public.css、public-module.css
+                    </p>
+                </blockquote>
+                <h2 class="section-title" id="name-rule5">JS文件命名</h2>
+                <blockquote>
+                    <p>参照目录命名规则。
+                        <br /> 例：public.js、public-module.js
+                    </p>
+                </blockquote>
+                <h1 class="section-title" id="html-rule">HTML</h1>
+                <h2 class="section-title" id="html-rule1">语法</h2>
+                <ul>
+                    <li>缩进使用soft tab（4个空格）；</li>
+                    <li>嵌套的节点应该缩进；</li>
+                    <li>在属性上，使用双引号，不要使用单引号；</li>
+                    <li>属性名全小写，用中划线做分隔符；</li>
+                    <li>不要在自动闭合标签结尾处使用斜线（HTML5 规范 指出他们是可选的）；</li>
+                    <li>不要忽略可选的关闭标签，例：&lt;/li&gt; 和 &lt;/body&gt;。</li>
+                </ul>
+                <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Page title&lt;/title&gt;
@@ -174,52 +173,52 @@
         &lt;h1 class="hello-world"&gt;Hello, world!&lt;/h1&gt;
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                    <h2 id="html-rule2">HTML5 doctype</h2>
-                    <p>在页面开头使用这个简单地doctype来启用标准模式，使其在每个浏览器中尽可能一致的展现；
-                        <br /> 虽然doctype不区分大小写，但是按照惯例，doctype大写 (
-                        <br /> 关于html属性，大写还是小写）。
-                    </p>
-                    <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+                <h2 class="section-title" id="html-rule2">HTML5 doctype</h2>
+                <p>在页面开头使用这个简单地doctype来启用标准模式，使其在每个浏览器中尽可能一致的展现；
+                    <br /> 虽然doctype不区分大小写，但是按照惯例，doctype大写 (
+                    <br /> 关于html属性，大写还是小写）。
+                </p>
+                <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     ...
 &lt;/html&gt;</code></pre>
-                    <h2 id="html-rule3">lang属性</h2>
-                    <p>根据HTML5规范：
-                        <br /> 应在html标签上加上lang属性。这会给语音工具和翻译工具帮助，告诉它们应当怎么去发音和翻译。
-                        <br /> 更多关于 lang 属性的说明<a href="http://w3c.github.io/html/semantics.html#the-html-element">在这里</a>；
-                        <br /> 在sitepoint上可以查到
-                        <a href="https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">语言列表</a>；
-                        <br /> 但sitepoint只是给出了语言的大类，例如中文只给出了zh，但是没有区分香港，台湾，大陆。而微软给出了一份更加
-                        <a href="https://msdn.microsoft.com/en-us/library/ms533052(v=vs.85).aspx">详细的语言列表</a>，其中细分了zh-CN, zh-hk, zh-tw。
-                    </p>
-                    <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+                <h2 class="section-title" id="html-rule3">lang属性</h2>
+                <p>根据HTML5规范：
+                    <br /> 应在html标签上加上lang属性。这会给语音工具和翻译工具帮助，告诉它们应当怎么去发音和翻译。
+                    <br /> 更多关于 lang 属性的说明<a href="http://w3c.github.io/html/semantics.html#the-html-element">在这里</a>；
+                    <br /> 在sitepoint上可以查到
+                    <a href="https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">语言列表</a>；
+                    <br /> 但sitepoint只是给出了语言的大类，例如中文只给出了zh，但是没有区分香港，台湾，大陆。而微软给出了一份更加
+                    <a href="https://msdn.microsoft.com/en-us/library/ms533052(v=vs.85).aspx">详细的语言列表</a>，其中细分了zh-CN, zh-hk, zh-tw。
+                </p>
+                <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en-CN"&gt;
     ...
 &lt;/html&gt;
 </code></pre>
-                    <h2 id="html-rule4">字符编码</h2>
-                    <p>通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式，通常指定为&rsquo;UTF-8&rsquo;。</p>
-                    <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+                <h2 class="section-title" id="html-rule4">字符编码</h2>
+                <p>通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式，通常指定为&rsquo;UTF-8&rsquo;。</p>
+                <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8"&gt;
 &lt;/head&gt;
 ...
 &lt;/html&gt;</code></pre>
-                    <h2 id="html-rule5">IE兼容模式</h2>
-                    <p>用 &lt;meta&gt; 标签可以指定页面应该用什么版本的IE来渲染；
-                        <br /> 不同doctype在不同浏览器下会触发不同的渲染模式（
-                        <a href="https://hsivonen.fi/doctype/">这篇文章</a>总结的很到位）。</p>
-                    <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+                <h2 class="section-title" id="html-rule5">IE兼容模式</h2>
+                <p>用 &lt;meta&gt; 标签可以指定页面应该用什么版本的IE来渲染；
+                    <br /> 不同doctype在不同浏览器下会触发不同的渲染模式（
+                    <a href="https://hsivonen.fi/doctype/">这篇文章</a>总结的很到位）。</p>
+                <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;
 &lt;/head&gt;
     ...
 &lt;/html&gt;</code></pre>
-                    <h2 id="html-rule6">引入CSS，JS</h2>
-                    <p>根据HTML5规范, 通常在引入CSS和JS时不需要指明 type，因为 text/css 和 text/javascript 分别是他们的默认值。</p>
-                    <pre class="language-markup"><code>&lt;!-- External CSS --&gt;
+                <h2 class="section-title" id="html-rule6">引入CSS，JS</h2>
+                <p>根据HTML5规范, 通常在引入CSS和JS时不需要指明 type，因为 text/css 和 text/javascript 分别是他们的默认值。</p>
+                <pre class="language-markup"><code>&lt;!-- External CSS --&gt;
 &lt;link rel="stylesheet" href="code_guide.css"&gt;
 
 &lt;!-- In-document CSS --&gt;
@@ -235,55 +234,55 @@
     ...
 &lt;/script&gt;
 </code></pre>
-                    <h2 id="html-rule7">属性顺序</h2>
-                    <p>属性应该按照特定的顺序出现以保证易读性；
-                        <ul>
-                            <li>class</li>
-                            <li>id</li>
-                            <li>name</li>
-                            <li>data-</li>
-                            <li>src, for, type, href, value , max-length, max, min, pattern</li>
-                            <li>placeholder, title, alt</li>
-                            <li>aria-, role</li>
-                            <li>required, readonly, disabled</li>
-                        </ul>
-                        <br /> class是为高可复用组件设计的，所以应处在第一位；
-                        <br /> id更加具体且应该尽量少使用，所以将它放在第二位。
-                    </p>
-                    <pre class="language-markup"><code>&lt;a class="..." id="..." data-modal="toggle" href="#">Example link&lt;/a&gt;
+                <h2 class="section-title" id="html-rule7">属性顺序</h2>
+                <p>属性应该按照特定的顺序出现以保证易读性；
+                    <ul>
+                        <li>class</li>
+                        <li>id</li>
+                        <li>name</li>
+                        <li>data-</li>
+                        <li>src, for, type, href, value , max-length, max, min, pattern</li>
+                        <li>placeholder, title, alt</li>
+                        <li>aria-, role</li>
+                        <li>required, readonly, disabled</li>
+                    </ul>
+                    <br /> class是为高可复用组件设计的，所以应处在第一位；
+                    <br /> id更加具体且应该尽量少使用，所以将它放在第二位。
+                </p>
+                <pre class="language-markup"><code>&lt;a class="..." class="section-title" id="..." data-modal="toggle" href="#">Example link&lt;/a&gt;
 &lt;input class="form-control" type="text"&gt;
 &lt;img src="..." alt="..."&gt;</code></pre>
-                    <h2 id="html-rule8">boolean属性</h2>
-                    <p>boolean属性z值不需要声明取值的属性，XHTML需要每个属性声明取值，但是HTML5并不需要；
-                        <br /> 更多内容可以参考
-                        <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#boolean-attributes">WhatWG section on boolean attributes：</a>
-                        <br /> boolean属性的存在表示取值为true，不存在则表示取值为false。
-                    </p>
-                    <pre class="language-markup"><code>&lt;input type="text" disabled&gt;
+                <h2 class="section-title" id="html-rule8">boolean属性</h2>
+                <p>boolean属性z值不需要声明取值的属性，XHTML需要每个属性声明取值，但是HTML5并不需要；
+                    <br /> 更多内容可以参考
+                    <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#boolean-attributes">WhatWG section on boolean attributes：</a>
+                    <br /> boolean属性的存在表示取值为true，不存在则表示取值为false。
+                </p>
+                <pre class="language-markup"><code>&lt;input type="text" disabled&gt;
 &lt;input type="checkbox" value="1" checked&gt;
 &lt;select&gt;
     &lt;option value="1" selected&gt;1&lt;/option&gt;
 &lt;/select&gt;</code></pre>
-                    <h2 id="html-rule9">JS生成标签</h2>
-                    <p>在JS文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。</p>
-                    <h2 id="html-rule10">减少标签数量</h2>
-                    <p>在编写HTML代码时，需要尽量避免多余的父节点；
-                        <br /> 很多时候，需要通过迭代和重构来使HTML变得更少。
-                    </p>
-                    <pre class="language-markup"><code>&lt;!-- Not well --&gt;
+                <h2 class="section-title" id="html-rule9">JS生成标签</h2>
+                <p>在JS文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。</p>
+                <h2 class="section-title" id="html-rule10">减少标签数量</h2>
+                <p>在编写HTML代码时，需要尽量避免多余的父节点；
+                    <br /> 很多时候，需要通过迭代和重构来使HTML变得更少。
+                </p>
+                <pre class="language-markup"><code>&lt;!-- Not well --&gt;
 &lt;span class="avatar"&gt;
     &lt;img src="..."&gt;
 &lt;/span&gt;
 
 &lt;!-- Better --&gt;
 &lt;img class="avatar" src="..."&gt;</code></pre>
-                    <h2 id="html-rule11">使用高于完美</h2>
-                    <p>尽量遵循HTML标准和语义，但是不应该以浪费实用性作为代价；</p>
-                    <p>任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。</p>
-                    <h1 id="css-rule">CSS</h1>
-                    <h2 id="css-rule1">缩进</h2>
-                    <p>使用soft tab（4个空格）。</p>
-                    <pre class="language-css"><code>.element {
+                <h2 class="section-title" id="html-rule11">使用高于完美</h2>
+                <p>尽量遵循HTML标准和语义，但是不应该以浪费实用性作为代价；</p>
+                <p>任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。</p>
+                <h1 class="section-title" id="css-rule">CSS</h1>
+                <h2 class="section-title" id="css-rule1">缩进</h2>
+                <p>使用soft tab（4个空格）。</p>
+                <pre class="language-css"><code>.element {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -291,33 +290,33 @@
     width: 50px;
     height: 50px;
 }</code></pre>
-                    <h2 id="css-rule2">分号</h2>
-                    <p>每个属性声明末尾都要加分号。</p>
-                    <pre class="language-css"><code>.element {
+                <h2 class="section-title" id="css-rule2">分号</h2>
+                <p>每个属性声明末尾都要加分号。</p>
+                <pre class="language-css"><code>.element {
     width: 20px;
     height: 20px;
     background-color: red;
 }</code></pre>
-                    <h2 id="css-rule3">空格</h2>
-                    <p>以下几种情况不需要空格：
-                        <ul>
-                            <li>属性名后</li>
-                            <li>多个规则的分隔符&rsquo;,&rsquo;前</li>
-                            <li>!important &lsquo;!&rsquo;后</li>
-                            <li>属性值中&rsquo;(&lsquo;后和&rsquo;)&rsquo;前</li>
-                            <li>行末不要有多余的空格</li>
-                        </ul>
-                        以下几种情况需要空格：
-                        <ul>
-                            <li>属性值前</li>
-                            <li>选择器&rsquo;&gt;&rsquo;, &lsquo;+&rsquo;, &lsquo;~&rsquo;前后</li>
-                            <li>&lsquo;{&lsquo;前</li>
-                            <li>@else 前后</li>
-                            <li>属性值中的&rsquo;,&rsquo;后</li>
-                            <li>注释&rsquo;/ <em>&lsquo;后和&rsquo;</em> /&rsquo;前</li>
-                        </ul>
-                    </p>
-                    <pre class="language-css"><code>/* not good */
+                <h2 class="section-title" id="css-rule3">空格</h2>
+                <p>以下几种情况不需要空格：
+                    <ul>
+                        <li>属性名后</li>
+                        <li>多个规则的分隔符&rsquo;,&rsquo;前</li>
+                        <li>!important &lsquo;!&rsquo;后</li>
+                        <li>属性值中&rsquo;(&lsquo;后和&rsquo;)&rsquo;前</li>
+                        <li>行末不要有多余的空格</li>
+                    </ul>
+                    以下几种情况需要空格：
+                    <ul>
+                        <li>属性值前</li>
+                        <li>选择器&rsquo;&gt;&rsquo;, &lsquo;+&rsquo;, &lsquo;~&rsquo;前后</li>
+                        <li>&lsquo;{&lsquo;前</li>
+                        <li>@else 前后</li>
+                        <li>属性值中的&rsquo;,&rsquo;后</li>
+                        <li>注释&rsquo;/ <em>&lsquo;后和&rsquo;</em> /&rsquo;前</li>
+                    </ul>
+                </p>
+                <pre class="language-css"><code>/* not good */
 .element {
     color :red! important;
     background-color: rgba(0,0,0,.5);
@@ -374,15 +373,15 @@
 } @else {
     ...
 }</code></pre>
-                    <h2 id="css-rule4">空行</h2>
-                    <p>以下几种情况需要空行：
-                        <ul>
-                            <li>文件最后保留一个空行</li>
-                            <li>&lsquo;}&rsquo;后最好跟一个空行，包括scss中嵌套的规则</li>
-                            <li>属性之间需要适当的空行，具体见<a href="#">属性声明顺序</a></li>
-                        </ul>
-                    </p>
-                    <pre class="language-css"><code>/* not good */
+                <h2 class="section-title" id="css-rule4">空行</h2>
+                <p>以下几种情况需要空行：
+                    <ul>
+                        <li>文件最后保留一个空行</li>
+                        <li>&lsquo;}&rsquo;后最好跟一个空行，包括scss中嵌套的规则</li>
+                        <li>属性之间需要适当的空行，具体见<a href="#">属性声明顺序</a></li>
+                    </ul>
+                </p>
+                <pre class="language-css"><code>/* not good */
 .element {
     ...
 }
@@ -405,16 +404,16 @@
         ...
     }
 }</code></pre>
-                    <h2 id="css-rule5">换行</h2>
-                    <p>以下几种情况不需要换行：
-                        <ul>
-                            <li>&lsquo;{&lsquo;前</li>
-                            <li>&lsquo;{&lsquo;后和&rsquo;}&rsquo;前</li>
-                            <li>每个属性独占一行</li>
-                            <li>多个规则的分隔符&rsquo;,&rsquo;后</li>
-                        </ul>
-                    </p>
-                    <pre class="language-css"><code>/* not good */
+                <h2 class="section-title" id="css-rule5">换行</h2>
+                <p>以下几种情况不需要换行：
+                    <ul>
+                        <li>&lsquo;{&lsquo;前</li>
+                        <li>&lsquo;{&lsquo;后和&rsquo;}&rsquo;前</li>
+                        <li>每个属性独占一行</li>
+                        <li>多个规则的分隔符&rsquo;,&rsquo;后</li>
+                    </ul>
+                </p>
+                <pre class="language-css"><code>/* not good */
 .element
 {color: red; background-color: black;}
 
@@ -434,11 +433,11 @@
 .dialog {
     ...
 }</code></pre>
-                    <h2 id="css-rule6">注释</h2>
-                    <p>注释统一用&rsquo;/<em> </em>/&rsquo;（scss中也不要用&rsquo;//&rsquo;），具体参照下边的写法；
-                        <br /> 缩进与下一行代码保持一致；
-                        <br /> 可位于一个代码行的末尾，与代码间隔一个空格。 </p>
-                    <pre class="language-css"><code>/* Modal header */
+                <h2 class="section-title" id="css-rule6">注释</h2>
+                <p>注释统一用&rsquo;/<em> </em>/&rsquo;（scss中也不要用&rsquo;//&rsquo;），具体参照下边的写法；
+                    <br /> 缩进与下一行代码保持一致；
+                    <br /> 可位于一个代码行的末尾，与代码间隔一个空格。 </p>
+                <pre class="language-css"><code>/* Modal header */
 .modal-header {
     ...
 }
@@ -456,12 +455,12 @@
 
     color: red; /* color red */
 }</code></pre>
-                    <h2 id="css-rule7">引号</h2>
-                    <p>最外层统一使用双引号；
-                        <br /> url的内容要用引号；
-                        <br /> 属性选择器中的属性值需要引号。
-                    </p>
-                    <pre class="language-css"><code>.element:after {
+                <h2 class="section-title" id="css-rule7">引号</h2>
+                <p>最外层统一使用双引号；
+                    <br /> url的内容要用引号；
+                    <br /> 属性选择器中的属性值需要引号。
+                </p>
+                <pre class="language-css"><code>.element:after {
     content: "";
     background-image: url("logo.png");
 }
@@ -469,13 +468,13 @@
 li[data-type="single"] {
     ...
 }</code></pre>
-                    <h2 id="css-rule8">命名</h2>
-                    <ul>
-                        <li>类名使用小写字母，以中划线分隔</li>
-                        <li>id使用小写字母，以中划线分隔</li>
-                        <li>scss中的变量、函数、混合、placeholder采用驼峰式命名</li>
-                    </ul>
-                    <pre class="language-css"><code>/* class */
+                <h2 class="section-title" id="css-rule8">命名</h2>
+                <ul>
+                    <li>类名使用小写字母，以中划线分隔</li>
+                    <li>id使用小写字母，以中划线分隔</li>
+                    <li>scss中的变量、函数、混合、placeholder采用驼峰式命名</li>
+                </ul>
+                <pre class="language-css"><code>/* class */
 .element-content {
     ...
 }
@@ -502,9 +501,9 @@ $colorBlack: #000;
 %myDialog {
     ...
 }</code></pre>
-                    <h2 id="css-rule9">属性声明顺序</h2>
-                    <p>相关的属性声明按右边的顺序做分组处理，组之间需要有一个空行。</p>
-                    <pre class="language-css"><code>.declaration-order {
+                <h2 class="section-title" id="css-rule9">属性声明顺序</h2>
+                <p>相关的属性声明按右边的顺序做分组处理，组之间需要有一个空行。</p>
+                <pre class="language-css"><code>.declaration-order {
 display: block;
 float: right;
 
@@ -836,10 +835,10 @@ opacity: 1;
         "pointer-events"
     ]
 ]</code></pre>
-                    <h2 id="css-rule10">颜色</h2>
-                    <p>颜色16进制用小写字母；</p>
-                    <p>颜色16进制尽量用简写。</p>
-                    <pre class="language-css"><code>/* not good */
+                <h2 class="section-title" id="css-rule10">颜色</h2>
+                <p>颜色16进制用小写字母；</p>
+                <p>颜色16进制尽量用简写。</p>
+                <pre class="language-css"><code>/* not good */
 .element {
     color: #ABCDEF;
     background-color: #001122;
@@ -850,18 +849,18 @@ opacity: 1;
     color: #abcdef;
     background-color: #012;
 }</code></pre>
-                    <h2 id="css-rule11">属性简写</h2>
-                    <p>属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，所以建议尽量分开声明会更加清晰；</p>
-                    <p>margin 和 padding 相反，需要使用简写；</p>
-                    <p>常见的属性简写包括：
-                        <ul>
-                            <li>font</li>
-                            <li>background</li>
-                            <li>transition</li>
-                            <li>animation</li>
-                        </ul>
-                    </p>
-                    <pre class="language-css"><code>/* not good */
+                <h2 class="section-title" id="css-rule11">属性简写</h2>
+                <p>属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，所以建议尽量分开声明会更加清晰；</p>
+                <p>margin 和 padding 相反，需要使用简写；</p>
+                <p>常见的属性简写包括：
+                    <ul>
+                        <li>font</li>
+                        <li>background</li>
+                        <li>transition</li>
+                        <li>animation</li>
+                    </ul>
+                </p>
+                <pre class="language-css"><code>/* not good */
 .element {
     transition: opacity 1s linear 2s;
 }
@@ -873,9 +872,9 @@ opacity: 1;
     transition-duration: 1s;
     transition-property: opacity;
 }</code></pre>
-                    <h2 id="css-rule12">媒体查询</h2>
-                    <p>尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。</p>
-                    <pre class="language-css"><code>.element {
+                <h2 class="section-title" id="css-rule12">媒体查询</h2>
+                <p>尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。</p>
+                <pre class="language-css"><code>.element {
     ...
 }
 
@@ -892,21 +891,21 @@ opacity: 1;
         ...
     }
 }</code></pre>
-                    <h2 id="css-rule13">杂项</h2>
-                    <p>不允许有空的规则；</p>
-                    <p>元素选择器用小写字母；</p>
-                    <p>去掉小数点前面的0；</p>
-                    <p>去掉数字中不必要的小数点和末尾的0；</p>
-                    <p>属性值&lsquo;0&rsquo;后面不要加单位；</p>
-                    <p>同个属性不同前缀的写法需要在垂直方向保持对齐，具体参照右边的写法；</p>
-                    <p>无前缀的标准属性应该写在有前缀的属性后面；</p>
-                    <p>不要在同个规则里出现重复的属性，如果重复的属性是连续的则没关系；</p>
-                    <p>不要在一个文件里出现两个相同的规则；</p>
-                    <p>用 border: 0; 代替 border: none;；</p>
-                    <p>选择器不要超过4层（在scss中如果超过4层应该考虑用嵌套的方式来写）；</p>
-                    <p>发布的代码中不要有 @import；</p>
-                    <p>尽量少用&rsquo;*&rsquo;选择器。</p>
-                    <pre class="language-css"><code>/* not good */
+                <h2 class="section-title" id="css-rule13">杂项</h2>
+                <p>不允许有空的规则；</p>
+                <p>元素选择器用小写字母；</p>
+                <p>去掉小数点前面的0；</p>
+                <p>去掉数字中不必要的小数点和末尾的0；</p>
+                <p>属性值&lsquo;0&rsquo;后面不要加单位；</p>
+                <p>同个属性不同前缀的写法需要在垂直方向保持对齐，具体参照右边的写法；</p>
+                <p>无前缀的标准属性应该写在有前缀的属性后面；</p>
+                <p>不要在同个规则里出现重复的属性，如果重复的属性是连续的则没关系；</p>
+                <p>不要在一个文件里出现两个相同的规则；</p>
+                <p>用 border: 0; 代替 border: none;；</p>
+                <p>选择器不要超过4层（在scss中如果超过4层应该考虑用嵌套的方式来写）；</p>
+                <p>发布的代码中不要有 @import；</p>
+                <p>尽量少用&rsquo;*&rsquo;选择器。</p>
+                <pre class="language-css"><code>/* not good */
 .element {
 }
 
@@ -987,31 +986,31 @@ li {
     color: rgb(0, 0, 0);
     color: rgba(0, 0, 0, .5);
 }</code></pre>
-                    <h1 id="js-rule">JavaScript</h1>
-                    <h2 id="js-rule1">缩进</h2>
-                    <p>使用soft tab（4个空格）。</p>
-                    <pre class="language-js"><code>var x = 1,
+                <h1 class="section-title" id="js-rule">JavaScript</h1>
+                <h2 class="section-title" id="js-rule1">缩进</h2>
+                <p>使用soft tab（4个空格）。</p>
+                <pre class="language-js"><code>var x = 1,
 y = 1;
 if (x &lt; y) {
     x += 10;
 } else {
     x += 1;
 }</code></pre>
-                    <h2 id="js-rule2">单行长度</h2>
-                    <p>不要超过80，但如果编辑器开启word wrap可以不考虑单行长度。</p>
-                    <h2 id="js-rule3">分号</h2>
-                    <p>以下几种情况后需加分号：
-                        <ul>
-                            <li>变量声明</li>
-                            <li>表达式</li>
-                            <li>return</li>
-                            <li>throw</li>
-                            <li>break</li>
-                            <li>continue</li>
-                            <li>do-while</li>
-                        </ul>
-                    </p>
-                    <pre class="language-js"><code>/* var declaration */
+                <h2 class="section-title" id="js-rule2">单行长度</h2>
+                <p>不要超过80，但如果编辑器开启word wrap可以不考虑单行长度。</p>
+                <h2 class="section-title" id="js-rule3">分号</h2>
+                <p>以下几种情况后需加分号：
+                    <ul>
+                        <li>变量声明</li>
+                        <li>表达式</li>
+                        <li>return</li>
+                        <li>throw</li>
+                        <li>break</li>
+                        <li>continue</li>
+                        <li>do-while</li>
+                    </ul>
+                </p>
+                <pre class="language-js"><code>/* var declaration */
 var x = 1;
 
 /* expression statement */
@@ -1021,33 +1020,33 @@ x++;
 do {
     x++;
 } while (x < 10);</code></pre>
-                    <h2 id="js-rule4">空格</h2>
-                    <p>以下几种情况不需要空格：
-                        <ul>
-                            <li>对象的属性名后</li>
-                            <li>前缀一元运算符后</li>
-                            <li>后缀一元运算符前</li>
-                            <li>函数调用括号前</li>
-                            <li>无论是函数声明还是函数表达式，&rsquo;(&lsquo;前不要空格</li>
-                            <li>数组的&rsquo;[&lsquo;后和&rsquo;]&rsquo;前</li>
-                            <li>对象的&rsquo;{&lsquo;后和&rsquo;}&rsquo;前</li>
-                            <li>运算符&rsquo;(&lsquo;后和&rsquo;)&rsquo;前</li>
-                        </ul>
-                        以下几种情况需要空格：
-                        <ul>
-                            <li>二元运算符前后</li>
-                            <li>三元运算符&rsquo;?:&rsquo;前后</li>
-                            <li>代码块&rsquo;{&lsquo;前</li>
-                            <li>下列关键字前：else, while, catch, finally</li>
-                            <li>下列关键字后：if, else, for, while, do, switch, case, try, catch, finally, with, return, typeof</li>
-                            <li>单行注释&rsquo;//&rsquo;后（若单行注释和代码同行，则&rsquo;//&rsquo;前也需要），多行注释&rsquo;*&rsquo;后</li>
-                            <li>对象的属性值前</li>
-                            <li>for循环，分号后留有一个空格，前置条件如果有多个，逗号后留一个空格</li>
-                            <li>无论是函数声明还是函数表达式，&rsquo;{&lsquo;前一定要有空格</li>
-                            <li>函数的参数之间</li>
-                        </ul>
-                    </p>
-                    <pre class="language-js"><code>// not good
+                <h2 class="section-title" id="js-rule4">空格</h2>
+                <p>以下几种情况不需要空格：
+                    <ul>
+                        <li>对象的属性名后</li>
+                        <li>前缀一元运算符后</li>
+                        <li>后缀一元运算符前</li>
+                        <li>函数调用括号前</li>
+                        <li>无论是函数声明还是函数表达式，&rsquo;(&lsquo;前不要空格</li>
+                        <li>数组的&rsquo;[&lsquo;后和&rsquo;]&rsquo;前</li>
+                        <li>对象的&rsquo;{&lsquo;后和&rsquo;}&rsquo;前</li>
+                        <li>运算符&rsquo;(&lsquo;后和&rsquo;)&rsquo;前</li>
+                    </ul>
+                    以下几种情况需要空格：
+                    <ul>
+                        <li>二元运算符前后</li>
+                        <li>三元运算符&rsquo;?:&rsquo;前后</li>
+                        <li>代码块&rsquo;{&lsquo;前</li>
+                        <li>下列关键字前：else, while, catch, finally</li>
+                        <li>下列关键字后：if, else, for, while, do, switch, case, try, catch, finally, with, return, typeof</li>
+                        <li>单行注释&rsquo;//&rsquo;后（若单行注释和代码同行，则&rsquo;//&rsquo;前也需要），多行注释&rsquo;*&rsquo;后</li>
+                        <li>对象的属性值前</li>
+                        <li>for循环，分号后留有一个空格，前置条件如果有多个，逗号后留一个空格</li>
+                        <li>无论是函数声明还是函数表达式，&rsquo;{&lsquo;前一定要有空格</li>
+                        <li>函数的参数之间</li>
+                    </ul>
+                </p>
+                <pre class="language-js"><code>// not good
 var a = {
     b :1
 };
@@ -1097,16 +1096,16 @@ for(i=0;i&lt;6;i++){
 for (i = 0; i &lt; 6; i++) {
     x++;
 }</code></pre>
-                    <h2 id="js-rule5">空行</h2>
-                    <p>以下几种情况需要空行：
-                        <ul>
-                            <li>变量声明后（当变量声明在代码块的最后一行时，则无需空行）</li>
-                            <li>注释前（当注释在代码块的第一行时，则无需空行）</li>
-                            <li>代码块后（在函数调用、数组、对象中则无需空行）</li>
-                            <li>文件最后保留一个空行</li>
-                        </ul>
-                    </p>
-                    <pre class="language-js"><code>// need blank line after variable declaration
+                <h2 class="section-title" id="js-rule5">空行</h2>
+                <p>以下几种情况需要空行：
+                    <ul>
+                        <li>变量声明后（当变量声明在代码块的最后一行时，则无需空行）</li>
+                        <li>注释前（当注释在代码块的第一行时，则无需空行）</li>
+                        <li>代码块后（在函数调用、数组、对象中则无需空行）</li>
+                        <li>文件最后保留一个空行</li>
+                    </ul>
+                </p>
+                <pre class="language-js"><code>// need blank line after variable declaration
 var x = 1;
 
 // not need blank line when variable declaration is last expression in
@@ -1169,19 +1168,19 @@ b: function() {
 },
 c: 3
 };</code></pre>
-                    <h2 id="js-rule6">换行</h2>
-                    <p>换行的地方，行末必须有&rsquo;,&rsquo;或者运算符； 以下几种情况不需要换行：
-                        <ul>
-                            <li>下列关键字后：else, catch, finally</li>
-                            <li>代码块&rsquo;{&lsquo;前</li>
-                        </ul>
-                        以下几种情况需要换行：
-                        <ul>
-                            <li>代码块&rsquo;{&lsquo;后和&rsquo;}&rsquo;前</li>
-                            <li>变量赋值后</li>
-                        </ul>
-                    </p>
-                    <pre class="language-js"><code>// not good
+                <h2 class="section-title" id="js-rule6">换行</h2>
+                <p>换行的地方，行末必须有&rsquo;,&rsquo;或者运算符； 以下几种情况不需要换行：
+                    <ul>
+                        <li>下列关键字后：else, catch, finally</li>
+                        <li>代码块&rsquo;{&lsquo;前</li>
+                    </ul>
+                    以下几种情况需要换行：
+                    <ul>
+                        <li>代码块&rsquo;{&lsquo;后和&rsquo;}&rsquo;前</li>
+                        <li>变量赋值后</li>
+                    </ul>
+                </p>
+                <pre class="language-js"><code>// not good
 var a = {
 b: 1
 , c: 2
@@ -1234,39 +1233,39 @@ c, bar = 8;
 var a,
 foo = 7,
 b, c, bar = 8;</code></pre>
-                    <h2 id="js-rule7">单行注释</h2>
-                    <p>双斜线后，必须跟一个空格；
-                        <br /> 缩进与下一行代码保持一致；
-                        <br /> 可位于一个代码行的末尾，与代码间隔一个空格。 </p>
-                    <pre class="language-js"><code>if (condition) {
+                <h2 class="section-title" id="js-rule7">单行注释</h2>
+                <p>双斜线后，必须跟一个空格；
+                    <br /> 缩进与下一行代码保持一致；
+                    <br /> 可位于一个代码行的末尾，与代码间隔一个空格。 </p>
+                <pre class="language-js"><code>if (condition) {
     // if you made it here, then all security checks passed
     allowed();
 }
 
 var zhangsan = 'zhangsan'; // one space after code</code></pre>
-                    <h2 id="js-rule8">多行注释</h2>
-                    <p>最少三行, &lsquo;*&rsquo;后跟一个空格，具体参照右边的写法； 建议在以下情况下使用：
-                        <ul>
-                            <li>难于理解的代码段</li>
-                            <li>可能存在错误的代码段</li>
-                            <li>浏览器特殊的HACK代码</li>
-                            <li>业务逻辑强相关的代码</li>
-                        </ul>
-                    </p>
-                    <pre class="language-js"><code>/*
+                <h2 class="section-title" id="js-rule8">多行注释</h2>
+                <p>最少三行, &lsquo;*&rsquo;后跟一个空格，具体参照右边的写法； 建议在以下情况下使用：
+                    <ul>
+                        <li>难于理解的代码段</li>
+                        <li>可能存在错误的代码段</li>
+                        <li>浏览器特殊的HACK代码</li>
+                        <li>业务逻辑强相关的代码</li>
+                    </ul>
+                </p>
+                <pre class="language-js"><code>/*
  + one space after '*'
  */
 var x = 1;</code></pre>
-                    <h2 id="js-rule9">文档注释</h2>
-                    <p>各类标签@param, @method等请参考<a href="http://usejsdoc.org/">usejsdoc</a>和<a href="http://yuri4ever.github.io/jsdoc/">JSDoc Guide</a>；</p>
-                    <p>建议在以下情况下使用：
-                        <ul>
-                            <li>所有常量</li>
-                            <li>所有函数</li>
-                            <li>所有类</li>
-                        </ul>
-                    </p>
-                    <pre class="language-js"><code>/**
+                <h2 class="section-title" id="js-rule9">文档注释</h2>
+                <p>各类标签@param, @method等请参考<a href="http://usejsdoc.org/">usejsdoc</a>和<a href="http://yuri4ever.github.io/jsdoc/">JSDoc Guide</a>；</p>
+                <p>建议在以下情况下使用：
+                    <ul>
+                        <li>所有常量</li>
+                        <li>所有函数</li>
+                        <li>所有类</li>
+                    </ul>
+                </p>
+                <pre class="language-js"><code>/**
  + @func
  + @desc 一个带参数的函数
  + @param {string} a - 参数a
@@ -1283,26 +1282,26 @@ var x = 1;</code></pre>
 function foo(a, b, c, d, g, j) {
 ...
 }</code></pre>
-                    <h2 id="js-rule10">引号</h2>
-                    <p>最外层统一使用单引号。</p>
-                    <pre class="language-js"><code>// not good
+                <h2 class="section-title" id="js-rule10">引号</h2>
+                <p>最外层统一使用单引号。</p>
+                <pre class="language-js"><code>// not good
 var x = "test";
 
 // good
 var y = 'foo',
-z = '&lt;div id="test"&gt;&lt;/div&gt;';</code></pre>
-                    <h2 id="js-rule11">变量命名</h2>
-                    <ul>
-                        <li>标准变量采用驼峰式命名（除了对象的属性外，主要是考虑到cgi返回的数据）</li>
-                        <li>'ID'在变量名中全大写</li>
-                        <li>'URL'在变量名中全大写</li>
-                        <li>'Android'在变量名中大写第一个字母</li>
-                        <li>'iOS'在变量名中小写第一个，大写后两个字母</li>
-                        <li>常量全大写，用下划线连接</li>
-                        <li>构造函数，大写第一个字母</li>
-                        <li>jquery对象必须以'$'开头命名</li>
-                    </ul>
-                    <pre class="language-js"><code>var thisIsMyName;
+z = '&lt;div class="section-title" id="test"&gt;&lt;/div&gt;';</code></pre>
+                <h2 class="section-title" id="js-rule11">变量命名</h2>
+                <ul>
+                    <li>标准变量采用驼峰式命名（除了对象的属性外，主要是考虑到cgi返回的数据）</li>
+                    <li>'ID'在变量名中全大写</li>
+                    <li>'URL'在变量名中全大写</li>
+                    <li>'Android'在变量名中大写第一个字母</li>
+                    <li>'iOS'在变量名中小写第一个，大写后两个字母</li>
+                    <li>常量全大写，用下划线连接</li>
+                    <li>构造函数，大写第一个字母</li>
+                    <li>jquery对象必须以'$'开头命名</li>
+                </ul>
+                <pre class="language-js"><code>var thisIsMyName;
 var goodID;
 var reportURL;
 var AndroidVersion;
@@ -1318,9 +1317,9 @@ var body = $('body');
 
 // good
 var $body = $('body');</code></pre>
-                    <h2 id="js-rule12">变量声明</h2>
-                    <p>一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。</p>
-                    <pre class="language-js"><code>function doSomethingWithItems(items) {
+                <h2 class="section-title" id="js-rule12">变量声明</h2>
+                <p>一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。</p>
+                <pre class="language-js"><code>function doSomethingWithItems(items) {
     // use one var
     var value = 10,
         result = value + 10,
@@ -1331,13 +1330,13 @@ var $body = $('body');</code></pre>
         result += 10;
     }
 }</code></pre>
-                    <h2 id="js-rule13">函数</h2>
-                    <p>无论是函数声明还是函数表达式，&rsquo;(&lsquo;前不要空格，但&rsquo;{&lsquo;前一定要有空格；</p>
-                    <p>函数调用括号前不需要空格；</p>
-                    <p>立即执行函数外必须包一层括号；</p>
-                    <p>不要给inline function命名；</p>
-                    <p>参数之间用&rsquo;, &lsquo;分隔，注意逗号后有一个空格。</p>
-                    <pre class="language-js"><code>// no space before '(', but one space before'{'
+                <h2 class="section-title" id="js-rule13">函数</h2>
+                <p>无论是函数声明还是函数表达式，&rsquo;(&lsquo;前不要空格，但&rsquo;{&lsquo;前一定要有空格；</p>
+                <p>函数调用括号前不需要空格；</p>
+                <p>立即执行函数外必须包一层括号；</p>
+                <p>不要给inline function命名；</p>
+                <p>参数之间用&rsquo;, &lsquo;分隔，注意逗号后有一个空格。</p>
+                <pre class="language-js"><code>// no space before '(', but one space before'{'
 var doSomething = function(item) {
     // do something
 };
@@ -1381,11 +1380,11 @@ var a = [1, 2, function() {
 var doSomething = function(a, b, c) {
     // do something
 };</code></pre>
-                    <h2 id="js-rule14">数组、对象</h2>
-                    <p>对象属性名不需要加引号；</p>
-                    <p>对象以缩进的形式书写，不要写在一行；</p>
-                    <p>数组、对象最后不要有逗号。</p>
-                    <pre class="language-js"><code>// not good
+                <h2 class="section-title" id="js-rule14">数组、对象</h2>
+                <p>对象属性名不需要加引号；</p>
+                <p>对象以缩进的形式书写，不要写在一行；</p>
+                <p>数组、对象最后不要有逗号。</p>
+                <pre class="language-js"><code>// not good
 var a = {
     'b': 1
 };
@@ -1402,9 +1401,9 @@ var a = {
     b: 1,
     c: 2
 };</code></pre>
-                    <h2 id="js-rule15">括号</h2>
-                    <p>下列关键字后必须有大括号（即使代码块的内容只有一行）：if, else, for, while, do, switch, try, catch, finally, with。</p>
-                    <pre class="language-js"><code>// not good
+                <h2 class="section-title" id="js-rule15">括号</h2>
+                <p>下列关键字后必须有大括号（即使代码块的内容只有一行）：if, else, for, while, do, switch, try, catch, finally, with。</p>
+                <pre class="language-js"><code>// not good
 if (condition)
 doSomething();
 
@@ -1412,21 +1411,21 @@ doSomething();
 if (condition) {
     doSomething();
 }</code></pre>
-                    <h2 id="js-rule16">null</h2>
-                    <p>适用场景：
-                        <ul>
-                            <li>初始化一个将来可能被赋值为对象的变量</li>
-                            <li>与已经初始化的变量做比较</li>
-                            <li>作为一个参数为对象的函数的调用传参</li>
-                            <li>作为一个返回对象的函数的返回值</li>
-                        </ul>
-                        不适用场景：
-                        <ul>
-                            <li>不要用null来判断函数调用时有无传参</li>
-                            <li>不要与未初始化的变量做比较</li>
-                        </ul>
-                    </p>
-                    <pre class="language-js"><code>// not good
+                <h2 class="section-title" id="js-rule16">null</h2>
+                <p>适用场景：
+                    <ul>
+                        <li>初始化一个将来可能被赋值为对象的变量</li>
+                        <li>与已经初始化的变量做比较</li>
+                        <li>作为一个参数为对象的函数的调用传参</li>
+                        <li>作为一个返回对象的函数的返回值</li>
+                    </ul>
+                    不适用场景：
+                    <ul>
+                        <li>不要用null来判断函数调用时有无传参</li>
+                        <li>不要与未初始化的变量做比较</li>
+                    </ul>
+                </p>
+                <pre class="language-js"><code>// not good
 function test(a, b) {
     if (b === null) {
         // not mean b is not supply
@@ -1446,10 +1445,10 @@ var a = null;
 if (a === null) {
     ...
 }</code></pre>
-                    <h2 id="js-rule17">undefined</h2>
-                    <p>永远不要直接使用undefined进行变量判断；</p>
-                    <p>使用typeof和字符串&rsquo;undefined&rsquo;对变量进行判断。</p>
-                    <pre class="language-js"><code>// not good
+                <h2 class="section-title" id="js-rule17">undefined</h2>
+                <p>永远不要直接使用undefined进行变量判断；</p>
+                <p>使用typeof和字符串&rsquo;undefined&rsquo;对变量进行判断。</p>
+                <pre class="language-js"><code>// not good
 if (person === undefined) {
     ...
 }
@@ -1458,23 +1457,23 @@ if (person === undefined) {
 if (typeof person === 'undefined') {
     ...
 }</code></pre>
-                    <h2 id="js-rule18">jshint</h2>
-                    <p>用&rsquo;===&rsquo;, &lsquo;!==&rsquo;代替&rsquo;==&rsquo;, &lsquo;!=&rsquo;；</p>
-                    <p>for-in里一定要有hasOwnProperty的判断；</p>
-                    <p>不要在内置对象的原型上添加方法，如Array, Date；</p>
-                    <p>不要在内层作用域的代码里声明了变量，之后却访问到了外层作用域的同名变量；</p>
-                    <p>变量不要先使用后声明；</p>
-                    <p>不要在一句代码中单单使用构造函数，记得将其赋值给某个变量；</p>
-                    <p>不要在同个作用域下声明同名变量；</p>
-                    <p>不要在一些不需要的地方加括号，例：delete(a.b)；</p>
-                    <p>不要使用未声明的变量（全局变量需要加到.jshintrc文件的globals属性里面）；</p>
-                    <p>不要声明了变量却不使用；</p>
-                    <p>不要在应该做比较的地方做赋值；</p>
-                    <p>debugger不要出现在提交的代码里；</p>
-                    <p>数组中不要存在空元素；</p>
-                    <p>不要在循环内部声明函数；</p>
-                    <p>不要像这样使用构造函数，例：new function () { &hellip; }, new Object；</p>
-                    <pre class="language-js"><code>// not good
+                <h2 class="section-title" id="js-rule18">jshint</h2>
+                <p>用&rsquo;===&rsquo;, &lsquo;!==&rsquo;代替&rsquo;==&rsquo;, &lsquo;!=&rsquo;；</p>
+                <p>for-in里一定要有hasOwnProperty的判断；</p>
+                <p>不要在内置对象的原型上添加方法，如Array, Date；</p>
+                <p>不要在内层作用域的代码里声明了变量，之后却访问到了外层作用域的同名变量；</p>
+                <p>变量不要先使用后声明；</p>
+                <p>不要在一句代码中单单使用构造函数，记得将其赋值给某个变量；</p>
+                <p>不要在同个作用域下声明同名变量；</p>
+                <p>不要在一些不需要的地方加括号，例：delete(a.b)；</p>
+                <p>不要使用未声明的变量（全局变量需要加到.jshintrc文件的globals属性里面）；</p>
+                <p>不要声明了变量却不使用；</p>
+                <p>不要在应该做比较的地方做赋值；</p>
+                <p>debugger不要出现在提交的代码里；</p>
+                <p>数组中不要存在空元素；</p>
+                <p>不要在循环内部声明函数；</p>
+                <p>不要像这样使用构造函数，例：new function () { &hellip; }, new Object；</p>
+                <pre class="language-js"><code>// not good
 if (a == 1) {
     a++;
 }
@@ -1558,15 +1557,15 @@ this.publicMethod2 = function() {
     privateVar = 2;
 };
 };</code></pre>
-                    <h2 id="js-rule19">杂项</h2>
-                    <p>不要混用tab和space；</p>
-                    <p>不要在一处使用多个tab或space；</p>
-                    <p>换行符统一用&rsquo;LF&rsquo;；</p>
-                    <p>对上下文this的引用只能使用&rsquo;_this&rsquo;, &lsquo;that&rsquo;, &lsquo;self&rsquo;其中一个来命名；</p>
-                    <p>行尾不要有空白字符；</p>
-                    <p>switch的falling through和no default的情况一定要有注释特别说明；</p>
-                    <p>不允许有空的代码块。</p>
-                    <pre class="language-js"><code>// not good
+                <h2 class="section-title" id="js-rule19">杂项</h2>
+                <p>不要混用tab和space；</p>
+                <p>不要在一处使用多个tab或space；</p>
+                <p>换行符统一用&rsquo;LF&rsquo;；</p>
+                <p>对上下文this的引用只能使用&rsquo;_this&rsquo;, &lsquo;that&rsquo;, &lsquo;self&rsquo;其中一个来命名；</p>
+                <p>行尾不要有空白字符；</p>
+                <p>switch的falling through和no default的情况一定要有注释特别说明；</p>
+                <p>不允许有空的代码块。</p>
+                <pre class="language-js"><code>// not good
 var a   = 1;
 
 function Person() {
@@ -1602,9 +1601,8 @@ case 4
 if (condition) {
 
 }</code></pre>
-                </div>
-                <!-- 右侧内容结束 -->
-            </article>
+            </div>
+            <!-- 右侧内容结束 -->
         </main>
         <footer>
             Copyright &copy; 2016-2017 <a href="www.manstro.com">万洲嘉智信息科技有限公司</a>. All Rights Reserved
@@ -1612,6 +1610,7 @@ if (condition) {
     </div>
     <script src="../ui/js/public.js"></script>
     <script src="../dep/prism/prism.js"></script>
+    <script src="../ui/js/jquery.waypoints.min.js"></script>
 </body>
 
 </html>
