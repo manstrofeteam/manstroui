@@ -295,12 +295,12 @@
     padding: 10px;
 }
 .tab-line .tab-nav li:hover {
-    border-bottom: 2px solid #bf7554;
-    color: #bf7554;
+    border-bottom: 2px solid #209EF6;
+    color: #209EF6;
 }
 .tab-line .tab-nav li.active {
-    border-bottom: 2px solid #bf7554;
-    color: #bf7554;
+    border-bottom: 2px solid #209EF6;
+    color: #209EF6;
 }
 
 /* ======= 默认标签页结束 ======= */

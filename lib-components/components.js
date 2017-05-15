@@ -9,7 +9,7 @@ function pageHeight() {
 //浏览器视口的宽度
 function windowWidth() {
     var de = document.documentElement;
-    return self.innerWidth || (de && de.clientWidth) || document.body.clientWidth
+    return self.innerWidth || (de && de.clientWidth) || document.body.clientWidth;
 };
 //浏览器视口的高度
 function windowHeight() {
@@ -27,8 +27,6 @@ function scrollY() {
     return self.pageYOffset || (de && de.scrollTop) || document.body.scrollTop;
 };
 /*===========================简单遮罩层开始========================*/
-// 1、在html页面创建id="overlay"的空div
-// 2、在CSS中
 // 显示遮罩层
 function showOverlay() {
     if (pageHeight() > windowHeight()) {
@@ -73,6 +71,8 @@ Date.prototype.Format = function(fmt) { //author: meizz
 };
 /*===========================格式化时间结束========================*/
 
+
+/*===============检测密码强度开始=================*/
 /**
  * 强度规则 
  * +-------------------------------------------------------+
@@ -82,7 +82,6 @@ Date.prototype.Format = function(fmt) { //author: meizz
  * 4) 12位字符数以上的三类或四类字符组合，非常好。
  *  +------------------------------------------------------- +
  */
-//检测密码强度
 function checkStrong(sValue) {
     var modes = 0;
     if (sValue.length < 6) return modes;
@@ -102,62 +101,81 @@ function checkStrong(sValue) {
             break;
     }
 }
+/*===============检测密码强度结束=================*/
 
-/*========评分开始=======*/
-var score = "";
+/*========倒计时开始========*/
+//倒计时间
+var countTime;
+//定时器
+var countTimer;
+//倒计时方法
+function countTimeFC() {
+    var $T = $(".send-code");
+    if (countTime == "0") {
+        $T.attr("disabled", false);
+        $T.text("获取验证码");
+        $T.toggleClass("btn-info").toggleClass("btn-default");
+        countTime = 60;
+    } else {
+        $T.attr("disabled", true);
+        var text = "重新发送(" + countTime + ")";
+        $T.text(text);
+        countTime--;
+        countTimer = window.setTimeout(function() {
+            countTimeFC();
+        }, 1000);
+    }
+}
+/*========倒计时结束========*/
+
+
 window.onload = function() {
-        var oStar = document.getElementById("ms-star");
-        var aLi = oStar.getElementsByTagName("li");
-        var oUl = oStar.getElementsByTagName("ul")[0];
-        var oSpan = oStar.getElementsByTagName("span")[0];
-        var oP = oStar.getElementsByTagName("p")[0];
-        var i = iScore = iStar = 0;
-        var aMsg = [
-            "很不满意",
-            "不满意",
-            "一般",
-            "满意",
-            "非常满意"
-        ]
+    /*========评分开始=======*/
+    var score = "";
+    var oStar = document.getElementById("ms-star");
+    var aLi = oStar.getElementsByTagName("li");
+    var oUl = oStar.getElementsByTagName("ul")[0];
+    var oSpan = oStar.getElementsByTagName("span")[0];
+    var oP = oStar.getElementsByTagName("p")[0];
+    var i = iScore = iStar = 0;
+    var aMsg = ["很不满意", "不满意", "一般", "满意", "非常满意"];
 
-        for (i = 1; i <= aLi.length; i++) {
-            aLi[i - 1].index = i;
-            //鼠标移过显示分数
-            aLi[i - 1].onmouseover = function() {
-                fnPoint(this.index);
-                //浮动层显示
-                oP.style.display = "block";
-                //计算浮动层位置
-                oP.style.left = oUl.offsetLeft + this.index * this.offsetWidth - 58 + "px";
-                //匹配浮动层文字内容
-                oP.innerHTML = "<em><b>" + this.index + "</b> 分 " + aMsg[this.index - 1] + "</em>"
-                    //+ aMsg[this.index - 1].match(/\|(.+)/)[1]
-            };
+    for (i = 1; i <= aLi.length; i++) {
+        aLi[i - 1].index = i;
+        //鼠标移过显示分数
+        aLi[i - 1].onmouseover = function() {
+            fnPoint(this.index);
+            //浮动层显示
+            oP.style.display = "block";
+            //计算浮动层位置
+            oP.style.left = oUl.offsetLeft + this.index * this.offsetWidth - 58 + "px";
+            //匹配浮动层文字内容
+            oP.innerHTML = "<em><b>" + this.index + "</b> 分 " + aMsg[this.index - 1] + "</em>"
+                //+ aMsg[this.index - 1].match(/\|(.+)/)[1]
+        };
 
-            //鼠标离开后恢复上次评分
-            aLi[i - 1].onmouseout = function() {
-                fnPoint();
-                //关闭浮动层
-                oP.style.display = "none"
-            };
-            //点击后进行评分处理
-            aLi[i - 1].onclick = function() {
-                iStar = this.index;
-                oP.style.display = "none";
-                oSpan.innerHTML = "<strong>" + (this.index) + " 分</strong> (" + aMsg[this.index - 1] + ")";
-                score = this.index;
-                $("#score").val(score);
-                $('#score').trigger("validate");
-            }
-        }
-        //评分处理
-        function fnPoint(iArg) {
-            //分数赋值
-            iScore = iArg || iStar;
-            for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";
-        }
+        //鼠标离开后恢复上次评分
+        aLi[i - 1].onmouseout = function() {
+            fnPoint();
+            //关闭浮动层
+            oP.style.display = "none"
+        };
+        //点击后进行评分处理
+        aLi[i - 1].onclick = function() {
+            iStar = this.index;
+            oP.style.display = "none";
+            oSpan.innerHTML = "<strong>" + (this.index) + " 分</strong> (" + aMsg[this.index - 1] + ")";
+            score = this.index;
+        };
+    }
+    //评分处理
+    function fnPoint(iArg) {
+        //分数赋值
+        iScore = iArg || iStar;
+        for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";
     }
     /*========评分结束=======*/
+}
 
 $(function() {
     // 点击遮罩层本身隐藏
@@ -176,8 +194,8 @@ $(function() {
         $(this).parent().hide();
     });
     /*========弹出层演示结束=======*/
-    //
-    /*下拉列表开始*/
+
+    /*========下拉列表开始========*/
     $('.ms-dropdown .dropdown-title').click(function() {
         $('.dropdown-menu').slideToggle(400);
         $('.dropdown-title .icon-caret').toggleClass("ms-flipy");
@@ -187,8 +205,9 @@ $(function() {
         $('.dropdown-title span').text(liTxt);
         $('.dropdown-menu').slideToggle(400);
     });
-    /*下拉列表结束*/
-    /*---------数量的加减开始----------*/
+    /*=========下拉列表结束=======*/
+
+    /*=========数量的加减开始=======*/
     $(".ms-plus-minus .plus").click(function() {
         var num = $(this).siblings(".text-amount");
         var val = Number(num.val());
@@ -205,10 +224,9 @@ $(function() {
             num.attr("value", val);
         };
     });
+    /*========数量的加减结束=======*/
 
-    /*---------数量的加减结束----------*/
-
-    /*---------密码强度验证开始----------*/
+    /*========密码强度验证开始=======*/
     var oTips = $("#ms-pwd-strong #tips");
     var oInput = $("#ms-pwd-strong input");
     var aSpan = oTips.children("span");
@@ -223,14 +241,14 @@ $(function() {
             index && (aSpan[index - 1].className = "active");
         }
     });
-    /*---------密码强度验证结束----------*/
+    /*========密码强度验证结束=======*/
 
-    /*---------进度条开始----------*/
+    /*=======进度条开始=========*/
     var progressVal = $(".ms-progress .progress-bar").attr("key");
-    $(".progress-bar").stop().animate({
+    $(".ms-progress .progress-bar").stop().animate({
         width: progressVal
     });
-    /*---------进度条结束----------*/
+    /*=======进度条结束=========*/
 
     /*======点击发送验证码开始======*/
     $(".send-code").click(function() {
@@ -242,40 +260,13 @@ $(function() {
     /*======点击发送验证码结束======*/
 
     /*========标签页切换开始========*/
-    $(".tab-nav li").click(function() {
+    $(".ms-tab .tab-nav li").click(function() {
         var tabLabel = $(this).attr("id");
         $(this).siblings().removeClass("active");
         $(this).addClass("active");
         $(".tab-content .tab-pane").hide();
         $("." + tabLabel).show();
     });
-
     /*========标签页切换结束========*/
 
-
 });
-/*========倒计时开始========*/
-//倒计时间
-var countTime;
-//定时器
-var countTimer;
-//倒计时方法
-function countTimeFC() {
-    var $T = $(".send-code");
-    //挂失申请
-    if (countTime == "0") {
-        $T.attr("disabled", false);
-        $T.text("获取验证码");
-        $T.toggleClass("btn-info").toggleClass("btn-default");
-        countTime = 60;
-    } else {
-        $T.attr("disabled", true);
-        var text = "重新发送(" + countTime + ")";
-        $T.text(text);
-        countTime--;
-        countTimer = window.setTimeout(function() {
-            countTimeFC();
-        }, 1000);
-    }
-}
-/*========倒计时结束========*/
