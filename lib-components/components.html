@@ -78,7 +78,7 @@
                 <section class="section-title" id="ms-overlay" class="docs-article">
                     <h2>遮罩层</h2>
                     <div class="ms-overlay"></div>
-                    <button class="btn btn-info bottom10" type="button" onclick="showOverlay();">显示遮罩层</button>
+                    <button class="ms-btn btn-info bottom10" type="button" onclick="showOverlay();">显示遮罩层</button>
                     <p>定义class="ms-overlay"的空div</p>
                     <pre class="language-markup"><code>&lt;div class="ms-overlay"&gt;&lt;/div&gt;</code></pre>
                     <p>js方法调用，显示/隐藏遮罩层</p>
@@ -90,7 +90,7 @@ hideOverlay();  //隐藏遮罩层
                     <h2>弹出层</h2>
                     <h3 class="bottom10">默认弹出层展示</h3>
                     <p class="bottom10">使用.ms-dialog、.dialog-default类名定义基础的弹出层</p>
-                    <button type="button" class="show-dialog btn btn-info ">点击显示弹出层</button>
+                    <button type="button" class="show-dialog ms-btn btn-info ">点击显示弹出层</button>
                     <div class="ms-dialog dialog-default">
                         <p class="dialog-title">默认弹出层示例</p>
                         <i class="dialog-close ms-icon icon-close"></i>
@@ -122,7 +122,7 @@ $(".ms-dialog .dialog-close").click(function() {
 });</code></pre>
                     <h3 class="bottom10">不同大小的弹出层展示</h3>
                     <p class="bottom10">使用.dialog-lg、.dialog-default、.dialog-sm、.dialog-xs类名定义不同尺寸的弹出层</p>
-                    <button type="button" class="show-dialog btn btn-info ">点击显示大弹出层</button>
+                    <button type="button" class="show-dialog ms-btn btn-info ">点击显示大弹出层</button>
                     <div class="ms-dialog dialog-lg">
                         <p class="dialog-title">大弹出层示例</p>
                         <i class="dialog-close ms-icon icon-close"></i>
@@ -145,7 +145,7 @@ $(".ms-dialog .dialog-close").click(function() {
     &lt;i class="dialog-close ms-icon icon-close"&gt;&lt;/i&gt;
     &lt;div class="dialog-content"&gt;···&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                    <button type="button" class="show-dialog btn btn-info ">点击显示小弹出层</button>
+                    <button type="button" class="show-dialog ms-btn btn-info ">点击显示小弹出层</button>
                     <div class="ms-dialog dialog-xs">
                         <p class="dialog-title">小弹出层示例</p>
                         <i class="dialog-close ms-icon icon-close"></i>
@@ -163,7 +163,7 @@ $(".ms-dialog .dialog-close").click(function() {
     &lt;i class="dialog-close ms-icon icon-close"&gt;&lt;/i&gt;
     &lt;div class="dialog-content"&gt;···&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                    <button type="button" class="show-dialog btn btn-info ">点击显示超小弹出层</button>
+                    <button type="button" class="show-dialog ms-btn btn-info ">点击显示超小弹出层</button>
                     <div class="ms-dialog dialog-xs">
                         <p class="dialog-title">超小弹出层示例</p>
                         <i class="dialog-close ms-icon icon-close"></i>
@@ -282,9 +282,9 @@ $(".progress-bar").stop().animate({
                 <section class="section-title" id="count-down" class="docs-article">
                     <h2>验证码倒计时</h2>
                     <p>现使用按钮样式进行样式，可根据需要自行修改按钮样式</p>
-                    <button type="button" class="btn btn-info send-code bottom10">获取验证码</button>
+                    <button type="button" class="ms-btn btn-info send-code bottom10">获取验证码</button>
                     <p>定义普通倒计时按钮</p>
-                    <pre class="language-markup"><code>&lt;button type="button" class="btn btn-info send-code"&gt;获取验证码&lt;/button&gt;</code></pre>
+                    <pre class="language-markup"><code>&lt;button type="button" class="ms-btn btn-info send-code"&gt;获取验证码&lt;/button&gt;</code></pre>
                     <p>js方法调用，显示</p>
                     <pre class="language-js"><code>$(".send-code").click(function() {
     $(this).toggleClass("btn-info").toggleClass("btn-default");

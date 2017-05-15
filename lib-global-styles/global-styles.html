@@ -35,7 +35,7 @@
         <div class="docs-header">
             <div class="align-center">
                 <h1>万洲嘉智全局样式库</h1>
-                <p>定义常用的全局样式库，比如表格、表单、按钮等等；</p>
+                <p>定义常用的全局样式库，比如表格、表单、按钮、图片等等；</p>
             </div>
         </div>
         <!-- 主体部分开始 -->
@@ -59,6 +59,13 @@
                             <li name="button-target"><a href="#button-target">可作为按钮使用的元素</a></li>
                             <li name="button-class"><a href="#button-class">带有预订样式的按钮</a></li>
                             <li name="button-size"><a href="#button-size">不同尺寸的按钮</a></li>
+                        </ul>
+                    </li>
+                    <li name="ms-img">
+                        <a href="#ms-img">图片</a>
+                        <ul class="children-nav">
+                            <li name="img-responsive"><a href="#img-responsive">响应式图片</a></li>
+                            <li name="img-shapes"><a href="#img-shapes">图片形状</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -214,8 +221,8 @@
                             <label for="radio2">单选二</label>
                         </div>
                         <div class="form-item">
-                            <button class="btn btn-default" type="reset">重置</button>
-                            <button class="btn btn-primary" type="button">保存</button>
+                            <button class="ms-btn btn-default" type="reset">重置</button>
+                            <button class="ms-btn btn-primary" type="button">保存</button>
                         </div>
                     </form>
                     <pre class="language-markup">
@@ -254,8 +261,8 @@
         &lt;label for="radio2"&gt;单选二&lt;/label&gt;
     &lt;/div&gt;
     &lt;div class="form-item"&gt;
-        &lt;button class="btn btn-default" type="reset"&gt;重置&lt;/button&gt;
-        &lt;button class="btn btn-primary" type="button"&gt;保存&lt;/button&gt;
+        &lt;button class="ms-btn btn-default" type="reset"&gt;重置&lt;/button&gt;
+        &lt;button class="ms-btn btn-primary" type="button"&gt;保存&lt;/button&gt;
     &lt;/div>
 &lt;/form&gt;
 </code>
@@ -266,76 +273,97 @@
                     <div class="bottom20 ms-article">
                         <h3 class="section-title" id="button-target">可作为按钮使用的元素</h3>
                         <p>最好使用 button 元素来获得在各个浏览器上获得相匹配的绘制效果</p>
-                        <a class="btn btn-default" href="#" role="button">Link</a>
-                        <button class="btn btn-default" type="button">Button</button>
-                        <button class="btn btn-default" type="submit">Submit</button>
-                        <input class="btn btn-default" type="button" value="Input">
-                        <input class="btn btn-default" type="submit" value="Submit">
+                        <a class="ms-btn btn-default" href="#" role="button">Link</a>
+                        <button class="ms-btn btn-default" type="button">Button</button>
+                        <button class="ms-btn btn-default" type="submit">Submit</button>
+                        <input class="ms-btn btn-default" type="button" value="Input">
+                        <input class="ms-btn btn-default" type="submit" value="Submit">
                         <pre><code class="language-markup">
-&lt;a class="btn btn-default" href="#" role="button">Link&lt;/a&gt;
-&lt;button class="btn btn-default" type="submit">Button&lt;/button&gt;
-&lt;input class="btn btn-default" type="button" value="Input"&gt;
-&lt;input class="btn btn-default" type="submit" value="Submit"&gt;
+&lt;a class="ms-btn btn-default" href="#" role="button">Link&lt;/a&gt;
+&lt;button class="ms-btn btn-default" type="submit">Button&lt;/button&gt;
+&lt;input class="ms-btn btn-default" type="button" value="Input"&gt;
+&lt;input class="ms-btn btn-default" type="submit" value="Submit"&gt;
                       </code></pre>
                     </div>
                     <div class="bottom20 ms-article">
                         <h3 class="section-title" id="button-class">带有预订样式的按钮</h3>
                         <p>当然了如果按钮样式不符合实际开发效果，可做相应修改，依具体情况定。</p>
-                        <button type="button" class="btn btn-default">（默认样式）Default</button>
-                        <button type="button" class="btn btn-primary">（首选项）Primary</button>
-                        <button type="button" class="btn btn-success">（成功）Success</button>
-                        <button type="button" class="btn btn-info">（一般信息）Info</button>
-                        <button type="button" class="btn btn-warning">（警告）Warning</button>
-                        <button type="button" class="btn btn-danger">（危险）Danger</button>
-                        <button type="button" class="btn btn-transparent">（透明）Transparent</button>
+                        <button type="button" class="ms-btn btn-default">（默认样式）Default</button>
+                        <button type="button" class="ms-btn btn-primary">（首选项）Primary</button>
+                        <button type="button" class="ms-btn btn-success">（成功）Success</button>
+                        <button type="button" class="ms-btn btn-info">（一般信息）Info</button>
+                        <button type="button" class="ms-btn btn-warning">（警告）Warning</button>
+                        <button type="button" class="ms-btn btn-danger">（危险）Danger</button>
+                        <button type="button" class="ms-btn btn-transparent">（透明）Transparent</button>
                         <pre><code class="language-markup">
-&lt;button type="button" class="btn btn-default"&gt;（默认样式）Default&lt;/button&gt;
-&lt;button type="button" class="btn btn-primary"&gt;（首选项）Primary&lt;/button&gt;
-&lt;button type="button" class="btn btn-success"&gt;（成功）Success&lt;/button&gt;
-&lt;button type="button" class="btn btn-info"&gt;（一般信息）Info&lt;/button&gt;
-&lt;button type="button" class="btn btn-warning"&gt;（警告）Warning&lt;/button&gt;
-&lt;button type="button" class="btn btn-danger"&gt;（危险）Danger&lt;/button&gt;
-&lt;button type="button" class="btn btn-transparent"&gt;（透明）Transparent&lt;/button&gt;
+&lt;button type="button" class="ms-btn btn-default"&gt;（默认样式）Default&lt;/button&gt;
+&lt;button type="button" class="ms-btn btn-primary"&gt;（首选项）Primary&lt;/button&gt;
+&lt;button type="button" class="ms-btn btn-success"&gt;（成功）Success&lt;/button&gt;
+&lt;button type="button" class="ms-btn btn-info"&gt;（一般信息）Info&lt;/button&gt;
+&lt;button type="button" class="ms-btn btn-warning"&gt;（警告）Warning&lt;/button&gt;
+&lt;button type="button" class="ms-btn btn-danger"&gt;（危险）Danger&lt;/button&gt;
+&lt;button type="button" class="ms-btn btn-transparent"&gt;（透明）Transparent&lt;/button&gt;
                         </code></pre>
                     </div>
                     <div class="bottom20 ms-article ms-article">
                         <h3 class="section-title" id="button-size">不同尺寸的按钮</h3>
                         <p>使用 .btn-lg .btn-sm . btn-xs改变按钮的默认大小</p>
                         <p>
-                            <button type="button" class="btn btn-primary btn-lg">（大按钮）Large button</button>
-                            <button type="button" class="btn btn-default btn-lg">（大按钮）Large button</button>
+                            <button type="button" class="ms-btn btn-primary btn-lg">（大按钮）Large button</button>
+                            <button type="button" class="ms-btn btn-default btn-lg">（大按钮）Large button</button>
                         </p>
                         <p>
-                            <button type="button" class="btn btn-primary">（默认尺寸）Default button</button>
-                            <button type="button" class="btn btn-default">（默认尺寸）Default button</button>
+                            <button type="button" class="ms-btn btn-primary">（默认尺寸）Default button</button>
+                            <button type="button" class="ms-btn btn-default">（默认尺寸）Default button</button>
                         </p>
                         <p>
-                            <button type="button" class="btn btn-primary btn-sm">（小按钮）Small button</button>
-                            <button type="button" class="btn btn-default btn-sm">（小按钮）Small button</button>
+                            <button type="button" class="ms-btn btn-primary btn-sm">（小按钮）Small button</button>
+                            <button type="button" class="ms-btn btn-default btn-sm">（小按钮）Small button</button>
                         </p>
                         <p>
-                            <button type="button" class="btn btn-primary btn-xs">（超小尺寸）Extra small button</button>
-                            <button type="button" class="btn btn-default btn-xs">（超小尺寸）Extra small button</button>
+                            <button type="button" class="ms-btn btn-primary btn-xs">（超小尺寸）Extra small button</button>
+                            <button type="button" class="ms-btn btn-default btn-xs">（超小尺寸）Extra small button</button>
                         </p>
                         <pre><code class="language-markup">
 &lt;p&gt;
-    &lt;button type="button" class="btn btn-primary btn-lg"&gt;（大按钮）Large button&lt;/button&gt;
-    &lt;button type="button" class="btn btn-default btn-lg"&gt;（大按钮）Large button&lt;/button&gt;
+    &lt;button type="button" class="ms-btn btn-primary btn-lg"&gt;（大按钮）Large button&lt;/button&gt;
+    &lt;button type="button" class="ms-btn btn-default btn-lg"&gt;（大按钮）Large button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-    &lt;button type="button" class="btn btn-primary"&gt;（默认尺寸）Default button&lt;/button&gt;
-    &lt;button type="button" class="btn btn-default"&gt;（默认尺寸）Default button&lt;/button&gt;
+    &lt;button type="button" class="ms-btn btn-primary"&gt;（默认尺寸）Default button&lt;/button&gt;
+    &lt;button type="button" class="ms-btn btn-default"&gt;（默认尺寸）Default button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-    &lt;button type="button" class="btn btn-primary btn-sm"&gt;（小按钮）Small button&lt;/button&gt;
-    &lt;button type="button" class="btn btn-default btn-sm"&gt;（小按钮）Small button&lt;/button&gt;
+    &lt;button type="button" class="ms-btn btn-primary btn-sm"&gt;（小按钮）Small button&lt;/button&gt;
+    &lt;button type="button" class="ms-btn btn-default btn-sm"&gt;（小按钮）Small button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-    &lt;button type="button" class="btn btn-primary btn-xs"&gt;（超小尺寸）Extra small button&lt;/button&gt;
-    &lt;button type="button" class="btn btn-default btn-xs"&gt;（超小尺寸）Extra small button&lt;/button&gt;
+    &lt;button type="button" class="ms-btn btn-primary btn-xs"&gt;（超小尺寸）Extra small button&lt;/button&gt;
+    &lt;button type="button" class="ms-btn btn-default btn-xs"&gt;（超小尺寸）Extra small button&lt;/button&gt;
 &lt;/p&gt;
                         </code></pre>
                     </div>
+                </section>
+                <section id="ms-img" class="section-title docs-article">
+                    <h2>图片</h2>
+                    <h3 class="section-title " id="img-responsive">响应式图片</h3>
+                    <p>通过为图片添加 .ms-img-responsive 类可以让图片支持响应式布局。其实质是为图片设置了 max-width: 100%;、 height: auto;属性，从而让图片在其父元素中更好的缩放。</p>
+                    <img class="ms-img-responsive" src="../ui/img/public/demo.jpg">
+                    <pre class="language-markup"><code>&lt;img class="ms-img-responsive" src="../ui/img/public/demo.jpg"&gt;</code></pre>
+                    <h3 class="section-title" id="img-shapes">图片形状</h3>
+                    <p>通过为 &lt;img&gt; 元素添加不同的class类，可以让图片呈现不同的形状。</p>
+                    <p class="docs-tip">请时刻牢记：Internet Explorer 8 不支持 CSS3 中的圆角属性。</p>
+                    <ul class="bottom20">
+                        <li>.am-radius 圆角</li>
+                        <li>.am-round 椭圆</li>
+                        <li>.am-circle 圆形，一般用于正方形的图片(你要觉得椭圆好看，用在长方形上也可以)</li>
+                    </ul>
+                    <img class="ms-radius right20" alt="140*140" src="../ui/img/public/demo.jpg" width="140" height="140">
+                    <img class="ms-round right20" alt="140*140" src="../ui/img/public/demo.jpg" width="200" height="120">
+                    <img class="ms-circle" alt="140*140" src="../ui/img/public/demo.jpg" width="140" height="140">
+                    <pre class="language-markup"><code>&lt;img class="ms-radius" alt="140*140" src="../ui/img/public/demo.jpg" width="140" height="140"&gt;
+&lt;img class="ms-round" alt="140*140" src="../ui/img/public/demo.jpg" width="200" height="120"&gt;
+&lt;img class="ms-circle" alt="140*140" src="../ui/img/public/demo.jpg" width="140" height="140"&gt;</code></pre>
                 </section>
             </article>
         </div>

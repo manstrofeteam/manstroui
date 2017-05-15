@@ -14,6 +14,28 @@
 /*======= 文章结束=======*/
 
 
+/*======== 图片开始 =======*/
+
+
+/*响应式图片*/
+
+.ms-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+.ms-radius {
+    border-radius: 4px;
+}
+.ms-round {
+    border-radius: 1000px;
+}
+.ms-circle {
+    border-radius: 50%;
+}
+
+/*======== 图片结束 =======*/
+
+
 /* ======= 表格公共样式开始 ======= */
 
 .ms-table {
@@ -93,13 +115,13 @@
     color: #555;
     resize: none;
 }
-.form-item .btn {
+.form-item .ms-btn {
     margin-left: 80px;
 }
 
 /* ======= 按钮样式开始 ======= */
 
-.btn {
+.ms-btn {
     display: inline-block;
     padding: 0px 8px;
     text-align: center;
