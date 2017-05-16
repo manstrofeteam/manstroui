@@ -381,3 +381,9 @@ pre, pre span, pre code, pre code span {
     word-wrap: break-word;
     /* Internet Explorer 5.5+ */
 }
+.demo-hover-box {
+    width: 140px;
+    height: 140px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #000;
+}

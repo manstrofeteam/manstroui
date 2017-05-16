@@ -16,13 +16,6 @@
 
 /*======== 图片开始 =======*/
 
-
-/*响应式图片*/
-
-.ms-img-responsive {
-    max-width: 100%;
-    height: auto;
-}
 .ms-radius {
     border-radius: 4px;
 }
@@ -31,6 +24,34 @@
 }
 .ms-circle {
     border-radius: 50%;
+}
+
+/*响应式图片*/
+
+.ms-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/*元素放大效果*/
+
+.ms-hover-big {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.6s;
+    /*表示所有的属性变化在0.6s的时间段内完成*/
+}
+.ms-hover-big:hover {
+    /*表示在鼠标放到图片上的时候图片按比例放大1.1倍*/
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -moz-transform: scale(1.1);
+    /* Firefox */
+    -webkit-transform: scale(1.1);
+    /* Safari 和 Chrome */
+    -o-transform: scale(1.1);
+    /* Opera */
 }
 
 /*======== 图片结束 =======*/
